@@ -1,0 +1,833 @@
+{
+	"$schema": "https://smapi.io/schemas/content-patcher.json",
+	"Changes": [
+		//
+		//Expa
+		//
+		{//Destination
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Expa Entry Center EastScarp",
+			"When": {"Enable Expa": true},
+			"TargetField": ["{{EastScarp Destinations}}", "Destinations"],
+			"Entries": {
+				"Expa": {
+					"Id": "Polydot.PolyCarts_Expa",
+					"DisplayName": "{{i18n: Expa}}",
+					"TargetLocation": "Polydot.PolyCarts_Expa",
+					"TargetTile": { "X": 19, "Y": 19 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{//Add Map
+			"Action": "EditMap",
+			"Target": "Maps/Polydot.PolyCarts_Expa",
+			"LogName": "ES Expa Map",
+			"FromFile": "assets/Expa/East Scarp.tmx",
+			"ToArea": { "X": 26, "Y": 5, "Width": 7, "Height": 8 },
+			"MapTiles": [
+				{
+					"Position": { "X": 29, "Y": 9 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{EastScarp Destinations}} Polydot.PolyCarts_Expa"
+					}
+				},
+				{//East Scarp
+					"Position": { "X": 31, "Y": 10 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MineSign {{i18n: Expacart East Scarp}}"
+					}
+				}
+			],
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "30 7 4",
+					"Delimiter": " "
+				}
+			]
+		},
+		//
+		//Remove ES Destinations
+		//
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "ES Remove Destinations",
+			"TargetField": ["EastScarp", "Destinations"],
+			"Entries": {
+				"EastScarp_DeepDark": null,
+				"EastScarp_DeepMountains": null,
+				"EastScarp_Village": null,
+				"EastScarp_ClearingHouse": null,
+				"Lemurkat_ClearingHouse": null
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "ES Remove Destinations",
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"EastScarp_ClearingHouse": null,
+				"Lemurkat_ClearingHouse": null
+			}
+		},
+		//
+		//Remove ES Carts
+		//
+		{//UnderScarp
+			"Action": "EditMap",
+			"When": {
+				"ES_Underscarp": false
+			},
+			"Target": "Maps/EastScarp_DeepDark",
+			"LogName": "ES UnderScarp Remove",
+			"FromFile": "assets/ES/UnderScarp_Remove.tmx",
+			"ToArea": { "X": 3, "Y": 62, "Width": 15, "Height": 5 }
+		},
+		{//Clearing House 1
+			"Action": "EditMap",
+			"When": {
+				"ES_Clearing": false
+			},
+			"Target": "Maps/EastScarp_ClearingHouse",
+			"LogName": "ES ClearingHouse Remove1",
+			"FromFile": "assets/ES/ClearingHouse_Remove1.tmx",
+			"ToArea": { "X": 0, "Y": 25, "Width": 60, "Height": 1 }
+		},
+		{//Clearing House 2
+			"Action": "EditMap",
+			"When": {
+				"ES_Clearing": false
+			},
+			"Target": "Maps/EastScarp_ClearingHouse",
+			"LogName": "ES ClearingHouse Remove2",
+			"FromFile": "assets/ES/ClearingHouse_Remove2.tmx",
+			"ToArea": { "X": 1, "Y": 26, "Width": 4, "Height": 3 }
+		},
+		{//Village 1
+			"Action": "EditMap",
+			"When": {
+				"ES_Village": false
+			},
+			"Target": "Maps/EastScarp_Village",
+			"LogName": "ES Village Remove1",
+			"FromFile": "assets/ES/Village_Remove1.tmx",
+			"ToArea": { "X": 64, "Y": 12, "Width": 11, "Height": 7 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "RemoveDelimited",
+					"Target": ["MapProperties", "Light"],
+					"Search": "68 13 4",
+					"Delimiter": " "
+				}
+			],
+      "MapProperties": {
+				"DayTiles": "",
+				"NightTiles": ""
+      }
+		},
+		{//Village 2
+			"Action": "EditMap",
+			"When": {
+				"ES_Village": false
+			},
+			"Target": "Maps/EastScarp_Village",
+			"LogName": "ES Village Remove2",
+			"FromFile": "assets/ES/Village_Remove2.tmx",
+			"ToArea": { "X": 0, "Y": 74, "Width": 34, "Height": 7 }
+		},
+		{//Trace's House
+			"Action": "EditMap",
+			"Target": "Maps/EastScarp_Village",
+			"LogName": "ES Village Remove Trace's House",
+			"When": {
+				"HasMod": "7thAxis.DitR",
+				"ES_Trace": false
+			},
+			"FromFile": "assets/ES/Trace_House_Exterior.tmx",
+			"ToArea": { "X": 0, "Y": 74, "Width": 13, "Height": 7 }
+		},
+		{//Deep Mountains
+			"Action": "EditMap",
+			"When": {
+				"ES_DeepMountains": false
+			},
+			"Target": "Maps/EastScarp_DeepMountains",
+			"LogName": "ES Deep Mountains Remove",
+			"FromFile": "assets/ES/DeepMountains_Remove.tmx",
+			"ToArea": { "X": 53, "Y": 33, "Width": 5, "Height": 6 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "RemoveDelimited",
+					"Target": ["MapProperties", "Light"],
+					"Search": "56 35 4",
+					"Delimiter": " "
+				}
+			],
+      "MapProperties": {
+				"DayTiles": "",
+				"NightTiles": ""
+      }
+		},
+		//
+		//Add New Carts
+		//
+		//East Scarp Village
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "ES Village EditData",
+			"When": {
+				"ES Village": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.ES_Village" 
+			},
+			"TargetField": ["{{EastScarp Destinations}}", "Destinations"],
+			"Entries": {
+				"ES Village": {
+					"Id": "Polydot.PolyCarts_ES_Village",
+					"DisplayName": "{{ES Village Name}}",
+					"TargetLocation": "EastScarp_Village",
+					"TargetTile": { "X": 47, "Y": 70 },
+					"TargetDirection": "up"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/EastScarp_Village",
+			"LogName": "ES Village EditMap",
+			"When": {
+				"ES Village": true 
+			},
+			"FromFile": "assets/ES/Village.tmx",
+			"ToArea": { "X": 48, "Y": 70, "Width": 4, "Height": 4 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "49 70 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 48, "Y": 70 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{EastScarp destinations}} Polydot.PolyCarts_ES_Village"
+					}
+				},
+				{
+					"Position": { "X": 48, "Y": 71 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{EastScarp destinations}} Polydot.PolyCarts_ES_Village"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "ES Unlock Village",
+			"When": {
+				"ES Village": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.ES_Village": false 
+			},
+			"Target": "Maps/EastScarp_Village",
+			"MapTiles": [
+				{
+					"Position": { "X": 48, "Y": 70 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.ES_Village {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{ES Village Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 48, "Y": 71 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.ES_Village {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{ES Village Name}}}}"
+					}
+				}
+			]
+		},
+		//Deep Mountains South
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "ES Deep Mountains South EditData",
+			"When": {
+				"Deep Mountains South": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.DeepMountains_South" 
+			},
+			"TargetField": ["{{EastScarp Destinations}}", "Destinations"],
+			"Entries": {
+				"Deep Mountains South": {
+					"Id": "Polydot.PolyCarts_DeepMountains_South",
+					"DisplayName": "{{Deep Mountains South Name}}",
+					"TargetLocation": "EastScarp_DeepMountains",
+					"TargetTile": { "X": 101, "Y": 28 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/EastScarp_DeepMountains",
+			"LogName": "ES Deep Mountains South EditMap",
+			"When": {
+				"Deep Mountains South": true 
+			},
+			"FromFile": "assets/ES/DeepMountains_South.tmx",
+			"ToArea": { "X": 99, "Y": 23, "Width": 5, "Height": 6 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "101 24 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 100, "Y": 27 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{EastScarp destinations}} Polydot.PolyCarts_DeepMountains_South"
+					}
+				},
+				{
+					"Position": { "X": 100, "Y": 28 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{EastScarp destinations}} Polydot.PolyCarts_DeepMountains_South"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "ES Unlock Deep Mountains South",
+			"When": {
+				"Deep Mountains South": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.DeepMountains_South": false 
+			},
+			"Target": "Maps/EastScarp_DeepMountains",
+			"MapTiles": [
+				{
+					"Position": { "X": 100, "Y": 27 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.DeepMountains_South {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Deep Mountains South Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 100, "Y": 28 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.DeepMountains_South {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Deep Mountains South Name}}}}"
+					}
+				}
+			]
+		},
+		//Deep Mountains West
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "ES Deep Mountains West EditData",
+			"When": {
+				"Deep Mountains West": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.DeepMountains_West" 
+			},
+			"TargetField": ["{{EastScarp Destinations}}", "Destinations"],
+			"Entries": {
+				"Deep Mountains West": {
+					"Id": "Polydot.PolyCarts_DeepMountains_West",
+					"DisplayName": "{{Deep Mountains West Name}}",
+					"TargetLocation": "EastScarp_DeepMountains",
+					"TargetTile": { "X": 22, "Y": 32 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/EastScarp_DeepMountains",
+			"LogName": "ES Deep Mountains West EditMap",
+			"When": {
+				"Deep Mountains West": true 
+			},
+			"FromFile": "assets/ES/DeepMountains_West.tmx",
+			"ToArea": { "X": 21, "Y": 28, "Width": 3, "Height": 4 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "21 29 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 22, "Y": 30 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{EastScarp destinations}} Polydot.PolyCarts_DeepMountains_West"
+					}
+				},
+				{
+					"Position": { "X": 22, "Y": 31 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{EastScarp destinations}} Polydot.PolyCarts_DeepMountains_West"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "ES Unlock Deep Mountains West",
+			"When": {
+				"Deep Mountains West": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.DeepMountains_West": false 
+			},
+			"Target": "Maps/EastScarp_DeepMountains",
+			"MapTiles": [
+				{
+					"Position": { "X": 22, "Y": 30 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.DeepMountains_West {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Deep Mountains West Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 22, "Y": 31 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.DeepMountains_West {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Deep Mountains West Name}}}}"
+					}
+				}
+			]
+		},
+		//UnderScarp
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "ES UnderScarp EditData",
+			"When": {
+				"UnderScarp": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.UnderScarp" 
+			},
+			"TargetField": ["{{EastScarp Destinations}}", "Destinations"],
+			"Entries": {
+				"UnderScarp": {
+					"Id": "Polydot.PolyCarts_UnderScarp",
+					"DisplayName": "{{UnderScarp Name}}",
+					"TargetLocation": "EastScarp_DeepDark",
+					"TargetTile": { "X": 34, "Y": 57 },
+					"TargetDirection": "up"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/EastScarp_DeepDark",
+			"LogName": "ES UnderScarp EditMap",
+			"When": {
+				"UnderScarp": true 
+			},
+			"FromFile": "assets/ES/UnderScarp.tmx",
+			"ToArea": { "X": 34, "Y": 57, "Width": 14, "Height": 3 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "34 59 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 34, "Y": 58 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{EastScarp destinations}} Polydot.PolyCarts_UnderScarp"
+					}
+				},
+				{
+					"Position": { "X": 35, "Y": 58 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{EastScarp destinations}} Polydot.PolyCarts_UnderScarp"
+					}
+				}
+			]
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/EastScarp_SeaCave",
+			"LogName": "ES UnderScarp cart SeaCave EditMap",
+			"When": {
+				"UnderScarp": true 
+			},
+			"FromFile": "assets/ES/SeaCave.tmx",
+			"ToArea": { "X": 0, "Y": 6, "Width": 14, "Height": 5 },
+			"PatchMode": "Overlay",
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "3 7 4",
+					"Delimiter": " "
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "ES Unlock UnderScarp",
+			"When": {
+				"UnderScarp": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.UnderScarp": false 
+			},
+			"Target": "Maps/EastScarp_DeepDark",
+			"MapTiles": [
+				{
+					"Position": { "X": 34, "Y": 58 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.UnderScarp {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{UnderScarp Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 35, "Y": 58 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.UnderScarp {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{UnderScarp Name}}}}"
+					}
+				}
+			]
+		},
+		//Meadow
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "ES Meadow EditData",
+			"When": {
+				"ES Meadow": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.ES_Meadow" 
+			},
+			"TargetField": ["{{EastScarp Destinations}}", "Destinations"],
+			"Entries": {
+				"ES Meadow": {
+					"Id": "Polydot.PolyCarts_ES_Meadow",
+					"DisplayName": "{{ES Meadow Name}}",
+					"TargetLocation": "EastScarp_MeadowFarm",
+					"TargetTile": { "X": 46, "Y": 23 },
+					"TargetDirection": "left"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/EastScarp_MeadowFarm",
+			"LogName": "ES Meadow EditMap",
+			"When": {
+				"ES Meadow": true 
+			},
+			"FromFile": "assets/ES/Meadow.tmx",
+			"ToArea": { "X": 47, "Y": 22, "Width": 3, "Height": 3 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "49 24 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 47, "Y": 23 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{EastScarp destinations}} Polydot.PolyCarts_ES_Meadow"
+					}
+				},
+				{
+					"Position": { "X": 48, "Y": 23 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{EastScarp destinations}} Polydot.PolyCarts_ES_Meadow"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "ES Unlock Meadow",
+			"When": {
+				"ES Meadow": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.ES_Meadow": false 
+			},
+			"Target": "Maps/EastScarp_MeadowFarm",
+			"MapTiles": [
+				{
+					"Position": { "X": 47, "Y": 23 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.ES_Meadow {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{ES Meadow Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 48, "Y": 23 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.ES_Meadow {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{ES Meadow Name}}}}"
+					}
+				}
+			]
+		},
+		//Clearing House
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "ES ClearingHouse EditData",
+			"When": {
+				"ClearingHouse": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.ClearingHouse" 
+			},
+			"TargetField": ["{{EastScarp Destinations}}", "Destinations"],
+			"Entries": {
+				"ClearingHouse": {
+					"Id": "Polydot.PolyCarts_ClearingHouse",
+					"DisplayName": "{{ClearingHouse Name}}",
+					"TargetLocation": "EastScarp_ClearingHouse",
+					"TargetTile": { "X": 35, "Y": 5 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/EastScarp_ClearingHouse",
+			"LogName": "ES ClearingHouse EditMap",
+			"When": {
+				"ClearingHouse": true 
+			},
+			"FromFile": "assets/ES/ClearingHouse.tmx",
+			"ToArea": { "X": 34, "Y": 0, "Width": 2, "Height": 5 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "34 4 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 35, "Y": 3 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{EastScarp destinations}} Polydot.PolyCarts_ClearingHouse"
+					}
+				},
+				{
+					"Position": { "X": 35, "Y": 4 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{EastScarp destinations}} Polydot.PolyCarts_ClearingHouse"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "ES Unlock ClearingHouse",
+			"When": {
+				"ClearingHouse": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.ClearingHouse": false 
+			},
+			"Target": "Maps/EastScarp_ClearingHouse",
+			"MapTiles": [
+				{
+					"Position": { "X": 35, "Y": 3 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.ClearingHouse {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{ClearingHouse Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 35, "Y": 4 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.ClearingHouse {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{ClearingHouse Name}}}}"
+					}
+				}
+			]
+		},
+		//Orchard
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "ES Orchard EditData",
+			"When": {
+				"Orchard": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Orchard" 
+			},
+			"TargetField": ["{{EastScarp Destinations}}", "Destinations"],
+			"Entries": {
+				"Orchard": {
+					"Id": "Polydot.PolyCarts_Orchard",
+					"DisplayName": "{{Orchard Name}}",
+					"TargetLocation": "EastScarp_Orchard",
+					"TargetTile": { "X": 48, "Y": 16 },
+					"TargetDirection": "uleftp"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/EastScarp_Orchard",
+			"LogName": "ES Orchard EditMap",
+			"When": {
+				"Orchard": true 
+			},
+			"FromFile": "assets/ES/Orchard.tmx",
+			"ToArea": { "X": 49, "Y": 15, "Width": 6, "Height": 2 },
+			"MapTiles": [
+				{
+					"Position": { "X": 49, "Y": 16 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{EastScarp destinations}} Polydot.PolyCarts_Orchard"
+					}
+				},
+				{
+					"Position": { "X": 50, "Y": 16 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{EastScarp destinations}} Polydot.PolyCarts_Orchard"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "ES Unlock Orchard",
+			"When": {
+				"Orchard": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Orchard": false 
+			},
+			"Target": "Maps/EastScarp_Orchard",
+			"MapTiles": [
+				{
+					"Position": { "X": 49, "Y": 16 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Orchard {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Orchard Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 50, "Y": 16 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Orchard {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Orchard Name}}}}"
+					}
+				}
+			]
+		},
+		//
+		//Change Other Carts
+		//
+		//Town East
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Town East EditData",
+			"When": {
+				"Town East": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Town_East",
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Town East": {
+					"Id": "Polydot.PolyCarts_Town_East",
+					"DisplayName": "{{Town East Name}}",
+					"TargetLocation": "Town",
+					"TargetTile": { "X": 105, "Y": 81 },
+					"TargetDirection": "left"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Town",
+			"LogName": "Town East EditMap",
+			"When": {
+				"Town East": true,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false 
+			},
+			"FromFile": "assets/ES/Town_East.tmx",
+			"ToArea": { "X": 105, "Y": 65, "Width": 25, "Height": 22 },
+			"MapTiles": [
+				{
+					"Position": { "X": 106, "Y": 81 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Town_East"
+					}
+				},
+				{
+					"Position": { "X": 107, "Y": 81 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Town_East"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock Town East",
+			"When": {
+				"Town East": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Town_East": false,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false 
+			},
+			"Target": "Maps/Town",
+			"MapTiles": [
+				{
+					"Position": { "X": 106, "Y": 81 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Town_East {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Town East Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 107, "Y": 81 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Town_East {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Town East Name}}}}"
+					}
+				}
+			]
+		}
+	]
+}

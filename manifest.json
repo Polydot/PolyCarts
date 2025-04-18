@@ -1,0 +1,68 @@
+{
+	"Name": "PolyCarts",
+	"Author": "Polydot",
+	"Version": "1.8.0",
+	"Description": "An neatness-focused minecart overhaul!",
+	"UniqueID": "Polydot.PolyCarts",
+	"MinimumApiVersion": "4.0.0",
+	"UpdateKeys": ["Nexus:23311", "CurseForge:1036762"],
+	"ContentPackFor": {
+		"UniqueID": "Pathoschild.ContentPatcher"
+	},
+	"Dependencies": [
+		{
+			"UniqueID": "Pathoschild.ContentPatcher",
+			"MinimumVersion": "2.5.3"
+		},
+		{
+			"UniqueID": "FlashShifter.StardewValleyExpandedCP",
+			"MinimumVersion": "1.15.8",
+			"IsRequired": false
+		},
+		{
+			"UniqueID": "flashshifter.immersivefarm2remastered",
+			"MinimumVersion": "1.15.8",
+			"IsRequired": false
+		},
+		{
+			"UniqueID": "FlashShifter.GrandpasFarm",
+			"MinimumVersion": "1.15.8",
+			"IsRequired": false
+		},
+		{
+			"UniqueID": "flashshifter.FrontierFarm",
+			"MinimumVersion": "1.15.8",
+			"IsRequired": false
+		},
+		{
+			"UniqueID": "atravita.EastScarp",
+			"MinimumVersion": "2.4.18",
+			"IsRequired": false
+		},
+		{
+			"UniqueID": "Lemurkat.EastScarpNPCs.CP",
+			"MinimumVersion": "2.4.18",
+			"IsRequired": false
+		},
+		{
+			"UniqueID": "Lemurkat.EastScarpe.FTM",
+			"MinimumVersion": "2.4.18",
+			"IsRequired": false
+		},
+		{
+			"UniqueID": "LemurKat.EastScarpe.CP",
+			"MinimumVersion": "2.4.18",
+			"IsRequired": false
+		},
+		{
+			"UniqueID": "7thAxis.DitR",
+			"MinimumVersion": "1.0.33-alpha",
+			"IsRequired": false
+		},
+		{
+			"UniqueID": "Rafseazz.RSVCP",
+			"MinimumVersion": "2.5.17",
+			"IsRequired": false
+		}
+	]
+}

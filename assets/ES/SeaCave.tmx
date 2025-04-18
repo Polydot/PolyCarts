@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="14" height="5" tilewidth="16" tileheight="16" infinite="0" nextlayerid="14" nextobjectid="188">
+  <tileset firstgid="1" name="paths" tilewidth="16" tileheight="16" tilecount="64" columns="4">
+    <image source="paths" width="64" height="256" />
+  </tileset>
+  <tileset firstgid="65" name="untitled tile sheet" tilewidth="16" tileheight="16" tilecount="384" columns="16">
+    <image source="ES_mine_desert" width="256" height="384" />
+  </tileset>
+  <tileset firstgid="449" name="z_cave_daisyextras" tilewidth="16" tileheight="16" tilecount="640" columns="20">
+    <image source="cave_daisyextras" width="320" height="512" />
+  </tileset>
+  <tileset firstgid="1089" name="springobjects" tilewidth="16" tileheight="16" tilecount="936" columns="24">
+    <image source="springobjects" width="384" height="624" />
+  </tileset>
+  <tileset firstgid="2025" name="z_DesertTiles" tilewidth="16" tileheight="16" tilecount="368" columns="16">
+    <image source="DesertTiles" width="256" height="368" />
+  </tileset>
+  <tileset firstgid="2393" name="townInterior" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
+    <image source="townInterior" width="512" height="1088" />
+  </tileset>
+  <tileset firstgid="4569" name="PolyCarts" tilewidth="16" tileheight="16" tilecount="32" columns="8">
+    <image source="mine_desert_PolyCarts" width="128" height="64" />
+  </tileset>
+  <layer id="1" name="Back" width="14" height="5">
+    <data encoding="csv">
+      0,0,0,0,0,0,0,0,0,234,235,283,251,300, 203,203,98,293,203,0,0,0,0,234,235,283,300,0, 283,283,283,283,283,283,203,203,203,203,283,284,98,0, 299,299,299,299,250,250,283,283,283,234,235,236,237,0, 220,202,234,235,236,237,218,219,220,202,203,205,234,204
+    </data>
+  </layer>
+  <objectgroup id="2" name="Back">
+    <object id="147" name="TileData" x="0" y="48" width="16" height="16">
+      <properties>
+        <property name="TouchAction" value="Warp EastScarp_DeepDark 46 59" />
+      </properties>
+    </object>
+  </objectgroup>
+  <layer id="12" name="Back2" width="14" height="5">
+    <properties>
+      <property name="Draw" value="Back" />
+    </properties>
+    <data encoding="csv">
+      0,155,156,157,0,0,0,0,0,0,0,0,0,0, 173,171,4580,173,0,0,0,0,0,0,0,0,0,0, 189,187,4580,189,0,0,0,0,0,0,0,0,0,0, 4572,4572,4597,0,0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0,0,0,0,0
+    </data>
+  </layer>
+  <layer id="3" name="Buildings" width="14" height="5">
+    <data encoding="csv">
+      154,4582,4583,4584,88,174,175,72,73,150,151,152,0,0, 245,4590,4591,4592,104,178,191,88,89,166,162,168,0,0, 213,4598,4599,4600,120,206,207,104,105,182,183,184,0,0, 0,0,0,0,535,222,223,120,121,198,199,0,0,0, 160,533,534,0,0,0,0,0,0,0,0,0,0,0
+    </data>
+  </layer>
+  <objectgroup id="4" name="Buildings">
+    <object id="102" name="TileData" x="32" y="32" width="16" height="16">
+      <properties>
+        <property name="Action" value="Message &quot;SeaCave.10&quot;" />
+      </properties>
+    </object>
+  </objectgroup>
+  <layer id="5" name="Front" width="14" height="5">
+    <data encoding="csv">
+      149,0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0,0,0,0,0, 229,0,0,0,515,0,0,0,0,0,0,0,0,0, 245,513,514,0,0,0,0,0,0,0,0,0,0,0, 261,262,515,513,514,0,0,270,279,280,262,0,0,0
+    </data>
+  </layer>
+  <layer id="7" name="Paths" width="14" height="5">
+    <data encoding="csv">
+      0,0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,9,0,0,0,0,9,0,0,0, 0,0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0,0,9,0,0, 0,0,0,0,0,0,0,0,0,0,0,0,0,0
+    </data>
+  </layer>
+  <layer id="10" name="AlwaysFront" width="14" height="5">
+    <data encoding="csv">
+      0,0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0,0,0,0,0
+    </data>
+  </layer>
+</map>

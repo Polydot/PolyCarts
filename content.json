@@ -1,0 +1,1175 @@
+{
+	"$schema": "https://smapi.io/schemas/content-patcher.json",
+	"Format": "2.5.3",
+	"ConfigSchema": {
+		//
+		//Vanilla overrides
+		//
+		"Bus stop": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "Change Vanilla Carts"
+		},
+		"Town East": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "Change Vanilla Carts"
+		},
+		"Mountain East": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "Change Vanilla Carts"
+		},
+		//
+		//Toggle Minecarts
+		//
+		"Farm East": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "Toggle Minecarts"
+		},
+		"Farm West": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "Toggle Minecarts"
+		},
+		"Farm Cave": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "Toggle Minecarts"
+		},
+		"Town North": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "Toggle Minecarts"
+		},
+		"Town West": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "Toggle Minecarts"
+		},
+		"Beach": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "Toggle Minecarts"
+		},
+		"Mountain North": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "Toggle Minecarts"
+		},
+		"Mountain West": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "Toggle Minecarts"
+		},
+		"Forest North": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "Toggle Minecarts"
+		},
+		"Forest East": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "Toggle Minecarts"
+		},
+		"Forest West": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "Toggle Minecarts"
+		},
+		"Desert North": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "Toggle Minecarts"
+		},
+		"Desert South": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "Toggle Minecarts"
+		},
+		"Railroad": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "Toggle Minecarts"
+		},
+		"Secret Woods": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "Toggle Minecarts"
+		},
+		"GingerIsland North": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "Toggle Minecarts"
+		},
+		"GingerIsland East": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "Toggle Minecarts"
+		},
+		"GingerIsland South": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "Toggle Minecarts"
+		},
+		"GingerIsland West": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "Toggle Minecarts"
+		},
+		//
+		//SVE Carts
+		//
+		"Grandpa's Shed": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "SVE Minecarts"
+		},
+		"Old Community Garden": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "SVE Minecarts"
+		},
+		"ForestWest North": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "SVE Minecarts"
+		},
+		"ForestWest East": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "SVE Minecarts"
+		},
+		"ForestWest South": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "SVE Minecarts"
+		},
+		"ForestWest West": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "SVE Minecarts"
+		},
+		//
+		//Custom Farms
+		//
+		"GrandpasFarm North": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "Custom Farm Minecarts"
+		},
+		"IF2R North": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "Custom Farm Minecarts"
+		},
+		"IF2R South": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "Custom Farm Minecarts"
+		},
+		"FrontierFarm North": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "Custom Farm Minecarts"
+		},
+		//
+		//East Scarp Carts
+		//
+		"ES Village": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "East Scarp Minecarts"
+		},
+		"Deep Mountains South": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "East Scarp Minecarts"
+		},
+		"Deep Mountains West": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "East Scarp Minecarts"
+		},
+		"UnderScarp": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "East Scarp Minecarts"
+		},
+		"ES Meadow": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "East Scarp Minecarts"
+		},
+		"ClearingHouse": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "East Scarp Minecarts"
+		},
+		"Orchard": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "East Scarp Minecarts"
+		},
+		//
+		//Remove Standard ES Carts
+		//
+		"ES_Underscarp": {
+			"AllowValues": "true, false",
+			"Default": "false",
+			"Section": "Default East Scarp Minecarts"
+		},
+		"ES_Clearing": {
+			"AllowValues": "true, false",
+			"Default": "false",
+			"Section": "Default East Scarp Minecarts"
+		},
+		"ES_Village": {
+			"AllowValues": "true, false",
+			"Default": "false",
+			"Section": "Default East Scarp Minecarts"
+		},
+		"ES_Trace": {
+			"AllowValues": "true, false",
+			"Default": "false",
+			"Section": "Default East Scarp Minecarts"
+		},
+		"ES_DeepMountains": {
+			"AllowValues": "true, false",
+			"Default": "false",
+			"Section": "Default East Scarp Minecarts"
+		},
+		//
+		//RidgeSide Village Carts
+		//
+		"RSV_CableCar_Bottom": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "RidgeSide Village Minecarts"
+		},
+		"RSV_CableCar_Top": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "RidgeSide Village Minecarts"
+		},
+		"RSV_Heaps": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "RidgeSide Village Minecarts"
+		},
+		"RSV_Nightingale": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "RidgeSide Village Minecarts"
+		},
+		"RSV_Greenhouse": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "RidgeSide Village Minecarts"
+		},
+		"RSV_LogCabin": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "RidgeSide Village Minecarts"
+		},
+		"RSV_Hike": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "RidgeSide Village Minecarts"
+		},
+		"RSV_Falls": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "RidgeSide Village Minecarts"
+		},
+		"RSV_Pond": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "RidgeSide Village Minecarts"
+		},
+		"RSV_SummitFarm_East": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "RidgeSide Village Minecarts"
+		},
+		"RSV_SummitFarm_West": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "RidgeSide Village Minecarts"
+		},
+		"RSV_Ridge_East": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "RidgeSide Village Minecarts"
+		},
+		"RSV_Ridge_West": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "RidgeSide Village Minecarts"
+		},
+
+		//
+		//Custom Names
+		//
+		"Bus Stop Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"Farm East Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"Farm West Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"Farm Cave Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"Town North Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"Town East Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"Town West Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"Beach Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"Mountain North Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"Mountain East Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"Mountain West Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"Forest North Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"Forest East Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"Forest West Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"Desert North Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"Desert South Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"Railroad Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"Secret Woods Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"GingerIsland North Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"GingerIsland East Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"GingerIsland South Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"GingerIsland West Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"Grandpa's Shed Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"Old Community Garden Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"ForestWest North Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"ForestWest East Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"ForestWest South Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"ForestWest West Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"GrandpasFarm North Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"IF2R North Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"IF2R South Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"FrontierFarm North Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"ES Village Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"Deep Mountains South Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"Deep Mountains West Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"UnderScarp Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"ES Meadow Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"ClearingHouse Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"Orchard Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"RSV_CableCar_Bottom Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"RSV_CableCar_Top Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"RSV_Heaps Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"RSV_Nightingale Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"RSV_Greenhouse Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"RSV_LogCabin Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"RSV_Hike Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"RSV_Falls Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"RSV_Pond Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"RSV_SummitFarm_East Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"RSV_SummitFarm_West Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"RSV_Ridge_East Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		"RSV_Ridge_West Minecart": {
+			"AllowBlank": true,
+			"Section": "Custom Names"
+		},
+		//
+		//Expa
+		//
+		"Enable Expa": {
+			"AllowValues": "true, false",
+			"Default": "true",
+			"Section": "Expa"
+		}
+	},
+	"DynamicTokens": [
+		//
+		//Change default name to custom name
+		{//Bus Stop
+			"Name": "Bus Stop Name",
+			"Value": "{{i18n: Bus Stop}}"
+		},
+		{
+			"Name": "Bus Stop Name",
+			"Value": "{{Bus Stop Minecart}}",
+			"When": { "Bus Stop Minecart": "{{Bus Stop Minecart}}" }
+		},
+		{//Farm East
+			"Name": "Farm East Name",
+			"Value": "{{i18n: Farm East}}"
+		},
+		{
+			"Name": "Farm East Name",
+			"Value": "{{Farm East Minecart}}",
+			"When": { "Farm East Minecart": "{{Farm East Minecart}}" }
+		},
+		{//Farm West
+			"Name": "Farm West Name",
+			"Value": "{{i18n: Farm West}}"
+		},
+		{
+			"Name": "Farm West Name",
+			"Value": "{{Farm West Minecart}}",
+			"When": { "Farm West Minecart": "{{Farm West Minecart}}" }
+		},
+		{//Farm Cave
+			"Name": "Farm Cave Name",
+			"Value": "{{i18n: Farm Cave}}"
+		},
+		{
+			"Name": "Farm Cave Name",
+			"Value": "{{Farm Cave Minecart}}",
+			"When": { "Farm Cave Minecart": "{{Farm Cave Minecart}}" }
+		},
+		{//Town North
+			"Name": "Town North Name",
+			"Value": "{{i18n: Town North}}"
+		},
+		{
+			"Name": "Town North Name",
+			"Value": "{{Town North Minecart}}",
+			"When": { "Town North Minecart": "{{Town North Minecart}}" }
+		},
+		{//Town East
+			"Name": "Town East Name",
+			"Value": "{{i18n: Town East}}"
+		},
+		{
+			"Name": "Town East Name",
+			"Value": "{{Town East Minecart}}",
+			"When": { "Town East Minecart": "{{Town East Minecart}}" }
+		},
+		{//Town West
+			"Name": "Town West Name",
+			"Value": "{{i18n: Town West}}"
+		},
+		{
+			"Name": "Town West Name",
+			"Value": "{{Town West Minecart}}",
+			"When": { "Town West Minecart": "{{Town West Minecart}}" }
+		},
+		{//Beach
+			"Name": "Beach Name",
+			"Value": "{{i18n: Beach}}"
+		},
+		{
+			"Name": "Beach Name",
+			"Value": "{{Beach Minecart}}",
+			"When": { "Beach Minecart": "{{Beach Minecart}}" }
+		},
+		{//Mountain North
+			"Name": "Mountain North Name",
+			"Value": "{{i18n: Mountain North}}"
+		},
+		{
+			"Name": "Mountain North Name",
+			"Value": "{{Mountain North Minecart}}",
+			"When": { "Mountain North Minecart": "{{Mountain North Minecart}}" }
+		},
+		{//Mountain East
+			"Name": "Mountain East Name",
+			"Value": "{{i18n: Mountain East}}"
+		},
+		{
+			"Name": "Mountain East Name",
+			"Value": "{{Mountain East Minecart}}",
+			"When": { "Mountain East Minecart": "{{Mountain East Minecart}}" }
+		},
+		{//Mountain West
+			"Name": "Mountain West Name",
+			"Value": "{{i18n: Mountain West}}"
+		},
+		{
+			"Name": "Mountain West Name",
+			"Value": "{{Mountain West Minecart}}",
+			"When": { "Mountain West Minecart": "{{Mountain West Minecart}}" }
+		},
+		{//Forest North
+			"Name": "Forest North Name",
+			"Value": "{{i18n: Forest North}}"
+		},
+		{
+			"Name": "Forest North Name",
+			"Value": "{{Forest North Minecart}}",
+			"When": { "Forest North Minecart": "{{Forest North Minecart}}" }
+		},
+		{//Forest East
+			"Name": "Forest East Name",
+			"Value": "{{i18n: Forest East}}"
+		},
+		{
+			"Name": "Forest East Name",
+			"Value": "{{Forest East Minecart}}",
+			"When": { "Forest East Minecart": "{{Forest East Minecart}}" }
+		},
+		{//Forest West
+			"Name": "Forest West Name",
+			"Value": "{{i18n: Forest West}}"
+		},
+		{
+			"Name": "Forest West Name",
+			"Value": "{{Forest West Minecart}}",
+			"When": { "Forest West Minecart": "{{Forest West Minecart}}" }
+		},
+		{//Desert North
+			"Name": "Desert North Name",
+			"Value": "{{i18n: Desert North}}"
+		},
+		{
+			"Name": "Desert North Name",
+			"Value": "{{Desert North Minecart}}",
+			"When": { "Desert North Minecart": "{{Desert North Minecart}}" }
+		},
+		{//Desert South
+			"Name": "Desert South Name",
+			"Value": "{{i18n: Desert South}}"
+		},
+		{
+			"Name": "Desert South Name",
+			"Value": "{{Desert South Minecart}}",
+			"When": { "Desert South Minecart": "{{Desert South Minecart}}" }
+		},
+		{//Railroad
+			"Name": "Railroad Name",
+			"Value": "{{i18n: Railroad}}"
+		},
+		{
+			"Name": "Railroad Name",
+			"Value": "{{Railroad Minecart}}",
+			"When": { "Railroad Minecart": "{{Railroad Minecart}}" }
+		},
+		{//Secret Woods
+			"Name": "Secret Woods Name",
+			"Value": "{{i18n: Secret Woods}}"
+		},
+		{
+			"Name": "Secret Woods Name",
+			"Value": "{{Secret Woods Minecart}}",
+			"When": { "Secret Woods Minecart": "{{Secret Woods Minecart}}" }
+		},
+		{//GingerIsland North
+			"Name": "GingerIsland North Name",
+			"Value": "{{i18n: GingerIsland North}}"
+		},
+		{
+			"Name": "GingerIsland North Name",
+			"Value": "{{GingerIsland North Minecart}}",
+			"When": { "GingerIsland North Minecart": "{{GingerIsland North Minecart}}" }
+		},
+		{//GingerIsland East
+			"Name": "GingerIsland East Name",
+			"Value": "{{i18n: GingerIsland East}}"
+		},
+		{
+			"Name": "GingerIsland East Name",
+			"Value": "{{GingerIsland East Minecart}}",
+			"When": { "GingerIsland East Minecart": "{{GingerIsland East Minecart}}" }
+		},
+		{//GingerIsland South
+			"Name": "GingerIsland South Name",
+			"Value": "{{i18n: GingerIsland South}}"
+		},
+		{
+			"Name": "GingerIsland South Name",
+			"Value": "{{GingerIsland South Minecart}}",
+			"When": { "GingerIsland South Minecart": "{{GingerIsland South Minecart}}" }
+		},
+		{//GingerIsland West
+			"Name": "GingerIsland West Name",
+			"Value": "{{i18n: GingerIsland West}}"
+		},
+		{
+			"Name": "GingerIsland West Name",
+			"Value": "{{GingerIsland West Minecart}}",
+			"When": { "GingerIsland West Minecart": "{{GingerIsland West Minecart}}" }
+		},
+		{//Grandpa's Shed
+			"Name": "Grandpa's Shed Name",
+			"Value": "{{i18n: Grandpa's Shed}}"
+		},
+		{
+			"Name": "Grandpa's Shed Name",
+			"Value": "{{Grandpa's Shed Minecart}}",
+			"When": { "Grandpa's Shed Minecart": "{{Grandpa's Shed Minecart}}" }
+		},
+		{//Old Community Garden
+			"Name": "Old Community Garden Name",
+			"Value": "{{i18n: Old Community Garden}}"
+		},
+		{
+			"Name": "Old Community Garden Name",
+			"Value": "{{Old Community Garden Minecart}}",
+			"When": { "Old Community Garden Minecart": "{{Old Community Garden Minecart}}" }
+		},
+		{//ForestWest North
+			"Name": "ForestWest North Name",
+			"Value": "{{i18n: ForestWest North}}"
+		},
+		{
+			"Name": "ForestWest North Name",
+			"Value": "{{ForestWest North Minecart}}",
+			"When": { "ForestWest North Minecart": "{{ForestWest North Minecart}}" }
+		},
+		{//ForestWest East
+			"Name": "ForestWest East Name",
+			"Value": "{{i18n: ForestWest East}}"
+		},
+		{
+			"Name": "ForestWest East Name",
+			"Value": "{{ForestWest East Minecart}}",
+			"When": { "ForestWest East Minecart": "{{ForestWest East Minecart}}" }
+		},
+		{//ForestWest South
+			"Name": "ForestWest South Name",
+			"Value": "{{i18n: ForestWest South}}"
+		},
+		{
+			"Name": "ForestWest South Name",
+			"Value": "{{ForestWest South Minecart}}",
+			"When": { "ForestWest South Minecart": "{{ForestWest South Minecart}}" }
+		},
+		{//ForestWest West
+			"Name": "ForestWest West Name",
+			"Value": "{{i18n: ForestWest West}}"
+		},
+		{
+			"Name": "ForestWest West Name",
+			"Value": "{{ForestWest West Minecart}}",
+			"When": { "ForestWest West Minecart": "{{ForestWest West Minecart}}" }
+		},
+		//
+		//Custom Farms
+		//
+		{//GrandpasFarm North
+			"Name": "GrandpasFarm North Name",
+			"Value": "{{i18n: GrandpasFarm North}}"
+		},
+		{
+			"Name": "GrandpasFarm North Name",
+			"Value": "{{GrandpasFarm North Minecart}}",
+			"When": { "GrandpasFarm North Minecart": "{{GrandpasFarm North Minecart}}" }
+		},
+		{//GrandpasFarm West
+			"Name": "GrandpasFarm West Name",
+			"Value": "{{i18n: GrandpasFarm West}}"
+		},
+		{
+			"Name": "GrandpasFarm West Name",
+			"Value": "{{Farm West Minecart}}",
+			"When": { "Farm West Minecart": "{{Farm West Minecart}}" }
+		},
+		{//IF2R North
+			"Name": "IF2R North Name",
+			"Value": "{{i18n: IF2R North}}"
+		},
+		{
+			"Name": "IF2R North Name",
+			"Value": "{{IF2R North Minecart}}",
+			"When": { "IF2R North Minecart": "{{IF2R North Minecart}}" }
+		},
+		{//IF2R South
+			"Name": "IF2R South Name",
+			"Value": "{{i18n: IF2R South}}"
+		},
+		{
+			"Name": "IF2R South Name",
+			"Value": "{{IF2R South Minecart}}",
+			"When": { "IF2R South Minecart": "{{IF2R South Minecart}}" }
+		},
+		{//IF2R West
+			"Name": "IF2R West Name",
+			"Value": "{{i18n: IF2R West}}"
+		},
+		{
+			"Name": "IF2R West Name",
+			"Value": "{{Farm West Minecart}}",
+			"When": { "Farm West Minecart": "{{Farm West Minecart}}" }
+		},
+		{//Frontier Farm North
+			"Name": "FrontierFarm North Name",
+			"Value": "{{i18n: FrontierFarm North}}"
+		},
+		{
+			"Name": "FrontierFarm North Name",
+			"Value": "{{FrontierFarm North Minecart}}",
+			"When": { "FrontierFarm North Minecart": "{{FrontierFarm North Minecart}}" }
+		},
+		{//Frontier Farm West
+			"Name": "FrontierFarm West Name",
+			"Value": "{{i18n: FrontierFarm West}}"
+		},
+		{
+			"Name": "FrontierFarm West Name",
+			"Value": "{{Farm West Minecart}}",
+			"When": { "Farm West Minecart": "{{Farm West Minecart}}" }
+		},
+		//
+		//East Scarp
+		//
+		{//ES Village
+			"Name": "ES Village Name",
+			"Value": "{{i18n: ES Village}}"
+		},
+		{
+			"Name": "ES Village Name",
+			"Value": "{{ES Village Minecart}}",
+			"When": { "ES Village Minecart": "{{ES Village Minecart}}" }
+		},
+		{//Deep Mountains South
+			"Name": "Deep Mountains South Name",
+			"Value": "{{i18n: Deep Mountains South}}"
+		},
+		{
+			"Name": "Deep Mountains South Name",
+			"Value": "{{Deep Mountains South Minecart}}",
+			"When": { "Deep Mountains South Minecart": "{{Deep Mountains South Minecart}}" }
+		},
+		{//Deep Mountains West
+			"Name": "Deep Mountains West Name",
+			"Value": "{{i18n: Deep Mountains West}}"
+		},
+		{
+			"Name": "Deep Mountains West Name",
+			"Value": "{{Deep Mountains West Minecart}}",
+			"When": { "Deep Mountains West Minecart": "{{Deep Mountains West Minecart}}" }
+		},
+		{//UnderScarp
+			"Name": "UnderScarp Name",
+			"Value": "{{i18n: UnderScarp}}"
+		},
+		{
+			"Name": "UnderScarp Name",
+			"Value": "{{UnderScarp Minecart}}",
+			"When": { "UnderScarp Minecart": "{{UnderScarp Minecart}}" }
+		},
+		{//ES Meadow
+			"Name": "ES Meadow Name",
+			"Value": "{{i18n: ES Meadow}}"
+		},
+		{
+			"Name": "ES Meadow Name",
+			"Value": "{{ES Meadow Minecart}}",
+			"When": { "ES Meadow Minecart": "{{ES Meadow Minecart}}" }
+		},
+		{//ClearingHouse
+			"Name": "ClearingHouse Name",
+			"Value": "{{i18n: ClearingHouse}}"
+		},
+		{
+			"Name": "ClearingHouse Name",
+			"Value": "{{ClearingHouse Minecart}}",
+			"When": { "ClearingHouse Minecart": "{{ClearingHouse Minecart}}" }
+		},
+		{//Orchard
+			"Name": "Orchard Name",
+			"Value": "{{i18n: Orchard}}"
+		},
+		{
+			"Name": "Orchard Name",
+			"Value": "{{Orchard Minecart}}",
+			"When": { "Orchard Minecart": "{{Orchard Minecart}}" }
+		},
+		//
+		//RidgeSide Village
+		//
+		{//RSV_CableCar_Bottom
+			"Name": "RSV_CableCar_Bottom Name",
+			"Value": "{{i18n: RSV_CableCar_Bottom}}"
+		},
+		{
+			"Name": "RSV_CableCar_Bottom Name",
+			"Value": "{{RSV_CableCar_Bottom Minecart}}",
+			"When": { "RSV_CableCar_Bottom Minecart": "{{RSV_CableCar_Bottom Minecart}}" }
+		},
+		{//RSV_CableCar_Top
+			"Name": "RSV_CableCar_Top Name",
+			"Value": "{{i18n: RSV_CableCar_Top}}"
+		},
+		{
+			"Name": "RSV_CableCar_Top Name",
+			"Value": "{{RSV_CableCar_Top Minecart}}",
+			"When": { "RSV_CableCar_Top Minecart": "{{RSV_CableCar_Top Minecart}}" }
+		},
+		{//RSV_Heaps
+			"Name": "RSV_Heaps Name",
+			"Value": "{{i18n: RSV_Heaps}}"
+		},
+		{
+			"Name": "RSV_Heaps Name",
+			"Value": "{{RSV_Heaps Minecart}}",
+			"When": { "RSV_Heaps Minecart": "{{RSV_Heaps Minecart}}" }
+		},
+		{//RSV_Nightingale
+			"Name": "RSV_Nightingale Name",
+			"Value": "{{i18n: RSV_Nightingale}}"
+		},
+		{
+			"Name": "RSV_Nightingale Name",
+			"Value": "{{RSV_Nightingale Minecart}}",
+			"When": { "RSV_Nightingale Minecart": "{{RSV_Nightingale Minecart}}" }
+		},
+		{//RSV_Greenhouse
+			"Name": "RSV_Greenhouse Name",
+			"Value": "{{i18n: RSV_Greenhouse}}"
+		},
+		{
+			"Name": "RSV_Greenhouse Name",
+			"Value": "{{RSV_Greenhouse Minecart}}",
+			"When": { "RSV_Greenhouse Minecart": "{{RSV_Greenhouse Minecart}}" }
+		},
+		{//RSV_LogCabin
+			"Name": "RSV_LogCabin Name",
+			"Value": "{{i18n: RSV_LogCabin}}"
+		},
+		{
+			"Name": "RSV_LogCabin Name",
+			"Value": "{{RSV_LogCabin Minecart}}",
+			"When": { "RSV_LogCabin Minecart": "{{RSV_LogCabin Minecart}}" }
+		},
+		{//RSV_Hike
+			"Name": "RSV_Hike Name",
+			"Value": "{{i18n: RSV_Hike}}"
+		},
+		{
+			"Name": "RSV_Hike Name",
+			"Value": "{{RSV_Hike Minecart}}",
+			"When": { "RSV_Hike Minecart": "{{RSV_Hike Minecart}}" }
+		},
+		{//RSV_Falls
+			"Name": "RSV_Falls Name",
+			"Value": "{{i18n: RSV_Falls}}"
+		},
+		{
+			"Name": "RSV_Falls Name",
+			"Value": "{{RSV_Falls Minecart}}",
+			"When": { "RSV_Falls Minecart": "{{RSV_Falls Minecart}}" }
+		},
+		{//RSV_Pond
+			"Name": "RSV_Pond Name",
+			"Value": "{{i18n: RSV_Pond}}"
+		},
+		{
+			"Name": "RSV_Pond Name",
+			"Value": "{{RSV_Pond Minecart}}",
+			"When": { "RSV_Pond Minecart": "{{RSV_Pond Minecart}}" }
+		},
+		{//RSV_SummitFarm_East
+			"Name": "RSV_SummitFarm_East Name",
+			"Value": "{{i18n: RSV_SummitFarm_East}}"
+		},
+		{
+			"Name": "RSV_SummitFarm_East Name",
+			"Value": "{{RSV_SummitFarm_East Minecart}}",
+			"When": { "RSV_SummitFarm_East Minecart": "{{RSV_SummitFarm_East Minecart}}" }
+		},
+		{//RSV_SummitFarm_West
+			"Name": "RSV_SummitFarm_West Name",
+			"Value": "{{i18n: RSV_SummitFarm_West}}"
+		},
+		{
+			"Name": "RSV_SummitFarm_West Name",
+			"Value": "{{RSV_SummitFarm_West Minecart}}",
+			"When": { "RSV_SummitFarm_West Minecart": "{{RSV_SummitFarm_West Minecart}}" }
+		},
+		{//RSV_Ridge_East
+			"Name": "RSV_Ridge_East Name",
+			"Value": "{{i18n: RSV_Ridge_East}}"
+		},
+		{
+			"Name": "RSV_Ridge_East Name",
+			"Value": "{{RSV_Ridge_East Minecart}}",
+			"When": { "RSV_Ridge_East Minecart": "{{RSV_Ridge_East Minecart}}" }
+		},
+		{//RSV_Ridge_West
+			"Name": "RSV_Ridge_West Name",
+			"Value": "{{i18n: RSV_Ridge_West}}"
+		},
+		{
+			"Name": "RSV_Ridge_West Name",
+			"Value": "{{RSV_Ridge_West Minecart}}",
+			"When": { "RSV_Ridge_West Minecart": "{{RSV_Ridge_West Minecart}}" }
+		},
+
+		//
+		//Destination lists
+		//
+		{//GingerIsland
+			"Name": "GingerIsland Destinations",
+			"Value": "GingerIsland"
+		},
+		{
+			"Name": "GingerIsland Destinations",
+			"Value": "Default",
+			"When": { "Enable Expa": false }
+		},
+		{//EastScarp
+			"Name": "EastScarp Destinations",
+			"Value": "EastScarp"
+		},
+		{
+			"Name": "EastScarp Destinations",
+			"Value": "Default",
+			"When": { "Enable Expa": false }
+		},
+		{//RidgeSide
+			"Name": "RidgeSide Destinations",
+			"Value": "RidgeSide"
+		},
+		{
+			"Name": "RidgeSide Destinations",
+			"Value": "Default",
+			"When": { "Enable Expa": false }
+		},
+		//
+		//Expa Validation
+		//
+		{
+			"Name": "Expa Valid",
+			"Value": "false"
+		},
+		{
+			"Name": "Expa Valid",
+			"When": { "HasMod": "LemurKat.EastScarpe.CP, Rafseazz.RSVCP" },
+			"Value": "true"
+		},
+		{
+			"Name": "Expa Valid",
+			"When": { "HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.GingerIsland_North, Polydot.PolyCarts.Unlock_Event.GingerIsland_East, Polydot.PolyCarts.Unlock_Event.GingerIsland_South, Polydot.PolyCarts.Unlock_Event.GingerIsland_West" },
+			"Value": "true"
+		},
+		//
+		//Dynamic Messages
+		//
+		{//Finding a Minecart
+			"Name": "find",
+			"Value": "Find"
+		},
+		{
+			"Name": "find",
+			"Value": "Unlock",
+			"When": { "HasFlag": "ccBoilerRoom" }
+		},
+		{
+			"Name": "find",
+			"Value": "Find2",
+			"When": {
+				"HasFlag |contains=ccBoilerRoom": false,
+				"HasMod": "Rafseazz.RSVCP",
+				"HasFlag: hostPlayer": "RSV.FixedMinecart"
+			}
+		},
+		{//Finding a RidgeSide Minecart
+			"Name": "RSV_find",
+			"Value": "Find"
+		},
+		{
+			"Name": "RSV_find",
+			"Value": "Find3",
+			"When": {
+				"HasFlag": "ccBoilerRoom",
+				"HasFlag: hostPlayer |contains=RSV.FixedMinecart": false
+			}
+		},
+		{
+			"Name": "RSV_find",
+			"Value": "Unlock",
+			"When": {
+				"HasFlag: hostPlayer": "RSV.FixedMinecart"
+			}
+		}
+	],
+	"Changes": [
+		//Load tilesheets
+		{
+			"Action": "Load",
+			"Target": "Maps/spring_PolyCarts, Maps/summer_PolyCarts, Maps/fall_PolyCarts, Maps/winter_PolyCarts, Maps/mine_PolyCarts, Maps/mine_desert_PolyCarts, Maps/spring_Expa, Maps/summer_Expa, Maps/fall_Expa, Maps/winter_Expa",
+			"FromFile": "assets/Tilesheets/{{TargetWithoutPath}}.png"
+		},
+		//Includes
+		{//Expa
+			"Action": "Include",
+			"When": {
+				"Expa Valid": true
+			},
+			"FromFile": "content/Expa.json"
+		},
+		{//Farm Carts
+			"Action": "Include",
+			"FromFile": "content/Farm Carts.json"
+		},
+		{//Custom Farms
+			"Action": "Include",
+			"FromFile": "content/Custom Farm Carts.json"
+		},
+		{//Vanilla Carts
+			"Action": "Include",
+			"FromFile": "content/Vanilla Carts.json"
+		},
+		{//East Scarp Carts
+			"Action": "Include",
+			"When": {
+				"HasMod": "LemurKat.EastScarpe.CP"
+			},
+			"FromFile": "content/East Scarp Carts.json"
+		},
+		{//Ridgeside Village Carts
+			"Action": "Include",
+			"When": {
+				"HasMod": "Rafseazz.RSVCP"
+			},
+			"FromFile": "content/Ridgeside Village Carts.json"
+		},
+		{//List Order
+			"Action": "Include",
+			"When": { "HasMod |contains=jibb.minecarts": false },
+			"FromFile": "content/List Order.json"
+		}
+	]
+}

@@ -1,0 +1,991 @@
+{
+	"$schema": "https://smapi.io/schemas/content-patcher.json",
+	"Changes": [
+		//Minecart Farm East Grandpa's Farm
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Custom Farm Grandpa's Farm East EditData",
+			"When": {
+				"Farm East": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Farm_East",
+				"FarmType": "Standard",
+				"HasMod": "flashshifter.GrandpasFarm" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Farm East": {
+					"Id": "Polydot.PolyCarts_Farm_East",
+					"DisplayName": "{{Farm East Name}}",
+					"TargetLocation": "Farm",
+					"TargetTile": { "X": 108, "Y": 39 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Farm",
+			"LogName": "Custom Farm Grandpa's Farm East EditMap",
+			"When": {
+				"Farm East": true,
+				"FarmType": "Standard",
+				"HasMod": "flashshifter.GrandpasFarm" 
+			},
+			"FromFile": "assets/Custom Farms/GrandpasFarm_East1.tmx",
+			"ToArea": { "X": 107, "Y": 31, "Width": 4, "Height": 8 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "107 36 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 108, "Y": 38 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_East"
+					}
+				}
+			]
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Farm",
+			"LogName": "Custom Farm Grandpa's Farm East EditMap",
+			"When": {
+				"Farm East": true,
+				"FarmType": "Standard",
+				"HasMod": "flashshifter.GrandpasFarm" 
+			},
+			"FromFile": "assets/Custom Farms/GrandpasFarm_East2.tmx",
+			"ToArea": { "X": 111, "Y": 31, "Width": 29, "Height": 2 }
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Custom Farm Grandpa's Farm Unlock East",
+			"When": {
+				"Farm East": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Farm_East": false,
+				"FarmType": "Standard",
+				"HasMod": "flashshifter.GrandpasFarm" 
+			},
+			"Target": "Maps/Farm",
+			"MapTiles": [
+				{
+					"Position": { "X": 108, "Y": 38 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_East {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Farm East Name}}}}"
+					}
+				}
+			]
+		},
+		//Minecart Farm West Grandpa's Farm
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Custom Farm Grandpa's Farm West EditData",
+			"When": {
+				"Farm West": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Farm_West",
+				"FarmType": "Standard",
+				"HasMod": "flashshifter.GrandpasFarm" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Farm West": {
+					"Id": "Polydot.PolyCarts_Farm_West",
+					"DisplayName": "{{GrandpasFarm West Name}}",
+					"TargetLocation": "Farm",
+					"TargetTile": { "X": 31, "Y": 60 },
+					"TargetDirection": "left"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Farm",
+			"LogName": "Custom Farm Grandpa's Farm West EditMap",
+			"When": {
+				"Farm West": true,
+				"FarmType": "Standard",
+				"HasMod": "flashshifter.GrandpasFarm" 
+			},
+			"FromFile": "assets/Custom Farms/GrandpasFarm_West.tmx",
+			"ToArea": { "X": 30, "Y": 58, "Width": 2, "Height": 2 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "30 58 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 31, "Y": 58 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_West"
+					}
+				},
+				{
+					"Position": { "X": 31, "Y": 59 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_West"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Custom Farm Grandpa's Farm Unlock West",
+			"When": {
+				"Farm West": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Farm_West": false,
+				"FarmType": "Standard",
+				"HasMod": "flashshifter.GrandpasFarm" 
+			},
+			"Target": "Maps/Farm",
+			"MapTiles": [
+				{
+					"Position": { "X": 31, "Y": 58 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_West {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{GrandpasFarm West Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 31, "Y": 59 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_West {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{GrandpasFarm West Name}}}}"
+					}
+				}
+			]
+		},
+		//Minecart Farm North Grandpa's Farm
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Custom Farm Grandpa's Farm North EditData",
+			"When": {
+				"GrandpasFarm North": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Farm_North",
+				"FarmType": "Standard",
+				"HasMod": "flashshifter.GrandpasFarm" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Farm North": {
+					"Id": "Polydot.PolyCarts_Farm_North",
+					"DisplayName": "{{GrandpasFarm North Name}}",
+					"TargetLocation": "Farm",
+					"TargetTile": { "X": 13, "Y": 16 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Farm",
+			"LogName": "Custom Farm Grandpa's Farm North EditMap",
+			"When": {
+				"GrandpasFarm North": true,
+				"FarmType": "Standard",
+				"HasMod": "flashshifter.GrandpasFarm" 
+			},
+			"FromFile": "assets/Custom Farms/GrandpasFarm_North.tmx",
+			"ToArea": { "X": 13, "Y": 14, "Width": 2, "Height": 3 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "14 16 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 13, "Y": 15 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_North"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Custom Farm Grandpa's Farm Unlock North",
+			"When": {
+				"GrandpasFarm North": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Farm_North": false,
+				"FarmType": "Standard",
+				"HasMod": "flashshifter.GrandpasFarm" 
+			},
+			"Target": "Maps/Farm",
+			"MapTiles": [
+				{
+					"Position": { "X": 13, "Y": 15 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_North {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{GrandpasFarm North Name}}}}"
+					}
+				}
+			]
+		},
+		//General light removal IF2R
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Farm",
+			"LogName": "Custom Farm IF2R Lights Remove",
+			"When": {
+				"FarmType": "Standard",
+				"HasMod": "flashshifter.immersivefarm2remastered"
+			},
+			//Remove Lights
+			"TextOperations": [
+				{
+					"Operation": "RemoveDelimited",
+					"Target": ["MapProperties", "Light"],
+					"Search": "64 14 4",
+					"Delimiter": " "
+				}
+			]
+		},
+		//Minecart Farm North IF2R
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Custom Farm IF2R North EditData",
+			"When": {
+				"IF2R North": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Farm_North",
+				"FarmType": "Standard",
+				"HasMod": "flashshifter.immersivefarm2remastered"
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Farm North": {
+					"Id": "Polydot.PolyCarts_Farm_North",
+					"DisplayName": "{{IF2R North Name}}",
+					"TargetLocation": "Farm",
+					"TargetTile": { "X": 76, "Y": 10 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{//Remove IF2R Cart
+			"Action": "EditMap",
+			"Target": "Maps/Farm",
+			"LogName": "Custom Farm IF2R North Remove",
+			"When": {
+				"FarmType": "Standard",
+				"HasMod": "flashshifter.immersivefarm2remastered"
+			},
+			"FromFile": "assets/Custom Farms/IF2R_North_Remove.tmx",
+			"ToArea": { "X": 74, "Y": 6, "Width": 5, "Height": 7 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "RemoveDelimited",
+					"Target": ["MapProperties", "Light"],
+					"Search": "77 7 4",
+					"Delimiter": " "
+				},
+				{
+					"Operation": "RemoveDelimited",
+					"Target": ["MapProperties", "DayTiles"],
+					"Search": "Buildings 77 7 510",
+					"Delimiter": " "
+				},
+				{
+					"Operation": "RemoveDelimited",
+					"Target": ["MapProperties", "NightTiles"],
+					"Search": "Buildings 77 7 507",
+					"Delimiter": " "
+				}
+			]
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Farm",
+			"LogName": "Custom Farm IF2R North EditMap",
+			"When": {
+				"IF2R North": true,
+				"FarmType": "Standard",
+				"HasMod": "flashshifter.immersivefarm2remastered"
+			},
+			"FromFile": "assets/Custom Farms/IF2R_North.tmx",
+			"ToArea": { "X": 75, "Y": 6, "Width": 3, "Height": 4 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "77 7 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 76, "Y": 9 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_North"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Custom Farm IF2R Unlock North",
+			"When": {
+				"IF2R North": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Farm_North": false,
+				"FarmType": "Standard",
+				"HasMod": "flashshifter.immersivefarm2remastered"
+			},
+			"Target": "Maps/Farm",
+			"MapTiles": [
+				{
+					"Position": { "X": 76, "Y": 9 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_North {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{IF2R North Name}}}}"
+					}
+				}
+			]
+		},
+		//Minecart Farm East IF2R
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Custom Farm IF2R East EditData",
+			"When": {
+				"Farm East": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Farm_East",
+				"FarmType": "Standard",
+				"HasMod": "flashshifter.immersivefarm2remastered"
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Farm East": {
+					"Id": "Polydot.PolyCarts_Farm_East",
+					"DisplayName": "{{Farm East Name}}",
+					"TargetLocation": "Farm",
+					"TargetTile": { "X": 157, "Y": 46 },
+					"TargetDirection": "left"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Farm",
+			"LogName": "Custom Farm IF2R East EditMap",
+			"When": {
+				"Farm East": true,
+				"FarmType": "Standard",
+				"HasMod": "flashshifter.immersivefarm2remastered"
+			},
+			"FromFile": "assets/Custom Farms/IF2R_East.tmx",
+			"ToArea": { "X": 157, "Y": 45, "Width": 6, "Height": 7 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "159 46 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 158, "Y": 46 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_East"
+					}
+				},
+				{
+					"Position": { "X": 158, "Y": 47 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_East"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Custom Farm IF2R Unlock East",
+			"When": {
+				"Farm East": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Farm_East": false,
+				"FarmType": "Standard",
+				"HasMod": "flashshifter.immersivefarm2remastered"
+			},
+			"Target": "Maps/Farm",
+			"MapTiles": [
+				{
+					"Position": { "X": 158, "Y": 46 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_East {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Farm East Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 158, "Y": 47 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_East {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Farm East Name}}}}"
+					}
+				}
+			]
+		},
+		//Minecart Farm South IF2R
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Custom Farm IF2R South EditData",
+			"When": {
+				"IF2R South": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Farm_South",
+				"FarmType": "Standard",
+				"HasMod": "flashshifter.immersivefarm2remastered"
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Farm South": {
+					"Id": "Polydot.PolyCarts_Farm_South",
+					"DisplayName": "{{IF2R South Name}}",
+					"TargetLocation": "Farm",
+					"TargetTile": { "X": 126, "Y": 94 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{//Remove IF2R Cart
+			"Action": "EditMap",
+			"Target": "Maps/Farm",
+			"LogName": "Custom Farm IF2R South Remove",
+			"When": {
+				"FarmType": "Standard",
+				"HasMod": "flashshifter.immersivefarm2remastered"
+			},
+			"FromFile": "assets/Custom Farms/IF2R_South_Remove.tmx",
+			"ToArea": { "X": 121, "Y": 90, "Width": 8, "Height": 5 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "RemoveDelimited",
+					"Target": ["MapProperties", "Light"],
+					"Search": "127 91 4",
+					"Delimiter": " "
+				},
+				{
+					"Operation": "RemoveDelimited",
+					"Target": ["MapProperties", "DayTiles"],
+					"Search": "Buildings 127 91 510",
+					"Delimiter": " "
+				},
+				{
+					"Operation": "RemoveDelimited",
+					"Target": ["MapProperties", "NightTiles"],
+					"Search": "Buildings 127 91 507",
+					"Delimiter": " "
+				}
+			]
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Farm",
+			"LogName": "Custom Farm IF2R South EditMap",
+			"When": {
+				"IF2R South": true,
+				"FarmType": "Standard",
+				"HasMod": "flashshifter.immersivefarm2remastered"
+			},
+			"FromFile": "assets/Custom Farms/IF2R_South.tmx",
+			"ToArea": { "X": 124, "Y": 90, "Width": 4, "Height": 4 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "124 93 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 126, "Y": 93 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_South"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Custom Farm IF2R Unlock South",
+			"When": {
+				"IF2R South": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Farm_South": false,
+				"FarmType": "Standard",
+				"HasMod": "flashshifter.immersivefarm2remastered"
+			},
+			"Target": "Maps/Farm",
+			"MapTiles": [
+				{
+					"Position": { "X": 126, "Y": 93 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_South {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{IF2R South Name}}}}"
+					}
+				}
+			]
+		},
+		//Minecart Farm West IF2R
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Custom Farm IF2R West EditData",
+			"When": {
+				"Farm West": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Farm_West",
+				"FarmType": "Standard",
+				"HasMod": "flashshifter.immersivefarm2remastered"
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Farm West": {
+					"Id": "Polydot.PolyCarts_Farm_West",
+					"DisplayName": "{{IF2R West Name}}",
+					"TargetLocation": "Farm",
+					"TargetTile": { "X": 16, "Y": 41 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{//Remove IF2R Cart
+			"Action": "EditMap",
+			"Target": "Maps/Farm",
+			"LogName": "Custom Farm IF2R West Remove",
+			"When": {
+				"FarmType": "Standard",
+				"HasMod": "flashshifter.immersivefarm2remastered"
+			},
+			"FromFile": "assets/Custom Farms/IF2R_West_Remove.tmx",
+			"ToArea": { "X": 1, "Y": 23, "Width": 7, "Height": 9 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "RemoveDelimited",
+					"Target": ["MapProperties", "Light"],
+					"Search": "5 24 4",
+					"Delimiter": " "
+				},
+				{
+					"Operation": "RemoveDelimited",
+					"Target": ["MapProperties", "DayTiles"],
+					"Search": "Buildings 5 24 510",
+					"Delimiter": " "
+				},
+				{
+					"Operation": "RemoveDelimited",
+					"Target": ["MapProperties", "NightTiles"],
+					"Search": "Buildings 5 24 507",
+					"Delimiter": " "
+				}
+			]
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Farm",
+			"LogName": "Custom Farm IF2R West EditMap",
+			"When": {
+				"Farm West": true,
+				"FarmType": "Standard",
+				"HasMod": "flashshifter.immersivefarm2remastered"
+			},
+			"FromFile": "assets/Custom Farms/IF2R_West.tmx",
+			"ToArea": { "X": 15, "Y": 37, "Width": 3, "Height": 4 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "15 38 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 16, "Y": 40 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_West"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Custom Farm IF2R Unlock West",
+			"When": {
+				"Farm West": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Farm_West": false,
+				"FarmType": "Standard",
+				"HasMod": "flashshifter.immersivefarm2remastered"
+			},
+			"Target": "Maps/Farm",
+			"MapTiles": [
+				{
+					"Position": { "X": 16, "Y": 40 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_West {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{IF2R West Name}}}}"
+					}
+				}
+			]
+		},
+		//Overwrite IF2R Cave Carts
+		{
+			"Action": "EditMap",
+			"Target": "Maps/FarmCave",
+			"LogName": "Custom Farm IF2R Cave",
+			"When": {
+				"FarmType": "Standard",
+				"HasMod": "flashshifter.immersivefarm2remastered"
+			},
+			"FromFile": "assets/Custom Farms/IF2R_Cave.tmx",
+			"ToArea": { "X": 29, "Y": 5, "Width": 5, "Height": 2 },
+			"PatchMode": "Overlay"
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Custom_DeepCave",
+			"LogName": "Custom Farm IF2R DeepCave",
+			"When": {
+				"FarmType": "Standard",
+				"HasMod": "flashshifter.immersivefarm2remastered"
+			},
+			"FromFile": "assets/Custom Farms/IF2R_DeepCave.tmx",
+			"ToArea": { "X": 0, "Y": 3, "Width": 23, "Height": 9 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "14 10 4",
+					"Delimiter": " "
+				}
+			]
+		},
+		//General light removal Frontier
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Farm_FrontierFarm",
+			"LogName": "Custom Farm FF Lights Remove",
+			"When": {
+				"FarmType": "FrontierFarm",
+				"HasMod": "flashshifter.FrontierFarm"
+			},
+			//Remove Lights
+			"TextOperations": [
+				{
+					"Operation": "RemoveDelimited",
+					"Target": ["MapProperties", "DayTiles"],
+					"Search": "Buildings 26 29 510 Buildings 85 21 510 Buildings 145 37 510",
+					"Delimiter": " "
+				},
+				{
+					"Operation": "RemoveDelimited",
+					"Target": ["MapProperties", "NightTiles"],
+					"Search": "Buildings 26 29 507 Buildings 85 21 507 Buildings 145 37 507",
+					"Delimiter": " "
+				}
+			]
+		},
+		//Minecart Farm North Frontier Farm
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Custom Farm Frontier Farm North EditData",
+			"When": {
+				"FrontierFarm North": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Farm_North",
+				"FarmType": "FrontierFarm",
+				"HasMod": "flashshifter.FrontierFarm" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Farm North": {
+					"Id": "Polydot.PolyCarts_Farm_North",
+					"DisplayName": "{{FrontierFarm North Name}}",
+					"TargetLocation": "Farm",
+					"TargetTile": { "X": 82, "Y": 27 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Farm_FrontierFarm",
+			"LogName": "Custom Farm Frontier Farm North EditMap",
+			"When": {
+				"FrontierFarm North": true,
+				"FarmType": "FrontierFarm",
+				"HasMod": "flashshifter.FrontierFarm" 
+			},
+			"FromFile": "assets/Custom Farms/FrontierFarm_North.tmx",
+			"ToArea": { "X": 82, "Y": 20, "Width": 4, "Height": 8 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "84 21 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 82, "Y": 25 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_North"
+					}
+				},
+				{
+					"Position": { "X": 82, "Y": 26 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_North"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Custom Farm Frontier Farm Unlock North",
+			"When": {
+				"FrontierFarm North": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Farm_North": false,
+				"FarmType": "FrontierFarm",
+				"HasMod": "flashshifter.FrontierFarm" 
+			},
+			"Target": "Maps/Farm_FrontierFarm",
+			"MapTiles": [
+				{
+					"Position": { "X": 82, "Y": 25 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_North {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{FrontierFarm North Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 82, "Y": 26 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_North {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{FrontierFarm North Name}}}}"
+					}
+				}
+			]
+		},
+		//Minecart Farm East Frontier Farm
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Custom Farm Frontier Farm East EditData",
+			"When": {
+				"Farm East": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Farm_East",
+				"FarmType": "FrontierFarm",
+				"HasMod": "flashshifter.FrontierFarm" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Farm East": {
+					"Id": "Polydot.PolyCarts_Farm_East",
+					"DisplayName": "{{Farm East Name}}",
+					"TargetLocation": "Farm",
+					"TargetTile": { "X": 123, "Y": 25 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{//Remove Frontier Farm Cart
+			"Action": "EditMap",
+			"Target": "Maps/Farm_FrontierFarm",
+			"LogName": "Custom Farm Frontier Farm East Remove",
+			"When": {
+				"FarmType": "FrontierFarm",
+				"HasMod": "flashshifter.FrontierFarm"
+			},
+			"FromFile": "assets/Custom Farms/FrontierFarm_East_Remove.tmx",
+			"ToArea": { "X": 143, "Y": 36, "Width": 3, "Height": 4 }
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Farm_FrontierFarm",
+			"LogName": "Custom Farm Frontier Farm East EditMap",
+			"When": {
+				"Farm East": true,
+				"FarmType": "FrontierFarm",
+				"HasMod": "flashshifter.FrontierFarm" 
+			},
+			"FromFile": "assets/Custom Farms/FrontierFarm_East.tmx",
+			"ToArea": { "X": 122, "Y": 20, "Width": 19, "Height": 5 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "122 24 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 123, "Y": 23 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_East"
+					}
+				},
+				{
+					"Position": { "X": 123, "Y": 24 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_East"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Custom Farm Frontier Farm Unlock East",
+			"When": {
+				"Farm East": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Farm_East": false,
+				"FarmType": "FrontierFarm",
+				"HasMod": "flashshifter.FrontierFarm" 
+			},
+			"Target": "Maps/Farm_FrontierFarm",
+			"MapTiles": [
+				{
+					"Position": { "X": 123, "Y": 23 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_East {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Farm East Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 123, "Y": 24 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_East {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Farm East Name}}}}"
+					}
+				}
+			]
+		},
+		//Minecart Farm West Frontier Farm
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Custom Farm Frontier Farm West EditData",
+			"When": {
+				"Farm West": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Farm_West",
+				"FarmType": "FrontierFarm",
+				"HasMod": "flashshifter.FrontierFarm" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Farm West": {
+					"Id": "Polydot.PolyCarts_Farm_West",
+					"DisplayName": "{{FrontierFarm West Name}}",
+					"TargetLocation": "Farm",
+					"TargetTile": { "X": 26, "Y": 32 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Farm_FrontierFarm",
+			"LogName": "Custom Farm Frontier Farm West EditMap",
+			"When": {
+				"Farm West": true,
+				"FarmType": "FrontierFarm",
+				"HasMod": "flashshifter.FrontierFarm" 
+			},
+			"FromFile": "assets/Custom Farms/FrontierFarm_West.tmx",
+			"ToArea": { "X": 23, "Y": 28, "Width": 5, "Height": 5 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "25 29 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 25, "Y": 31 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_West"
+					}
+				},
+				{
+					"Position": { "X": 26, "Y": 31 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_West"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Custom Farm Frontier Farm Unlock West",
+			"When": {
+				"Farm West": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Farm_West": false,
+				"FarmType": "FrontierFarm",
+				"HasMod": "flashshifter.FrontierFarm" 
+			},
+			"Target": "Maps/Farm_FrontierFarm",
+			"MapTiles": [
+				{
+					"Position": { "X": 25, "Y": 31 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_West {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{FrontierFarm West Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 26, "Y": 31 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_West {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{FrontierFarm West Name}}}}"
+					}
+				}
+			]
+		},
+	]
+}

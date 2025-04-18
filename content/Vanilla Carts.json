@@ -1,0 +1,3341 @@
+{
+	"$schema": "https://smapi.io/schemas/content-patcher.json",
+	"Changes": [
+		//
+		//Expa Ginger Island
+		//
+		//Minecart GingerIsland Destinations List
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "GingerIsland Add Destinations List",
+			"Entries": {
+				"GingerIsland": {
+					"Destinations": []
+				}
+			}
+		},
+		{//Expa Destination
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Expa Entry Center Ginger Island",
+			"When": {"Enable Expa": true},
+			"TargetField": ["{{GingerIsland Destinations}}", "Destinations"],
+			"Entries": {
+				"Expa": {
+					"Id": "Polydot.PolyCarts_Expa",
+					"DisplayName": "{{i18n: Expa}}",
+					"TargetLocation": "Polydot.PolyCarts_Expa",
+					"TargetTile": { "X": 19, "Y": 19 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{//Add Map
+			"Action": "EditMap",
+			"Target": "Maps/Polydot.PolyCarts_Expa",
+			"LogName": "GingerIsland Expa Map",
+			"When": {
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.GingerIsland_North, Polydot.PolyCarts.Unlock_Event.GingerIsland_East, Polydot.PolyCarts.Unlock_Event.GingerIsland_South, Polydot.PolyCarts.Unlock_Event.GingerIsland_West"
+			},
+			"FromFile": "assets/Expa/GingerIsland.tmx",
+			"ToArea": { "X": 30, "Y": 16, "Width": 7, "Height": 7 },
+			"MapTiles": [
+				{
+					"Position": { "X": 33, "Y": 19 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{GingerIsland Destinations}} Polydot.PolyCarts_Expa"
+					}
+				},
+				{
+					"Position": { "X": 34, "Y": 19 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{GingerIsland Destinations}} Polydot.PolyCarts_Expa"
+					}
+				},
+				{//Ginger Island
+					"Position": { "X": 32, "Y": 21 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MineSign {{i18n: Expacart GingerIsland}}"
+					}
+				}
+			],
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "33 17 4 35 20 4",
+					"Delimiter": " "
+				}
+			]
+		},
+		//Minecart Farm Cave
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Farm Cave EditData",
+			"When": {
+				"Farm Cave": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.FarmCave" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Farm Cave": {
+					"Id": "Polydot.PolyCarts_FarmCave",
+					"DisplayName": "{{Farm Cave Name}}",
+					"TargetLocation": "FarmCave",
+					"TargetTile": { "X": 2, "Y": 7 },
+					"TargetDirection": "right"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/FarmCave",
+			"LogName": "Farm Cave EditMap",
+			"When": {
+				"Farm Cave": true 
+			},
+			"FromFile": "assets/SDV/FarmCave.tmx",
+			"ToArea": { "X": 0, "Y": 1, "Width": 3, "Height": 8 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "1 4 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 1, "Y": 6 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_FarmCave"
+					}
+				},
+				{
+					"Position": { "X": 2, "Y": 6 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_FarmCave"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock Farm Cave",
+			"When": {
+				"Farm Cave": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.FarmCave": false 
+			},
+			"Target": "Maps/FarmCave",
+			"MapTiles": [
+				{
+					"Position": { "X": 1, "Y": 6 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.FarmCave {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Farm Cave Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 2, "Y": 6 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.FarmCave {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Farm Cave Name}}}}"
+					}
+				}
+			]
+		},
+		//SVE Grandpa's Shed
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Grandpa's Shed EditData",
+			"When": {
+				"Grandpa's Shed": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.GrandpasShed",
+				"HasMod": "FlashShifter.StardewValleyExpandedCP" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Grandpa's Shed": {
+					"Id": "Polydot.PolyCarts_GrandpasShed",
+					"DisplayName": "{{Grandpa's Shed Name}}",
+					"TargetLocation": "Custom_GrandpasShedOutside",
+					"TargetTile": { "X": 30, "Y": 26 },
+					"TargetDirection": "up"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Custom_GrandpasShedOutside",
+			"LogName": "Grandpa's Shed EditMap",
+			"When": {
+				"Grandpa's Shed": true 
+			},
+			"FromFile": "assets/SVE/GrandpasShed.tmx",
+			"ToArea": { "X": 30, "Y": 26, "Width": 7, "Height": 4 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "30 28 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 30, "Y": 27 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_GrandpasShed"
+					}
+				},
+				{
+					"Position": { "X": 31, "Y": 27 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_GrandpasShed"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock Grandpa's Shed",
+			"When": {
+				"Grandpa's Shed": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.GrandpasShed": false 
+			},
+			"Target": "Maps/Custom_GrandpasShedOutside",
+			"MapTiles": [
+				{
+					"Position": { "X": 30, "Y": 27 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.GrandpasShed {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Grandpa's Shed Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 31, "Y": 27 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.GrandpasShed {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Grandpa's Shed Name}}}}"
+					}
+				}
+			]
+		},
+		//SVE Old Community Garden
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Old Community Garden EditData",
+			"When": {
+				"Old Community Garden": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Old_Community_Garden",
+				"HasMod": "FlashShifter.StardewValleyExpandedCP" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Old Community Garden": {
+					"Id": "Polydot.PolyCarts_Old_Community_Garden",
+					"DisplayName": "{{Old Community Garden Name}}",
+					"TargetLocation": "Custom_Garden",
+					"TargetTile": { "X": 14, "Y": 17 },
+					"TargetDirection": "right"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Custom_Garden",
+			"LogName": "Old Community Garden EditMap",
+			"When": {
+				"Old Community Garden": true 
+			},
+			"FromFile": "assets/SVE/Old_Community_Garden.tmx",
+			"ToArea": { "X": 0, "Y": 16, "Width": 14, "Height": 2 },
+			"MapTiles": [
+				{
+					"Position": { "X": 13, "Y": 17 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Old_Community_Garden"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock Old Community Garden",
+			"When": {
+				"Old Community Garden": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Old_Community_Garden": false 
+			},
+			"Target": "Maps/Custom_Garden",
+			"MapTiles": [
+				{
+					"Position": { "X": 13, "Y": 17 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Old_Community_Garden {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Old Community Garden Name}}}}"
+					}
+				}
+			]
+		},
+		//Minecart Bus Stop
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Bus Stop Remove Destination",
+			"When": {
+				"Bus Stop": true 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Bus": null
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/BusStop",
+			"LogName": "Bus Stop EditMap",
+			"When": {
+				"Bus Stop": true 
+			},
+			"FromFile": "assets/SDV/BusStop.tmx",
+			"ToArea": { "X": 13, "Y": 0, "Width": 6, "Height": 6 }
+		},
+		{//Smokepuff
+			"Action": "EditImage",
+			"Target": "TileSheets/animations",
+			"LogName": "Bus Stop EditImage smokepuff",
+			"When": {
+				"LocationName": "BusStop",
+				"Bus Stop": true 
+			},
+			"FromFile": "assets/SDV/animations.png",
+			"ToArea": { "X": 0, "Y": 1728, "Width": 640, "Height": 64 },
+			"Update": "OnLocationChange"
+		},
+		//Minecart Town North
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Town North EditData",
+			"When": {
+				"Town North": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Town_North" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Town North": {
+					"Id": "Polydot.PolyCarts_Town_North",
+					"DisplayName": "{{Town North Name}}",
+					"TargetLocation": "Town",
+					"TargetTile": { "X": 46, "Y": 21 },
+					"TargetDirection": "right"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Town",
+			"LogName": "Town North EditMap",
+			"When": {
+				"Town North": true 
+			},
+			"FromFile": "assets/SDV/Town_North.tmx",
+			"ToArea": { "X": 43, "Y": 6, "Width": 6, "Height": 17 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "45 7 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 45, "Y": 20 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Town_North"
+					}
+				},
+				{
+					"Position": { "X": 46, "Y": 20 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Town_North"
+					}
+				}
+			]
+		},
+		{//Unlock + SVE
+			"Action": "EditMap",
+			"LogName": "Unlock Town North",
+			"When": {
+				"Town North": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Town_North": false 
+			},
+			"Target": "Maps/Town",
+			"MapTiles": [
+				{
+					"Position": { "X": 45, "Y": 20 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Town_North {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Town North Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 46, "Y": 20 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Town_North {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Town North Name}}}}"
+					}
+				}
+			]
+		},
+		{//Fair
+			"Action": "EditMap",
+			"Target": "Maps/Town-Fair",
+			"LogName": "Town North EditMap Fair",
+			"When": {
+				"Town North": true 
+			},
+			"FromFile": "assets/SDV/Town_North.tmx",
+			"ToArea": { "X": 43, "Y": 6, "Width": 6, "Height": 17 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "45 7 4",
+					"Delimiter": " "
+				}
+			]
+		},
+		{//Fair2
+			"Action": "EditMap",
+			"Target": "Maps/Town-Fair2",
+			"LogName": "Town North EditMap Fair2",
+			"When": {
+				"Town North": true 
+			},
+			"FromFile": "assets/SDV/Town_North.tmx",
+			"ToArea": { "X": 43, "Y": 6, "Width": 6, "Height": 17 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "45 7 4",
+					"Delimiter": " "
+				}
+			]
+		},
+		{//Halloween
+			"Action": "EditMap",
+			"Target": "Maps/Town-Halloween",
+			"LogName": "Town North EditMap Halloween",
+			"When": {
+				"Town North": true,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false 
+			},
+			"FromFile": "assets/SDV/Town_North_Halloween.tmx",
+			"ToArea": { "X": 43, "Y": 6, "Width": 6, "Height": 17 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "45 7 4",
+					"Delimiter": " "
+				}
+			]
+		},
+		{//Halloween2
+			"Action": "EditMap",
+			"Target": "Maps/Town-Halloween2",
+			"LogName": "Town North EditMap Halloween2",
+			"When": {
+				"Town North": true,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false 
+			},
+			"FromFile": "assets/SDV/Town_North_Halloween2.tmx",
+			"ToArea": { "X": 42, "Y": 6, "Width": 7, "Height": 17 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "45 7 4",
+					"Delimiter": " "
+				},
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "44 9 4",
+					"Delimiter": " "
+				}
+			]
+		},
+		{//SVE
+			"Action": "EditMap",
+			"Target": "Maps/Town",
+			"LogName": "Town North SVE EditMap",
+			"When": {
+				"Town North": true,
+				"HasMod": "FlashShifter.StardewValleyExpandedCP" 
+			},
+			"FromFile": "assets/SVE/Town_North.tmx",
+			"ToArea": { "X": 43, "Y": 17, "Width": 1, "Height": 3 }
+		},
+		{//SVE Fair
+			"Action": "EditMap",
+			"Target": "Maps/Town-Fair",
+			"LogName": "Town North SVE EditMap Fair",
+			"When": {
+				"Town North": true,
+				"HasMod": "FlashShifter.StardewValleyExpandedCP" 
+			},
+			"FromFile": "assets/SVE/Town_Fair_North.tmx",
+			"ToArea": { "X": 43, "Y": 17, "Width": 6, "Height": 6 }
+		},
+		{//SVE Fair2
+			"Action": "EditMap",
+			"Target": "Maps/Town-Fair2",
+			"LogName": "Town North SVE EditMap Fair2",
+			"When": {
+				"Town North": true,
+				"HasMod": "FlashShifter.StardewValleyExpandedCP" 
+			},
+			"FromFile": "assets/SVE/Town_North.tmx",
+			"ToArea": { "X": 43, "Y": 17, "Width": 1, "Height": 3 }
+		},
+		{//SVE Halloween
+			"Action": "EditMap",
+			"Target": "Maps/Town-Halloween",
+			"LogName": "Town North SVE EditMap Halloween",
+			"When": {
+				"Town North": true,
+				"HasMod": "FlashShifter.StardewValleyExpandedCP",
+				"Year": "1, 5, 9, 13, 17, 21, 25, 29, 33, 37, 41, 45, 49, 53, 56, 59, 63, 67, 71, 75, 79, 83, 87, 91, 95, 99" 
+			},
+			"FromFile": "assets/SVE/Town_North_Halloween.tmx",
+			"ToArea": { "X": 43, "Y": 6, "Width": 4, "Height": 15 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "45 7 4",
+					"Delimiter": " "
+				}
+			]
+		},
+		{//SVE Halloween2
+			"Action": "EditMap",
+			"Target": "Maps/Town-Halloween2",
+			"LogName": "Town North SVE EditMap Halloween2",
+			"When": {
+				"Town North": true,
+				"HasMod": "FlashShifter.StardewValleyExpandedCP" 
+			},
+			"FromFile": "assets/SVE/Town_North_Halloween2.tmx",
+			"ToArea": { "X": 42, "Y": 6, "Width": 6, "Height": 16 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "45 7 4",
+					"Delimiter": " "
+				},
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "44 9 4",
+					"Delimiter": " "
+				}
+			]
+		},
+		{//SVE Halloween Secret
+			"Action": "EditMap",
+			"Target": "Maps/Town-Halloween",
+			"LogName": "Town North SVE EditMap Halloween Secret",
+			"When": {
+				"HasMod": "FlashShifter.StardewValleyExpandedCP",
+				"Year": "1, 5, 9, 13, 17, 21, 25, 29, 33, 37, 41, 45, 49, 53, 56, 59, 63, 67, 71, 75, 79, 83, 87, 91, 95, 99" 
+			},
+			"FromFile": "assets/SVE/Town_North_Halloween_Secret.tmx",
+			"ToArea": { "X": 53, "Y": 6, "Width": 9, "Height": 9 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "56 7 4",
+					"Delimiter": " "
+				}
+			]
+		},
+		{//SVE Halloween Secret2
+			"Action": "EditMap",
+			"Target": "Maps/Town-Halloween2",
+			"LogName": "Town North SVE EditMap Halloween Secret2",
+			"When": {
+				"HasMod": "FlashShifter.StardewValleyExpandedCP" 
+			},
+			"FromFile": "assets/SVE/Town_North_Halloween_Secret2.tmx",
+			"ToArea": { "X": 53, "Y": 6, "Width": 9, "Height": 9 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "56 7 4",
+					"Delimiter": " "
+				}
+			]
+		},
+		{//SVE Halloween Secret3
+			"Action": "EditMap",
+			"Target": "Maps/Town-Halloween",
+			"LogName": "Town North SVE EditMap Halloween Secret3",
+			"When": {
+				"HasMod": "FlashShifter.StardewValleyExpandedCP",
+				"Year": "3, 7, 11, 15, 19, 23, 27, 31, 35, 39, 43, 47, 51, 55, 57, 61, 65, 69, 73, 77, 81, 85, 89, 93, 97" 
+			},
+			"FromFile": "assets/SVE/Town_North_Halloween_Secret3.tmx",
+			"ToArea": { "X": 54, "Y": 6, "Width": 8, "Height": 9 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "60 12 4",
+					"Delimiter": " "
+				},
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "54 7 4",
+					"Delimiter": " "
+				}
+			]
+		},
+		//Minecart Town East
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Town East EditData",
+			"When": {
+				"Town East": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Town_East",
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP, LemurKat.EastScarpe.CP": false 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Town East": {
+					"Id": "Polydot.PolyCarts_Town_East",
+					"DisplayName": "{{Town East Name}}",
+					"TargetLocation": "Town",
+					"TargetTile": { "X": 105, "Y": 81 },
+					"TargetDirection": "left"
+				}
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Town East Remove Destination",
+			"When": {
+				"Town East": true 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Town": null
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Town",
+			"LogName": "Town East EditMap",
+			"When": {
+				"Town East": true,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP, LemurKat.EastScarpe.CP": false 
+			},
+			"FromFile": "assets/SDV/Town_East.tmx",
+			"ToArea": { "X": 105, "Y": 70, "Width": 25, "Height": 17 },
+			"MapTiles": [
+				{
+					"Position": { "X": 106, "Y": 81 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Town_East"
+					}
+				},
+				{
+					"Position": { "X": 107, "Y": 81 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Town_East"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock Town East",
+			"When": {
+				"Town East": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Town_East": false,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP, LemurKat.EastScarpe.CP": false 
+			},
+			"Target": "Maps/Town",
+			"MapTiles": [
+				{
+					"Position": { "X": 106, "Y": 81 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Town_East {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Town East Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 107, "Y": 81 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Town_East {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Town East Name}}}}"
+					}
+				}
+			]
+		},
+		{//Smokepuff
+			"Action": "EditImage",
+			"Target": "TileSheets/animations",
+			"LogName": "Town East EditImage smokepuff",
+			"When": {
+				"LocationName": "Town",
+				"Town East": true 
+			},
+			"FromFile": "assets/SDV/animations.png",
+			"ToArea": { "X": 0, "Y": 1728, "Width": 640, "Height": 64 },
+			"Update": "OnLocationChange"
+		},
+		{//SVE
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Town East SVE EditData",
+			"When": {
+				"Town East": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Town_East",
+				"HasMod": "FlashShifter.StardewValleyExpandedCP"
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Town East": {
+					"Id": "Polydot.PolyCarts_Town_East",
+					"DisplayName": "{{Town East Name}}",
+					"TargetLocation": "Town",
+					"TargetTile": { "X": 103, "Y": 81 },
+					"TargetDirection": "left"
+				}
+			}
+		},
+		{//SVE 
+			"Action": "EditMap",
+			"Target": "Maps/Town",
+			"LogName": "Town East SVE EditMap",
+			"When": {
+				"Town East": true,
+				"HasMod": "FlashShifter.StardewValleyExpandedCP"
+			},
+			"FromFile": "assets/SVE/Town_East.tmx",
+			"ToArea": { "X": 103, "Y": 74, "Width": 21, "Height": 18 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "105 79 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 103, "Y": 80 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Town_East"
+					}
+				},
+				{
+					"Position": { "X": 104, "Y": 80 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Town_East"
+					}
+				}
+			]
+		},
+		{//SVE Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock SVE Town East",
+			"When": {
+				"Town East": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Town_East": false,
+				"HasMod": "FlashShifter.StardewValleyExpandedCP"
+			},
+			"Target": "Maps/Town",
+			"MapTiles": [
+				{
+					"Position": { "X": 103, "Y": 80 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Town_East {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Town East Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 104, "Y": 80 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Town_East {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Town East Name}}}}"
+					}
+				}
+			]
+		},
+		//Minecart Town West
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Town West EditData",
+			"When": {
+				"Town West": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Town_West" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Town West": {
+					"Id": "Polydot.PolyCarts_Town_West",
+					"DisplayName": "{{Town West Name}}",
+					"TargetLocation": "Town",
+					"TargetTile": { "X": 6, "Y": 67 },
+					"TargetDirection": "right"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Town",
+			"LogName": "Town West EditMap",
+			"When": {
+				"Town West": true 
+			},
+			"FromFile": "assets/SDV/Town_West.tmx",
+			"ToArea": { "X": 1, "Y": 66, "Width": 5, "Height": 3 },
+			"MapTiles": [
+				{
+					"Position": { "X": 4, "Y": 67 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Town_West"
+					}
+				},
+				{
+					"Position": { "X": 5, "Y": 67 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Town_West"
+					}
+				}
+			]
+		},
+		{//Unlock + SVE
+			"Action": "EditMap",
+			"LogName": "Unlock Town West",
+			"When": {
+				"Town West": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Town_West": false 
+			},
+			"Target": "Maps/Town",
+			"MapTiles": [
+				{
+					"Position": { "X": 4, "Y": 67 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Town_West {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Town West Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 5, "Y": 67 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Town_West {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Town West Name}}}}"
+					}
+				}
+			]
+		},
+		{//Christmas
+			"Action": "EditMap",
+			"Target": "Maps/Town-Christmas",
+			"LogName": "Town West EditMap Christmas",
+			"When": {
+				"Town West": true,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false 
+			},
+			"FromFile": "assets/SDV/Town_West_Christmas.tmx",
+			"ToArea": { "X": 1, "Y": 65, "Width": 6, "Height": 4 }
+		},
+		{//Christmas2
+			"Action": "EditMap",
+			"Target": "Maps/Town-Christmas2",
+			"LogName": "Town West EditMap Christmas2",
+			"When": {
+				"Town West": true,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false 
+			},
+			"FromFile": "assets/SDV/Town_West_Christmas.tmx",
+			"ToArea": { "X": 1, "Y": 65, "Width": 6, "Height": 4 }
+		},
+		{//Egg festival
+			"Action": "EditMap",
+			"Target": "Maps/Town-EggFestival",
+			"LogName": "Town West EditMap Egg festival",
+			"When": {
+				"Town West": true 
+			},
+			"FromFile": "assets/SDV/Town_West_EggFestival.tmx",
+			"ToArea": { "X": 1, "Y": 65, "Width": 6, "Height": 4 }
+		},
+		{//Egg festival2
+			"Action": "EditMap",
+			"Target": "Maps/Town-EggFestival2",
+			"LogName": "Town West EditMap Egg festival2",
+			"When": {
+				"Town West": true 
+			},
+			"FromFile": "assets/SDV/Town_West_EggFestival.tmx",
+			"ToArea": { "X": 1, "Y": 65, "Width": 6, "Height": 4 }
+		},
+		{//Fair
+			"Action": "EditMap",
+			"Target": "Maps/Town-Fair",
+			"LogName": "Town West EditMap Fair",
+			"When": {
+				"Town West": true 
+			},
+			"FromFile": "assets/SDV/Town_West_Fair.tmx",
+			"ToArea": { "X": 1, "Y": 66, "Width": 6, "Height": 3 }
+		},
+		{//Fair2
+			"Action": "EditMap",
+			"Target": "Maps/Town-Fair2",
+			"LogName": "Town West EditMap Fair2",
+			"When": {
+				"Town West": true 
+			},
+			"FromFile": "assets/SDV/Town_West_Fair2.tmx",
+			"ToArea": { "X": 1, "Y": 65, "Width": 6, "Height": 4 }
+		},
+		{//Halloween
+			"Action": "EditMap",
+			"Target": "Maps/Town-Halloween",
+			"LogName": "Town West EditMap Halloween",
+			"When": {
+				"Town West": true,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false 
+			},
+			"FromFile": "assets/SDV/Town_West.tmx",
+			"ToArea": { "X": 1, "Y": 66, "Width": 5, "Height": 3 }
+		},
+		{//Halloween2
+			"Action": "EditMap",
+			"Target": "Maps/Town-Halloween2",
+			"LogName": "Town West EditMap Halloween2",
+			"When": {
+				"Town West": true 
+			},
+			"FromFile": "assets/SDV/Town_West_Halloween2.tmx",
+			"ToArea": { "X": 1, "Y": 64, "Width": 9, "Height": 6 }
+		},
+		{//SVE Fix
+			"Action": "EditMap",
+			"Target": "Maps/Town",
+			"LogName": "Town West SVE EditMap Fix",
+			"When": {
+				"Town West": true,
+				"HasMod": "FlashShifter.StardewValleyExpandedCP" 
+			},
+			"FromFile": "assets/SVE/Town_West.tmx",
+			"ToArea": { "X": 0, "Y": 63, "Width": 3, "Height": 4 }
+		},
+		{//SVE Egg Festival Fix
+			"Action": "EditMap",
+			"Target": "Maps/Town-EggFestival",
+			"LogName": "Town West SVE EditMap Egg festival Fix",
+			"When": {
+				"Town West": true,
+				"HasMod": "FlashShifter.StardewValleyExpandedCP" 
+			},
+			"FromFile": "assets/SVE/Town_West.tmx",
+			"ToArea": { "X": 0, "Y": 63, "Width": 3, "Height": 4 }
+		},
+		{//SVE Egg Festival2 Fix
+			"Action": "EditMap",
+			"Target": "Maps/Town-EggFestival2",
+			"LogName": "Town West SVE EditMap Egg festival2 Fix",
+			"When": {
+				"Town West": true,
+				"HasMod": "FlashShifter.StardewValleyExpandedCP" 
+			},
+			"FromFile": "assets/SVE/Town_West.tmx",
+			"ToArea": { "X": 0, "Y": 63, "Width": 3, "Height": 4 }
+		},
+		{//SVE Fair Fix
+			"Action": "EditMap",
+			"Target": "Maps/Town-Fair",
+			"LogName": "Town West SVE EditMap Fair Fix",
+			"When": {
+				"Town West": true,
+				"HasMod": "FlashShifter.StardewValleyExpandedCP" 
+			},
+			"FromFile": "assets/SVE/Town_West.tmx",
+			"ToArea": { "X": 0, "Y": 63, "Width": 3, "Height": 4 }
+		},
+		{//SVE Fair2 Fix
+			"Action": "EditMap",
+			"Target": "Maps/Town-Fair2",
+			"LogName": "Town West SVE EditMap Fair2 Fix",
+			"When": {
+				"Town West": true,
+				"HasMod": "FlashShifter.StardewValleyExpandedCP" 
+			},
+			"FromFile": "assets/SVE/Town_West.tmx",
+			"ToArea": { "X": 0, "Y": 63, "Width": 3, "Height": 4 }
+		},
+		{//SVE Halloween
+			"Action": "EditMap",
+			"Target": "Maps/Town-Halloween",
+			"LogName": "Town West SVE EditMap Halloween",
+			"When": {
+				"Town West": true,
+				"HasMod": "FlashShifter.StardewValleyExpandedCP" 
+			},
+			"FromFile": "assets/SVE/Town_West_Halloween.tmx",
+			"ToArea": { "X": 1, "Y": 65, "Width": 7, "Height": 4 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "7 67 4",
+					"Delimiter": " "
+				}
+			]
+		},
+		{//SVE Halloween2 Fix
+			"Action": "EditMap",
+			"Target": "Maps/Town-Halloween2",
+			"LogName": "Town West SVE EditMap Halloween2 Fix",
+			"When": {
+				"Town West": true,
+				"HasMod": "FlashShifter.StardewValleyExpandedCP" 
+			},
+			"FromFile": "assets/SVE/Town_West.tmx",
+			"ToArea": { "X": 0, "Y": 63, "Width": 3, "Height": 4 }
+		},
+		//Minecart Beach
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Beach EditData",
+			"When": {
+				"Beach": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Beach" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Beach": {
+					"Id": "Polydot.PolyCarts_Beach",
+					"DisplayName": "{{Beach Name}}",
+					"TargetLocation": "Beach",
+					"TargetTile": { "X": 26, "Y": 3 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Beach",
+			"LogName": "Beach EditMap",
+			"When": {
+				"Beach": true 
+			},
+			"FromFile": "assets/SDV/Beach.tmx",
+			"ToArea": { "X": 23, "Y": 1, "Width": 8, "Height": 5 },
+			"MapTiles": [
+				{
+					"Position": { "X": 25, "Y": 2 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Beach"
+					}
+				},
+				{
+					"Position": { "X": 26, "Y": 2 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Beach"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock Beach",
+			"When": {
+				"Beach": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Beach": false 
+			},
+			"Target": "Maps/Beach",
+			"MapTiles": [
+				{
+					"Position": { "X": 25, "Y": 2 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Beach {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Beach Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 26, "Y": 2 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Beach {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Beach Name}}}}"
+					}
+				}
+			]
+		},
+		{//Squidfest
+			"Action": "EditMap",
+			"Target": "Maps/Beach_SquidFest",
+			"LogName": "Beach EditMap Squidfest",
+			"When": {
+				"Beach": true 
+			},
+			"FromFile": "assets/SDV/Beach_SquidFest.tmx",
+			"ToArea": { "X": 14, "Y": 0, "Width": 2, "Height": 3 }
+		},
+		{//Squidfest_Revert
+			"Action": "EditMap",
+			"Target": "Maps/Beach_SquidFest_Revert",
+			"LogName": "Beach EditMap Squidfest_revert",
+			"When": {
+				"Beach": true 
+			},
+			"FromFile": "assets/SDV/Beach_SquidFest_Revert.tmx",
+			"ToArea": { "X": 12, "Y": 0, "Width": 4, "Height": 3 }
+		},
+		{//Luau
+			"Action": "EditMap",
+			"Target": "Maps/Beach-Luau",
+			"LogName": "Beach EditMap Luau",
+			"When": {
+				"Beach": true 
+			},
+			"FromFile": "assets/SDV/Beach-Luau.tmx",
+			"ToArea": { "X": 23, "Y": 1, "Width": 9, "Height": 7 }
+		},
+		{//Luau2
+			"Action": "EditMap",
+			"Target": "Maps/Beach-Luau2",
+			"LogName": "Beach EditMap Luau2",
+			"When": {
+				"Beach": true 
+			},
+			"FromFile": "assets/SDV/Beach-Luau2.tmx",
+			"ToArea": { "X": 23, "Y": 1, "Width": 8, "Height": 5 }
+		},
+		{//Midnight Jellies
+			"Action": "EditMap",
+			"Target": "Maps/Beach-Jellies",
+			"LogName": "Beach EditMap Midnight Jellies",
+			"When": {
+				"Beach": true 
+			},
+			"FromFile": "assets/SDV/Beach-Jellies.tmx",
+			"ToArea": { "X": 23, "Y": 1, "Width": 8, "Height": 5 }
+		},
+		{//Midnight Jellies2
+			"Action": "EditMap",
+			"Target": "Maps/Beach-Jellies2",
+			"LogName": "Beach EditMap Midnight Jellies 2",
+			"When": {
+				"Beach": true 
+			},
+			"FromFile": "assets/SDV/Beach-Jellies2.tmx",
+			"ToArea": { "X": 23, "Y": 1, "Width": 8, "Height": 5 }
+		},
+		{//NightMarket
+			"Action": "EditMap",
+			"Target": "Maps/Beach-NightMarket",
+			"LogName": "Beach EditMap NightMarket",
+			"When": {
+				"Beach": true 
+			},
+			"FromFile": "assets/SDV/Beach-NightMarket.tmx",
+			"ToArea": { "X": 23, "Y": 1, "Width": 8, "Height": 5 },
+			"MapTiles": [
+				{
+					"Position": { "X": 25, "Y": 2 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Beach"
+					}
+				},
+				{
+					"Position": { "X": 26, "Y": 2 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Beach"
+					}
+				}
+			]
+		},
+		{//Nightmarket Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock Beach Nightmarket",
+			"When": {
+				"Beach": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Beach": false 
+			},
+			"Target": "Maps/Beach",
+			"MapTiles": [
+				{
+					"Position": { "X": 25, "Y": 2 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Beach {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Beach Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 26, "Y": 2 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Beach {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Beach Name}}}}"
+					}
+				}
+			]
+		},
+		//Minecart Mountain North
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Mountain North EditData",
+			"When": {
+				"Mountain North": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Mountain_North" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Mountain North": {
+					"Id": "Polydot.PolyCarts_Mountain_North",
+					"DisplayName": "{{Mountain North Name}}",
+					"TargetLocation": "Mountain",
+					"TargetTile": { "X": 22, "Y": 6 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Mountain",
+			"LogName": "Mountain North EditMap",
+			"When": {
+				"Mountain North": true 
+			},
+			"FromFile": "assets/SDV/Mountain_North.tmx",
+			"ToArea": { "X": 22, "Y": 2, "Width": 3, "Height": 5 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "24 3 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 23, "Y": 6 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Mountain_North"
+					}
+				},
+				{
+					"Position": { "X": 23, "Y": 4 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "Message RIPbush"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock Mountain North",
+			"When": {
+				"Mountain North": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Mountain_North": false 
+			},
+			"Target": "Maps/Mountain",
+			"MapTiles": [
+				{
+					"Position": { "X": 23, "Y": 6 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Mountain_North {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Mountain North Name}}}}"
+					}
+				}
+			]
+		},
+		{//RIPbush
+			"Action": "EditData",
+			"Target": "Strings/StringsFromMaps",
+			"LogName": "Mountain North EditData Secret Message",
+			"When": {
+				"Mountain North": true 
+			},
+			"Entries": {
+				"RIPbush": "{{i18n:RIPbush_L1}}^{{i18n:RIPbush_L2}}^{{i18n:RIPbush_L3}}"
+			}
+		},
+		//Minecart Mountain East
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Mountain East EditData",
+			"When": {
+				"Mountain East": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Mountain_East" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Mountain East": {
+					"Id": "Polydot.PolyCarts_Mountain_East",
+					"DisplayName": "{{Mountain East Name}}",
+					"TargetLocation": "Mountain",
+					"TargetTile": { "X": 125, "Y": 11 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Mountain East Remove Destination",
+			"When": {
+				"Mountain East": true 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Quarry": null
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Mountain",
+			"LogName": "Mountain East EditMap",
+			"When": {
+				"Mountain East": true 
+			},
+			"FromFile": "assets/SDV/Mountain_East.tmx",
+			"ToArea": { "X": 122, "Y": 5, "Width": 6, "Height": 8 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "125 8 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 125, "Y": 10 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Mountain_East"
+					}
+				},
+				{
+					"Position": { "X": 126, "Y": 10 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Mountain_East"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock Mountain East",
+			"When": {
+				"Mountain East": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Mountain_East": false 
+			},
+			"Target": "Maps/Mountain",
+			"MapTiles": [
+				{
+					"Position": { "X": 125, "Y": 10 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Mountain_East {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Mountain East Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 126, "Y": 10 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Mountain_East {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Mountain East Name}}}}"
+					}
+				}
+			]
+		},
+		{//Smokepuff
+			"Action": "EditImage",
+			"Target": "TileSheets/animations",
+			"LogName": "Mountain East EditImage smokepuff",
+			"When": {
+				"LocationName": "Mountain",
+				"Mountain East": true 
+			},
+			"FromFile": "assets/SDV/animations.png",
+			"ToArea": { "X": 0, "Y": 1728, "Width": 640, "Height": 64 },
+			"Update": "OnLocationChange"
+		},
+		//Minecart Mountain West
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Mountain West EditData",
+			"When": {
+				"Mountain West": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Mountain_West" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Mountain West": {
+					"Id": "Polydot.PolyCarts_Mountain_West",
+					"DisplayName": "{{Mountain West Name}}",
+					"TargetLocation": "Mountain",
+					"TargetTile": { "X": 4, "Y": 29 },
+					"TargetDirection": "right"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Mountain",
+			"LogName": "Mountain West EditMap",
+			"When": {
+				"Mountain West": true,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false 
+			},
+			"FromFile": "assets/SDV/Mountain_West.tmx",
+			"ToArea": { "X": 0, "Y": 18, "Width": 8, "Height": 15 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "2 27 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 2, "Y": 29 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Mountain_West"
+					}
+				},
+				{
+					"Position": { "X": 3, "Y": 29 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Mountain_West"
+					}
+				}
+			]
+		},
+		{//SVE
+			"Action": "EditMap",
+			"Target": "Maps/Mountain",
+			"LogName": "Mountain West SVE EditMap",
+			"When": {
+				"Mountain West": true,
+				"HasMod": "FlashShifter.StardewValleyExpandedCP" 
+			},
+			"FromFile": "assets/SVE/Mountain_West.tmx",
+			"ToArea": { "X": 0, "Y": 24, "Width": 4, "Height": 6 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "2 27 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 2, "Y": 29 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Mountain_West"
+					}
+				},
+				{
+					"Position": { "X": 3, "Y": 29 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Mountain_West"
+					}
+				}
+			]
+		},
+		{//Unlock + SVE
+			"Action": "EditMap",
+			"LogName": "Unlock Mountain West",
+			"When": {
+				"Mountain West": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Mountain_West": false 
+			},
+			"Target": "Maps/Mountain",
+			"MapTiles": [
+				{
+					"Position": { "X": 2, "Y": 29 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Mountain_West {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Mountain West Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 3, "Y": 29 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Mountain_West {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Mountain West Name}}}}"
+					}
+				}
+			]
+		},
+		//Minecart Forest North
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Forest North EditData",
+			"When": {
+				"Forest North": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Forest_North",
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Forest North": {
+					"Id": "Polydot.PolyCarts_Forest_North",
+					"DisplayName": "{{Forest North Name}}",
+					"TargetLocation": "Forest",
+					"TargetTile": { "X": 78, "Y": 13 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Forest",
+			"LogName": "Forest North EditMap",
+			"When": {
+				"Forest North": true,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false 
+			},
+			"FromFile": "assets/SDV/Forest_North.tmx",
+			"ToArea": { "X": 75, "Y": 2, "Width": 6, "Height": 11 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "79 9 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 78, "Y": 11 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Forest_North"
+					}
+				},
+				{
+					"Position": { "X": 78, "Y": 12 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Forest_North"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock Forest North",
+			"When": {
+				"Forest North": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Forest_North": false,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false 
+			},
+			"Target": "Maps/Forest",
+			"MapTiles": [
+				{
+					"Position": { "X": 78, "Y": 11 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Forest_North {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Forest North Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 78, "Y": 12 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Forest_North {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Forest North Name}}}}"
+					}
+				}
+			]
+		},
+		{//SVE
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Forest North SVE EditData",
+			"When": {
+				"Forest North": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Forest_North",
+				"HasMod": "FlashShifter.StardewValleyExpandedCP" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Forest North": {
+					"Id": "Polydot.PolyCarts_Forest_North",
+					"DisplayName": "{{Forest North Name}}",
+					"TargetLocation": "Forest",
+					"TargetTile": { "X": 74, "Y": 10 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{//SVE
+			"Action": "EditMap",
+			"Target": "Maps/Forest",
+			"LogName": "Forest North SVE EditMap",
+			"When": {
+				"Forest North": true,
+				"HasMod": "FlashShifter.StardewValleyExpandedCP" 
+			},
+			"FromFile": "assets/SVE/Forest_North.tmx",
+			"ToArea": { "X": 71, "Y": 2, "Width": 8, "Height": 9 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "77 4 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 75, "Y": 9 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Forest_North"
+					}
+				},
+				{
+					"Position": { "X": 75, "Y": 10 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Forest_North"
+					}
+				}
+			]
+		},
+		{//SVE Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock SVE Forest North",
+			"When": {
+				"Forest North": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Forest_North": false,
+				"HasMod": "FlashShifter.StardewValleyExpandedCP" 
+			},
+			"Target": "Maps/Forest",
+			"MapTiles": [
+				{
+					"Position": { "X": 75, "Y": 9 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Forest_North {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Forest North Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 75, "Y": 10 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Forest_North {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Forest North Name}}}}"
+					}
+				}
+			]
+		},
+		//Minecart Forest East
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Forest East EditData",
+			"When": {
+				"Forest East": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Forest_East",
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Forest East": {
+					"Id": "Polydot.PolyCarts_Forest_East",
+					"DisplayName": "{{Forest East Name}}",
+					"TargetLocation": "Forest",
+					"TargetTile": { "X": 109, "Y": 85 },
+					"TargetDirection": "left"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Forest",
+			"LogName": "Forest East EditMap",
+			"When": {
+				"Forest East": true,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false 
+			},
+			"FromFile": "assets/SDV/Forest_East.tmx",
+			"ToArea": { "X": 110, "Y": 80, "Width": 5, "Height": 6 },
+			"MapTiles": [
+				{
+					"Position": { "X": 110, "Y": 85 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Forest_East"
+					}
+				},
+				{
+					"Position": { "X": 111, "Y": 85 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Forest_East"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock Forest East",
+			"When": {
+				"Forest East": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Forest_East": false,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false 
+			},
+			"Target": "Maps/Forest",
+			"MapTiles": [
+				{
+					"Position": { "X": 110, "Y": 85 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Forest_East {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Forest East Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 111, "Y": 85 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Forest_East {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Forest East Name}}}}"
+					}
+				}
+			]
+		},
+		{//SVE
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Forest East SVE EditData",
+			"When": {
+				"Forest East": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Forest_East",
+				"HasMod": "FlashShifter.StardewValleyExpandedCP" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Forest East": {
+					"Id": "Polydot.PolyCarts_Forest_East",
+					"DisplayName": "{{Forest East Name}}",
+					"TargetLocation": "Forest",
+					"TargetTile": { "X": 97, "Y": 73 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{//SVE
+			"Action": "EditMap",
+			"Target": "Maps/Forest",
+			"LogName": "Forest East SVE EditMap",
+			"When": {
+				"Forest East": true,
+				"HasMod": "FlashShifter.StardewValleyExpandedCP" 
+			},
+			"FromFile": "assets/SVE/Forest_East.tmx",
+			"ToArea": { "X": 95, "Y": 69, "Width": 9, "Height": 5 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "98 70 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 97, "Y": 71 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Forest_East"
+					}
+				},
+				{
+					"Position": { "X": 97, "Y": 72 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Forest_East"
+					}
+				}
+			]
+		},
+		{//SVE Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock SVE Forest East",
+			"When": {
+				"Forest East": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Forest_East": false,
+				"HasMod": "FlashShifter.StardewValleyExpandedCP" 
+			},
+			"Target": "Maps/Forest",
+			"MapTiles": [
+				{
+					"Position": { "X": 97, "Y": 71 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Forest_East {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Forest East Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 97, "Y": 72 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Forest_East {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Forest East Name}}}}"
+					}
+				}
+			]
+		},
+		//Minecart Forest West
+		{//Move abigail out of the way of the cart
+			"Action": "EditData",
+			"Target": "Characters/schedules/Abigail",
+			"Fields": {
+				"Sun": {
+					"2": "1300 Forest 15 40 2"}
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Forest West EditData",
+			"When": {
+				"Forest West": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Forest_West" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Forest West": {
+					"Id": "Polydot.PolyCarts_Forest_West",
+					"DisplayName": "{{Forest West Name}}",
+					"TargetLocation": "Forest",
+					"TargetTile": { "X": 15, "Y": 40 },
+					"TargetDirection": "right"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Forest",
+			"LogName": "Forest West EditMap",
+			"When": {
+				"Forest West": true 
+			},
+			"FromFile": "assets/SDV/Forest_West.tmx",
+			"ToArea": { "X": 12, "Y": 37, "Width": 5, "Height": 5 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "15 38 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 14, "Y": 39 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Forest_West"
+					}
+				},
+				{
+					"Position": { "X": 14, "Y": 40 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Forest_West"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock Forest West",
+			"When": {
+				"Forest West": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Forest_West": false 
+			},
+			"Target": "Maps/Forest",
+			"MapTiles": [
+				{
+					"Position": { "X": 14, "Y": 39 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Forest_West {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Forest West Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 14, "Y": 40 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Forest_West {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Forest West Name}}}}"
+					}
+				}
+			]
+		},
+		{//SVE
+			"Action": "EditMap",
+			"Target": "Maps/Forest",
+			"LogName": "Forest West EditMap",
+			"When": {
+				"Forest West": true,
+				"HasMod": "FlashShifter.StardewValleyExpandedCP" 
+			},
+			"FromFile": "assets/SVE/Forest_West.tmx",
+			"ToArea": { "X": 12, "Y": 37, "Width": 5, "Height": 5 }
+		},
+		//Minecart Desert North
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Desert North EditData",
+			"When": {
+				"Desert North": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Desert_North",
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+				"Day |contains=15,16,17": false,
+				"Season": "Spring" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Desert North": {
+					"Id": "Polydot.PolyCarts_Desert_North",
+					"DisplayName": "{{Desert North Name}}",
+					"TargetLocation": "Desert",
+					"TargetTile": { "X": 19, "Y": 9 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Desert North EditData2",
+			"When": {
+				"Desert North": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Desert_North",
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+				"Season": "Summer, Fall, Winter" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Desert North": {
+					"Id": "Polydot.PolyCarts_Desert_North",
+					"DisplayName": "{{Desert North Name}}",
+					"TargetLocation": "Desert",
+					"TargetTile": { "X": 19, "Y": 9 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Desert",
+			"LogName": "Desert North EditMap",
+			"When": {
+				"Desert North": true,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false 
+			},
+			"FromFile": "assets/SDV/Desert_North.tmx",
+			"ToArea": { "X": 16, "Y": 3, "Width": 5, "Height": 6 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "20 6 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 19, "Y": 7 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Desert_North"
+					}
+				},
+				{
+					"Position": { "X": 19, "Y": 8 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Desert_North"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock Desert North",
+			"When": {
+				"Desert North": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Desert_North": false,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false 
+			},
+			"Target": "Maps/Desert",
+			"MapTiles": [
+				{
+					"Position": { "X": 19, "Y": 7 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Desert_North {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Desert North Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 19, "Y": 8 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Desert_North {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Desert North Name}}}}"
+					}
+				}
+			]
+		},
+		{//SVE
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Desert North SVE EditData",
+			"When": {
+				"Desert North": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Desert_North",
+				"HasMod": "FlashShifter.StardewValleyExpandedCP",
+				"Day |contains=15,16,17": false,
+				"Season": "Spring" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Desert North": {
+					"Id": "Polydot.PolyCarts_Desert_North",
+					"DisplayName": "{{Desert South Name}}",
+					"TargetLocation": "Desert",
+					"TargetTile": { "X": 15, "Y": 8 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{//SVE
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Desert North SVE EditData2",
+			"When": {
+				"Desert North": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Desert_North",
+				"HasMod": "FlashShifter.StardewValleyExpandedCP",
+				"Season": "Summer, Fall, Winter" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Desert North": {
+					"Id": "Polydot.PolyCarts_Desert_North",
+					"DisplayName": "{{Desert South Name}}",
+					"TargetLocation": "Desert",
+					"TargetTile": { "X": 15, "Y": 8 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{//SVE
+			"Action": "EditMap",
+			"Target": "Maps/Desert",
+			"LogName": "Desert North SVE EditMap",
+			"When": {
+				"Desert North": true,
+				"HasMod": "FlashShifter.StardewValleyExpandedCP" 
+			},
+			"FromFile": "assets/SVE/Desert_North.tmx",
+			"ToArea": { "X": 14, "Y": 3, "Width": 3, "Height": 5 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "16 4 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 15, "Y": 6 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Desert_North"
+					}
+				},
+				{
+					"Position": { "X": 15, "Y": 7 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Desert_North"
+					}
+				}
+			]
+		},
+		{//SVE Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock SVE Desert South",
+			"When": {
+				"Desert South": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Desert_North": false,
+				"HasMod": "FlashShifter.StardewValleyExpandedCP" 
+			},
+			"Target": "Maps/Desert",
+			"MapTiles": [
+				{
+					"Position": { "X": 15, "Y": 6 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Desert_North {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Desert South Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 15, "Y": 7 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Desert_North {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Desert South Name}}}}"
+					}
+				}
+			]
+		},
+		//Minecart Desert South
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Desert South EditData",
+			"When": {
+				"Desert South": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Desert_South",
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+				"Day |contains=15,16,17": false,
+				"Season": "Spring" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Desert South": {
+					"Id": "Polydot.PolyCarts_Desert_South",
+					"DisplayName": "{{Desert South Name}}",
+					"TargetLocation": "Desert",
+					"TargetTile": { "X": 11, "Y": 42 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Desert South EditData2",
+			"When": {
+				"Desert South": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Desert_South",
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false,
+				"Season": "Summer, Fall, Winter" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Desert South": {
+					"Id": "Polydot.PolyCarts_Desert_South",
+					"DisplayName": "{{Desert South Name}}",
+					"TargetLocation": "Desert",
+					"TargetTile": { "X": 11, "Y": 42 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Desert",
+			"LogName": "Desert South EditMap",
+			"When": {
+				"Desert South": true,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false 
+			},
+			"FromFile": "assets/SDV/Desert_South.tmx",
+			"ToArea": { "X": 9, "Y": 37, "Width": 3, "Height": 7 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "11 40 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 10, "Y": 41 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Desert_South"
+					}
+				},
+				{
+					"Position": { "X": 10, "Y": 42 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Desert_South"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock Desert South",
+			"When": {
+				"Desert South": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Desert_South": false,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false 
+			},
+			"Target": "Maps/Desert",
+			"MapTiles": [
+				{
+					"Position": { "X": 10, "Y": 41 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Desert_South {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Desert South Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 10, "Y": 42 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Desert_South {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Desert South Name}}}}"
+					}
+				}
+			]
+		},
+		{//Festival
+			"Action": "EditMap",
+			"Target": "Maps/Desert-Festival",
+			"LogName": "Desert Festival South EditMap",
+			"When": {
+				"Desert South": true,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false 
+			},
+			"FromFile": "assets/SDV/Desert_Festival_South.tmx",
+			"ToArea": { "X": 9, "Y": 37, "Width": 3, "Height": 7 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "11 40 4",
+					"Delimiter": " "
+				}
+			]
+		},
+		{//SVE
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Desert South SVE EditData",
+			"When": {
+				"Desert South": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Desert_South",
+				"HasMod": "FlashShifter.StardewValleyExpandedCP",
+				"Day |contains=15,16,17": false,
+				"Season": "Spring" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Desert South": {
+					"Id": "Polydot.PolyCarts_Desert_South",
+					"DisplayName": "{{Desert North Name}}",
+					"TargetLocation": "Desert",
+					"TargetTile": { "X": 37, "Y": 65 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{//SVE
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Desert South SVE EditData2",
+			"When": {
+				"Desert South": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Desert_South",
+				"HasMod": "FlashShifter.StardewValleyExpandedCP",
+				"Season": "Summer, Fall, Winter" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Desert South": {
+					"Id": "Polydot.PolyCarts_Desert_South",
+					"DisplayName": "{{Desert North Name}}",
+					"TargetLocation": "Desert",
+					"TargetTile": { "X": 37, "Y": 65 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{//SVE
+			"Action": "EditMap",
+			"Target": "Maps/Desert",
+			"LogName": "Desert South SVE EditMap",
+			"When": {
+				"Desert South": true,
+				"HasMod": "FlashShifter.StardewValleyExpandedCP" 
+			},
+			"FromFile": "assets/SVE/Desert_South.tmx",
+			"ToArea": { "X": 33, "Y": 60, "Width": 6, "Height": 5 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "33 61 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 37, "Y": 64 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Desert_South"
+					}
+				},
+				{
+					"Position": { "X": 38, "Y": 64 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Desert_South"
+					}
+				}
+			]
+		},
+		{//SVE Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock SVE Desert North",
+			"When": {
+				"Desert North": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Desert_South": false,
+				"HasMod": "FlashShifter.StardewValleyExpandedCP" 
+			},
+			"Target": "Maps/Desert",
+			"MapTiles": [
+				{
+					"Position": { "X": 37, "Y": 64 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Desert_South {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Desert North Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 38, "Y": 64 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Desert_South {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Desert North Name}}}}"
+					}
+				}
+			]
+		},
+		//Minecart Railroad
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Railroad EditData",
+			"When": {
+				"Railroad": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Railroad",
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Railroad": {
+					"Id": "Polydot.PolyCarts_Railroad",
+					"DisplayName": "{{Railroad Name}}",
+					"TargetLocation": "Railroad",
+					"TargetTile": { "X": 3, "Y": 58 },
+					"TargetDirection": "right"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Railroad",
+			"LogName": "Railroad EditMap",
+			"When": {
+				"Railroad": true,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false 
+			},
+			"FromFile": "assets/SDV/Railroad.tmx",
+			"ToArea": { "X": 0, "Y": 50, "Width": 9, "Height": 11 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "2 55 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 2, "Y": 57 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Railroad"
+					}
+				},
+				{
+					"Position": { "X": 3, "Y": 57 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Railroad"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock Railroad",
+			"When": {
+				"Railroad": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Railroad": false,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false 
+			},
+			"Target": "Maps/Railroad",
+			"MapTiles": [
+				{
+					"Position": { "X": 2, "Y": 57 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Railroad {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Railroad Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 3, "Y": 57 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Railroad {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Railroad Name}}}}"
+					}
+				}
+			]
+		},
+		{//SVE
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Railroad SVE EditData",
+			"When": {
+				"Railroad": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Railroad",
+				"HasMod": "FlashShifter.StardewValleyExpandedCP" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Railroad": {
+					"Id": "Polydot.PolyCarts_Railroad",
+					"DisplayName": "{{Railroad Name}}",
+					"TargetLocation": "Railroad",
+					"TargetTile": { "X": 4, "Y": 58 },
+					"TargetDirection": "right"
+				}
+			}
+		},
+		{//SVE
+			"Action": "EditMap",
+			"Target": "Maps/Railroad",
+			"LogName": "Railroad SVE EditMap",
+			"When": {
+				"Railroad": true,
+				"HasMod": "FlashShifter.StardewValleyExpandedCP" 
+			},
+			"FromFile": "assets/SVE/Railroad.tmx",
+			"ToArea": { "X": 0, "Y": 51, "Width": 7, "Height": 11 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "2 56 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 2, "Y": 58 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Railroad"
+					}
+				},
+				{
+					"Position": { "X": 3, "Y": 58 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Railroad"
+					}
+				}
+			]
+		},
+		{//SVE Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock SVE Railroad",
+			"When": {
+				"Railroad": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Railroad": false,
+				"HasMod": "FlashShifter.StardewValleyExpandedCP" 
+			},
+			"Target": "Maps/Railroad",
+			"MapTiles": [
+				{
+					"Position": { "X": 2, "Y": 58 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Railroad {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Railroad Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 3, "Y": 58 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Railroad {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Railroad Name}}}}"
+					}
+				}
+			]
+		},
+		//Minecart Secret Woods
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Secret Woods EditData",
+			"When": {
+				"Secret Woods": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Secret_Woods",
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Secret Woods": {
+					"Id": "Polydot.PolyCarts_Secret_Woods",
+					"DisplayName": "{{Secret Woods Name}}",
+					"TargetLocation": "Woods",
+					"TargetTile": { "X": 38, "Y": 12 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Woods",
+			"LogName": "Secret Woods EditMap",
+			"When": {
+				"Secret Woods": true,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false 
+			},
+			"FromFile": "assets/SDV/Secret_Woods.tmx",
+			"ToArea": { "X": 35, "Y": 5, "Width": 6, "Height": 9 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "36 12 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 38, "Y": 11 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Secret_Woods"
+					}
+				},
+				{
+					"Position": { "X": 39, "Y": 11 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Secret_Woods"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock Secret Woods",
+			"When": {
+				"Secret Woods": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Secret_Woods": false,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false 
+			},
+			"Target": "Maps/Woods",
+			"MapTiles": [
+				{
+					"Position": { "X": 38, "Y": 11 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Secret_Woods {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Secret Woods Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 39, "Y": 11 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Secret_Woods {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Secret Woods Name}}}}"
+					}
+				}
+			]
+		},
+		{//SVE
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Secret Woods SVE EditData",
+			"When": {
+				"Secret Woods": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Secret_Woods",
+				"HasMod": "FlashShifter.StardewValleyExpandedCP" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Secret Woods": {
+					"Id": "Polydot.PolyCarts_Secret_Woods",
+					"DisplayName": "{{Secret Woods Name}}",
+					"TargetLocation": "Woods",
+					"TargetTile": { "X": 57, "Y": 44 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{//SVE
+			"Action": "EditMap",
+			"Target": "Maps/Woods",
+			"LogName": "Secret Woods SVE EditMap",
+			"When": {
+				"Secret Woods": true,
+				"HasMod": "FlashShifter.StardewValleyExpandedCP" 
+			},
+			"FromFile": "assets/SVE/Secret_Woods.tmx",
+			"ToArea": { "X": 55, "Y": 39, "Width": 4, "Height": 5 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "55 40 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 57, "Y": 43 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Secret_Woods"
+					}
+				},
+				{
+					"Position": { "X": 58, "Y": 43 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Secret_Woods"
+					}
+				}
+			]
+		},
+		{//SVE Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock SVE Secret Woods",
+			"When": {
+				"Secret Woods": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Secret_Woods": false,
+				"HasMod": "FlashShifter.StardewValleyExpandedCP" 
+			},
+			"Target": "Maps/Woods",
+			"MapTiles": [
+				{
+					"Position": { "X": 57, "Y": 43 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Secret_Woods {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Secret Woods Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 58, "Y": 43 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Secret_Woods {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Secret Woods Name}}}}"
+					}
+				}
+			]
+		},
+		//Minecart GingerIsland North
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "GingerIsland North EditData",
+			"When": {
+				"GingerIsland North": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.GingerIsland_North"
+			},
+			"TargetField": ["{{GingerIsland Destinations}}", "Destinations"],
+			"Entries": {
+				"GingerIsland North": {
+					"Id": "Polydot.PolyCarts_GingerIsland_North",
+					"DisplayName": "{{GingerIsland North Name}}",
+					"TargetLocation": "IslandNorth",
+					"TargetTile": { "X": 15, "Y": 63 },
+					"TargetDirection": "up"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Island_N",
+			"LogName": "GingerIsland North EditMap",
+			"When": {
+				"GingerIsland North": true 
+			},
+			"FromFile": "assets/SDV/GingerIsland_North.tmx",
+			"ToArea": { "X": 15, "Y": 64, "Width": 3, "Height": 3 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "16 66 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 15, "Y": 64 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{GingerIsland Destinations}} Polydot.PolyCarts_GingerIsland_North"
+					}
+				},
+				{
+					"Position": { "X": 15, "Y": 65 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{GingerIsland Destinations}} Polydot.PolyCarts_GingerIsland_North"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock GingerIsland North",
+			"When": {
+				"GingerIsland North": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.GingerIsland_North": false 
+			},
+			"Target": "Maps/Island_N",
+			"MapTiles": [
+				{
+					"Position": { "X": 15, "Y": 64 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.GingerIsland_North {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{GingerIsland North Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 15, "Y": 65 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.GingerIsland_North {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{GingerIsland North Name}}}}"
+					}
+				}
+			]
+		},
+		//Minecart GingerIsland East
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "GingerIsland East EditData",
+			"When": {
+				"GingerIsland East": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.GingerIsland_East"
+			},
+			"TargetField": ["{{GingerIsland Destinations}}", "Destinations"],
+			"Entries": {
+				"GingerIsland East": {
+					"Id": "Polydot.PolyCarts_GingerIsland_East",
+					"DisplayName": "{{GingerIsland East Name}}",
+					"TargetLocation": "IslandEast",
+					"TargetTile": { "X": 13, "Y": 40 },
+					"TargetDirection": "right"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Island_E",
+			"LogName": "GingerIsland East EditMap",
+			"When": {
+				"GingerIsland East": true 
+			},
+			"FromFile": "assets/SDV/GingerIsland_East.tmx",
+			"ToArea": { "X": 10, "Y": 38, "Width": 4, "Height": 5 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "11 42 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 12, "Y": 40 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{GingerIsland Destinations}} Polydot.PolyCarts_GingerIsland_East"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock GingerIsland East",
+			"When": {
+				"GingerIsland East": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.GingerIsland_East": false 
+			},
+			"Target": "Maps/Island_E",
+			"MapTiles": [
+				{
+					"Position": { "X": 12, "Y": 40 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.GingerIsland_East {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{GingerIsland East Name}}}}"
+					}
+				}
+			]
+		},
+		//Minecart GingerIsland South
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "GingerIsland South EditData",
+			"When": {
+				"GingerIsland South": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.GingerIsland_South"
+			},
+			"TargetField": ["{{GingerIsland Destinations}}", "Destinations"],
+			"Entries": {
+				"GingerIsland South": {
+					"Id": "Polydot.PolyCarts_GingerIsland_South",
+					"DisplayName": "{{GingerIsland South Name}}",
+					"TargetLocation": "IslandSouth",
+					"TargetTile": { "X": 20, "Y": 7 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Island_S",
+			"LogName": "GingerIsland South EditMap",
+			"When": {
+				"GingerIsland South": true 
+			},
+			"FromFile": "assets/SDV/GingerIsland_South.tmx",
+			"ToArea": { "X": 20, "Y": 3, "Width": 3, "Height": 5 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "22 3 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 21, "Y": 6 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{GingerIsland Destinations}} Polydot.PolyCarts_GingerIsland_South"
+					}
+				},
+				{
+					"Position": { "X": 21, "Y": 7 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{GingerIsland Destinations}} Polydot.PolyCarts_GingerIsland_South"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock GingerIsland South",
+			"When": {
+				"GingerIsland South": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.GingerIsland_South": false 
+			},
+			"Target": "Maps/Island_S",
+			"MapTiles": [
+				{
+					"Position": { "X": 21, "Y": 6 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.GingerIsland_South {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{GingerIsland South Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 21, "Y": 7 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.GingerIsland_South {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{GingerIsland South Name}}}}"
+					}
+				}
+			]
+		},
+		//Minecart GingerIsland West
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "GingerIsland West EditData",
+			"When": {
+				"GingerIsland West": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.GingerIsland_West"
+			},
+			"TargetField": ["{{GingerIsland Destinations}}", "Destinations"],
+			"Entries": {
+				"GingerIsland West": {
+					"Id": "Polydot.PolyCarts_GingerIsland_West",
+					"DisplayName": "{{GingerIsland West Name}}",
+					"TargetLocation": "IslandWest",
+					"TargetTile": { "X": 59, "Y": 46 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Island_W",
+			"LogName": "GingerIsland West EditMap",
+			"When": {
+				"GingerIsland West": true 
+			},
+			"FromFile": "assets/SDV/GingerIsland_West.tmx",
+			"ToArea": { "X": 55, "Y": 42, "Width": 6, "Height": 4 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "58 43 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 59, "Y": 44 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{GingerIsland Destinations}} Polydot.PolyCarts_GingerIsland_West"
+					}
+				},
+				{
+					"Position": { "X": 59, "Y": 45 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{GingerIsland Destinations}} Polydot.PolyCarts_GingerIsland_West"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock GingerIsland West",
+			"When": {
+				"GingerIsland West": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.GingerIsland_West": false 
+			},
+			"Target": "Maps/Island_W",
+			"MapTiles": [
+				{
+					"Position": { "X": 59, "Y": 44 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.GingerIsland_West {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{GingerIsland West Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 59, "Y": 45 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.GingerIsland_West {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{GingerIsland West Name}}}}"
+					}
+				}
+			]
+		},
+		//Minecart ForestWest North
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "ForestWest North EditData",
+			"When": {
+				"ForestWest North": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.ForestWest_North",
+				"HasMod": "FlashShifter.StardewValleyExpandedCP" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"ForestWest North": {
+					"Id": "Polydot.PolyCarts_ForestWest_North",
+					"DisplayName": "{{ForestWest North Name}}",
+					"TargetLocation": "Custom_ForestWest",
+					"TargetTile": { "X": 47, "Y": 14 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Custom_ForestWest",
+			"LogName": "ForestWest North EditMap",
+			"When": {
+				"ForestWest North": true 
+			},
+			"FromFile": "assets/SVE/ForestWest_North.tmx",
+			"ToArea": { "X": 46, "Y": 10, "Width": 3, "Height": 4 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "48 11 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 47, "Y": 12 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_ForestWest_North"
+					}
+				},
+				{
+					"Position": { "X": 47, "Y": 13 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_ForestWest_North"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock Western Forest North",
+			"When": {
+				"ForestWest North": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.ForestWest_North": false 
+			},
+			"Target": "Maps/Custom_ForestWest",
+			"MapTiles": [
+				{
+					"Position": { "X": 47, "Y": 12 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.ForestWest_North {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{ForestWest North Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 47, "Y": 13 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.ForestWest_North {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{ForestWest North Name}}}}"
+					}
+				}
+			]
+		},
+		//Minecart ForestWest East
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "ForestWest East EditData",
+			"When": {
+				"ForestWest East": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.ForestWest_East",
+				"HasMod": "FlashShifter.StardewValleyExpandedCP" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"ForestWest East": {
+					"Id": "Polydot.PolyCarts_ForestWest_East",
+					"DisplayName": "{{ForestWest East Name}}",
+					"TargetLocation": "Custom_ForestWest",
+					"TargetTile": { "X": 136, "Y": 83 },
+					"TargetDirection": "left"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Custom_ForestWest",
+			"LogName": "ForestWest East EditMap",
+			"When": {
+				"ForestWest East": true 
+			},
+			"FromFile": "assets/SVE/ForestWest_East.tmx",
+			"ToArea": { "X": 137, "Y": 81, "Width": 9, "Height": 3 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "142 82 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 137, "Y": 83 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_ForestWest_East"
+					}
+				},
+				{
+					"Position": { "X": 138, "Y": 83 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_ForestWest_East"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock Western Forest East",
+			"When": {
+				"ForestWest East": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.ForestWest_East": false 
+			},
+			"Target": "Maps/Custom_ForestWest",
+			"MapTiles": [
+				{
+					"Position": { "X": 137, "Y": 83 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.ForestWest_East {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{ForestWest East Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 138, "Y": 83 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.ForestWest_East {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{ForestWest East Name}}}}"
+					}
+				}
+			]
+		},
+		//Minecart ForestWest South
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "ForestWest South EditData",
+			"When": {
+				"ForestWest South": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.ForestWest_South",
+				"HasMod": "FlashShifter.StardewValleyExpandedCP" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"ForestWest South": {
+					"Id": "Polydot.PolyCarts_ForestWest_South",
+					"DisplayName": "{{ForestWest South Name}}",
+					"TargetLocation": "Custom_ForestWest",
+					"TargetTile": { "X": 49, "Y": 148 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Custom_ForestWest",
+			"LogName": "ForestWest South EditMap",
+			"When": {
+				"ForestWest South": true 
+			},
+			"FromFile": "assets/SVE/ForestWest_South.tmx",
+			"ToArea": { "X": 49, "Y": 145, "Width": 2, "Height": 4 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "50 147 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 49, "Y": 147 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_ForestWest_South"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock Western Forest South",
+			"When": {
+				"ForestWest South": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.ForestWest_South": false 
+			},
+			"Target": "Maps/Custom_ForestWest",
+			"MapTiles": [
+				{
+					"Position": { "X": 49, "Y": 147 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.ForestWest_South {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{ForestWest South Name}}}}"
+					}
+				}
+			]
+		},
+		//Minecart ForestWest West
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "ForestWest West EditData",
+			"When": {
+				"ForestWest West": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.ForestWest_West",
+				"HasMod": "FlashShifter.StardewValleyExpandedCP" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"ForestWest West": {
+					"Id": "Polydot.PolyCarts_ForestWest_West",
+					"DisplayName": "{{ForestWest West Name}}",
+					"TargetLocation": "Custom_ForestWest",
+					"TargetTile": { "X": 13, "Y": 82 },
+					"TargetDirection": "right"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Custom_ForestWest",
+			"LogName": "ForestWest West EditMap",
+			"When": {
+				"ForestWest West": true 
+			},
+			"FromFile": "assets/SVE/ForestWest_West.tmx",
+			"ToArea": { "X": 7, "Y": 79, "Width": 15, "Height": 5 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "13 81 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 12, "Y": 82 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_ForestWest_West"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock Western Forest West",
+			"When": {
+				"ForestWest West": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.ForestWest_West": false 
+			},
+			"Target": "Maps/Custom_ForestWest",
+			"MapTiles": [
+				{
+					"Position": { "X": 12, "Y": 82 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.ForestWest_West {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{ForestWest West Name}}}}"
+					}
+				}
+			]
+		}
+	]
+}

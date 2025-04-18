@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="3" height="8" tilewidth="16" tileheight="16" infinite="0" nextlayerid="10" nextobjectid="1">
+  <tileset firstgid="1" name="cave" tilewidth="16" tileheight="16" tilecount="288" columns="16">
+    <image source="Mines/mine" width="256" height="288" />
+  </tileset>
+  <tileset firstgid="289" name="paths" tilewidth="16" tileheight="16" tilecount="64" columns="4">
+    <image source="paths" width="64" height="256" />
+  </tileset>
+  <tileset firstgid="353" name="PolyCarts" tilewidth="16" tileheight="16" tilecount="32" columns="8">
+    <image source="mine_PolyCarts" width="128" height="64" />
+  </tileset>
+  <layer id="1" name="Back" width="3" height="8">
+    <data encoding="csv">
+      139,139,139, 139,139,139, 139,139,219, 219,219,219, 139,235,235, 139,139,139, 139,139,139, 139,139,139
+    </data>
+  </layer>
+  <layer id="9" name="Back2" width="3" height="8">
+    <data encoding="csv">
+      0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,356,357, 0,0,0, 0,0,0
+    </data>
+  </layer>
+  <layer id="2" name="Buildings" width="3" height="8">
+    <data encoding="csv">
+      96,130,86, 86,87,99, 101,103,115, 117,119,134, 133,135,0, 214,378,379, 0,233,0, 0,165,0
+    </data>
+  </layer>
+  <layer id="3" name="Paths" width="3" height="8">
+    <data encoding="csv">
+      0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0, 0,0,0
+    </data>
+  </layer>
+  <layer id="4" name="Front" width="3" height="8">
+    <data encoding="csv">
+      0,0,0, 0,0,0, 0,0,0, 0,98,0, 0,370,371, 0,217,0, 78,0,0, 78,0,0
+    </data>
+  </layer>
+  <objectgroup id="5" name="Back" />
+  <objectgroup id="6" name="Buildings" />
+  <objectgroup id="7" name="Paths" />
+  <objectgroup id="8" name="Front" />
+</map>

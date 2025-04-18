@@ -1,0 +1,154 @@
+{
+	"$schema": "https://smapi.io/schemas/content-patcher.json",
+	"Changes": [
+		//
+		//Load Map
+		//
+		{
+			"Action": "Load",
+			"LogName": "Location Load Expa",
+			"Target": "Maps/Polydot.PolyCarts_Expa",
+			"FromFile": "assets/Expa/Expa.tmx"
+		},
+		{
+			"Action": "EditData",
+			"LogName": "Location EditData Expa",
+			"Target": "Data/Locations",
+			"Entries": {
+				"Polydot.PolyCarts_Expa": {
+					"DisplayName": "Expa",
+					"DefaultArrivalTile": {
+						"X": 19,
+						"Y": 19
+					},
+					"CreateOnLoad": {
+						"MapPath": "Maps\\Polydot.PolyCarts_Expa"
+					},
+					"Music": [
+						{
+							"Track": "woodsTheme"
+						}
+					]
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"LogName": "Location Light Expa",
+			"Target": "Maps/Polydot.PolyCarts_Expa",
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "19 19 8 16 8 5 22 8 5 16 5 2 22 5 2",
+					"Delimiter": " "
+				}
+			]
+		},
+		//
+		//The Rest
+		//
+		{//Add Signs
+			"Action": "EditMap",
+			"LogName": "Expa Signs",
+			"Target": "Maps/Polydot.PolyCarts_Expa",
+			"MapTiles": [
+				{
+					//Pelican Town
+					"Position": { "X": 21, "Y": 5 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MineSign {{i18n: Expacart Pelican Town}}"
+					}
+				},
+				{
+					//Ginger Island
+					"Position": { "X": 32, "Y": 21 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MineSign {{i18n: Expacart GingerIsland Rail}}"
+					}
+				},
+				{
+					//East Scarp
+					"Position": { "X": 31, "Y": 10 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MineSign {{i18n: Expacart East Scarp Rail}}"
+					}
+				},
+				{
+					//RidgeSide Village
+					"Position": { "X": 10, "Y": 7 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MineSign {{i18n: Expacart RidgeSide Village Rail}}"
+					}
+				}
+			]
+		},
+		{//Add Expa destination to Default
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Expa Entry Center Default",
+			"When": { "Enable Expa": true },
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Expa": {
+					"Id": "Polydot.PolyCarts_Expa",
+					"DisplayName": "{{i18n: Expa}}",
+					"TargetLocation": "Polydot.PolyCarts_Expa",
+					"TargetTile": { "X": 19, "Y": 19 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{//Exit Minecart
+			"Action": "EditMap",
+			"LogName": "Expa Exit Pelican Town",
+			"Target": "Maps/Polydot.PolyCarts_Expa",
+			"MapTiles": [
+				{
+					"Position": { "X": 19, "Y": 6 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Expa"
+					}
+				},
+				{
+					"Position": { "X": 19, "Y": 7 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Expa"
+					}
+				}
+			]
+		},
+		{//Add CJB Cheats Menu Section
+			"Action": "EditData",
+			"When": { "HasMod": "CJBok.CheatsMenu" },
+			"Target": "Mods/CJBok.CheatsMenu/WarpSections",
+			"Entries": {
+				"{{ModId}}_Expa": {
+					"Id": "{{ModId}}_Expa",
+					"DisplayName": "{{i18n: Expa}}"
+				}
+			}
+		},
+		{//Add CJB Cheats Menu Warp
+			"Action": "EditData",
+			"When": { "HasMod": "CJBok.CheatsMenu" },
+			"Target": "Mods/CJBok.CheatsMenu/Warps",
+			"Entries": {
+				"{{ModId}}_Expa": {
+					"Id": "{{ModId}}_Expa",
+					"SectionId": "{{ModId}}_Expa",
+					"DisplayName": "{{i18n: Magic Circle}}",
+					"Location": "{{ModId}}_Expa",
+					"Tile": "19, 19"
+				}
+			}
+		}
+	]
+}

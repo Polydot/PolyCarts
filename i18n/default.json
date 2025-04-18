@@ -1,0 +1,406 @@
+{
+	"$schema": "https://smapi.io/schemas/i18n.json",
+
+	//Sections
+
+"config.section.Toggle Minecarts.name": "Toggle Minecarts",
+"config.section.Toggle Minecarts.description": "Either enable or disable specific minecarts",
+"config.section.Custom Names.name": "Custom Names",
+"config.section.Custom Names.description": "Add a custom name for specific minecarts",
+"config.section.Change Vanilla Carts.name": "Vanilla Minecarts",
+"config.section.Change Vanilla Carts.description": "Toggle changes to the default minecarts",
+"config.section.SVE Minecarts.name": "SVE Minecarts",
+"config.section.SVE Minecarts.description": "Either enable or disable specific Stardew Valley Expanded minecarts",
+"config.section.Custom Farm Minecarts.name": "Custom Farm Minecarts",
+"config.section.Custom Farm Minecarts.description": "Either enable or disable minecarts for Custom Farm maps\nThe East and West minecarts are the regular toggles above.",
+"config.section.East Scarp Minecarts.name": "East Scarp Minecarts",
+"config.section.East Scarp Minecarts.description": "Either enable or disable specific East Scarp minecarts",
+"config.section.Default East Scarp Minecarts.name": "Standard East Scarp Minecarts",
+"config.section.Default East Scarp Minecarts.description": "Whether to restore the standard East Scarp minecarts or not",
+"config.section.Expa.name": "Expa",
+"config.section.Expa.description": "Settings related to the Minecart Realm Expa\nOnly shows when you have a compatible mod that contains a new region",
+
+//Vanilla
+
+"Bus Stop": "Bus Stop",
+"config.Bus Stop.name": "Remove Bus Stop",
+"config.Bus Stop.description": "Remove the minecart near the Bus Stop",
+"config.Bus Stop Minecart.name": "Bus Stop",
+"config.Bus Stop Minecart.description": "(Optional) Enter a custom name for the Bus Stop Minecart\nLeave blank for 'Bus Stop'",
+
+"Farm East": "Farm - Entrance",
+"config.Farm East.name": "Farm East",
+"config.Farm East.description": "Enable the minecart on the East of the Farm",
+"config.Farm East Minecart.name": "Farm East",
+"config.Farm East Minecart.description": "(Optional) Enter a custom name for the Farm East Minecart\nLeave blank for 'Farm - Entrance'",
+
+"Farm West": "Farm - Fields",
+"config.Farm West.name": "Farm West",
+"config.Farm West.description": "Enable the minecart on the West of the Farm",
+"config.Farm West Minecart.name": "Farm West",
+"config.Farm West Minecart.description": "(Optional) Enter a custom name for the Farm West Minecart\nLeave blank for 'Farm - Fields'",
+
+"Farm Cave": "Farm - Cave",
+"config.Farm Cave.name": "Farm Cave",
+"config.Farm Cave.description": "Enable the minecart in the Cave on the Farm",
+"config.Farm Cave Minecart.name": "Farm Cave",
+"config.Farm Cave Minecart.description": "(Optional) Enter a custom name for the Farm Cave Minecart\nLeave blank for 'Farm - Cave'",
+
+"Town North": "Town - Community Center",
+"config.Town North.name": "Town North",
+"config.Town North.description": "Enable the minecart next to the Community Center",
+"config.Town North Minecart.name": "Town North",
+"config.Town North Minecart.description": "(Optional) Enter a custom name for the Town North Minecart\nLeave blank for 'Town - Community Center'",
+
+"Town East": "Town - Blacksmith",
+"config.Town East.name": "Update Town",
+"config.Town East.description": "Modify the vanilla 'town' minecart to fit the rest of the mod's minecarts",
+"config.Town East Minecart.name": "Town East",
+"config.Town East Minecart.description": "(Optional) Enter a custom name for the Town East Minecart\nLeave blank for 'Town - Blacksmith'",
+
+"Town West": "Town - Square",
+"config.Town West.name": "Town West",
+"config.Town West.description": "Enable the minecart in the West of Town",
+"config.Town West Minecart.name": "Town West",
+"config.Town West Minecart.description": "(Optional) Enter a custom name for the Town West Minecart\nLeave blank for 'Town - Square'",
+
+"Beach": "Beach",
+"config.Beach.name": "Beach",
+"config.Beach.description": "Enable the minecart on the beach",
+"config.Beach Minecart.name": "Beach",
+"config.Beach Minecart.description": "(Optional) Enter a custom name for the Beach Minecart\nLeave blank for 'Beach'",
+
+"Mountain North": "Mountain - Camping Spot",
+"config.Mountain North.name": "Mountain North",
+"config.Mountain North.description": "Enable the minecart in the North of the Mountain",
+"config.Mountain North Minecart.name": "Mountain North",
+"config.Mountain North Minecart.description": "(Optional) Enter a custom name for the Mountain North Minecart\nLeave blank for 'Mountain - Camping Spot'",
+
+"Mountain East": "Mountain - Quarry",
+"config.Mountain East.name": "Update Quarry",
+"config.Mountain East.description": "Modify the vanilla 'quarry' minecart to fit the rest of the mod's minecarts",
+"config.Mountain East Minecart.name": "Mountain East",
+"config.Mountain East Minecart.description": "(Optional) Enter a custom name for the Mountain East Minecart\nLeave blank for 'Mountain - Quarry'",
+
+"Mountain West": "Mountain - Carpenter Shop",
+"config.Mountain West.name": "Mountain West",
+"config.Mountain West.description": "Enable the minecart in the West of the Mountain",
+"config.Mountain West Minecart.name": "Mountain West",
+"config.Mountain West Minecart.description": "(Optional) Enter a custom name for the Mountain West Minecart\nLeave blank for 'Mountain - Carpenter Shop'",
+
+"Forest North": "Forest - Animal Shop",
+"config.Forest North.name": "Forest North",
+"config.Forest North.description": "Enable the minecart in the North of the Forest",
+"config.Forest North Minecart.name": "Forest North",
+"config.Forest North Minecart.description": "(Optional) Enter a custom name for the Forest North Minecart\nLeave blank for 'Forest - Animal Shop'",
+
+"Forest East": "Forest - Spring Onions",
+"config.Forest East.name": "Forest East",
+"config.Forest East.description": "Enable the minecart in the East of the Forest",
+"config.Forest East Minecart.name": "Forest East",
+"config.Forest East Minecart.description": "(Optional) Enter a custom name for the Forest East Minecart\nLeave blank for 'Forest - Spring Onions'",
+
+"Forest West": "Forest - Wizard Tower",
+"config.Forest West.name": "Forest West",
+"config.Forest West.description": "Enable the minecart in the West of the Forest",
+"config.Forest West Minecart.name": "Forest West",
+"config.Forest West Minecart.description": "(Optional) Enter a custom name for the Forest West Minecart\nLeave blank for 'Forest - Wizard Tower'",
+
+"Desert North": "Desert - Skull Cavern",
+"config.Desert North.name": "Desert North",
+"config.Desert North.description": "Enable the minecart in the North of the Desert",
+"config.Desert North Minecart.name": "Desert North",
+"config.Desert North Minecart.description": "(Optional) Enter a custom name for the Desert North Minecart\nLeave blank for 'Desert - Skull Cavern'",
+
+"Desert South": "Desert - Shop",
+"config.Desert South.name": "Desert South",
+"config.Desert South.description": "Enable the minecart in the South of the Desert",
+"config.Desert South Minecart.name": "Desert South",
+"config.Desert South Minecart.description": "(Optional) Enter a custom name for the Desert South Minecart\nLeave blank for 'Desert - Shop'",
+
+"Railroad": "Railroad",
+"config.Railroad.name": "Railroad",
+"config.Railroad.description": "Enable the minecart near the Bathhouse",
+"config.Railroad Minecart.name": "Railroad",
+"config.Railroad Minecart.description": "(Optional) Enter a custom name for the Railroad Minecart\nLeave blank for 'Railroad'",
+
+"Secret Woods": "Secret Woods",
+"config.Secret Woods.name": "Secret Woods",
+"config.Secret Woods.description": "Enable the minecart in the Secret Woods",
+"config.Secret Woods Minecart.name": "Secret Woods",
+"config.Secret Woods Minecart.description": "(Optional) Enter a custom name for the Secret Woods Minecart\nLeave blank for 'Secret Woods'",
+
+"GingerIsland North": "Ginger Island - Quarry",
+"config.GingerIsland North.name": "Ginger Island North",
+"config.GingerIsland North.description": "Enable the minecart in the Quarry on Ginger Island",
+"config.GingerIsland North Minecart.name": "Ginger Island North",
+"config.GingerIsland North Minecart.description": "(Optional) Enter a custom name for the Ginger Island North Minecart\nLeave blank for 'Ginger Island - Quarry'",
+
+"GingerIsland East": "Ginger Island - Leo's",
+"config.GingerIsland East.name": "Ginger Island East",
+"config.GingerIsland East.description": "Enable the minecart in the Quarry on Ginger Island",
+"config.GingerIsland East Minecart.name": "Ginger Island East",
+"config.GingerIsland East Minecart.description": "(Optional) Enter a custom name for the Ginger Island East Minecart\nLeave blank for 'Ginger Island - Leo's'",
+
+"GingerIsland South": "Ginger Island - Resort",
+"config.GingerIsland South.name": "Ginger Island South",
+"config.GingerIsland South.description": "Enable the minecart in the Quarry on Ginger Island",
+"config.GingerIsland South Minecart.name": "Ginger Island South",
+"config.GingerIsland South Minecart.description": "(Optional) Enter a custom name for the Ginger Island South Minecart\nLeave blank for 'Ginger Island - Resort'",
+
+"GingerIsland West": "Ginger Island - Farm",
+"config.GingerIsland West.name": "Ginger Island West",
+"config.GingerIsland West.description": "Enable the minecart in the Quarry on Ginger Island",
+"config.GingerIsland West Minecart.name": "Ginger Island West",
+"config.GingerIsland West Minecart.description": "(Optional) Enter a custom name for the Ginger Island West Minecart\nLeave blank for 'Ginger Island - Farm'",
+
+//SVE
+
+"Grandpa's Shed": "Farm - Grandpa's Shed",
+"config.Grandpa's Shed.name": "Grandpa's Shed",
+"config.Grandpa's Shed.description": "Enable the minecart near Grandpa's Shed",
+"config.Grandpa's Shed Minecart.name": "Grandpa's Shed",
+"config.Grandpa's Shed Minecart.description": "(Optional) Enter a custom name for the Grandpa's Shed Minecart\nLeave blank for 'Farm - Grandpa's Shed'",
+
+"Old Community Garden": "Old Community Garden",
+"config.Old Community Garden.name": "Old Community Garden",
+"config.Old Community Garden.description": "Enable the minecart in the Old Community Garden",
+"config.Old Community Garden Minecart.name": "Old Community Garden",
+"config.Old Community Garden Minecart.description": "(Optional) Enter a custom name for the Old Community Garden Minecart\nLeave blank for 'Old Community Garden'",
+
+"ForestWest North": "Western Forest - Aurora Vineyard",
+"config.ForestWest North.name": "Western Forest North",
+"config.ForestWest North.description": "Enable the minecart in the North of the Western Forest",
+"config.ForestWest North Minecart.name": "Western Forest North",
+"config.ForestWest North Minecart.description": "(Optional) Enter a custom name for the Western Forest North Minecart\nLeave blank for 'Western Forest - Aurora Vineyard'",
+
+"ForestWest East": "Western Forest - East",
+"config.ForestWest East.name": "Western Forest East",
+"config.ForestWest East.description": "Enable the minecart in the East of the Western Forest",
+"config.ForestWest East Minecart.name": "Western Forest East",
+"config.ForestWest East Minecart.description": "(Optional) Enter a custom name for the Western Forest East Minecart\nLeave blank for 'Western Forest - East'",
+
+"ForestWest South": "Western Forest - Ancient Battleground",
+"config.ForestWest South.name": "Western Forest South",
+"config.ForestWest South.description": "Enable the minecart in the South of the Western Forest",
+"config.ForestWest South Minecart.name": "Western Forest South",
+"config.ForestWest South Minecart.description": "(Optional) Enter a custom name for the Western Forest South Minecart\nLeave blank for 'Western Forest - Ancient Battleground'",
+
+"ForestWest West": "Western Forest - West",
+"config.ForestWest West.name": "Western Forest West",
+"config.ForestWest West.description": "Enable the minecart in the West of the Western Forest",
+"config.ForestWest West Minecart.name": "Western Forest West",
+"config.ForestWest West Minecart.description": "(Optional) Enter a custom name for the Western Forest's West Minecart\nLeave blank for 'Western Forest - West'",
+
+//Custom Farms
+
+"GrandpasFarm North": "Farm - Grandpa's Shed",
+"config.GrandpasFarm North.name": "Grandpa's Farm North",
+"config.GrandpasFarm North.description": "Enable the minecart next to Grandpa's Shed",
+"config.GrandpasFarm North Minecart.name": "Grandpa's Farm North",
+"config.GrandpasFarm North Minecart.description": "(Optional) Enter a custom name for the Grandpa's Farm North Minecart\nLeave blank for 'Farm - Grandpa's Shed'",
+
+"GrandpasFarm West": "Farm - Greenhouse",
+
+"IF2R North": "Farm - House",
+"config.IF2R North.name": "IF2R Farm North",
+"config.IF2R North.description": "Enable the minecart behind the House",
+"config.IF2R North Minecart.name": "IF2R North",
+"config.IF2R North Minecart.description": "(Optional) Enter a custom name for the Immersive Farm 2 Remastered North Minecart\nLeave blank for 'Farm - House'",
+
+"IF2R South": "Farm - Hill",
+"config.IF2R South.name": "IF2R Farm South",
+"config.IF2R South.description": "Enable the minecart next to the Cave",
+"config.IF2R South Minecart.name": "IF2R South",
+"config.IF2R South Minecart.description": "(Optional) Enter a custom name for the Immersive Farm 2 Remastered South Minecart\nLeave blank for 'Farm - Hill'",
+
+"IF2R West": "Farm - Dock",
+
+"FrontierFarm North": "Farm - Bridge",
+"config.Frontier Farm North.name": "Frontier Farm North",
+"config.Frontier Farm North.description": "Enable the minecart near the Bridge",
+"config.Frontier Farm North Minecart.name": "Frontier Farm North",
+"config.Frontier Farm North Minecart.description": "(Optional) Enter a custom name for the Frontier Farm North Minecart\nLeave blank for 'Farm - Bridge'",
+
+"FrontierFarm West": "Farm - Grandpa's Shed",
+
+//East Scarp
+
+"ES Village": "Scarpe Inn",
+"config.ES Village.name": "East Scarp Village",
+"config.ES Village.description": "Enable the minecart near the inn of East Scarp",
+"config.ES Village Minecart.name": "East Scarp Village",
+"config.ES Village Minecart.description": "(Optional) Enter a custom name for the East Scarp Village Minecart\nLeave blank for 'Scarpe Inn'",
+
+"Deep Mountains South": "Deep Mountains - Lake",
+"config.Deep Mountains South.name": "Deep Mountains South",
+"config.Deep Mountains South.description": "Enable the minecart in the southeast of the Deep Mountains",
+"config.Deep Mountains South Minecart.name": "Deep Mountains South",
+"config.Deep Mountains South Minecart.description": "(Optional) Enter a custom name for the Deep Mountains South Minecart\nLeave blank for 'Deep Mountains - Lake'",
+
+"Deep Mountains West": "Deep Mountains - Goats",
+"config.Deep Mountains West.name": "Deep Mountains West",
+"config.Deep Mountains West.description": "Enable the minecart in the west of the Deep Mountains",
+"config.Deep Mountains West Minecart.name": "Deep Mountains West",
+"config.Deep Mountains West Minecart.description": "(Optional) Enter a custom name for the Deep Mountains West Minecart\nLeave blank for 'Deep Mountains - Goats'",
+
+"UnderScarp": "UnderScarp",
+"config.UnderScarp.name": "UnderScarp",
+"config.UnderScarp.description": "Enable the minecart in the UnderScarp",
+"config.UnderScarp Minecart.name": "UnderScarp",
+"config.UnderScarp Minecart.description": "(Optional) Enter a custom name for the UnderScarp Minecart\nLeave blank for 'UnderScarp'",
+
+"ES Meadow": "Scarp Meadow",
+"config.ES Meadow.name": "Meadow",
+"config.ES Meadow.description": "Enable the minecart on the Scarp Meadow",
+"config.ES Meadow Minecart.name": "East Scarp Meadow",
+"config.ES Meadow Minecart.description": "(Optional) Enter a custom name for the East Scarp Meadow Minecart\nLeave blank for 'Scarp Meadow'",
+
+"ClearingHouse": "Clearing House",
+"config.ClearingHouse.name": "Clearing House",
+"config.ClearingHouse.description": "Enable the minecart near the Clearing House",
+"config.ClearingHouse Minecart.name": "Clearing House",
+"config.ClearingHouse Minecart.description": "(Optional) Enter a custom name for the Clearing House Minecart\nLeave blank for 'Clearing House'",
+
+"Orchard": "Orchard",
+"config.Orchard.name": "Orchard",
+"config.Orchard.description": "Enable the minecart in the Orchard",
+"config.Orchard Minecart.name": "Orchard",
+"config.Orchard Minecart.description": "(Optional) Enter a custom name for the Orchard Minecart\nLeave blank for 'Orchard'",
+
+"config.ES_Underscarp.name": "Standard Underscarp",
+"config.ES_Underscarp.description": "Restore the standard minecart in the Underscarp",
+
+"config.ES_Clearing.name": "Standard Clearing House",
+"config.ES_Clearing.description": "Restore the standard minecart near the Clearing House",
+
+"config.ES_Village.name": "Standard Village",
+"config.ES_Village.description": "Restore the standard minecart in the village",
+
+"config.ES_Trace.name": "Standard Trace's House",
+"config.ES_Trace.description": "Restore the standard minecart near Trace's House",
+
+"config.ES_DeepMountains.name": "Standard Deep Mountains",
+"config.ES_DeepMountains.description": "Restore the standard minecart in the Deep Mountains",
+
+//RidgeSide Village
+
+"RSV_CableCar_Bottom": "Cable Car - Lower Dock",
+"config.RSV_CableCar_Bottom.name": "Cable Car Bottom",
+"config.RSV_CableCar_Bottom.description": "Replace the minecart near bottom of the Cable Car",
+"config.RSV_CableCar_Bottom Minecart.name": "Cable Car Bottom",
+"config.RSV_CableCar_Bottom Minecart.description": "(Optional) Enter a custom name for the Cable Car Bottom Minecart\nLeave blank for 'Cable Car - Lower Dock'",
+
+"RSV_CableCar_Top": "Cable Car - Upper Dock",
+"config.RSV_CableCar_Top.name": "Cable Car Top",
+"config.RSV_CableCar_Top.description": "Enable the minecart near top of the Cable Car",
+"config.RSV_CableCar_Top Minecart.name": "Cable Car Top",
+"config.RSV_CableCar_Top Minecart.description": "(Optional) Enter a custom name for the Cable Car Top Minecart\nLeave blank for 'Cable Car - Upper Dock'",
+
+"RSV_Heaps": "Heaps General Store",
+"config.RSV_Heaps.name": "Heaps General Store",
+"config.RSV_Heaps.description": "Replace the minecart near Heaps General Store",
+"config.RSV_Heaps Minecart.name": "Heaps General Store",
+"config.RSV_Heaps Minecart.description": "(Optional) Enter a custom name for the Heaps General Store Minecart\nLeave blank for 'Heaps General Store'",
+
+"RSV_Nightingale": "Nightingale Farm",
+"config.RSV_Nightingale.name": "Nightingale Farm",
+"config.RSV_Nightingale.description": "Replace the minecart near the Nightingale Farm",
+"config.RSV_Nightingale Minecart.name": "Nightingale Farm",
+"config.RSV_Nightingale Minecart.description": "(Optional) Enter a custom name for the Nightingale Farm Minecart\nLeave blank for 'Nightingale Farm'",
+
+"RSV_Greenhouse": "Community Greenhouse",
+"config.RSV_Greenhouse.name": "Greenhouse",
+"config.RSV_Greenhouse.description": "Replace the minecart near the Greenhouse",
+"config.RSV_Greenhouse Minecart.name": "Greenhouse",
+"config.RSV_Greenhouse Minecart.description": "(Optional) Enter a custom name for the Greenhouse Minecart\nLeave blank for 'Community Greenhouse'",
+
+"RSV_LogCabin": "Log Cabin Hotel",
+"config.RSV_LogCabin.name": "Log Cabin Hotel",
+"config.RSV_LogCabin.description": "Enable the minecart near the Log Cabin Hotel",
+"config.RSV_LogCabin Minecart.name": "Log Cabin Hotel",
+"config.RSV_LogCabin Minecart.description": "(Optional) Enter a custom name for the Log Cabin Hotel Minecart\nLeave blank for 'Log Cabin Hotel'",
+
+"RSV_Hike": "Hike Trail",
+"config.RSV_Hike.name": "Hike Trail",
+"config.RSV_Hike.description": "Enable the minecart near the Hike Trail",
+"config.RSV_Hike Minecart.name": "Hike Trail",
+"config.RSV_Hike Minecart.description": "(Optional) Enter a custom name for the Hike Trail Minecart\nLeave blank for 'Hike Trail'",
+
+"RSV_Falls": "Ridge Falls",
+"config.RSV_Falls.name": "Ridge Falls",
+"config.RSV_Falls.description": "Enable the minecart near the Ridge Falls",
+"config.RSV_Falls Minecart.name": "Ridge Falls",
+"config.RSV_Falls Minecart.description": "(Optional) Enter a custom name for the Ridge Falls Minecart\nLeave blank for 'Ridge Falls'",
+
+"RSV_Pond": "Ridge Pond",
+"config.RSV_Pond.name": "Ridge Pond",
+"config.RSV_Pond.description": "Enable the minecart near the Ridge Pond",
+"config.RSV_Pond Minecart.name": "Ridge Pond",
+"config.RSV_Pond Minecart.description": "(Optional) Enter a custom name for the Ridge Pond Minecart\nLeave blank for 'Ridge Pond'",
+
+"RSV_SummitFarm_East": "Summit Farm - Plateau",
+"config.RSV_SummitFarm_East.name": "Summit Farm East",
+"config.RSV_SummitFarm_East.description": "Enable the minecart near the plateau on Summit Farm",
+"config.RSV_SummitFarm_East Minecart.name": "Summit Farm East",
+"config.RSV_SummitFarm_East Minecart.description": "(Optional) Enter a custom name for the Summit Farm East Minecart\nLeave blank for 'Summit Farm - Plateau'",
+
+"RSV_SummitFarm_West": "Summit Farm - House",
+"config.RSV_SummitFarm_West.name": "Summit Farm West",
+"config.RSV_SummitFarm_West.description": "Replace the minecart near the house on Summit Farm",
+"config.RSV_SummitFarm_West Minecart.name": "Summit Farm West",
+"config.RSV_SummitFarm_West Minecart.description": "(Optional) Enter a custom name for the Summit Farm West Minecart\nLeave blank for 'Summit Farm - House'",
+
+"RSV_Ridge_East": "The Ridge - Ninja House",
+"config.RSV_Ridge_East.name": "The Ridge East",
+"config.RSV_Ridge_East.description": "Enable the minecart near the Ninja House",
+"config.RSV_Ridge_East Minecart.name": "The Ridge East",
+"config.RSV_Ridge_East Minecart.description": "(Optional) Enter a custom name for the The Ridge East Minecart\nLeave blank for '- Ninja House'",
+
+"RSV_Ridge_West": "The Ridge - Forest Entrance",
+"config.RSV_Ridge_West.name": "The Ridge West",
+"config.RSV_Ridge_West.description": "Enable the minecart near the entrance to the Ridge Forest",
+"config.RSV_Ridge_West Minecart.name": "The Ridge West",
+"config.RSV_Ridge_West Minecart.description": "(Optional) Enter a custom name for the The Ridge West Minecart\nLeave blank for 'The Ridge - Forest Entrance'",
+
+//Expa
+
+"Expa": "Expa",
+"config.Enable Expa.name": "Enable Expa",
+"config.Enable Expa.description": "Not recommended without Integrated Minecarts (IM)!\nWhen disabled all destinations will be combined into a single list, making it very difficult to navigate.\nWith Integrated Minecarts: Makes all PolyCarts join IM's customisable minecart menu!",
+
+"Magic Circle": "Faerie Ring",
+"Expacart Pelican Town": "This minecart connects to the Pelican Town minecart Network",
+"Expacart GingerIsland": "This minecart connects to the Ginger Island minecart Network",
+"Expacart GingerIsland Rail": "*Squawk!*",
+"Expacart East Scarp": "This minecart connects to the East Scarp minecart Network",
+"Expacart East Scarp Rail": "5787",
+"Expacart RidgeSide Village": "This minecart connects to the RidgeSide Village minecart Network",
+"Expacart RidgeSide Village Rail": "7286",
+
+//Messages
+
+"RIPbush_L1": "For the advancement of technology, our beloved bush has been sacrificed.",
+"RIPbush_L2": "You will forever be missed <",
+"RIPbush_L3": "R.I.P Bush",
+
+"Find_L1": "You found a broken Minecart.",
+"Find_L2": "After tinkering a bit, it looks like you fixed it, but it doesn't seem to do anything...",
+"Find_L3": "Maybe you can find out what the problem is and come back to it later?",
+"Find_L4": "You've added '{{Unlocked_Location}}' to your Mysterious Minecarts list!",
+
+"Find2_L1": "You found a new Minecart!",
+"Find2_L2": "After tinkering a bit, it looks like you fixed it, but it doesn't seem to do anything...",
+"Find2_L3": "Maybe this minecart's network needs to be repaired as well?",
+"Find2_L4": "You've added '{{Unlocked_Location}}' to your Mysterious Minecarts list!",
+
+"Find3_L1": "You found a new Minecart!",
+"Find3_L2": "After tinkering a bit, it looks like you fixed it, but it doesn't seem to do anything...",
+"Find3_L3": "Maybe RidgeSide Village's minecart network needs to be repaired as well?",
+"Find3_L4": "You've added '{{Unlocked_Location}}' to your Mysterious Minecarts list!",
+
+"Unlock_L1": "You found a new Minecart!",
+"Unlock_L2": "After trying to get it to work for a bit it springs to life.",
+"Unlock_L3": "It should be fully functional tomorrow!",
+"Unlock_L4": "You've added '{{Unlocked_Location}}' to your known destinations."
+}

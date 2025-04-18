@@ -1,0 +1,406 @@
+{
+	"$schema": "https://smapi.io/schemas/i18n.json",
+
+//Sections
+
+"config.section.Toggle Minecarts.name": "Schakel Mijnwagens",
+"config.section.Toggle Minecarts.description": "Specifieke mijnwagens aan- of uitzetten",
+"config.section.Custom Names.name": "Aangepaste Namen",
+"config.section.Custom Names.description": "Geef specifieke mijnwagens een aangepaste naam",
+"config.section.Change Vanilla Carts.name": "Vanilla Mijnwagens",
+"config.section.Change Vanilla Carts.description": "Schakel veranderingen aan de standaard mijnwagens",
+"config.section.SVE Minecarts.name": "SVE Mijnwagens",
+"config.section.SVE Minecarts.description": "Specifieke Stardew Valley Expanded mijnwagens aan- of uitzetten",
+"config.section.Custom Farm Minecarts.name": "Aangepaste Boerderij Mijnwagens",
+"config.section.Custom Farm Minecarts.description": "Mijnwagens van aangepaste boerderijen aan- of uitzetten\nDe oost en West mijnwagens staan bij de gewone schakels bovenaan.",
+"config.section.East Scarp Minecarts.name": "Oost Scarp Mijnwagens",
+"config.section.East Scarp Minecarts.description": "Specifieke Oost Scarp mijnwagens aan- of uitzetten",
+"config.section.Default East Scarp Minecarts.name": "Standaard Oost Scarp Mijnwagens",
+"config.section.Default East Scarp Minecarts.description": "De standaard mijnwagens van East Scarp herstellen of niet",
+"config.section.Expa.name": "Expa",
+"config.section.Expa.description": "Instelling van de Mijnwagen wereld Expa\nVerschijnt alleen wanneer je een compatibele mod hebt die een nieuw gebied toevoegt.",
+
+//Vanilla
+
+"Bus Stop": "Bushalte",
+"config.Bus Stop.name": "Verwijder Bushalte",
+"config.Bus Stop.description": "Verwijder de mijnwagen bij de bushalte",
+"config.Bus Stop Minecart.name": "Bushalte",
+"config.Bus Stop Minecart.description": "(Optioneel) Vul een naam in voor de Bushalte Mijnwagen\nLaat leeg voor 'Bushalte'",
+
+"Farm East": "Boerderij - Entree",
+"config.Farm East.name": "Boederij Oost",
+"config.Farm East.description": "Schakel de mijnwagen in het oosten van de boerderij in",
+"config.Farm East Minecart.name": "Boerderij Oost",
+"config.Farm East Minecart.description": "(Optioneel) Vul een naam in voor de Boerderij Oost Mijnwagen\nLaat leeg voor 'Boerderij - Entree'",
+
+"Farm West": "Boerderij - Velden",
+"config.Farm West.name": "Boederij West",
+"config.Farm West.description": "Schakel de mijnwagen in het westen van de boerderij in",
+"config.Farm West Minecart.name": "Boerderij West",
+"config.Farm West Minecart.description": "(Optioneel) Vul een naam in voor de Boerderij West Mijnwagen\nLaat leeg voor 'Boerderij - Velden'",
+
+"Farm Cave": "Boerderij - Grot",
+"config.Farm Cave.name": "Boederij Grot",
+"config.Farm Cave.description": "Schakel de mijnwagen in de grot op de boerderij in",
+"config.Farm Cave Minecart.name": "Boerderij Grot",
+"config.Farm Cave Minecart.description": "(Optioneel) Vul een naam in voor de Boerderij Grot Mijnwagen\nLaat leeg voor 'Boerderij - Grot'",
+
+"Town North": "Dorp - Buurthuis",
+"config.Town North.name": "Dorp Noord",
+"config.Town North.description": "Schakel de mijnwagen in naast het Buurthuis",
+"config.Town North Minecart.name": "Dorp Noord",
+"config.Town North Minecart.description": "(Optioneel) Vul een naam in voor de Dorp Noord Mijnwagen\nLaat leeg voor 'Dorp - Buurthuis'",
+
+"Town East": "Dorp - Smid",
+"config.Town East.name": "Werk Dorp Bij",
+"config.Town East.description": "Pas de vanilla 'Dorp' mijnwagen aan om bij de rest van de mod te passen",
+"config.Town East Minecart.name": "Dorp Oost",
+"config.Town East Minecart.description": "(Optioneel) Vul een naam in voor de Dorp Oost Mijnwagen\nLaat leeg voor 'Dorp - Smid'",
+
+"Town West": "Dorp - Plein",
+"config.Town West.name": "Dorp West",
+"config.Town West.description": "Schakel de mijnwagen in de buurt van het plein in",
+"config.Town West Minecart.name": "Dorp West",
+"config.Town West Minecart.description": "(Optioneel) Vul een naam in voor de Dorp West Mijnwagen\nLaat leeg voor 'Dorp - Plein'",
+
+"Beach": "Strand",
+"config.Beach.name": "Strand",
+"config.Beach.description": "Schakel de mijnwagen op het strand in",
+"config.Beach Minecart.name": "Strand",
+"config.Beach Minecart.description": "(Optioneel) Vul een naam in voor de Strand Mijnwagen\nLaat leeg voor 'Strand'",
+
+"Mountain North": "Berg - Kampeerplaats",
+"config.Mountain North.name": "Berg Noord",
+"config.Mountain North.description": "Schakel de mijnwagen in het noorden van de berg in",
+"config.Mountain North Minecart.name": "Berg Noord",
+"config.Mountain North Minecart.description": "(Optioneel) Vul een naam in voor de Berg Noord Mijnwagen\nLaat leeg voor 'Berg - Kampeerplaats'",
+
+"Mountain East": "Berg - Steengroeve",
+"config.Mountain East.name": "Werk Steengroeve bij",
+"config.Mountain East.description": "Pas de vanilla 'Steengroeve' mijnwagen aan om bij de rest van de mod te passen",
+"config.Mountain East Minecart.name": "Berg Oost",
+"config.Mountain East Minecart.description": "(Optioneel) Vul een naam in voor de Berg Oost Mijnwagen\nLaat leeg voor 'Berg - Steengroeve'",
+
+"Mountain West": "Berg - Timmermanswinkel",
+"config.Mountain West.name": "Berg West",
+"config.Mountain West.description": "Schakel de mijnwagen in het westen van de berg in",
+"config.Mountain West Minecart.name": "Berg West",
+"config.Mountain West Minecart.description": "(Optioneel) Vul een naam in voor de Berg West Mijnwagen\nLaat leeg voor 'Berg - Timmermanswinkel'",
+
+"Forest North": "Bos - Dierenwinkel",
+"config.Forest North.name": "Bos Noord",
+"config.Forest North.description": "Schakel de mijnwagen in het noorden van het bos in",
+"config.Forest North Minecart.name": "Bos Noord",
+"config.Forest North Minecart.description": "(Optioneel) Vul een naam in voor de Bos Noord Mijnwagen\nLaat leeg voor 'Bos - Dierenwinkel'",
+
+"Forest East": "Bos - Bosuien",
+"config.Forest East.name": "Bos Oost",
+"config.Forest East.description": "Schakel de mijnwagen in het oosten van het bos in",
+"config.Forest East Minecart.name": "Bos Oost",
+"config.Forest East Minecart.description": "(Optioneel) Vul een naam in voor de Bos Oost Mijnwagen\nLaat leeg voor 'Bos - Bosuien'",
+
+"Forest West": "Bos - Tovenaarstoren",
+"config.Forest West.name": "Bos West",
+"config.Forest West.description": "Schakel de mijnwagen in het westen van het bos in",
+"config.Forest West Minecart.name": "Bos West",
+"config.Forest West Minecart.description": "(Optioneel) Vul een naam in voor de Bos West Mijnwagen\nLaat leeg voor 'Bos - Tovenaarstoren'",
+
+"Desert North": "Woestijn - Schedel Grot",
+"config.Desert North.name": "Woestijn Noord",
+"config.Desert North.description": "Schakel de mijnwagen in het noorden van de woestijn in",
+"config.Desert North Minecart.name": "Woestijn Noord",
+"config.Desert North Minecart.description": "(Optioneel) Vul een naam in voor de Woestijn Noord Mijnwagen\nLaat leeg voor 'Woestijn - Schedel Grot'",
+
+"Desert South": "Woestijn - Winkel",
+"config.Desert South.name": "Woestijn Zuid",
+"config.Desert South.description": "Schakel de mijnwagen in het zuiden van de woestijn in",
+"config.Desert South Minecart.name": "Woestijn Zuid",
+"config.Desert South Minecart.description": "(Optioneel) Vul een naam in voor de Woestijn Zuid Mijnwagen\nLaat leeg voor 'Woestijn - Winkel'",
+
+"Railroad": "Spoorweg",
+"config.Railroad.name": "Spoorweg",
+"config.Railroad.description": "Schakel de mijnwagen bij het Badhuis in",
+"config.Railroad Minecart.name": "Spoorweg",
+"config.Railroad Minecart.description": "(Optioneel) Vul een naam in voor de Spoorweg Mijnwagen\nLaat leeg voor 'Spoorweg'",
+
+"Secret Woods": "Geheime Woud",
+"config.Secret Woods.name": "Geheime Woud",
+"config.Secret Woods.description": "Schakel de mijnwagen in het geheime woud in",
+"config.Secret Woods Minecart.name": "Geheime Woud",
+"config.Secret Woods Minecart.description": "(Optioneel) Vul een naam in voor de Geheime Woud Mijnwagen\nLaat leeg voor 'Geheime Woud'",
+
+"GingerIsland North": "Gember Eiland - Steengroeve",
+"config.GingerIsland North.name": "Gember Eiland Noord",
+"config.GingerIsland North.description": "Schakel de mijnwagen in steengroeve op Gember Eiland in",
+"config.GingerIsland North Minecart.name": "Gember Eiland Noord",
+"config.GingerIsland North Minecart.description": "(Optioneel) Vul een naam in voor de Gember Eiland Noord Mijnwagen\nLaat leeg voor 'Gember Eiland - Steengroeve'",
+
+"GingerIsland East": "Gember Eiland - Leo",
+"config.GingerIsland East.name": "Gember Eiland Oost",
+"config.GingerIsland East.description": "Schakel de mijnwagen in steengroeve op Gember Eiland in",
+"config.GingerIsland East Minecart.name": "Gember Eiland Oost",
+"config.GingerIsland East Minecart.description": "(Optioneel) Vul een naam in voor de Gember Eiland Oost Mijnwagen\nLaat leeg voor 'Gember Eiland - Leo'",
+
+"GingerIsland South": "Gember Eiland - Resort",
+"config.GingerIsland South.name": "Gember Eiland Zuid",
+"config.GingerIsland South.description": "Schakel de mijnwagen in steengroeve op Gember Eiland in",
+"config.GingerIsland South Minecart.name": "Gember Eiland Zuid",
+"config.GingerIsland South Minecart.description": "(Optioneel) Vul een naam in voor de Gember Eiland Zuid Mijnwagen\nLaat leeg voor 'Gember Eiland - Resort'",
+
+"GingerIsland West": "Gember Eiland - Boerderij",
+"config.GingerIsland West.name": "Gember Eiland West",
+"config.GingerIsland West.description": "Schakel de mijnwagen in steengroeve op Gember Eiland in",
+"config.GingerIsland West Minecart.name": "Gember Eiland West",
+"config.GingerIsland West Minecart.description": "(Optioneel) Vul een naam in voor de Gember Eiland West Mijnwagen\nLaat leeg voor 'Gember Eiland - Boerderij'",
+
+//SVE
+
+"Grandpa's Shed": "Boerderij - Opa's Schuur",
+"config.Grandpa's Shed.name": "Opa's Schuur",
+"config.Grandpa's Shed.description": "Schakel de mijnwagen bij Opa's Schuur in",
+"config.Grandpa's Shed Minecart.name": "Opa's Schuur",
+"config.Grandpa's Shed Minecart.description": "(Optioneel) Vul een naam in voor de Opa's Schuur Mijnwagen\nLaat leeg voor 'Boerderij - Opa's Schuur'",
+
+"Old Community Garden": "Oude Gemeentetuin",
+"config.Old Community Garden.name": "Oude Gemeentetuin",
+"config.Old Community Garden.description": "Schakel de mijnwagen in de Oude Gemeentetuin in",
+"config.Old Community Garden Minecart.name": "Oude Gemeentetuin",
+"config.Old Community Garden Minecart.description": "(Optioneel) Vul een naam in voor de Oude Gemeentetuin Mijnwagen\nLaat leeg voor 'Oude Gemeentetuin'",
+
+"ForestWest North": "Westerlijk Bos - Aurora Wijngaard",
+"config.ForestWest North.name": "Westerlijk Bos Noord",
+"config.ForestWest North.description": "Schakel de mijnwagen in het noorden van het Westerlijk Bos in",
+"config.ForestWest North Minecart.name": "Westerlijk Bos Noord",
+"config.ForestWest North Minecart.description": "(Optioneel) Vul een naam in voor de Westerlijk Bos Noord Mijnwagen\nLaat leeg voor 'Westerlijk Bos - Aurora Wijngaard'",
+
+"ForestWest East": "Westerlijk Bos - Oost",
+"config.ForestWest East.name": "Westerlijk Bos Oost",
+"config.ForestWest East.description": "Schakel de mijnwagen in het oosten van het Westerlijk Bos in",
+"config.ForestWest East Minecart.name": "Westerlijk Bos Oost",
+"config.ForestWest East Minecart.description": "(Optioneel) Vul een naam in voor de Westerlijk Bos Oost Mijnwagen\nLaat leeg voor 'Westerlijk Bos - Oost'",
+
+"ForestWest South": "Westerlijk Bos - Eeuwenoude Slagveld",
+"config.ForestWest South.name": "Westerlijk Bos Zuid",
+"config.ForestWest South.description": "Schakel de mijnwagen in het zuiden van het Westerlijk Bos in",
+"config.ForestWest South Minecart.name": "Westerlijk Bos Zuid",
+"config.ForestWest South Minecart.description": "(Optioneel) Vul een naam in voor de Westerlijk Bos Zuid Mijnwagen\nLaat leeg voor 'Westerlijk Bos - Eeuwenoude Slagveld'",
+
+"ForestWest West": "Westerlijk Bos - West",
+"config.ForestWest West.name": "Westerlijk Bos West",
+"config.ForestWest West.description": "Schakel de mijnwagen in het westen van het Westerlijk Bos in",
+"config.ForestWest West Minecart.name": "Westerlijk Bos West",
+"config.ForestWest West Minecart.description": "(Optioneel) Vul een naam in voor de Westerlijk Bos West Mijnwagen\nLaat leeg voor 'Westerlijk Bos - West'",
+
+//Custom Farms
+
+"GrandpasFarm North": "Boerderij - Opa's Schuur",
+"config.GrandpasFarm North.name": "Opa's Boerderij Noord",
+"config.GrandpasFarm North.description": "Schakel de mijnwagen bij Opa's Schuur in",
+"config.GrandpasFarm North Minecart.name": "Opa's Boerderij Noord",
+"config.GrandpasFarm North Minecart.description": "(Optioneel) Vul een naam in voor de Opa's Boerderij Noord Mijnwagen\nLaat leeg voor 'Boerderij - Opa's Schuur'",
+
+"GrandpasFarm West": "Boerderij - Kas",
+
+"IF2R North": "Boerderij - Huis",
+"config.IF2R North.name": "IF2R Boerderij Noord",
+"config.IF2R North.description": "Schakel de mijnwagen achter het Huis in",
+"config.IF2R North Minecart.name": "IF2R Noord",
+"config.IF2R North Minecart.description": "(Optioneel) Vul een naam in voor de Immersieve Boederij 2 Geremastered Noord Mijnwagen\nLaat leeg voor 'Boerderij - Huis'",
+
+"IF2R South": "Boerderij - Heuvel",
+"config.IF2R South.name": "IF2R Boerderij Zuid",
+"config.IF2R South.description": "Schakel de mijnwagen naast de Grot in",
+"config.IF2R South Minecart.name": "IF2R Zuid",
+"config.IF2R South Minecart.description": "(Optioneel) Vul een naam in voor de Immersieve Boederij 2 Geremastered Zuid Mijnwagen\nLaat leeg voor 'Boerderij - Heuvel'",
+
+"IF2R West": "Boerderij - Pier",
+
+"FrontierFarm North": "Boerderij - Brug",
+"config.Frontier Farm North.name": "Frontierboerderij Noord",
+"config.Frontier Farm North.description": "Schakel de mijnwagen bij de brug in",
+"config.Frontier Farm North Minecart.name": "Frontierboerderij Noord",
+"config.Frontier Farm North Minecart.description": "(Optioneel) Vul een naam in voor de Frontierboerderij Noord Mijnwagen\nLaat leeg voor 'Boerderij - Brug'",
+
+"FrontierFarm West": "Boerderij - Opa's Schuur",
+
+//East Scarp
+
+"ES Village": "Taverne Scarpe",
+"config.ES Village.name": "Oost Scarp Dorp",
+"config.ES Village.description": "Schakel de mijnwagen bij de taverne van Oost Scarp in",
+"config.ES Village Minecart.name": "Oost Scarp Dorp",
+"config.ES Village Minecart.description": "(Optioneel) Vul een naam in voor de East Scarp Village Mijnwagen\nLaat leeg voor 'Taverne Scarpe'",
+
+"Deep Mountains South": "Diepe Bergen - Meer",
+"config.Deep Mountains South.name": "Diepe Bergen Zuid",
+"config.Deep Mountains South.description": "Schakel de mijnwagen in het zuidoosten van de diepe Bergen in",
+"config.Deep Mountains South Minecart.name": "Diepe Bergen Zuid",
+"config.Deep Mountains South Minecart.description": "(Optioneel) Vul een naam in voor de Diepe Bergen Zuid Mijnwagen\nLaat leeg voor 'Diepe Bergen - Meer'",
+
+"Deep Mountains West": "Diepe Bergen - Geiten",
+"config.Deep Mountains West.name": "Diepe Bergen West",
+"config.Deep Mountains West.description": "Schakel de mijnwagen in het westen van de diepe Bergen in",
+"config.Deep Mountains West Minecart.name": "Diepe Bergen West",
+"config.Deep Mountains West Minecart.description": "(Optioneel) Vul een naam in voor de Diepe Bergen West Mijnwagen\nLaat leeg voor 'Diepe Bergen - Geiten'",
+
+"UnderScarp": "OnderScarp",
+"config.UnderScarp.name": "OnderScarp",
+"config.UnderScarp.description": "Schakel de mijnwagen in de OnderScarp in",
+"config.UnderScarp Minecart.name": "OnderScarp",
+"config.UnderScarp Minecart.description": "(Optioneel) Vul een naam in voor de OnderScarp Mijnwagen\nLaat leeg voor 'OnderScarp'",
+
+"ES Meadow": "Scarp Weide",
+"config.ES Meadow.name": "Weide",
+"config.ES Meadow.description": "Schakel de mijnwagen op de Scarp Weide in",
+"config.ES Meadow Minecart.name": "Oost Scarp Weide",
+"config.ES Meadow Minecart.description": "(Optioneel) Vul een naam in voor de Oost Scarp Weide Mijnwagen\nLaat leeg voor 'Scarp Weide'",
+
+"ClearingHouse": "Verrekenkantoor ",
+"config.ClearingHouse.name": "Verrekenkantoor ",
+"config.ClearingHouse.description": "Schakel de mijnwagen bij het Verrekenkantoor in",
+"config.ClearingHouse Minecart.name": "Verrekenkantoor ",
+"config.ClearingHouse Minecart.description": "(Optioneel) Vul een naam in voor de Verrekenkantoor Mijnwagen\nLaat leeg voor 'Verrekenkantoor'",
+
+"Orchard": "Boomgaard",
+"config.Orchard.name": "Boomgaard",
+"config.Orchard.description": "Schakel de mijnwagen in de Boomgaard in",
+"config.Orchard Minecart.name": "Boomgaard",
+"config.Orchard Minecart.description": "(Optioneel) Vul een naam in voor de Boomgaard Mijnwagen\nLaat leeg voor 'Boomgaard'",
+
+"config.ES_Underscarp.name": "Standaard OnderScarp",
+"config.ES_Underscarp.description": "Herstel de standaard mijnwagen in de OnderScarp",
+
+"config.ES_Clearing.name": "Standaard Verrekenkantoor",
+"config.ES_Clearing.description": "Herstel de standaard mijnwagen bij het Verrekenkantoor in de buurt",
+
+"config.ES_Village.name": "Standaard OnderScarp",
+"config.ES_Village.description": "Herstel de standaard mijnwagen in het dorp",
+
+"config.ES_Trace.name": "Standaard Trace's Huis",
+"config.ES_Trace.description": "Herstel de standaard mijnwagen bij Trace's haar huis",
+
+"config.ES_DeepMountains.name": "Standaard Diepe Bergen",
+"config.ES_DeepMountains.description": "Herstel de standaard mijnwagen in de Diepe Bergen",
+
+//RidgeSide Village
+
+"RSV_CableCar_Bottom": "Kabelbaan - Onderste Station",
+"config.RSV_CableCar_Bottom.name": "Onderkant van de Kabelbaan",
+"config.RSV_CableCar_Bottom.description": "Vervang de mijnwagen bij de onderkant van de Kabelbaan",
+"config.RSV_CableCar_Bottom Minecart.name": "Onderkant van de Kabelbaan",
+"config.RSV_CableCar_Bottom Minecart.description": "(Optioneel) Voer een aangepaste naam in voor de Onderkant van de Kabelbaan Mijnwagen\nLaat leeg voor 'Kabelbaan - Onderste Station'",
+
+"RSV_CableCar_Top": "Kabelbaan - Bovenste Station",
+"config.RSV_CableCar_Top.name": "Bovenkant van de Kabelbaan",
+"config.RSV_CableCar_Top.description": "Activeer de mijnwagen bij de bovenkant van de kabelbaan",
+"config.RSV_CableCar_Top Minecart.name": "Bovenkant van de Kabelbaan",
+"config.RSV_CableCar_Top Minecart.description": "(Optioneel) Voer een aangepaste naam in voor de Bovenkant van de Kabelbaan Mijnwagen\nLaat leeg voor 'Kabelbaan - Bovenste Station'",
+
+"RSV_Heaps": "Heaps Warenhuis",
+"config.RSV_Heaps.name": "Heaps Warenhuis",
+"config.RSV_Heaps.description": "Vervang de mijnwagen bij Heaps Warenhuis",
+"config.RSV_Heaps Minecart.name": "Heaps Warenhuis",
+"config.RSV_Heaps Minecart.description": "(Optioneel) Voer een aangepaste naam in voor de Heaps Warenhuis Mijnwagen\nLaat leeg voor 'Heaps Warenhuis'",
+
+"RSV_Nightingale": "Nachtegaal Boerderij",
+"config.RSV_Nightingale.name": "Nachtegaal Boerderij",
+"config.RSV_Nightingale.description": "Vervang de mijnwagen bij de Nightingale Farm",
+"config.RSV_Nightingale Minecart.name": "Nachtegaal Boerderij",
+"config.RSV_Nightingale Minecart.description": "(Optioneel) Voer een aangepaste naam in voor de Nachtegaal Boerderij Mijnwagen\nLaat leeg voor 'Nachtegaal Boerderij'",
+
+"RSV_Greenhouse": "Gemeenschappelijke Kas",
+"config.RSV_Greenhouse.name": "Kas",
+"config.RSV_Greenhouse.description": "Vervang de mijnwagen bij de Kas",
+"config.RSV_Greenhouse Minecart.name": "Kas",
+"config.RSV_Greenhouse Minecart.description": "(Optioneel) Voer een aangepaste naam in voor de Kas Mijnwagen\nLaat leeg voor 'Gemeenschappelijke Kas'",
+
+"RSV_LogCabin": "Blokhut Hotel",
+"config.RSV_LogCabin.name": "Blokhut Hotel",
+"config.RSV_LogCabin.description": "Schakel de mijnwagen in bij het Blokhut Hotel",
+"config.RSV_LogCabin Minecart.name": "Blokhut Hotel",
+"config.RSV_LogCabin Minecart.description": "(Optioneel) Voer een aangepaste naam in voor de Blokhut Hotel Mijnwagen\nLaat leeg voor 'Blokhut Hotel'",
+
+"RSV_Hike": "Wandelpad",
+"config.RSV_Hike.name": "Wandelpad",
+"config.RSV_Hike.description": "Activeer de mijnwagen langs het Wandelpad",
+"config.RSV_Hike Minecart.name": "Wandelpad",
+"config.RSV_Hike Minecart.description": "(Optioneel) Voer een aangepaste naam in voor de Wandelpad Mijnwagen\nLaat leeg voor 'Wandelpad'",
+
+"RSV_Falls": "Kamwatervallen",
+"config.RSV_Falls.name": "Kamwatervallen",
+"config.RSV_Falls.description": "Activeer de mijnwagen naast de Watervallen bij de Kam",
+"config.RSV_Falls Minecart.name": "Kamwatervallen",
+"config.RSV_Falls Minecart.description": "(Optioneel) Voer een aangepaste naam in voor de Kamwatervallen Mijnwagen\nLaat leeg voor 'Kamwatervallen'",
+
+"RSV_Pond": "Kamvijver",
+"config.RSV_Pond.name": "Kamvijver",
+"config.RSV_Pond.description": "Activeer de mijnwagen bij de Vijver op de Kam",
+"config.RSV_Pond Minecart.name": "Kamvijver",
+"config.RSV_Pond Minecart.description": "(Optioneel) Voer een aangepaste naam in voor de Kamvijver Mijnwagen\nLaat leeg voor 'Kamvijver'",
+
+"RSV_SummitFarm_East": "Boerderij \"De Kam\" - Plateau",
+"config.RSV_SummitFarm_East.name": "Boerderij \"De Kam\" Oost",
+"config.RSV_SummitFarm_East.description": "Activeer de mijnwagen bij het plateau bij Boerderij \"De Kam\"",
+"config.RSV_SummitFarm_East Minecart.name": "Boerderij \"De Kam\" Oost",
+"config.RSV_SummitFarm_East Minecart.description": "(Optioneel) Voer een aangepaste naam in voor de Boerderij \"De Kam\" Oost Mijnwagen\nLaat leeg voor 'Boerderij \"De Kam\" - Plateau'",
+
+"RSV_SummitFarm_West": "Boerderij \"De Kam\" - Huis",
+"config.RSV_SummitFarm_West.name": "Boerderij \"De Kam\" West",
+"config.RSV_SummitFarm_West.description": "Vervang de mijnwagen voor de Boerderij \"De Kam\"",
+"config.RSV_SummitFarm_West Minecart.name": "Boerderij \"De Kam\" West",
+"config.RSV_SummitFarm_West Minecart.description": "(Optioneel) Voer een aangepaste naam in voor de Boerderij \"De Kam\" West Mijnwagen\nLaat leeg voor 'Boerderij \"De Kam\" - Huis'",
+
+"RSV_Ridge_East": "De Kam - Ninja Huis",
+"config.RSV_Ridge_East.name": "De Kam Oost",
+"config.RSV_Ridge_East.description": "Activeer de mijnwagen naast het Ninja Huis",
+"config.RSV_Ridge_East Minecart.name": "De Kam Oost",
+"config.RSV_Ridge_East Minecart.description": "(Optioneel) Voer een aangepaste naam in voor de De Kam Oost Mijnwagen\nLaat leeg voor '- Ninja Huis'",
+
+"RSV_Ridge_West": "De Kam - Bosingang",
+"config.RSV_Ridge_West.name": "De Kam West",
+"config.RSV_Ridge_West.description": "Activeer de mijnwagen bij de ingang van het Kambos",
+"config.RSV_Ridge_West Minecart.name": "De Kam West",
+"config.RSV_Ridge_West Minecart.description": "(Optioneel) Voer een aangepaste naam in voor de De Kam West Mijnwagen\nLaat leeg voor 'De Kam - Bosingang'",
+
+//Expa
+
+"Expa": "Expa",
+"config.Enable Expa.name": "Schakel Expa in",
+"config.Enable Expa.description": "Niet Aangeraden zonder Integrated Minecarts (IM)!\nWanneer Expa uitgeschakeld is worden alle bestemmingen in één grote lijst gecombineerd, waardoor deze erg moeilijk te navigeren wordt.\nMet Integrated Minecarts: Zorgt er voor dat alle PolyCarts IM's aanpasbare minecart menu joinen!",
+
+"Magic Circle": "Heksenkring",
+"Expacart Pelican Town": "Deze mijnwagen is verbonden met het Pelikanendorp mijnwagenstelsel",
+"Expacart GingerIsland": "Deze mijnwagen is verbonden met het Gember Eiland mijnwagenstelsel",
+"Expacart GingerIsland Rail": "*Kra!*",
+"Expacart East Scarp": "Deze mijnwagen is verbonden met het East Scarp mijnwagenstelsel",
+"Expacart East Scarp Rail": "5787",
+"Expacart RidgeSide Village": "Deze mijnwagen is verbonden met het RidgeSide Dorp mijnwagenstelsel",
+"Expacart RidgeSide Village Rail": "7286",
+
+//Messages
+
+"RIPbush_L1": "Voor de vooruitgang van technologie is onze gelievde struik opgeoffered.",
+"RIPbush_L2": "We zullen je voor eeuwig missen <",
+"RIPbush_L3": "R.I.P. Struik",
+
+"Find_L1": "Je hebt een kapotte mijnwagen gevonden.",
+"Find_L2": "Nadat je er een poosje aan knutselt lijkt 'ie gemaakt, maar toch doet 'ie niets...",
+"Find_L3": "Misschien kun je er achter komen wat het probleem is en later terugkomen?",
+"Find_L4": "Je hebt '{{Unlocked_Location}}' toegevoegd aan je Mysterieuze Mijnwagens lijstje!",
+
+"Find2_L1": "Je hebt een nieuwe mijnwagen gevonden!",
+"Find2_L2": "Nadat je er een poosje aan knutselt lijkt 'ie gemaakt, maar toch doet 'ie niets...",
+"Find2_L3": "Misschien moet het netwerk van deze mijnwagen ook gerepareerd worden?",
+"Find2_L4": "Je hebt '{{Unlocked_Location}}' toegevoegd aan je Mysterieuze Mijnwagens lijstje!",
+
+"Find3_L1": "Je hebt een nieuwe mijnwagen gevonden!",
+"Find3_L2": "Nadat je er een poosje aan knutselt lijkt 'ie gemaakt, maar toch doet 'ie niets...",
+"Find3_L3": "Misschien moet het mijnwagennetwerk van RidgeSide Village ook gerepareerd worden?",
+"Find3_L4": "Je hebt '{{Unlocked_Location}}' toegevoegd aan je Mysterieuze Mijnwagens lijstje!",
+
+"Unlock_L1": "Je hebt een nieuwe mijnwagen gevonden!",
+"Unlock_L2": "Nadat je een poosje probeert komt 'ie plots tot leven.",
+"Unlock_L3": "Morgen zou 'ie weer volledig functioneel moeten zijn!",
+"Unlock_L4": "Je hebt '{{Unlocked_Location}}' Aan je bekende bestemmingen toegevoegd."
+}

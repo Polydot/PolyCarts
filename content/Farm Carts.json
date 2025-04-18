@@ -1,0 +1,1271 @@
+{
+	"$schema": "https://smapi.io/schemas/content-patcher.json",
+	"Changes": [
+		//Minecart Farm East Standard
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Farm East EditData",
+			"When": {
+				"Farm East": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Farm_East",
+				"FarmType": "Standard",
+				"HasMod |contains=flashshifter.GrandpasFarm, flashshifter.immersivefarm2remastered": false 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Farm East": {
+					"Id": "Polydot.PolyCarts_Farm_East",
+					"DisplayName": "{{Farm East Name}}",
+					"TargetLocation": "Farm",
+					"TargetTile": { "X": 77, "Y": 11 },
+					"TargetDirection": "left"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Farm",
+			"LogName": "Farm East EditMap",
+			"When": {
+				"Farm East": true,
+				"FarmType": "Standard",
+				"HasMod |contains=flashshifter.GrandpasFarm, flashshifter.immersivefarm2remastered": false 
+			},
+			"FromFile": "assets/SDV/Farm_East.tmx",
+			"ToArea": { "X": 77, "Y": 8, "Width": 3, "Height": 4 },
+			"MapTiles": [
+				{
+					"Position": { "X": 77, "Y": 10 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_East"
+					}
+				},
+				{
+					"Position": { "X": 78, "Y": 10 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_East"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock Farm East Standard",
+			"When": {
+				"Farm East": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Farm_East": false,
+				"FarmType": "Standard",
+				"HasMod |contains=flashshifter.GrandpasFarm, flashshifter.immersivefarm2remastered": false 
+			},
+			"Target": "Maps/Farm",
+			"MapTiles": [
+				{
+					"Position": { "X": 77, "Y": 10 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_East {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Farm East Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 78, "Y": 10 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_East {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Farm East Name}}}}"
+					}
+				}
+			]
+		},
+		//Minecart Farm West Standard
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Farm West EditData",
+			"When": {
+				"Farm West": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Farm_West",
+				"FarmType": "Standard",
+				"HasMod |contains=flashshifter.GrandpasFarm, flashshifter.immersivefarm2remastered": false 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Farm West": {
+					"Id": "Polydot.PolyCarts_Farm_West",
+					"DisplayName": "{{Farm West Name}}",
+					"TargetLocation": "Farm",
+					"TargetTile": { "X": 5, "Y": 34 },
+					"TargetDirection": "right"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Farm",
+			"LogName": "Farm West EditMap",
+			"When": {
+				"Farm West": true,
+				"FarmType": "Standard",
+				"HasMod |contains=flashshifter.GrandpasFarm, flashshifter.immersivefarm2remastered": false 
+			},
+			"FromFile": "assets/SDV/Farm_West.tmx",
+			"ToArea": { "X": 2, "Y": 29, "Width": 5, "Height": 9 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "5 32 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 4, "Y": 33 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_West"
+					}
+				},
+				{
+					"Position": { "X": 4, "Y": 34 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_West"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock Farm West Standard",
+			"When": {
+				"Farm West": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Farm_West": false,
+				"FarmType": "Standard",
+				"HasMod |contains=flashshifter.GrandpasFarm, flashshifter.immersivefarm2remastered": false 
+			},
+			"Target": "Maps/Farm",
+			"MapTiles": [
+				{
+					"Position": { "X": 4, "Y": 33 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_West {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Farm West Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 4, "Y": 34 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_West {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Farm West Name}}}}"
+					}
+				}
+			]
+		},
+		//Minecart Farm East Riverland
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Farm East Riverland EditData",
+			"When": {
+				"Farm East": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Farm_East",
+				"FarmType": "Riverland" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Farm East": {
+					"Id": "Polydot.PolyCarts_Farm_East",
+					"DisplayName": "{{Farm East Name}}",
+					"TargetLocation": "Farm",
+					"TargetTile": { "X": 77, "Y": 11 },
+					"TargetDirection": "left"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Farm_Fishing",
+			"LogName": "Farm East Riverland EditMap",
+			"When": {
+				"Farm East": true,
+				"FarmType": "Riverland" 
+			},
+			"FromFile": "assets/SDV/Farm_East.tmx",
+			"ToArea": { "X": 77, "Y": 8, "Width": 3, "Height": 4 },
+			"MapTiles": [
+				{
+					"Position": { "X": 77, "Y": 10 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_East"
+					}
+				},
+				{
+					"Position": { "X": 78, "Y": 10 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_East"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock Farm East Riverland",
+			"When": {
+				"Farm East": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Farm_East": false,
+				"FarmType": "Riverland" 
+			},
+			"Target": "Maps/Farm_Fishing",
+			"MapTiles": [
+				{
+					"Position": { "X": 77, "Y": 10 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_East {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Farm East Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 78, "Y": 10 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_East {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Farm East Name}}}}"
+					}
+				}
+			]
+		},
+		//Minecart Farm West Riverland
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Farm West Riverland EditData",
+			"When": {
+				"Farm West": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Farm_West",
+				"FarmType": "Riverland" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Farm West": {
+					"Id": "Polydot.PolyCarts_Farm_West",
+					"DisplayName": "{{Farm West Name}}",
+					"TargetLocation": "Farm",
+					"TargetTile": { "X": 5, "Y": 46 },
+					"TargetDirection": "right"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Farm_Fishing",
+			"LogName": "Farm West Riverland EditMap",
+			"When": {
+				"Farm West": true,
+				"FarmType": "Riverland" 
+			},
+			"FromFile": "assets/SDV/Farm_West_Riverland.tmx",
+			"ToArea": { "X": 2, "Y": 40, "Width": 6, "Height": 9 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "5 44 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 4, "Y": 45 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_West"
+					}
+				},
+				{
+					"Position": { "X": 4, "Y": 46 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_West"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock Farm West Riverland",
+			"When": {
+				"Farm West": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Farm_West": false,
+				"FarmType": "Riverland" 
+			},
+			"Target": "Maps/Farm_Fishing",
+			"MapTiles": [
+				{
+					"Position": { "X": 4, "Y": 45 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_West {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Farm West Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 4, "Y": 46 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_West {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Farm West Name}}}}"
+					}
+				}
+			]
+		},
+		//Minecart Farm East Forest
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Farm East Forest EditData",
+			"When": {
+				"Farm East": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Farm_East",
+				"FarmType": "Forest" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Farm East": {
+					"Id": "Polydot.PolyCarts_Farm_East",
+					"DisplayName": "{{Farm East Name}}",
+					"TargetLocation": "Farm",
+					"TargetTile": { "X": 77, "Y": 11 },
+					"TargetDirection": "left"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Farm_Foraging",
+			"LogName": "Farm East Forest EditMap",
+			"When": {
+				"Farm East": true,
+				"FarmType": "Forest" 
+			},
+			"FromFile": "assets/SDV/Farm_East_Forest.tmx",
+			"ToArea": { "X": 77, "Y": 8, "Width": 3, "Height": 4 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "79 11 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 77, "Y": 10 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_East"
+					}
+				},
+				{
+					"Position": { "X": 78, "Y": 10 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_East"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock Farm East Forest",
+			"When": {
+				"Farm East": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Farm_East": false,
+				"FarmType": "Forest" 
+			},
+			"Target": "Maps/Farm_Foraging",
+			"MapTiles": [
+				{
+					"Position": { "X": 77, "Y": 10 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_East {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Farm East Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 78, "Y": 10 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_East {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Farm East Name}}}}"
+					}
+				}
+			]
+		},
+		//Minecart Farm West Forest
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Farm West Forest EditData",
+			"When": {
+				"Farm West": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Farm_West",
+				"FarmType": "Forest" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Farm West": {
+					"Id": "Polydot.PolyCarts_Farm_West",
+					"DisplayName": "{{Farm West Name}}",
+					"TargetLocation": "Farm",
+					"TargetTile": { "X": 11, "Y": 47 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Farm_Foraging",
+			"LogName": "Farm West Forest EditMap",
+			"When": {
+				"Farm West": true,
+				"FarmType": "Forest" 
+			},
+			"FromFile": "assets/SDV/Farm_West_Forest.tmx",
+			"ToArea": { "X": 11, "Y": 45, "Width": 2, "Height": 2 },
+			"MapTiles": [
+				{
+					"Position": { "X": 11, "Y": 46 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_West"
+					}
+				},
+				{
+					"Position": { "X": 12, "Y": 46 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_West"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock Farm West Forest",
+			"When": {
+				"Farm West": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Farm_West": false,
+				"FarmType": "Forest" 
+			},
+			"Target": "Maps/Farm_Foraging",
+			"MapTiles": [
+				{
+					"Position": { "X": 11, "Y": 46 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_West {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Farm West Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 12, "Y": 46 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_West {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Farm West Name}}}}"
+					}
+				}
+			]
+		},
+		//Minecart Farm East Hilltop
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Farm East Hilltop EditData",
+			"When": {
+				"Farm East": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Farm_East",
+				"FarmType": "Hilltop" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Farm East": {
+					"Id": "Polydot.PolyCarts_Farm_East",
+					"DisplayName": "{{Farm East Name}}",
+					"TargetLocation": "Farm",
+					"TargetTile": { "X": 77, "Y": 11 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Farm_Mining",
+			"LogName": "Farm East Hilltop EditMap",
+			"When": {
+				"Farm East": true,
+				"FarmType": "Hilltop" 
+			},
+			"FromFile": "assets/SDV/Farm_East_Hilltop.tmx",
+			"ToArea": { "X": 76, "Y": 7, "Width": 3, "Height": 5 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "76 8 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 77, "Y": 9 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_East"
+					}
+				},
+				{
+					"Position": { "X": 77, "Y": 10 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_East"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock Farm East Hilltop",
+			"When": {
+				"Farm East": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Farm_East": false,
+				"FarmType": "Hilltop" 
+			},
+			"Target": "Maps/Farm_Mining",
+			"MapTiles": [
+				{
+					"Position": { "X": 77, "Y": 9 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_East {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Farm East Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 77, "Y": 10 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_East {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Farm East Name}}}}"
+					}
+				}
+			]
+		},
+		//Minecart Farm West Hilltop
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Farm West Hilltop EditData",
+			"When": {
+				"Farm West": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Farm_West",
+				"FarmType": "Hilltop" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Farm West": {
+					"Id": "Polydot.PolyCarts_Farm_West",
+					"DisplayName": "{{Farm West Name}}",
+					"TargetLocation": "Farm",
+					"TargetTile": { "X": 18, "Y": 51 },
+					"TargetDirection": "left"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Farm_Mining",
+			"LogName": "Farm West Hilltop EditMap",
+			"When": {
+				"Farm West": true,
+				"FarmType": "Hilltop" 
+			},
+			"FromFile": "assets/SDV/Farm_West_Hilltop.tmx",
+			"ToArea": { "X": 19, "Y": 48, "Width": 4, "Height": 4 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "22 49 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 19, "Y": 51 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_West"
+					}
+				},
+				{
+					"Position": { "X": 20, "Y": 51 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_West"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock Farm West Hilltop",
+			"When": {
+				"Farm West": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Farm_West": false,
+				"FarmType": "Hilltop" 
+			},
+			"Target": "Maps/Farm_Mining",
+			"MapTiles": [
+				{
+					"Position": { "X": 19, "Y": 51 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_West {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Farm West Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 20, "Y": 51 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_West {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Farm West Name}}}}"
+					}
+				}
+			]
+		},
+		//Minecart Farm East Wilderness
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Farm East Wilderness EditData",
+			"When": {
+				"Farm East": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Farm_East",
+				"FarmType": "Wilderness" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Farm East": {
+					"Id": "Polydot.PolyCarts_Farm_East",
+					"DisplayName": "{{Farm East Name}}",
+					"TargetLocation": "Farm",
+					"TargetTile": { "X": 77, "Y": 11 },
+					"TargetDirection": "left"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Farm_Combat",
+			"LogName": "Farm East Wilderness EditMap",
+			"When": {
+				"Farm East": true,
+				"FarmType": "Wilderness" 
+			},
+			"FromFile": "assets/SDV/Farm_East.tmx",
+			"ToArea": { "X": 77, "Y": 8, "Width": 3, "Height": 4 },
+			"MapTiles": [
+				{
+					"Position": { "X": 77, "Y": 10 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_East"
+					}
+				},
+				{
+					"Position": { "X": 78, "Y": 10 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_East"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock Farm East Wilderness",
+			"When": {
+				"Farm East": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Farm_East": false,
+				"FarmType": "Wilderness" 
+			},
+			"Target": "Maps/Farm_Combat",
+			"MapTiles": [
+				{
+					"Position": { "X": 77, "Y": 10 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_East {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Farm East Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 78, "Y": 10 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_East {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Farm East Name}}}}"
+					}
+				}
+			]
+		},
+		//Minecart Farm West Wilderness
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Farm West Wilderness EditData",
+			"When": {
+				"Farm West": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Farm_West",
+				"FarmType": "Wilderness" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Farm West": {
+					"Id": "Polydot.PolyCarts_Farm_West",
+					"DisplayName": "{{Farm West Name}}",
+					"TargetLocation": "Farm",
+					"TargetTile": { "X": 20, "Y": 37 },
+					"TargetDirection": "right"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Farm_Combat",
+			"LogName": "Farm West Wilderness EditMap",
+			"When": {
+				"Farm West": true,
+				"FarmType": "Wilderness" 
+			},
+			"FromFile": "assets/SDV/Farm_West_Wilderness.tmx",
+			"ToArea": { "X": 16, "Y": 33, "Width": 4, "Height": 5 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "18 34 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 18, "Y": 37 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_West"
+					}
+				},
+				{
+					"Position": { "X": 19, "Y": 37 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_West"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock Farm West Wilderness",
+			"When": {
+				"Farm West": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Farm_West": false,
+				"FarmType": "Wilderness" 
+			},
+			"Target": "Maps/Farm_Combat",
+			"MapTiles": [
+				{
+					"Position": { "X": 18, "Y": 37 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_West {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Farm West Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 19, "Y": 37 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_West {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Farm West Name}}}}"
+					}
+				}
+			]
+		},
+		//Minecart Farm East FourCorners
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Farm East FourCorners EditData",
+			"When": {
+				"Farm East": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Farm_East",
+				"FarmType": "FourCorners" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Farm East": {
+					"Id": "Polydot.PolyCarts_Farm_East",
+					"DisplayName": "{{Farm East Name}}",
+					"TargetLocation": "Farm",
+					"TargetTile": { "X": 77, "Y": 11 },
+					"TargetDirection": "left"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Farm_FourCorners",
+			"LogName": "Farm East FourCorners EditMap",
+			"When": {
+				"Farm East": true,
+				"FarmType": "FourCorners" 
+			},
+			"FromFile": "assets/SDV/Farm_East.tmx",
+			"ToArea": { "X": 77, "Y": 8, "Width": 3, "Height": 4 },
+			"MapTiles": [
+				{
+					"Position": { "X": 77, "Y": 10 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_East"
+					}
+				},
+				{
+					"Position": { "X": 78, "Y": 10 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_East"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock Farm East FourCorners",
+			"When": {
+				"Farm East": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Farm_East": false,
+				"FarmType": "FourCorners" 
+			},
+			"Target": "Maps/Farm_FourCorners",
+			"MapTiles": [
+				{
+					"Position": { "X": 77, "Y": 10 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_East {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Farm East Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 78, "Y": 10 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_East {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Farm East Name}}}}"
+					}
+				}
+			]
+		},
+		//Minecart Farm West FourCorners
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Farm West FourCorners EditData",
+			"When": {
+				"Farm West": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Farm_West",
+				"FarmType": "FourCorners" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Farm West": {
+					"Id": "Polydot.PolyCarts_Farm_West",
+					"DisplayName": "{{Farm West Name}}",
+					"TargetLocation": "Farm",
+					"TargetTile": { "X": 34, "Y": 9 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Farm_FourCorners",
+			"LogName": "Farm West FourCorners EditMap",
+			"When": {
+				"Farm West": true,
+				"FarmType": "FourCorners" 
+			},
+			"FromFile": "assets/SDV/Farm_West_FourCorners.tmx",
+			"ToArea": { "X": 32, "Y": 5, "Width": 4, "Height": 4 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "34 6 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 34, "Y": 8 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_West"
+					}
+				},
+				{
+					"Position": { "X": 35, "Y": 8 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_West"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock Farm West FourCorners",
+			"When": {
+				"Farm West": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Farm_West": false,
+				"FarmType": "FourCorners" 
+			},
+			"Target": "Maps/Farm_FourCorners",
+			"MapTiles": [
+				{
+					"Position": { "X": 34, "Y": 8 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_West {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Farm West Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 35, "Y": 8 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_West {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Farm West Name}}}}"
+					}
+				}
+			]
+		},
+		//Minecart Farm East Beach
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Farm East Beach EditData",
+			"When": {
+				"Farm East": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Farm_East",
+				"FarmType": "Beach" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Farm East": {
+					"Id": "Polydot.PolyCarts_Farm_East",
+					"DisplayName": "{{Farm East Name}}",
+					"TargetLocation": "Farm",
+					"TargetTile": { "X": 77, "Y": 15 },
+					"TargetDirection": "left"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Farm_Island",
+			"LogName": "Farm East Beach EditMap",
+			"When": {
+				"Farm East": true,
+				"FarmType": "Beach" 
+			},
+			"FromFile": "assets/SDV/Farm_East_Beach.tmx",
+			"ToArea": { "X": 77, "Y": 13, "Width": 3, "Height": 3 },
+			"MapTiles": [
+				{
+					"Position": { "X": 77, "Y": 14 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_East"
+					}
+				},
+				{
+					"Position": { "X": 78, "Y": 14 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_East"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock Farm East Beach",
+			"When": {
+				"Farm East": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Farm_East": false,
+				"FarmType": "Beach" 
+			},
+			"Target": "Maps/Farm_Island",
+			"MapTiles": [
+				{
+					"Position": { "X": 77, "Y": 14 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_East {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Farm East Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 78, "Y": 14 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_East {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Farm East Name}}}}"
+					}
+				}
+			]
+		},
+		//Minecart Farm West Beach
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Farm West Beach EditData",
+			"When": {
+				"Farm West": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Farm_West",
+				"FarmType": "Beach" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Farm West": {
+					"Id": "Polydot.PolyCarts_Farm_West",
+					"DisplayName": "{{Farm West Name}}",
+					"TargetLocation": "Farm",
+					"TargetTile": { "X": 48, "Y": 61 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Farm_Island",
+			"LogName": "Farm West Beach EditMap",
+			"When": {
+				"Farm West": true,
+				"FarmType": "Beach" 
+			},
+			"FromFile": "assets/SDV/Farm_West_Beach.tmx",
+			"ToArea": { "X": 46, "Y": 57, "Width": 5, "Height": 4 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "49 58 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 48, "Y": 59 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_West"
+					}
+				},
+				{
+					"Position": { "X": 48, "Y": 60 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_West"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock Farm West Beach",
+			"When": {
+				"Farm West": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Farm_West": false,
+				"FarmType": "Beach" 
+			},
+			"Target": "Maps/Farm_Island",
+			"MapTiles": [
+				{
+					"Position": { "X": 48, "Y": 59 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_West {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Farm West Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 48, "Y": 60 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_West {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Farm West Name}}}}"
+					}
+				}
+			]
+		},
+		//Minecart Farm East MeadowlandsFarm
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Farm East MeadowlandsFarm EditData",
+			"When": {
+				"Farm East": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Farm_East",
+				"FarmType": "MeadowlandsFarm" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Farm East": {
+					"Id": "Polydot.PolyCarts_Farm_East",
+					"DisplayName": "{{Farm East Name}}",
+					"TargetLocation": "Farm",
+					"TargetTile": { "X": 93, "Y": 19 },
+					"TargetDirection": "left"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Farm_Ranching",
+			"LogName": "Farm East MeadowlandsFarm EditMap",
+			"When": {
+				"Farm East": true,
+				"FarmType": "MeadowlandsFarm" 
+			},
+			"FromFile": "assets/SDV/Farm_East_MeadowlandsFarm.tmx",
+			"ToArea": { "X": 92, "Y": 16, "Width": 8, "Height": 4 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "92 18 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 94, "Y": 19 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_East"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock Farm East MeadowlandsFarm",
+			"When": {
+				"Farm East": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Farm_East": false,
+				"FarmType": "MeadowlandsFarm" 
+			},
+			"Target": "Maps/Farm_Ranching",
+			"MapTiles": [
+				{
+					"Position": { "X": 94, "Y": 19 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_East {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Farm East Name}}}}"
+					}
+				}
+			]
+		},
+		//Minecart Farm West MeadowlandsFarm
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Farm West MeadowlandsFarm EditData",
+			"When": {
+				"Farm West": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Farm_West",
+				"FarmType": "MeadowlandsFarm" 
+			},
+			"TargetField": ["Default", "Destinations"],
+			"Entries": {
+				"Farm West": {
+					"Id": "Polydot.PolyCarts_Farm_West",
+					"DisplayName": "{{Farm West Name}}",
+					"TargetLocation": "Farm",
+					"TargetTile": { "X": 11, "Y": 57 },
+					"TargetDirection": "right"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Farm_Ranching",
+			"LogName": "Farm West MeadowlandsFarm EditMap",
+			"When": {
+				"Farm West": true,
+				"FarmType": "MeadowlandsFarm" 
+			},
+			"FromFile": "assets/SDV/Farm_West_MeadowlandsFarm.tmx",
+			"ToArea": { "X": 7, "Y": 56, "Width": 4, "Height": 5 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "8 58 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 9, "Y": 57 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_West"
+					}
+				},
+				{
+					"Position": { "X": 10, "Y": 57 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport Default Polydot.PolyCarts_Farm_West"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "Unlock Farm West MeadowlandsFarm",
+			"When": {
+				"Farm West": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Farm_West": false,
+				"FarmType": "MeadowlandsFarm" 
+			},
+			"Target": "Maps/Farm_Ranching",
+			"MapTiles": [
+				{
+					"Position": { "X": 9, "Y": 57 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_West {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Farm West Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 10, "Y": 57 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_West {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Farm West Name}}}}"
+					}
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,85 @@
+{
+	"$schema": "https://smapi.io/schemas/content-patcher.json",
+	"Changes": [
+		//
+		//Sort Carts
+		//
+		{//RidgeSide Village
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"When": {
+				"HasMod": "Rafseazz.RSVCP"
+			},
+			"TargetField": ["{{RidgeSide Destinations}}", "Destinations"],
+			"MoveEntries": [
+				{ "ID": "Polydot.PolyCarts_RSV_CableCar_Bottom", "ToPosition": "Top" },
+				{ "ID": "Polydot.PolyCarts_RSV_CableCar_Top", "ToPosition": "Top" },
+				{ "ID": "Polydot.PolyCarts_Expa", "ToPosition": "Top" }
+			]
+		},
+		{//East Scarp
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"When": {
+				"HasMod": "LemurKat.EastScarpe.CP"
+			},
+			"TargetField": ["{{EastScarp Destinations}}", "Destinations"],
+			"MoveEntries": [
+				{ "ID": "Polydot.PolyCarts_ClearingHouse", "ToPosition": "Top" },
+				{ "ID": "Polydot.PolyCarts_Orchard", "ToPosition": "Top" },
+				{ "ID": "Polydot.PolyCarts_ES_Meadow", "ToPosition": "Top" },
+				{ "ID": "Polydot.PolyCarts_UnderScarp", "ToPosition": "Top" },
+				{ "ID": "Polydot.PolyCarts_DeepMountains_West", "ToPosition": "Top" },
+				{ "ID": "Polydot.PolyCarts_DeepMountains_South", "ToPosition": "Top" },
+				{ "ID": "Polydot.PolyCarts_ES_Village", "ToPosition": "Top" },
+				{ "ID": "Polydot.PolyCarts_Expa", "ToPosition": "Top" }
+			]
+		},
+		{//Ginger Island
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"TargetField": ["{{GingerIsland Destinations}}", "Destinations"],
+			"MoveEntries": [
+				{ "ID": "Polydot.PolyCarts_GingerIsland_West", "ToPosition": "Top" },
+				{ "ID": "Polydot.PolyCarts_GingerIsland_South", "ToPosition": "Top" },
+				{ "ID": "Polydot.PolyCarts_GingerIsland_East", "ToPosition": "Top" },
+				{ "ID": "Polydot.PolyCarts_GingerIsland_North", "ToPosition": "Top" },
+				{ "ID": "Polydot.PolyCarts_Expa", "ToPosition": "Top" }
+			]
+		},
+		{//Vanilla & SVE
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"TargetField": ["Default", "Destinations"],
+			"MoveEntries": [
+				{ "ID": "Polydot.PolyCarts_ForestWest_West", "ToPosition": "Top" },
+				{ "ID": "Polydot.PolyCarts_ForestWest_South", "ToPosition": "Top" },
+				{ "ID": "Polydot.PolyCarts_ForestWest_East", "ToPosition": "Top" },
+				{ "ID": "Polydot.PolyCarts_ForestWest_North", "ToPosition": "Top" },
+				{ "ID": "Polydot.PolyCarts_Secret_Woods", "ToPosition": "Top" },
+				{ "ID": "Polydot.PolyCarts_Railroad", "ToPosition": "Top" },
+				{ "ID": "Polydot.PolyCarts_Desert_South", "ToPosition": "Top" },
+				{ "ID": "Polydot.PolyCarts_Desert_North", "ToPosition": "Top" },
+				{ "ID": "Polydot.PolyCarts_Forest_West", "ToPosition": "Top" },
+				{ "ID": "Polydot.PolyCarts_Forest_East", "ToPosition": "Top" },
+				{ "ID": "Polydot.PolyCarts_Forest_North", "ToPosition": "Top" },
+				{ "ID": "Polydot.PolyCarts_Mountain_West", "ToPosition": "Top" },
+				{ "ID": "Polydot.PolyCarts_Mountain_East", "ToPosition": "Top" },
+				{ "ID": "Polydot.PolyCarts_Mountain_North", "ToPosition": "Top" },
+				{ "ID": "Polydot.PolyCarts_Beach", "ToPosition": "Top" },
+				{ "ID": "Polydot.PolyCarts_Town_West", "ToPosition": "Top" },
+				{ "ID": "Polydot.PolyCarts_Town_East", "ToPosition": "Top" },
+				{ "ID": "Polydot.PolyCarts_Town_North", "ToPosition": "Top" },
+				{ "ID": "Polydot.PolyCarts_Old_Community_Garden", "ToPosition": "Top" },
+				{ "ID": "Polydot.PolyCarts_GrandpasShed", "ToPosition": "Top" },
+				{ "ID": "Polydot.PolyCarts_FarmCave", "ToPosition": "Top" },
+				{ "ID": "Polydot.PolyCarts_Farm_North", "ToPosition": "Top" },
+				{ "ID": "Polydot.PolyCarts_Farm_South", "ToPosition": "Top" },
+				{ "ID": "Polydot.PolyCarts_Farm_West", "ToPosition": "Top" },
+				{ "ID": "Polydot.PolyCarts_Farm_East", "ToPosition": "Top" },
+				{ "ID": "Mines", "ToPosition": "Top" },
+				{ "ID": "Polydot.PolyCarts_Expa", "ToPosition": "Top" }
+			]
+		}
+	]
+}

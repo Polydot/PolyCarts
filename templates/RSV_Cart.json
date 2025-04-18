@@ -1,0 +1,95 @@
+{
+	"$schema": "https://smapi.io/schemas/content-patcher.json",
+	"Changes": [
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "{{{MinecartID}}} EditData",
+			"When": {
+				"{{MinecartID}}": true,
+				"HasFlag: hostPlayer": "RSV.FixedMinecart",
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.{{MinecartID}}"
+			},
+			"TargetField": ["{{RidgeSide Destinations}}", "Destinations"],
+			"Entries": {
+				"{{MinecartID}}": {
+					"Id": "Polydot.PolyCarts_{{MinecartID}}",
+					"DisplayName": "{{{{MinecartID}} Name}}",
+					"TargetLocation": "{{MapID}}",
+					"TargetTile": { "X": {{ArrivaltileX}}, "Y": {{ArrivaltileY}} },
+					"TargetDirection": "{{ArrivalDir}}"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/{{MapID}}",
+			"LogName": "{{MinecartID}} EditMap",
+			"When": {
+				"{{MinecartID}}": true
+			},
+			"FromFile": "assets/RSV/{{MinecartID}}.tmx",
+			"ToArea": { "X": {{ToX}}, "Y": {{ToY}}, "Width": {{Width}}, "Height": {{Height}} },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "{{Light X Y}} 4",
+					"Delimiter": " "
+				}
+			]
+		},
+		{
+			"Action": "EditMap",
+			"LogName": "{{MinecartID}} Activate",
+			"When": {
+				"{{MinecartID}}": true,
+				"HasFlag: hostPlayer": "RSV.FixedMinecart"
+			},
+			"Target": "Maps/{{MapID}}",
+			"MapTiles": [
+				{
+					"Position": { "X": {CartX1}}, "Y": {{CartY1}} },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{RidgeSide Destinations}} Polydot.PolyCarts_{{MinecartID}}"
+					}
+				},
+				{
+					"Position": { "X": {CartX2}}, "Y": {{CartY2}} },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{RidgeSide Destinations}} Polydot.PolyCarts_{{MinecartID}}"
+					}
+				}
+			]
+		},
+		{
+			//Unlock
+			"Action": "EditMap",
+			"LogName": "{{MinecartID}} Unlock",
+			"When": {
+				"{{MinecartID}}": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.{{MinecartID}}": false
+			},
+			"Target": "Maps/{{MapID}}",
+			"MapTiles": [
+				{
+					"Position": { "X": {CartX1}}, "Y": {{CartY1}} },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.{{MinecartID}} {{i18n: {{RSV_find}}_L1}}^{{i18n: {{RSV_find}}_L2}}^{{i18n: {{RSV_find}}_L3}}^{{i18n: {{RSV_find}}_L4 |Unlocked_Location={{{{MinecartID}} Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": {CartX2}}, "Y": {{CartY2}} },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.{{MinecartID}} {{i18n: {{RSV_find}}_L1}}^{{i18n: {{RSV_find}}_L2}}^{{i18n: {{RSV_find}}_L3}}^{{i18n: {{RSV_find}}_L4 |Unlocked_Location={{{{MinecartID}} Name}}}}"
+					}
+				}
+			]
+		}
+	]
+}

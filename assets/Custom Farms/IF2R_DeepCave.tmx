@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="23" height="9" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="3">
+  <tileset firstgid="1" name="mine" tilewidth="16" tileheight="16" tilecount="288" columns="16">
+    <image source="Mines/mine" width="256" height="288" />
+    <tile id="0">
+      <properties>
+        <property name="Type" value="Dirt" />
+      </properties>
+    </tile>
+    <tile id="137">
+      <properties>
+        <property name="Type" value="Stone" />
+      </properties>
+    </tile>
+    <tile id="138">
+      <properties>
+        <property name="Type" value="Stone" />
+      </properties>
+    </tile>
+    <tile id="139">
+      <properties>
+        <property name="Type" value="Stone" />
+      </properties>
+    </tile>
+    <tile id="140">
+      <properties>
+        <property name="Type" value="Stone" />
+      </properties>
+    </tile>
+    <tile id="153">
+      <properties>
+        <property name="Type" value="Stone" />
+      </properties>
+    </tile>
+    <tile id="154">
+      <properties>
+        <property name="Type" value="Stone" />
+      </properties>
+    </tile>
+    <tile id="155">
+      <properties>
+        <property name="Type" value="Stone" />
+      </properties>
+    </tile>
+    <tile id="165">
+      <properties>
+        <property name="Type" value="Dirt" />
+      </properties>
+    </tile>
+    <tile id="166">
+      <properties>
+        <property name="Type" value="Stone" />
+      </properties>
+    </tile>
+    <tile id="167">
+      <properties>
+        <property name="Type" value="Stone" />
+      </properties>
+    </tile>
+    <tile id="168">
+      <properties>
+        <property name="Type" value="Stone" />
+      </properties>
+    </tile>
+    <tile id="169">
+      <properties>
+        <property name="Type" value="Stone" />
+      </properties>
+    </tile>
+    <tile id="170">
+      <properties>
+        <property name="Type" value="Stone" />
+      </properties>
+    </tile>
+    <tile id="171">
+      <properties>
+        <property name="Type" value="Stone" />
+      </properties>
+    </tile>
+    <tile id="172">
+      <properties>
+        <property name="Type" value="Stone" />
+      </properties>
+    </tile>
+    <tile id="181">
+      <properties>
+        <property name="Type" value="Dirt" />
+      </properties>
+    </tile>
+    <tile id="182">
+      <properties>
+        <property name="Type" value="Stone" />
+      </properties>
+    </tile>
+    <tile id="183">
+      <properties>
+        <property name="Type" value="Dirt" />
+      </properties>
+    </tile>
+    <tile id="184">
+      <properties>
+        <property name="Type" value="Stone" />
+      </properties>
+    </tile>
+    <tile id="185">
+      <properties>
+        <property name="Type" value="Stone" />
+      </properties>
+    </tile>
+    <tile id="186">
+      <properties>
+        <property name="Type" value="Stone" />
+      </properties>
+    </tile>
+    <tile id="187">
+      <properties>
+        <property name="Type" value="Stone" />
+      </properties>
+    </tile>
+    <tile id="188">
+      <properties>
+        <property name="Type" value="Stone" />
+      </properties>
+    </tile>
+    <tile id="198">
+      <properties>
+        <property name="Type" value="Stone" />
+      </properties>
+    </tile>
+    <tile id="199">
+      <properties>
+        <property name="Type" value="Stone" />
+      </properties>
+    </tile>
+    <tile id="200">
+      <properties>
+        <property name="Type" value="Stone" />
+      </properties>
+    </tile>
+    <tile id="201">
+      <properties>
+        <property name="Type" value="Stone" />
+      </properties>
+    </tile>
+    <tile id="202">
+      <properties>
+        <property name="Type" value="Stone" />
+      </properties>
+    </tile>
+    <tile id="203">
+      <properties>
+        <property name="Type" value="Stone" />
+      </properties>
+    </tile>
+    <tile id="204">
+      <properties>
+        <property name="Type" value="Stone" />
+      </properties>
+    </tile>
+    <tile id="217">
+      <properties>
+        <property name="Type" value="Stone" />
+      </properties>
+    </tile>
+    <tile id="218">
+      <properties>
+        <property name="Type" value="Stone" />
+      </properties>
+    </tile>
+    <tile id="219">
+      <properties>
+        <property name="Type" value="Stone" />
+      </properties>
+    </tile>
+    <tile id="233">
+      <properties>
+        <property name="Type" value="Stone" />
+      </properties>
+    </tile>
+    <tile id="234">
+      <properties>
+        <property name="Type" value="Stone" />
+      </properties>
+    </tile>
+    <tile id="235">
+      <properties>
+        <property name="Type" value="Stone" />
+      </properties>
+    </tile>
+    <tile id="240">
+      <properties>
+        <property name="Type" value="Wood" />
+      </properties>
+    </tile>
+    <tile id="241">
+      <properties>
+        <property name="Type" value="Wood" />
+      </properties>
+    </tile>
+    <tile id="242">
+      <properties>
+        <property name="Type" value="Wood" />
+      </properties>
+    </tile>
+    <tile id="246">
+      <properties>
+        <property name="Water" value="T" />
+      </properties>
+    </tile>
+    <tile id="247">
+      <properties>
+        <property name="Water" value="T" />
+      </properties>
+    </tile>
+    <tile id="248">
+      <properties>
+        <property name="Water" value="T" />
+      </properties>
+    </tile>
+    <tile id="256">
+      <properties>
+        <property name="Type" value="Wood" />
+      </properties>
+    </tile>
+    <tile id="257">
+      <properties>
+        <property name="Type" value="Wood" />
+      </properties>
+    </tile>
+    <tile id="258">
+      <properties>
+        <property name="Type" value="Wood" />
+      </properties>
+    </tile>
+    <tile id="260">
+      <properties>
+        <property name="Water" value="T" />
+      </properties>
+    </tile>
+    <tile id="262">
+      <properties>
+        <property name="Water" value="T" />
+      </properties>
+    </tile>
+    <tile id="263">
+      <properties>
+        <property name="Water" value="T" />
+      </properties>
+    </tile>
+    <tile id="264">
+      <properties>
+        <property name="Water" value="T" />
+      </properties>
+    </tile>
+    <tile id="265">
+      <properties>
+        <property name="Water" value="T" />
+      </properties>
+    </tile>
+    <tile id="266">
+      <properties>
+        <property name="Water" value="T" />
+      </properties>
+    </tile>
+    <tile id="272">
+      <properties>
+        <property name="Type" value="Wood" />
+      </properties>
+    </tile>
+    <tile id="273">
+      <properties>
+        <property name="Type" value="Wood" />
+      </properties>
+    </tile>
+    <tile id="274">
+      <properties>
+        <property name="Type" value="Wood" />
+      </properties>
+    </tile>
+    <tile id="275">
+      <properties>
+        <property name="Water" value="T" />
+      </properties>
+    </tile>
+    <tile id="276">
+      <properties>
+        <property name="Water" value="T" />
+      </properties>
+    </tile>
+    <tile id="277">
+      <properties>
+        <property name="Water" value="T" />
+      </properties>
+    </tile>
+    <tile id="281">
+      <properties>
+        <property name="Water" value="T" />
+      </properties>
+    </tile>
+    <tile id="282">
+      <properties>
+        <property name="Water" value="T" />
+      </properties>
+    </tile>
+  </tileset>
+  <tileset firstgid="289" name="CavernObjects" tilewidth="16" tileheight="16" tilecount="936" columns="24">
+    <image source="CavernObjects" width="384" height="624" />
+  </tileset>
+  <tileset firstgid="1225" name="paths" tilewidth="16" tileheight="16" tilecount="64" columns="4">
+    <image source="paths" width="64" height="256" />
+  </tileset>
+  <tileset firstgid="1289" name="Mine_Inverted" tilewidth="16" tileheight="16" tilecount="288" columns="16">
+    <image source="Mine_Inverted" width="256" height="288" />
+  </tileset>
+  <tileset firstgid="1577" name="PolyCarts" tilewidth="16" tileheight="16" tilecount="32" columns="8">
+    <image source="mine_PolyCarts" width="128" height="64" />
+  </tileset>
+  <layer id="1" name="Back" width="23" height="9">
+    <data encoding="base64" compression="zlib">
+      eJxjYKAuuI2EKQVdUIxs5m4gfk2hmdjMA+E3QDyLDDNvY8G7oebNRvJHFxXN7cKCyTUb2f/YzCXX7MtI+AoQd0PNmgOlVzGQF9643Eipu2HgDtSN3VjcjIwBeO48sQ==
+    </data>
+  </layer>
+  <layer id="3" name="Buildings" width="23" height="9">
+    <data encoding="base64" compression="zlib">
+      eJyN0j1OAkEYgOEPohSgCB0R/ClBwk9JhQghdHRqgR2FhXYUEEJBA1yBG8AN4AIIN9Dj8A6ZTT5WBpjkyc5udt/MTqYpIs0zVdT8EQ20kMAnvpFGF337XhgRO7/y9Z6QVffXqOMN7/hSvQFKmCB+8X9tKdzZeU49z6OA6aUMX7m27VrHqtcKym68BEQyB9ouZTxjTnuGjl1rDx+26R/muyhuVEfvkd+S7gJju9ZG4HDXa9/jwdGqqLnZgw3dNdzF/bYnJ+49idk9+KP7i2pIpBY63vafC9f5MFamjR8UT3TN0OfCxfufWyQxOp3djS3yRjfV
+    </data>
+  </layer>
+  <objectgroup id="4" name="Buildings">
+    <object id="1" name="TileData" x="224" y="96" width="16" height="16">
+      <properties>
+        <property name="Action" value="Warp 31 6 FarmCave" />
+      </properties>
+    </object>
+    <object id="2" name="TileData" x="240" y="96" width="16" height="16">
+      <properties>
+        <property name="Action" value="Warp 31 6 FarmCave" />
+      </properties>
+    </object>
+  </objectgroup>
+  <layer id="5" name="Path" width="23" height="9">
+    <data encoding="base64" compression="zlib">
+      eJxjYBgFo2AUkAMAAzwAAQ==
+    </data>
+  </layer>
+  <layer id="7" name="Front" width="23" height="9">
+    <data encoding="base64" compression="zlib">
+      eJxjYKAMeFCoHx+IoKHZGTQ0m1rAlYZmL0ViW7ExMFizUc/srdQzalADAC4rAyk=
+    </data>
+  </layer>
+</map>

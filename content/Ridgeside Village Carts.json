@@ -1,0 +1,1309 @@
+{
+	"$schema": "https://smapi.io/schemas/content-patcher.json",
+	"Changes": [
+		//
+		//Expa
+		//
+		{//Minecart RSV Destinations List
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "RSV Add Destinations List",
+			"Entries": {
+				"RidgeSide": {
+					"Destinations": []
+				}
+			}
+		},
+		{//Destination
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "Expa Entry Center RidgeSide",
+			"When": {"Enable Expa": true},
+			"TargetField": ["{{RidgeSide Destinations}}", "Destinations"],
+			"Entries": {
+				"Expa": {
+					"Id": "Polydot.PolyCarts_Expa",
+					"DisplayName": "{{i18n: Expa}}",
+					"TargetLocation": "Polydot.PolyCarts_Expa",
+					"TargetTile": { "X": 19, "Y": 19 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{//Add Map
+			"Action": "EditMap",
+			"Target": "Maps/Polydot.PolyCarts_Expa",
+			"LogName": "RSV Expa Map",
+			"FromFile": "assets/Expa/RidgeSide Village.tmx",
+			"ToArea": { "X": 6, "Y": 5, "Width": 7, "Height": 7 },
+			"MapTiles": [
+				{
+					"Position": { "X": 8, "Y": 8 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{RidgeSide Destinations}} Polydot.PolyCarts_Expa"
+					}
+				},
+				{
+					"Position": { "X": 8, "Y": 9 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{RidgeSide Destinations}} Polydot.PolyCarts_Expa"
+					}
+				},
+				{//RidgeSide Village
+					"Position": { "X": 10, "Y": 7 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MineSign {{i18n: Expacart RidgeSide Village}}"
+					}
+				}
+			]
+		},
+		//
+		//Add New Carts
+		//
+		//RSV_CableCar_Bottom
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "RSV_CableCar_Bottom EditData",
+			"When": {
+				"RSV_CableCar_Bottom": true,
+				"HasFlag: hostPlayer": "RSV.FixedMinecart",
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.RSV_CableCar_Bottom" 
+			},
+			"TargetField": ["{{RidgeSide Destinations}}", "Destinations"],
+			"Entries": {
+				"RSV_CableCar_Bottom": {
+					"Id": "Polydot.PolyCarts_RSV_CableCar_Bottom",
+					"DisplayName": "{{RSV_CableCar_Bottom Name}}",
+					"TargetLocation": "Custom_Ridgeside_RSVCableCar",
+					"TargetTile": { "X": 24, "Y": 19 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Custom_Ridgeside_RSVCableCar",
+			"LogName": "RSV_CableCar_Bottom EditMap",
+			"When": {
+				"RSV_CableCar_Bottom": true
+			},
+			"FromFile": "assets/RSV/RSV_CableCar_Bottom.tmx",
+			"ToArea": { "X": 23, "Y": 15, "Width": 4, "Height": 4 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "RemoveDelimited",
+					"Target": ["MapProperties", "NightTiles"],
+					"Search": "Front 26 16 507",
+					"Delimiter": " "
+				},
+				{
+					"Operation": "RemoveDelimited",
+					"Target": ["MapProperties", "Light"],
+					"Search": "26 16 4",
+					"Delimiter": " "
+				},
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "25 16 4",
+					"Delimiter": " "
+				}
+			]
+		},
+		{
+			"Action": "EditMap",
+			"LogName": "RSV_CableCar_Bottom Activate",
+			"When": {
+				"RSV_CableCar_Bottom": true,
+				"HasFlag: hostPlayer": "RSV.FixedMinecart"
+			},
+			"Target": "Maps/Custom_Ridgeside_RSVCableCar",
+			"MapTiles": [
+				{
+					"Position": { "X": 24, "Y": 17 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{RidgeSide Destinations}} Polydot.PolyCarts_RSV_CableCar_Bottom"
+					}
+				},
+				{
+					"Position": { "X": 24, "Y": 18 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{RidgeSide Destinations}} Polydot.PolyCarts_RSV_CableCar_Bottom"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "RSV_CableCar_Bottom Unlock",
+			"When": {
+				"RSV_CableCar_Bottom": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.RSV_CableCar_Bottom": false 
+			},
+			"Target": "Maps/Custom_Ridgeside_RSVCableCar",
+			"MapTiles": [
+				{
+					"Position": { "X": 24, "Y": 17 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.RSV_CableCar_Bottom {{i18n: {{RSV_find}}_L1}}^{{i18n: {{RSV_find}}_L2}}^{{i18n: {{RSV_find}}_L3}}^{{i18n: {{RSV_find}}_L4 |Unlocked_Location={{RSV_CableCar_Bottom Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 24, "Y": 18 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.RSV_CableCar_Bottom {{i18n: {{RSV_find}}_L1}}^{{i18n: {{RSV_find}}_L2}}^{{i18n: {{RSV_find}}_L3}}^{{i18n: {{RSV_find}}_L4 |Unlocked_Location={{RSV_CableCar_Bottom Name}}}}"
+					}
+				}
+			]
+		},
+		//RSV_CableCar_Top
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "RSV_CableCar_Top EditData",
+			"When": {
+				"RSV_CableCar_Top": true,
+				"HasFlag: hostPlayer": "RSV.FixedMinecart",
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.RSV_CableCar_Top" 
+			},
+			"TargetField": ["{{RidgeSide Destinations}}", "Destinations"],
+			"Entries": {
+				"RSV_CableCar_Top": {
+					"Id": "Polydot.PolyCarts_RSV_CableCar_Top",
+					"DisplayName": "{{RSV_CableCar_Top Name}}",
+					"TargetLocation": "Custom_Ridgeside_RSVCliff",
+					"TargetTile": { "X": 24, "Y": 23 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Custom_Ridgeside_RSVCliff",
+			"LogName": "RSV_CableCar_Top EditMap",
+			"When": {
+				"RSV_CableCar_Top": true
+			},
+			"FromFile": "assets/RSV/RSV_CableCar_Top.tmx",
+			"ToArea": { "X": 23, "Y": 19, "Width": 5, "Height": 4 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "24 20 4",
+					"Delimiter": " "
+				}
+			]
+		},
+		{
+			"Action": "EditMap",
+			"LogName": "RSV_CableCar_Top Activate",
+			"When": {
+				"RSV_CableCar_Top": true,
+				"HasFlag: hostPlayer": "RSV.FixedMinecart"
+			},
+			"Target": "Maps/Custom_Ridgeside_RSVCliff",
+			"MapTiles": [
+				{
+					"Position": { "X": 23, "Y": 22 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{RidgeSide Destinations}} Polydot.PolyCarts_RSV_CableCar_Top"
+					}
+				},
+				{
+					"Position": { "X": 24, "Y": 22 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{RidgeSide Destinations}} Polydot.PolyCarts_RSV_CableCar_Top"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "RSV_CableCar_Top Unlock",
+			"When": {
+				"RSV_CableCar_Top": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.RSV_CableCar_Top": false 
+			},
+			"Target": "Maps/Custom_Ridgeside_RSVCliff",
+			"MapTiles": [
+				{
+					"Position": { "X": 23, "Y": 22 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.RSV_CableCar_Top {{i18n: {{RSV_find}}_L1}}^{{i18n: {{RSV_find}}_L2}}^{{i18n: {{RSV_find}}_L3}}^{{i18n: {{RSV_find}}_L4 |Unlocked_Location={{RSV_CableCar_Top Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 24, "Y": 22 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.RSV_CableCar_Top {{i18n: {{RSV_find}}_L1}}^{{i18n: {{RSV_find}}_L2}}^{{i18n: {{RSV_find}}_L3}}^{{i18n: {{RSV_find}}_L4 |Unlocked_Location={{RSV_CableCar_Top Name}}}}"
+					}
+				}
+			]
+		},
+		//RSV_Heaps
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "RSV_Heaps EditData",
+			"When": {
+				"RSV_Heaps": true,
+				"HasFlag: hostPlayer": "RSV.FixedMinecart",
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.RSV_Heaps" 
+			},
+			"TargetField": ["{{RidgeSide Destinations}}", "Destinations"],
+			"Entries": {
+				"RSV_Heaps": {
+					"Id": "Polydot.PolyCarts_RSV_Heaps",
+					"DisplayName": "{{RSV_Heaps Name}}",
+					"TargetLocation": "Custom_Ridgeside_RidgesideVillage",
+					"TargetTile": { "X": 69, "Y": 17 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
+			"LogName": "RSV_Heaps EditMap",
+			"When": {
+				"RSV_Heaps": true
+			},
+			"FromFile": "assets/RSV/RSV_Heaps.tmx",
+			"ToArea": { "X": 68, "Y": 13, "Width": 4, "Height": 4 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "70 14 4",
+					"Delimiter": " "
+				}
+			]
+		},
+		{
+			"Action": "EditMap",
+			"LogName": "RSV_Heaps Activate",
+			"When": {
+				"RSV_Heaps": true,
+				"HasFlag: hostPlayer": "RSV.FixedMinecart"
+			},
+			"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
+			"MapTiles": [
+				{
+					"Position": { "X": 69, "Y": 15 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{RidgeSide Destinations}} Polydot.PolyCarts_RSV_Heaps"
+					}
+				},
+				{
+					"Position": { "X": 69, "Y": 16 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{RidgeSide Destinations}} Polydot.PolyCarts_RSV_Heaps"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "RSV_Heaps Unlock",
+			"When": {
+				"RSV_Heaps": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.RSV_Heaps": false 
+			},
+			"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
+			"MapTiles": [
+				{
+					"Position": { "X": 69, "Y": 15 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.RSV_Heaps {{i18n: {{RSV_find}}_L1}}^{{i18n: {{RSV_find}}_L2}}^{{i18n: {{RSV_find}}_L3}}^{{i18n: {{RSV_find}}_L4 |Unlocked_Location={{RSV_Heaps Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 69, "Y": 16 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.RSV_Heaps {{i18n: {{RSV_find}}_L1}}^{{i18n: {{RSV_find}}_L2}}^{{i18n: {{RSV_find}}_L3}}^{{i18n: {{RSV_find}}_L4 |Unlocked_Location={{RSV_Heaps Name}}}}"
+					}
+				}
+			]
+		},
+		//RSV_Nightingale
+		{//Remove standard
+			"Action": "EditMap",
+			"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
+			"LogName": "RSV_Nightingale Remove",
+			"When": {
+				"RSV_Nightingale": true
+			},
+			"FromFile": "assets/RSV/RSV_Nightingale_Remove.tmx",
+			"ToArea": { "X": 15, "Y": 79, "Width": 3, "Height": 4 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "RemoveDelimited",
+					"Target": ["MapProperties", "NightTiles"],
+					"Search": "Buildings 17 80 507",
+					"Delimiter": " "
+				},
+				{
+					"Operation": "RemoveDelimited",
+					"Target": ["MapProperties", "Light"],
+					"Search": "17 80 4",
+					"Delimiter": " "
+				},
+			]
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "RSV_Nightingale EditData",
+			"When": {
+				"RSV_Nightingale": true,
+				"HasFlag: hostPlayer": "RSV.FixedMinecart",
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.RSV_Nightingale" 
+			},
+			"TargetField": ["{{RidgeSide Destinations}}", "Destinations"],
+			"Entries": {
+				"RSV_Nightingale": {
+					"Id": "Polydot.PolyCarts_RSV_Nightingale",
+					"DisplayName": "{{RSV_Nightingale Name}}",
+					"TargetLocation": "Custom_Ridgeside_RidgesideVillage",
+					"TargetTile": { "X": 32, "Y": 97 },
+					"TargetDirection": "left"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
+			"LogName": "RSV_Nightingale EditMap",
+			"When": {
+				"RSV_Nightingale": true
+			},
+			"FromFile": "assets/RSV/RSV_Nightingale.tmx",
+			"ToArea": { "X": 29, "Y": 86, "Width": 5, "Height": 12 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "30 96 4",
+					"Delimiter": " "
+				}
+			]
+		},
+		{
+			"Action": "EditMap",
+			"LogName": "RSV_Nightingale Activate",
+			"When": {
+				"RSV_Nightingale": true,
+				"HasFlag: hostPlayer": "RSV.FixedMinecart"
+			},
+			"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
+			"MapTiles": [
+				{
+					"Position": { "X": 32, "Y": 95 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{RidgeSide Destinations}} Polydot.PolyCarts_RSV_Nightingale"
+					}
+				},
+				{
+					"Position": { "X": 32, "Y": 96 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{RidgeSide Destinations}} Polydot.PolyCarts_RSV_Nightingale"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "RSV_Nightingale Unlock",
+			"When": {
+				"RSV_Nightingale": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.RSV_Nightingale": false 
+			},
+			"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
+			"MapTiles": [
+				{
+					"Position": { "X": 32, "Y": 95 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.RSV_Nightingale {{i18n: {{RSV_find}}_L1}}^{{i18n: {{RSV_find}}_L2}}^{{i18n: {{RSV_find}}_L3}}^{{i18n: {{RSV_find}}_L4 |Unlocked_Location={{RSV_Nightingale Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 32, "Y": 96 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.RSV_Nightingale {{i18n: {{RSV_find}}_L1}}^{{i18n: {{RSV_find}}_L2}}^{{i18n: {{RSV_find}}_L3}}^{{i18n: {{RSV_find}}_L4 |Unlocked_Location={{RSV_Nightingale Name}}}}"
+					}
+				}
+			]
+		},
+		//RSV_Greenhouse
+		{//Remove standard
+			"Action": "EditMap",
+			"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
+			"LogName": "RSV_Greenhouse Remove",
+			"When": {
+				"RSV_Greenhouse": true
+			},
+			"FromFile": "assets/RSV/RSV_Greenhouse_Remove.tmx",
+			"ToArea": { "X": 108, "Y": 82, "Width": 4, "Height": 4 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "RemoveDelimited",
+					"Target": ["MapProperties", "NightTiles"],
+					"Search": "Buildings 110 83 507",
+					"Delimiter": " "
+				},
+				{
+					"Operation": "RemoveDelimited",
+					"Target": ["MapProperties", "Light"],
+					"Search": "110 83 4",
+					"Delimiter": " "
+				},
+			]
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "RSV_Greenhouse EditData",
+			"When": {
+				"RSV_Greenhouse": true,
+				"HasFlag: hostPlayer": "RSV.FixedMinecart",
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.RSV_Greenhouse" 
+			},
+			"TargetField": ["{{RidgeSide Destinations}}", "Destinations"],
+			"Entries": {
+				"RSV_Greenhouse": {
+					"Id": "Polydot.PolyCarts_RSV_Greenhouse",
+					"DisplayName": "{{RSV_Greenhouse Name}}",
+					"TargetLocation": "Custom_Ridgeside_RidgesideVillage",
+					"TargetTile": { "X": 89, "Y": 69 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
+			"LogName": "RSV_Greenhouse EditMap",
+			"When": {
+				"RSV_Greenhouse": true
+			},
+			"FromFile": "assets/RSV/RSV_Greenhouse.tmx",
+			"ToArea": { "X": 88, "Y": 65, "Width": 3, "Height": 4 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "88 66 4",
+					"Delimiter": " "
+				}
+			]
+		},
+		{
+			"Action": "EditMap",
+			"LogName": "RSV_Greenhouse Activate",
+			"When": {
+				"RSV_Greenhouse": true,
+				"HasFlag: hostPlayer": "RSV.FixedMinecart"
+			},
+			"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
+			"MapTiles": [
+				{
+					"Position": { "X": 89, "Y": 67 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{RidgeSide Destinations}} Polydot.PolyCarts_RSV_Greenhouse"
+					}
+				},
+				{
+					"Position": { "X": 89, "Y": 68 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{RidgeSide Destinations}} Polydot.PolyCarts_RSV_Greenhouse"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "RSV_Greenhouse Unlock",
+			"When": {
+				"RSV_Greenhouse": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.RSV_Greenhouse": false 
+			},
+			"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
+			"MapTiles": [
+				{
+					"Position": { "X": 89, "Y": 67 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.RSV_Greenhouse {{i18n: {{RSV_find}}_L1}}^{{i18n: {{RSV_find}}_L2}}^{{i18n: {{RSV_find}}_L3}}^{{i18n: {{RSV_find}}_L4 |Unlocked_Location={{RSV_Greenhouse Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 89, "Y": 68 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.RSV_Greenhouse {{i18n: {{RSV_find}}_L1}}^{{i18n: {{RSV_find}}_L2}}^{{i18n: {{RSV_find}}_L3}}^{{i18n: {{RSV_find}}_L4 |Unlocked_Location={{RSV_Greenhouse Name}}}}"
+					}
+				}
+			]
+		},
+		//RSV_LogCabin
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "RSV_LogCabin EditData",
+			"When": {
+				"RSV_LogCabin": true,
+				"HasFlag: hostPlayer": "RSV.FixedMinecart",
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.RSV_LogCabin" 
+			},
+			"TargetField": ["{{RidgeSide Destinations}}", "Destinations"],
+			"Entries": {
+				"RSV_LogCabin": {
+					"Id": "Polydot.PolyCarts_RSV_LogCabin",
+					"DisplayName": "{{RSV_LogCabin Name}}",
+					"TargetLocation": "Custom_Ridgeside_RidgesideVillage",
+					"TargetTile": { "X": 126, "Y": 19 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
+			"LogName": "RSV_LogCabin EditMap",
+			"When": {
+				"RSV_LogCabin": true
+			},
+			"FromFile": "assets/RSV/RSV_LogCabin.tmx",
+			"ToArea": { "X": 126, "Y": 12, "Width": 3, "Height": 8 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "128 17 4",
+					"Delimiter": " "
+				}
+			]
+		},
+		{
+			"Action": "EditMap",
+			"LogName": "RSV_LogCabin Activate",
+			"When": {
+				"RSV_LogCabin": true,
+				"HasFlag: hostPlayer": "RSV.FixedMinecart"
+			},
+			"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
+			"MapTiles": [
+				{
+					"Position": { "X": 127, "Y": 18 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{RidgeSide Destinations}} Polydot.PolyCarts_RSV_LogCabin"
+					}
+				},
+				{
+					"Position": { "X": 127, "Y": 19 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{RidgeSide Destinations}} Polydot.PolyCarts_RSV_LogCabin"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "RSV_LogCabin Unlock",
+			"When": {
+				"RSV_LogCabin": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.RSV_LogCabin": false 
+			},
+			"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
+			"MapTiles": [
+				{
+					"Position": { "X": 127, "Y": 18 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.RSV_LogCabin {{i18n: {{RSV_find}}_L1}}^{{i18n: {{RSV_find}}_L2}}^{{i18n: {{RSV_find}}_L3}}^{{i18n: {{RSV_find}}_L4 |Unlocked_Location={{RSV_LogCabin Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 127, "Y": 19 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.RSV_LogCabin {{i18n: {{RSV_find}}_L1}}^{{i18n: {{RSV_find}}_L2}}^{{i18n: {{RSV_find}}_L3}}^{{i18n: {{RSV_find}}_L4 |Unlocked_Location={{RSV_LogCabin Name}}}}"
+					}
+				}
+			]
+		},
+		//RSV_Hike
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "RSV_Hike EditData",
+			"When": {
+				"RSV_Hike": true,
+				"HasFlag: hostPlayer": "RSV.FixedMinecart",
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.RSV_Hike" 
+			},
+			"TargetField": ["{{RidgeSide Destinations}}", "Destinations"],
+			"Entries": {
+				"RSV_Hike": {
+					"Id": "Polydot.PolyCarts_RSV_Hike",
+					"DisplayName": "{{RSV_Hike Name}}",
+					"TargetLocation": "Custom_Ridgeside_RSVTheHike",
+					"TargetTile": { "X": 44, "Y": 22 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Custom_Ridgeside_RSVTheHike",
+			"LogName": "RSV_Hike EditMap",
+			"When": {
+				"RSV_Hike": true
+			},
+			"FromFile": "assets/RSV/RSV_Hike.tmx",
+			"ToArea": { "X": 44, "Y": 16, "Width": 4, "Height": 6 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "47 17 4",
+					"Delimiter": " "
+				}
+			]
+		},
+		{
+			"Action": "EditMap",
+			"LogName": "RSV_Hike Activate",
+			"When": {
+				"RSV_Hike": true,
+				"HasFlag: hostPlayer": "RSV.FixedMinecart"
+			},
+			"Target": "Maps/Custom_Ridgeside_RSVTheHike",
+			"MapTiles": [
+				{
+					"Position": { "X": 44, "Y": 21 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{RidgeSide Destinations}} Polydot.PolyCarts_RSV_Hike"
+					}
+				},
+				{
+					"Position": { "X": 45, "Y": 21 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{RidgeSide Destinations}} Polydot.PolyCarts_RSV_Hike"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "RSV_Hike Unlock",
+			"When": {
+				"RSV_Hike": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.RSV_Hike": false 
+			},
+			"Target": "Maps/Custom_Ridgeside_RSVTheHike",
+			"MapTiles": [
+				{
+					"Position": { "X": 44, "Y": 21 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.RSV_Hike {{i18n: {{RSV_find}}_L1}}^{{i18n: {{RSV_find}}_L2}}^{{i18n: {{RSV_find}}_L3}}^{{i18n: {{RSV_find}}_L4 |Unlocked_Location={{RSV_Hike Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 45, "Y": 21 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.RSV_Hike {{i18n: {{RSV_find}}_L1}}^{{i18n: {{RSV_find}}_L2}}^{{i18n: {{RSV_find}}_L3}}^{{i18n: {{RSV_find}}_L4 |Unlocked_Location={{RSV_Hike Name}}}}"
+					}
+				}
+			]
+		},
+		//RSV_Falls
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "RSV_Falls EditData",
+			"When": {
+				"RSV_Falls": true,
+				"HasFlag: hostPlayer": "RSV.FixedMinecart",
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.RSV_Falls" 
+			},
+			"TargetField": ["{{RidgeSide Destinations}}", "Destinations"],
+			"Entries": {
+				"RSV_Falls": {
+					"Id": "Polydot.PolyCarts_RSV_Falls",
+					"DisplayName": "{{RSV_Falls Name}}",
+					"TargetLocation": "Custom_Ridgeside_RidgeFalls",
+					"TargetTile": { "X": 66, "Y": 26 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Custom_Ridgeside_RidgeFalls",
+			"LogName": "RSV_Falls EditMap",
+			"When": {
+				"RSV_Falls": true
+			},
+			"FromFile": "assets/RSV/RSV_Falls.tmx",
+			"ToArea": { "X": 65, "Y": 22, "Width": 3, "Height": 4 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "67 23 4",
+					"Delimiter": " "
+				}
+			]
+		},
+		{
+			"Action": "EditMap",
+			"LogName": "RSV_Falls Activate",
+			"When": {
+				"RSV_Falls": true,
+				"HasFlag: hostPlayer": "RSV.FixedMinecart"
+			},
+			"Target": "Maps/Custom_Ridgeside_RidgeFalls",
+			"MapTiles": [
+				{
+					"Position": { "X": 66, "Y": 24 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{RidgeSide Destinations}} Polydot.PolyCarts_RSV_Falls"
+					}
+				},
+				{
+					"Position": { "X": 66, "Y": 25 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{RidgeSide Destinations}} Polydot.PolyCarts_RSV_Falls"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "RSV_Falls Unlock",
+			"When": {
+				"RSV_Falls": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.RSV_Falls": false 
+			},
+			"Target": "Maps/Custom_Ridgeside_RidgeFalls",
+			"MapTiles": [
+				{
+					"Position": { "X": 66, "Y": 24 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.RSV_Falls {{i18n: {{RSV_find}}_L1}}^{{i18n: {{RSV_find}}_L2}}^{{i18n: {{RSV_find}}_L3}}^{{i18n: {{RSV_find}}_L4 |Unlocked_Location={{RSV_Falls Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 66, "Y": 25 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.RSV_Falls {{i18n: {{RSV_find}}_L1}}^{{i18n: {{RSV_find}}_L2}}^{{i18n: {{RSV_find}}_L3}}^{{i18n: {{RSV_find}}_L4 |Unlocked_Location={{RSV_Falls Name}}}}"
+					}
+				}
+			]
+		},
+		//RSV_Pond
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "RSV_Pond EditData",
+			"When": {
+				"RSV_Pond": true,
+				"HasFlag: hostPlayer": "RSV.FixedMinecart",
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.RSV_Pond" 
+			},
+			"TargetField": ["{{RidgeSide Destinations}}", "Destinations"],
+			"Entries": {
+				"RSV_Pond": {
+					"Id": "Polydot.PolyCarts_RSV_Pond",
+					"DisplayName": "{{RSV_Pond Name}}",
+					"TargetLocation": "Custom_Ridgeside_RidgePond",
+					"TargetTile": { "X": 11, "Y": 8 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Custom_Ridgeside_RidgePond",
+			"LogName": "RSV_Pond EditMap",
+			"When": {
+				"RSV_Pond": true
+			},
+			"FromFile": "assets/RSV/RSV_Pond.tmx",
+			"ToArea": { "X": 10, "Y": 4, "Width": 3, "Height": 4 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "12 5 4",
+					"Delimiter": " "
+				}
+			]
+		},
+		{
+			"Action": "EditMap",
+			"LogName": "RSV_Pond Activate",
+			"When": {
+				"RSV_Pond": true,
+				"HasFlag: hostPlayer": "RSV.FixedMinecart"
+			},
+			"Target": "Maps/Custom_Ridgeside_RidgePond",
+			"MapTiles": [
+				{
+					"Position": { "X": 11, "Y": 6 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{RidgeSide Destinations}} Polydot.PolyCarts_RSV_Pond"
+					}
+				},
+				{
+					"Position": { "X": 11, "Y": 7 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{RidgeSide Destinations}} Polydot.PolyCarts_RSV_Pond"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "RSV_Pond Unlock",
+			"When": {
+				"RSV_Pond": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.RSV_Pond": false 
+			},
+			"Target": "Maps/Custom_Ridgeside_RidgePond",
+			"MapTiles": [
+				{
+					"Position": { "X": 11, "Y": 6 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.RSV_Pond {{i18n: {{RSV_find}}_L1}}^{{i18n: {{RSV_find}}_L2}}^{{i18n: {{RSV_find}}_L3}}^{{i18n: {{RSV_find}}_L4 |Unlocked_Location={{RSV_Pond Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 11, "Y": 7 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.RSV_Pond {{i18n: {{RSV_find}}_L1}}^{{i18n: {{RSV_find}}_L2}}^{{i18n: {{RSV_find}}_L3}}^{{i18n: {{RSV_find}}_L4 |Unlocked_Location={{RSV_Pond Name}}}}"
+					}
+				}
+			]
+		},
+		//RSV_Ridge_East
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "RSV_Ridge_East EditData",
+			"When": {
+				"RSV_Ridge_East": true,
+				"HasFlag: hostPlayer": "RSV.FixedMinecart",
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.RSV_Ridge_East" 
+			},
+			"TargetField": ["{{RidgeSide Destinations}}", "Destinations"],
+			"Entries": {
+				"RSV_Ridge_East": {
+					"Id": "Polydot.PolyCarts_RSV_Ridge_East",
+					"DisplayName": "{{RSV_Ridge_East Name}}",
+					"TargetLocation": "Custom_Ridgeside_Ridge",
+					"TargetTile": { "X": 78, "Y": 21 },
+					"TargetDirection": "down"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Custom_Ridgeside_Ridge",
+			"LogName": "RSV_Ridge_East EditMap",
+			"When": {
+				"RSV_Ridge_East": true
+			},
+			"FromFile": "assets/RSV/RSV_Ridge_East.tmx",
+			"ToArea": { "X": 76, "Y": 17, "Width": 4, "Height": 4 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "78 18 4",
+					"Delimiter": " "
+				}
+			]
+		},
+		{
+			"Action": "EditMap",
+			"LogName": "RSV_Ridge_East Activate",
+			"When": {
+				"RSV_Ridge_East": true,
+				"HasFlag: hostPlayer": "RSV.FixedMinecart"
+			},
+			"Target": "Maps/Custom_Ridgeside_Ridge",
+			"MapTiles": [
+				{
+					"Position": { "X": 78, "Y": 20 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{RidgeSide Destinations}} Polydot.PolyCarts_RSV_Ridge_East"
+					}
+				},
+				{
+					"Position": { "X": 79, "Y": 20 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{RidgeSide Destinations}} Polydot.PolyCarts_RSV_Ridge_East"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "RSV_Ridge_East Unlock",
+			"When": {
+				"RSV_Ridge_East": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.RSV_Ridge_East": false 
+			},
+			"Target": "Maps/Custom_Ridgeside_Ridge",
+			"MapTiles": [
+				{
+					"Position": { "X": 78, "Y": 20 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.RSV_Ridge_East {{i18n: {{RSV_find}}_L1}}^{{i18n: {{RSV_find}}_L2}}^{{i18n: {{RSV_find}}_L3}}^{{i18n: {{RSV_find}}_L4 |Unlocked_Location={{RSV_Ridge_East Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 79, "Y": 20 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.RSV_Ridge_East {{i18n: {{RSV_find}}_L1}}^{{i18n: {{RSV_find}}_L2}}^{{i18n: {{RSV_find}}_L3}}^{{i18n: {{RSV_find}}_L4 |Unlocked_Location={{RSV_Ridge_East Name}}}}"
+					}
+				}
+			]
+		},
+		//RSV_Ridge_West
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "RSV_Ridge_West EditData",
+			"When": {
+				"RSV_Ridge_West": true,
+				"HasFlag: hostPlayer": "RSV.FixedMinecart",
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.RSV_Ridge_West" 
+			},
+			"TargetField": ["{{RidgeSide Destinations}}", "Destinations"],
+			"Entries": {
+				"RSV_Ridge_West": {
+					"Id": "Polydot.PolyCarts_RSV_Ridge_West",
+					"DisplayName": "{{RSV_Ridge_West Name}}",
+					"TargetLocation": "Custom_Ridgeside_Ridge",
+					"TargetTile": { "X": 27, "Y": 11 },
+					"TargetDirection": "right"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Custom_Ridgeside_Ridge",
+			"LogName": "RSV_Ridge_West EditMap",
+			"When": {
+				"RSV_Ridge_West": true
+			},
+			"FromFile": "assets/RSV/RSV_Ridge_West.tmx",
+			"ToArea": { "X": 25, "Y": 8, "Width": 3, "Height": 4 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "27 9 4",
+					"Delimiter": " "
+				}
+			]
+		},
+		{
+			"Action": "EditMap",
+			"LogName": "RSV_Ridge_West Activate",
+			"When": {
+				"RSV_Ridge_West": true,
+				"HasFlag: hostPlayer": "RSV.FixedMinecart"
+			},
+			"Target": "Maps/Custom_Ridgeside_Ridge",
+			"MapTiles": [
+				{
+					"Position": { "X": 26, "Y": 10 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{RidgeSide Destinations}} Polydot.PolyCarts_RSV_Ridge_West"
+					}
+				},
+				{
+					"Position": { "X": 26, "Y": 11 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{RidgeSide Destinations}} Polydot.PolyCarts_RSV_Ridge_West"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "RSV_Ridge_West Unlock",
+			"When": {
+				"RSV_Ridge_West": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.RSV_Ridge_West": false 
+			},
+			"Target": "Maps/Custom_Ridgeside_Ridge",
+			"MapTiles": [
+				{
+					"Position": { "X": 26, "Y": 10 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.RSV_Ridge_West {{i18n: {{RSV_find}}_L1}}^{{i18n: {{RSV_find}}_L2}}^{{i18n: {{RSV_find}}_L3}}^{{i18n: {{RSV_find}}_L4 |Unlocked_Location={{RSV_Ridge_West Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 26, "Y": 11 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.RSV_Ridge_West {{i18n: {{RSV_find}}_L1}}^{{i18n: {{RSV_find}}_L2}}^{{i18n: {{RSV_find}}_L3}}^{{i18n: {{RSV_find}}_L4 |Unlocked_Location={{RSV_Ridge_West Name}}}}"
+					}
+				}
+			]
+		},
+		//RSV_SummitFarm_East
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "RSV_SummitFarm_East EditData",
+			"When": {
+				"RSV_SummitFarm_East": true,
+				"HasFlag: hostPlayer": "RSV.FixedMinecart",
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.RSV_SummitFarm_East" 
+			},
+			"TargetField": ["{{RidgeSide Destinations}}", "Destinations"],
+			"Entries": {
+				"RSV_SummitFarm_East": {
+					"Id": "Polydot.PolyCarts_RSV_SummitFarm_East",
+					"DisplayName": "{{RSV_SummitFarm_East Name}}",
+					"TargetLocation": "Custom_Ridgeside_SummitFarm",
+					"TargetTile": { "X": 75, "Y": 49 },
+					"TargetDirection": "left"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Custom_Ridgeside_SummitFarm",
+			"LogName": "RSV_SummitFarm_East EditMap",
+			"When": {
+				"RSV_SummitFarm_East": true
+			},
+			"FromFile": "assets/RSV/RSV_SummitFarm_East.tmx",
+			"ToArea": { "X": 75, "Y": 45, "Width": 4, "Height": 4 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "76 46 4",
+					"Delimiter": " "
+				}
+			]
+		},
+		{
+			"Action": "EditMap",
+			"LogName": "RSV_SummitFarm_East Activate",
+			"When": {
+				"RSV_SummitFarm_East": true,
+				"HasFlag: hostPlayer": "RSV.FixedMinecart"
+			},
+			"Target": "Maps/Custom_Ridgeside_SummitFarm",
+			"MapTiles": [
+				{
+					"Position": { "X": 75, "Y": 48 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{RidgeSide Destinations}} Polydot.PolyCarts_RSV_SummitFarm_East"
+					}
+				},
+				{
+					"Position": { "X": 76, "Y": 48 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{RidgeSide Destinations}} Polydot.PolyCarts_RSV_SummitFarm_East"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "RSV_SummitFarm_East Unlock",
+			"When": {
+				"RSV_SummitFarm_East": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.RSV_SummitFarm_East": false 
+			},
+			"Target": "Maps/Custom_Ridgeside_SummitFarm",
+			"MapTiles": [
+				{
+					"Position": { "X": 75, "Y": 48 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.RSV_SummitFarm_East {{i18n: {{RSV_find}}_L1}}^{{i18n: {{RSV_find}}_L2}}^{{i18n: {{RSV_find}}_L3}}^{{i18n: {{RSV_find}}_L4 |Unlocked_Location={{RSV_SummitFarm_East Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 76, "Y": 48 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.RSV_SummitFarm_East {{i18n: {{RSV_find}}_L1}}^{{i18n: {{RSV_find}}_L2}}^{{i18n: {{RSV_find}}_L3}}^{{i18n: {{RSV_find}}_L4 |Unlocked_Location={{RSV_SummitFarm_East Name}}}}"
+					}
+				}
+			]
+		},
+		//RSV_SummitFarm_West
+		{//Remove standard
+			"Action": "EditMap",
+			"Target": "Maps/Custom_Ridgeside_SummitFarm",
+			"LogName": "RSV_SummitFarm_West Remove",
+			"When": {
+				"RSV_SummitFarm_West": true
+			},
+			"FromFile": "assets/RSV/RSV_SummitFarm_West_Remove.tmx",
+			"ToArea": { "X": 21, "Y": 38, "Width": 3, "Height": 4 }
+		},
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "RSV_SummitFarm_West EditData",
+			"When": {
+				"RSV_SummitFarm_West": true,
+				"HasFlag: hostPlayer": "RSV.FixedMinecart",
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.RSV_SummitFarm_West" 
+			},
+			"TargetField": ["{{RidgeSide Destinations}}", "Destinations"],
+			"Entries": {
+				"RSV_SummitFarm_West": {
+					"Id": "Polydot.PolyCarts_RSV_SummitFarm_West",
+					"DisplayName": "{{RSV_SummitFarm_West Name}}",
+					"TargetLocation": "Custom_Ridgeside_SummitFarm",
+					"TargetTile": { "X": 10, "Y": 49 },
+					"TargetDirection": "right"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Custom_Ridgeside_SummitFarm",
+			"LogName": "RSV_SummitFarm_West EditMap",
+			"When": {
+				"RSV_SummitFarm_West": true
+			},
+			"FromFile": "assets/RSV/RSV_SummitFarm_West.tmx",
+			"ToArea": { "X": 8, "Y": 46, "Width": 3, "Height": 6 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "10 47 4",
+					"Delimiter": " "
+				}
+			]
+		},
+		{
+			"Action": "EditMap",
+			"LogName": "RSV_SummitFarm_West Activate",
+			"When": {
+				"RSV_SummitFarm_West": true,
+				"HasFlag: hostPlayer": "RSV.FixedMinecart"
+			},
+			"Target": "Maps/Custom_Ridgeside_SummitFarm",
+			"MapTiles": [
+				{
+					"Position": { "X": 9, "Y": 48 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{RidgeSide Destinations}} Polydot.PolyCarts_RSV_SummitFarm_West"
+					}
+				},
+				{
+					"Position": { "X": 9, "Y": 49 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{RidgeSide Destinations}} Polydot.PolyCarts_RSV_SummitFarm_West"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "RSV_SummitFarm_West Unlock",
+			"When": {
+				"RSV_SummitFarm_West": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.RSV_SummitFarm_West": false 
+			},
+			"Target": "Maps/Custom_Ridgeside_SummitFarm",
+			"MapTiles": [
+				{
+					"Position": { "X": 9, "Y": 48 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.RSV_SummitFarm_West {{i18n: {{RSV_find}}_L1}}^{{i18n: {{RSV_find}}_L2}}^{{i18n: {{RSV_find}}_L3}}^{{i18n: {{RSV_find}}_L4 |Unlocked_Location={{RSV_SummitFarm_West Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 9, "Y": 49 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.RSV_SummitFarm_West {{i18n: {{RSV_find}}_L1}}^{{i18n: {{RSV_find}}_L2}}^{{i18n: {{RSV_find}}_L3}}^{{i18n: {{RSV_find}}_L4 |Unlocked_Location={{RSV_SummitFarm_West Name}}}}"
+					}
+				}
+			]
+		}
+	]
+}
