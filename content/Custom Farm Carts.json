@@ -289,6 +289,7 @@
 			"Target": "Maps/Farm",
 			"LogName": "Custom Farm IF2R North Remove",
 			"When": {
+				"IF2R North": true,
 				"FarmType": "Standard",
 				"HasMod": "flashshifter.immersivefarm2remastered"
 			},
@@ -479,6 +480,7 @@
 			"Target": "Maps/Farm",
 			"LogName": "Custom Farm IF2R South Remove",
 			"When": {
+				"IF2R South": true,
 				"FarmType": "Standard",
 				"HasMod": "flashshifter.immersivefarm2remastered"
 			},
@@ -583,6 +585,7 @@
 			"Target": "Maps/Farm",
 			"LogName": "Custom Farm IF2R West Remove",
 			"When": {
+				"Farm West": true,
 				"FarmType": "Standard",
 				"HasMod": "flashshifter.immersivefarm2remastered"
 			},
@@ -693,14 +696,15 @@
 				}
 			]
 		},
-		//General light removal Frontier
+		//Day-/NightTiles removal Frontier
 		{
 			"Action": "EditMap",
 			"Target": "Maps/Farm_FrontierFarm",
 			"LogName": "Custom Farm FF Lights Remove",
 			"When": {
 				"FarmType": "FrontierFarm",
-				"HasMod": "flashshifter.FrontierFarm"
+				"HasMod": "flashshifter.FrontierFarm",
+				"HasSeenEvent: anyPlayer|contains=1337431": true
 			},
 			//Remove Lights
 			"TextOperations": [
@@ -831,6 +835,7 @@
 			"Target": "Maps/Farm_FrontierFarm",
 			"LogName": "Custom Farm Frontier Farm East Remove",
 			"When": {
+				"Farm East": true,
 				"FarmType": "FrontierFarm",
 				"HasMod": "flashshifter.FrontierFarm"
 			},
