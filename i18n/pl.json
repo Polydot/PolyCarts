@@ -134,19 +134,19 @@
 
 "GingerIsland East": "Wyspa Imbirowa - U Leo",
 "config.GingerIsland East.name": "Wyspa Imbirowa Wschód",
-"config.GingerIsland East.description": "Włącz wózek kopalniany w pobliżu U Leo na Wyspie Imbirowej",
+"config.GingerIsland East.description": "Włącz wózek kopalniany w pobliżu domku na drzewie Leo na Wyspie Imbirowej",
 "config.GingerIsland East Minecart.name": "Wyspa Imbirowa Wschód",
 "config.GingerIsland East Minecart.description": "(Opcjonalnie) Wprowadź własną nazwę dla Wózka kopalnianego Wyspa Imbirowa Wschód\nZostaw puste dla „Wyspa Imbirowa - U Leo”",
 
 "GingerIsland South": "Wyspa Imbirowa - Kurort",
 "config.GingerIsland South.name": "Wyspa Imbirowa Południe",
-"config.GingerIsland South.description": "Włącz wózek kopalniany w pobliżu Kurortu na Wyspie Imbirowej",
+"config.GingerIsland South.description": "Włącz wózek kopalnianego na plaży desantowej na Wyspie Imbirowej",
 "config.GingerIsland South Minecart.name": "Wyspa Imbirowa Południe",
 "config.GingerIsland South Minecart.description": "(Opcjonalnie) Wprowadź własną nazwę dla Wózka kopalnianego Wyspa Imbirowa Południe\nZostaw puste dla „Wyspa Imbirowa - Kurort”",
 
 "GingerIsland West": "Wyspa Imbirowa - Farma",
 "config.GingerIsland West.name": "Wyspa Imbirowa Zachód",
-"config.GingerIsland West.description": "Włącz wózek kopalniany w pobliżu Farmy na Wyspie Imbirowej",
+"config.GingerIsland West.description": "Włącz wózek kopalniany na farmie na Wyspie Imbirowej",
 "config.GingerIsland West Minecart.name": "Wyspa Imbirowa Zachód",
 "config.GingerIsland West Minecart.description": "(Opcjonalnie) Wprowadź własną nazwę dla Wózka kopalnianego Wyspa Imbirowa Zachód\nZostaw puste dla „Wyspa Imbirowa - Farma”",
 

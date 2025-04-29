@@ -134,19 +134,19 @@
 
 "GingerIsland East": "Gyömbérsziget - Leó Háza",
 "config.GingerIsland East.name": "Gyömbérsziget Kelet",
-"config.GingerIsland East.description": "Engedélyezd a csillét a Kőfejtőben a Gyömbérszigeten",
+"config.GingerIsland East.description": "Engedélyezd a csillét Leó faháza közelében a Gyömbérszigeten",
 "config.GingerIsland East Minecart.name": "Gyömbérsziget Kelet",
 "config.GingerIsland East Minecart.description": "(Választható) Adj meg egy egyéni nevet a Gyömbérsziget Keleti Csilléhez\nHagyd üresen a „Gyömbérsziget - Leó's” névhez",
 
 "GingerIsland South": "Gyömbérsziget - Üdülő",
 "config.GingerIsland South.name": "Gyömbérsziget Dél",
-"config.GingerIsland South.description": "Engedélyezd a csillét a Kőfejtőben a Gyömbérszigeten",
+"config.GingerIsland South.description": "Engedélyezd a csillét a Gyömbérsziget partra szállási partszakaszán",
 "config.GingerIsland South Minecart.name": "Gyömbérsziget Dél",
-"config.GingerIsland South Minecart.description": "(Választható) Adj meg egy egyéni nevet a Gyömbérsziget Déli Csilléhez\nHagyd üresen a „Gyömbérsziget - Üdülő” névhez",
+"config.GingerIsland South Minecart.description": "(Választható) Adj meg egy egyéni nevet a Gyömbérsziget Déli Csilléhez\nHagyd üresen a „Gyömbérsziget - Resort” névhez",
 
 "GingerIsland West": "Gyömbérsziget - Farm",
 "config.GingerIsland West.name": "Gyömbérsziget Nyugat",
-"config.GingerIsland West.description": "Engedélyezd a csillét a Kőfejtőben a Gyömbérszigeten",
+"config.GingerIsland West.description": "Engedélyezd a csillét a Gyömbérsziget farmján",
 "config.GingerIsland West Minecart.name": "Gyömbérsziget Nyugat",
 "config.GingerIsland West Minecart.description": "(Választható) Adj meg egy egyéni nevet a Gyömbérsziget Nyugati Csilléhez\nHagyd üresen a „Gyömbérsziget - Farm” névhez",
 

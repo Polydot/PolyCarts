@@ -134,19 +134,19 @@
 
 "GingerIsland East": "姜岛 - 莱奥家",
 "config.GingerIsland East.name": "姜岛东部",
-"config.GingerIsland East.description": "启用姜岛采石场中的矿车",
+"config.GingerIsland East.description": "启用姜岛上莱奥树屋附近的矿车",
 "config.GingerIsland East Minecart.name": "姜岛东部",
 "config.GingerIsland East Minecart.description": "（可选）输入姜岛东部矿车的自定义名称\n留空则为“姜岛 - 莱奥家”",
 
 "GingerIsland South": "姜岛 - 度假村",
 "config.GingerIsland South.name": "姜岛南部",
-"config.GingerIsland South.description": "启用姜岛采石场中的矿车",
+"config.GingerIsland South.description": "启用姜岛登陆海滩上的矿车",
 "config.GingerIsland South Minecart.name": "姜岛南部",
 "config.GingerIsland South Minecart.description": "（可选）输入姜岛南部矿车的自定义名称\n留空则为“姜岛 - 度假村”",
 
 "GingerIsland West": "姜岛 - 农场",
 "config.GingerIsland West.name": "姜岛西部",
-"config.GingerIsland West.description": "启用姜岛采石场中的矿车",
+"config.GingerIsland West.description": "启用姜岛农场上的矿车",
 "config.GingerIsland West Minecart.name": "姜岛西部",
 "config.GingerIsland West Minecart.description": "（可选）输入姜岛西部矿车的自定义名称\n留空则为“姜岛 - 农场”",
 

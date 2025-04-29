@@ -139,19 +139,19 @@
 
 "GingerIsland East": "Isla Jengibre - Casa de Leo",
 "config.GingerIsland East.name": "Isla Jengibre Este",
-"config.GingerIsland East.description": "Activar la vagoneta en la Cantera de la Isla Jengibre",
+"config.GingerIsland East.description": "Activar la vagoneta cerca de la casa del árbol de Leo en la Isla Jengibre",
 "config.GingerIsland East Minecart.name": "Isla Jengibre Este",
 "config.GingerIsland East Minecart.description": "(Opcional) Introduce un nombre personalizado para la Vagoneta del Este de la Isla Jengibre\nDeja en blanco para «Isla Jengibre - Casa de Leo»",
 
 "GingerIsland South": "Isla Jengibre - Complejo turístico",
 "config.GingerIsland South.name": "Isla Jengibre Sur",
-"config.GingerIsland South.description": "Activar la vagoneta en la Cantera de la Isla Jengibre",
+"config.GingerIsland South.description": "Activar la vagoneta en la playa de desembarco de la Isla Jengibre",
 "config.GingerIsland South Minecart.name": "Isla Jengibre Sur",
 "config.GingerIsland South Minecart.description": "(Opcional) Introduce un nombre personalizado para la Vagoneta del Sur de la Isla Jengibre\nDeja en blanco para «Isla Jengibre - Complejo turístico»",
 
 "GingerIsland West": "Isla Jengibre - Granja",
 "config.GingerIsland West.name": "Isla Jengibre Oeste",
-"config.GingerIsland West.description": "Activar la vagoneta en la Cantera de la Isla Jengibre",
+"config.GingerIsland West.description": "Activar la vagoneta en la granja de la Isla Jengibre",
 "config.GingerIsland West Minecart.name": "Isla Jengibre Oeste",
 "config.GingerIsland West Minecart.description": "(Opcional) Introduce un nombre personalizado para la Vagoneta del Oeste de la Isla Jengibre\nDeja en blanco para «Isla Jengibre - Granja»",
 
@@ -348,7 +348,7 @@
 "config.RSV_Ridge_East.name": "La Cresta Este",
 "config.RSV_Ridge_East.description": "Activar la vagoneta cerca de la Casa Ninja",
 "config.RSV_Ridge_East Minecart.name": "La Cresta Este",
-"config.RSV_Ridge_East Minecart.description": "(Opcional) Introduce un nombre personalizado para la Vagoneta del Este de La Cresta\nDeja en blanco para «- Casa Ninja»",
+"config.RSV_Ridge_East Minecart.description": "(Opcional) Introduce un nombre personalizado para la Vagoneta del Este de La Cresta\nDeja en blanco para «La Cresta - Casa Ninja»",
 
 "RSV_Ridge_West": "La Cresta - Entrada del Bosque",
 "config.RSV_Ridge_West.name": "La Cresta Oeste",

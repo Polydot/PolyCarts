@@ -134,19 +134,19 @@
 
 "GingerIsland East": "Isola Zenzero - Da Leo",
 "config.GingerIsland East.name": "Isola Zenzero Est",
-"config.GingerIsland East.description": "Abilita il carrello da miniera nella Cava sull'Isola Zenzero",
+"config.GingerIsland East.description": "Abilita il carrello da miniera vicino alla casa sull'albero di Leo sull'Isola Zenzero",
 "config.GingerIsland East Minecart.name": "Isola Zenzero Est",
 "config.GingerIsland East Minecart.description": "(Opzionale) Inserisci un nome personalizzato per il Carrello da miniera dell'Isola Zenzero Est\nLascia vuoto per «Isola Zenzero - Da Leo»",
 
 "GingerIsland South": "Isola Zenzero - Resort",
 "config.GingerIsland South.name": "Isola Zenzero Sud",
-"config.GingerIsland South.description": "Abilita il carrello da miniera nella Cava sull'Isola Zenzero",
+"config.GingerIsland South.description": "Abilita il carrello da miniera sulla spiaggia d'approdo dell'Isola Zenzero",
 "config.GingerIsland South Minecart.name": "Isola Zenzero Sud",
 "config.GingerIsland South Minecart.description": "(Opzionale) Inserisci un nome personalizzato per il Carrello da miniera dell'Isola Zenzero Sud\nLascia vuoto per «Isola Zenzero - Resort»",
 
 "GingerIsland West": "Isola Zenzero - Fattoria",
 "config.GingerIsland West.name": "Isola Zenzero Ovest",
-"config.GingerIsland West.description": "Abilita il carrello da miniera nella Cava sull'Isola Zenzero",
+"config.GingerIsland West.description": "Abilita il carrello da miniera nella fattoria dell'Isola Zenzero",
 "config.GingerIsland West Minecart.name": "Isola Zenzero Ovest",
 "config.GingerIsland West Minecart.description": "(Opzionale) Inserisci un nome personalizzato per il Carrello da miniera dell'Isola Zenzero Ovest\nLascia vuoto per «Isola Zenzero - Fattoria»",
 

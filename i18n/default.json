@@ -1,8 +1,6 @@
 {
 	"$schema": "https://smapi.io/schemas/i18n.json",
 
-	//Sections
-
 "config.section.Toggle Minecarts.name": "Toggle Minecarts",
 "config.section.Toggle Minecarts.description": "Either enable or disable specific minecarts",
 "config.section.Custom Names.name": "Custom Names",
@@ -19,8 +17,6 @@
 "config.section.Default East Scarp Minecarts.description": "Whether to restore the standard East Scarp minecarts or not",
 "config.section.Expa.name": "Expa",
 "config.section.Expa.description": "Settings related to the Minecart Realm Expa\nOnly shows when you have a compatible mod that contains a new region",
-
-//Vanilla
 
 "Bus Stop": "Bus Stop",
 "config.Bus Stop.name": "Remove Bus Stop",
@@ -138,23 +134,21 @@
 
 "GingerIsland East": "Ginger Island - Leo's",
 "config.GingerIsland East.name": "Ginger Island East",
-"config.GingerIsland East.description": "Enable the minecart in the Quarry on Ginger Island",
+"config.GingerIsland East.description": "Enable the minecart near Leo's treehouse on Ginger Island",
 "config.GingerIsland East Minecart.name": "Ginger Island East",
 "config.GingerIsland East Minecart.description": "(Optional) Enter a custom name for the Ginger Island East Minecart\nLeave blank for 'Ginger Island - Leo's'",
 
 "GingerIsland South": "Ginger Island - Resort",
 "config.GingerIsland South.name": "Ginger Island South",
-"config.GingerIsland South.description": "Enable the minecart in the Quarry on Ginger Island",
+"config.GingerIsland South.description": "Enable the minecart on the landing beach of Ginger Island",
 "config.GingerIsland South Minecart.name": "Ginger Island South",
 "config.GingerIsland South Minecart.description": "(Optional) Enter a custom name for the Ginger Island South Minecart\nLeave blank for 'Ginger Island - Resort'",
 
 "GingerIsland West": "Ginger Island - Farm",
 "config.GingerIsland West.name": "Ginger Island West",
-"config.GingerIsland West.description": "Enable the minecart in the Quarry on Ginger Island",
+"config.GingerIsland West.description": "Enable the minecart on the farm of Ginger Island",
 "config.GingerIsland West Minecart.name": "Ginger Island West",
 "config.GingerIsland West Minecart.description": "(Optional) Enter a custom name for the Ginger Island West Minecart\nLeave blank for 'Ginger Island - Farm'",
-
-//SVE
 
 "Grandpa's Shed": "Farm - Grandpa's Shed",
 "config.Grandpa's Shed.name": "Grandpa's Shed",
@@ -192,8 +186,6 @@
 "config.ForestWest West Minecart.name": "Western Forest West",
 "config.ForestWest West Minecart.description": "(Optional) Enter a custom name for the Western Forest's West Minecart\nLeave blank for 'Western Forest - West'",
 
-//Custom Farms
-
 "GrandpasFarm North": "Farm - Grandpa's Shed",
 "config.GrandpasFarm North.name": "Grandpa's Farm North",
 "config.GrandpasFarm North.description": "Enable the minecart next to Grandpa's Shed",
@@ -223,8 +215,6 @@
 "config.Frontier Farm North Minecart.description": "(Optional) Enter a custom name for the Frontier Farm North Minecart\nLeave blank for 'Farm - Bridge'",
 
 "FrontierFarm West": "Farm - Grandpa's Shed",
-
-//East Scarp
 
 "ES Village": "Scarpe Inn",
 "config.ES Village.name": "East Scarp Village",
@@ -282,8 +272,6 @@
 
 "config.ES_DeepMountains.name": "Standard Deep Mountains",
 "config.ES_DeepMountains.description": "Restore the standard minecart in the Deep Mountains",
-
-//RidgeSide Village
 
 "RSV_CableCar_Bottom": "Cable Car - Lower Dock",
 "config.RSV_CableCar_Bottom.name": "Cable Car Bottom",
@@ -355,15 +343,13 @@
 "config.RSV_Ridge_East.name": "The Ridge East",
 "config.RSV_Ridge_East.description": "Enable the minecart near the Ninja House",
 "config.RSV_Ridge_East Minecart.name": "The Ridge East",
-"config.RSV_Ridge_East Minecart.description": "(Optional) Enter a custom name for the The Ridge East Minecart\nLeave blank for '- Ninja House'",
+"config.RSV_Ridge_East Minecart.description": "(Optional) Enter a custom name for the The Ridge East Minecart\nLeave blank for 'The Ridge - Ninja House'",
 
 "RSV_Ridge_West": "The Ridge - Forest Entrance",
 "config.RSV_Ridge_West.name": "The Ridge West",
 "config.RSV_Ridge_West.description": "Enable the minecart near the entrance to the Ridge Forest",
 "config.RSV_Ridge_West Minecart.name": "The Ridge West",
 "config.RSV_Ridge_West Minecart.description": "(Optional) Enter a custom name for the The Ridge West Minecart\nLeave blank for 'The Ridge - Forest Entrance'",
-
-//Expa
 
 "Expa": "Expa",
 "config.Enable Expa.name": "Enable Expa",
@@ -377,8 +363,6 @@
 "Expacart East Scarp Rail": "5787",
 "Expacart RidgeSide Village": "This minecart connects to the RidgeSide Village minecart Network",
 "Expacart RidgeSide Village Rail": "7286",
-
-//Messages
 
 "RIPbush_L1": "For the advancement of technology, our beloved bush has been sacrificed.",
 "RIPbush_L2": "You will forever be missed <",

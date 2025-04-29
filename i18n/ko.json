@@ -132,15 +132,15 @@
 "config.GingerIsland North Minecart.name": "진저 섬 북쪽",
 "config.GingerIsland North Minecart.description": "(선택 사항) 진저 섬 북쪽 광산 수레에 사용자 지정 이름을 입력하십시오\n비워두면 “진저 섬 - 채석장”으로 표시됩니다",
 
-"GingerIsland East": "진저 섬 - 레오의 집",
+"GingerIsland East": "진저 섬 - 레오의 오두막",
 "config.GingerIsland East.name": "진저 섬 동쪽",
-"config.GingerIsland East.description": "진저 섬 레오의 집 광산 수레를 활성화합니다",
+"config.GingerIsland East.description": "진저 섬 레오의 나무집 근처 광산 수레를 활성화합니다",
 "config.GingerIsland East Minecart.name": "진저 섬 동쪽",
 "config.GingerIsland East Minecart.description": "(선택 사항) 진저 섬 동쪽 광산 수레에 사용자 지정 이름을 입력하십시오\n비워두면 “진저 섬 - 레오의 오두막”으로 표시됩니다",
 
 "GingerIsland South": "진저 섬 - 리조트",
 "config.GingerIsland South.name": "진저 섬 남쪽",
-"config.GingerIsland South.description": "진저 섬 리조트 광산 수레를 활성화합니다",
+"config.GingerIsland South.description": "진저 섬 착륙 해변 광산 수레를 활성화합니다",
 "config.GingerIsland South Minecart.name": "진저 섬 남쪽",
 "config.GingerIsland South Minecart.description": "(선택 사항) 진저 섬 남쪽 광산 수레에 사용자 지정 이름을 입력하십시오\n비워두면 “진저 섬 - 리조트”으로 표시됩니다",
 

@@ -134,13 +134,13 @@
 
 "GingerIsland East": "ジンジャーアイランド - レオの小屋",
 "config.GingerIsland East.name": "ジンジャーアイランド 東",
-"config.GingerIsland East.description": "ジンジャーアイランドのレオの小屋にあるトロッコを有効にする",
+"config.GingerIsland East.description": "ジンジャーアイランドのレオのツリーハウス近くのトロッコを有効にする",
 "config.GingerIsland East Minecart.name": "ジンジャーアイランド 東",
 "config.GingerIsland East Minecart.description": "（任意）ジンジャーアイランド 東のトロッコにカスタム名を入力してください\n「ジンジャーアイランド - レオの小屋」の場合は空白のままにしてください",
 
 "GingerIsland South": "ジンジャーアイランド - リゾート",
 "config.GingerIsland South.name": "ジンジャーアイランド 南",
-"config.GingerIsland South.description": "ジンジャーアイランドのリゾートにあるトロッコを有効にする",
+"config.GingerIsland South.description": "ジンジャーアイランドの到着ビーチにあるトロッコを有効にする",
 "config.GingerIsland South Minecart.name": "ジンジャーアイランド 南",
 "config.GingerIsland South Minecart.description": "（任意）ジンジャーアイランド 南のトロッコにカスタム名を入力してください\n「ジンジャーアイランド - リゾート」の場合は空白のままにしてください",
 

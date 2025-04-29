@@ -139,19 +139,19 @@
 
 "GingerIsland East": "Île Gingembre - Chez Léo",
 "config.GingerIsland East.name": "Île Gingembre Est",
-"config.GingerIsland East.description": "Activer le chariot de mine près de chez Léo sur l'Île Gingembre",
+"config.GingerIsland East.description": "Activer le chariot de mine près de la cabane dans les arbres de Léo sur l'Île Gingembre",
 "config.GingerIsland East Minecart.name": "Île Gingembre Est",
 "config.GingerIsland East Minecart.description": "(Facultatif) Entrez un nom personnalisé pour le chariot de mine Est de l'Île Gingembre\nLaissez vide pour « Île Gingembre - Chez Léo »",
 
 "GingerIsland South": "Île Gingembre - Complexe hôtelier",
 "config.GingerIsland South.name": "Île Gingembre Sud",
-"config.GingerIsland South.description": "Activer le chariot de mine au Complexe hôtelier sur l'Île Gingembre",
+"config.GingerIsland South.description": "Activer le chariot de mine sur la plage d'arrivée de l'Île Gingembre",
 "config.GingerIsland South Minecart.name": "Île Gingembre Sud",
 "config.GingerIsland South Minecart.description": "(Facultatif) Entrez un nom personnalisé pour le chariot de mine Sud de l'Île Gingembre\nLaissez vide pour « Île Gingembre - Complexe hôtelier »",
 
 "GingerIsland West": "Île Gingembre - Ferme",
 "config.GingerIsland West.name": "Île Gingembre Ouest",
-"config.GingerIsland West.description": "Activer le chariot de mine à la Ferme sur l'Île Gingembre",
+"config.GingerIsland West.description": "Activer le chariot de mine sur la ferme de l'Île Gingembre",
 "config.GingerIsland West Minecart.name": "Île Gingembre Ouest",
 "config.GingerIsland West Minecart.description": "(Facultatif) Entrez un nom personnalisé pour le chariot de mine Ouest de l'Île Gingembre\nLaissez vide pour « Île Gingembre - Ferme »",
 

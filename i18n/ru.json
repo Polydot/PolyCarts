@@ -134,19 +134,19 @@
 
 "GingerIsland East": "Остров Имбиря - У Лео",
 "config.GingerIsland East.name": "Восток Острова Имбиря",
-"config.GingerIsland East.description": "Включить вагонетку в Карьере на Острове Имбиря",
+"config.GingerIsland East.description": "Включить вагонетку рядом с домиком Лео на дереве на Острове Имбиря",
 "config.GingerIsland East Minecart.name": "Восток Острова Имбиря",
 "config.GingerIsland East Minecart.description": "(Необязательно) Введите пользовательское название для вагонетки на востоке Острова Имбиря\nОставьте поле пустым для «Остров Имбиря - У Лео»",
 
 "GingerIsland South": "Остров Имбиря - Курорт",
 "config.GingerIsland South.name": "Юг Острова Имбиря",
-"config.GingerIsland South.description": "Включить вагонетку в Карьере на Острове Имбиря",
+"config.GingerIsland South.description": "Включить вагонетку на пляже высадки Острова Имбиря",
 "config.GingerIsland South Minecart.name": "Юг Острова Имбиря",
 "config.GingerIsland South Minecart.description": "(Необязательно) Введите пользовательское название для вагонетки на юге Острова Имбиря\nОставьте поле пустым для «Остров Имбиря - Курорт»",
 
 "GingerIsland West": "Остров Имбиря - Ферма",
 "config.GingerIsland West.name": "Запад Острова Имбиря",
-"config.GingerIsland West.description": "Включить вагонетку в Карьере на Острове Имбиря",
+"config.GingerIsland West.description": "Включить вагонетку на ферме Острова Имбиря",
 "config.GingerIsland West Minecart.name": "Запад Острова Имбиря",
 "config.GingerIsland West Minecart.description": "(Необязательно) Введите пользовательское название для вагонетки на западе Острова Имбиря\nОставьте поле пустым для «Остров Имбиря - Ферма»",
 

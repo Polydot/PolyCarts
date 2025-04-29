@@ -134,19 +134,19 @@
 
 "GingerIsland East": "Ilha Gengibre - Casa do Leo",
 "config.GingerIsland East.name": "Ilha Gengibre Leste",
-"config.GingerIsland East.description": "Habilitar o carrinho da mina na Pedreira na Ilha Gengibre",
+"config.GingerIsland East.description": "Habilitar o carrinho da mina perto da casa na árvore do Leo na Ilha Gengibre",
 "config.GingerIsland East Minecart.name": "Ilha Gengibre Leste",
 "config.GingerIsland East Minecart.description": "(Opcional) Insira um nome personalizado para o Carrinho da Mina da Ilha Gengibre Leste\nDeixe em branco para “Ilha Gengibre - Casa do Leo”",
 
 "GingerIsland South": "Ilha Gengibre - Resort",
 "config.GingerIsland South.name": "Ilha Gengibre Sul",
-"config.GingerIsland South.description": "Habilitar o carrinho da mina na Pedreira na Ilha Gengibre",
+"config.GingerIsland South.description": "Habilitar o carrinho da mina na praia de desembarque da Ilha Gengibre",
 "config.GingerIsland South Minecart.name": "Ilha Gengibre Sul",
 "config.GingerIsland South Minecart.description": "(Opcional) Insira um nome personalizado para o Carrinho da Mina da Ilha Gengibre Sul\nDeixe em branco para “Ilha Gengibre - Resort”",
 
 "GingerIsland West": "Ilha Gengibre - Fazenda",
 "config.GingerIsland West.name": "Ilha Gengibre Oeste",
-"config.GingerIsland West.description": "Habilitar o carrinho da mina na Pedreira na Ilha Gengibre",
+"config.GingerIsland West.description": "Habilitar o carrinho da mina na fazenda da Ilha Gengibre",
 "config.GingerIsland West Minecart.name": "Ilha Gengibre Oeste",
 "config.GingerIsland West Minecart.description": "(Opcional) Insira um nome personalizado para o Carrinho da Mina da Ilha Gengibre Oeste\nDeixe em branco para “Ilha Gengibre - Fazenda”",
 

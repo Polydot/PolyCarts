@@ -134,19 +134,19 @@
 
 "GingerIsland East": "Ingwerinsel - bei Leo",
 "config.GingerIsland East.name": "Ingwerinsel Ost",
-"config.GingerIsland East.description": "Die Loretür im Steinbruch auf der Ingwerinsel aktivieren",
+"config.GingerIsland East.description": "Die Loretür bei Leos Baumhaus auf der Ingwerinsel aktivieren",
 "config.GingerIsland East Minecart.name": "Ingwerinsel Ost",
 "config.GingerIsland East Minecart.description": "(Optional) Gib einen benutzerdefinierten Namen für die Ingwerinsel-Ost-Loretür ein\nLeer lassen für „Ingwerinsel - bei Leo“",
 
 "GingerIsland South": "Ingwerinsel - Resort",
 "config.GingerIsland South.name": "Ingwerinsel Süd",
-"config.GingerIsland South.description": "Die Loretür im Steinbruch auf der Ingwerinsel aktivieren",
+"config.GingerIsland South.description": "Die Loretür am Ankunftsstrand der Ingwerinsel aktivieren",
 "config.GingerIsland South Minecart.name": "Ingwerinsel Süd",
 "config.GingerIsland South Minecart.description": "(Optional) Gib einen benutzerdefinierten Namen für die Ingwerinsel-Süd-Loretür ein\nLeer lassen für „Ingwerinsel - Resort“",
 
 "GingerIsland West": "Ingwerinsel - Hof",
 "config.GingerIsland West.name": "Ingwerinsel West",
-"config.GingerIsland West.description": "Die Loretür im Steinbruch auf der Ingwerinsel aktivieren",
+"config.GingerIsland West.description": "Die Loretür auf dem Hof der Ingwerinsel aktivieren",
 "config.GingerIsland West Minecart.name": "Ingwerinsel West",
 "config.GingerIsland West Minecart.description": "(Optional) Gib einen benutzerdefinierten Namen für die Ingwerinsel-West-Loretür ein\nLeer lassen für „Ingwerinsel - Hof“",
 
