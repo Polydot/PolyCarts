@@ -5986,7 +5986,7 @@
   <objectgroup id="8" name="Buildings" />
   <layer id="11" name="Paths" width="3" height="4">
     <data encoding="base64" compression="zlib">
-      eJxjYCAOXGSH0AAG6QDZ
+      eJxjYCAMLrIj2AAKSQDZ
     </data>
   </layer>
   <layer id="13" name="Front" width="3" height="4">

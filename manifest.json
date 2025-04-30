@@ -1,7 +1,7 @@
 {
 	"Name": "PolyCarts",
 	"Author": "Polydot",
-	"Version": "1.8.0",
+	"Version": "1.8.2",
 	"Description": "An neatness-focused minecart overhaul!",
 	"UniqueID": "Polydot.PolyCarts",
 	"MinimumApiVersion": "4.0.0",

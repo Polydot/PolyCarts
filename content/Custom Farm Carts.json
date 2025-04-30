@@ -696,32 +696,6 @@
 				}
 			]
 		},
-		//Day-/NightTiles removal Frontier
-		{
-			"Action": "EditMap",
-			"Target": "Maps/Farm_FrontierFarm",
-			"LogName": "Custom Farm FF Lights Remove",
-			"When": {
-				"FarmType": "FrontierFarm",
-				"HasMod": "flashshifter.FrontierFarm",
-				"HasSeenEvent: anyPlayer|contains=1337431": true
-			},
-			//Remove Lights
-			"TextOperations": [
-				{
-					"Operation": "RemoveDelimited",
-					"Target": ["MapProperties", "DayTiles"],
-					"Search": "Buildings 26 29 510 Buildings 85 21 510 Buildings 145 37 510",
-					"Delimiter": " "
-				},
-				{
-					"Operation": "RemoveDelimited",
-					"Target": ["MapProperties", "NightTiles"],
-					"Search": "Buildings 26 29 507 Buildings 85 21 507 Buildings 145 37 507",
-					"Delimiter": " "
-				}
-			]
-		},
 		//Minecart Farm North Frontier Farm
 		{
 			"Action": "EditData",
@@ -763,7 +737,17 @@
 					"Value": "84 21 4",
 					"Delimiter": " "
 				}
-			],
+			]
+		},
+		{
+			"Action": "EditMap",
+			"LogName": "FrontierFarm North Activate",
+			"When": {
+				"FrontierFarm North": true,
+				"FarmType": "FrontierFarm",
+        "HasSeenEvent: anyPlayer|contains=1337431": true
+			},
+			"Target": "Maps/Farm_FrontierFarm",
 			"MapTiles": [
 				{
 					"Position": { "X": 82, "Y": 25 },
@@ -861,7 +845,17 @@
 					"Value": "122 24 4",
 					"Delimiter": " "
 				}
-			],
+			]
+		},
+		{
+			"Action": "EditMap",
+			"LogName": "FrontierFarm East Activate",
+			"When": {
+				"Farm East": true,
+				"FarmType": "FrontierFarm",
+        "HasSeenEvent: anyPlayer|contains=1337431": true
+			},
+			"Target": "Maps/Farm_FrontierFarm",
 			"MapTiles": [
 				{
 					"Position": { "X": 123, "Y": 23 },
@@ -947,7 +941,17 @@
 					"Value": "25 29 4",
 					"Delimiter": " "
 				}
-			],
+			]
+		},
+		{
+			"Action": "EditMap",
+			"LogName": "FrontierFarm West Activate",
+			"When": {
+				"Farm West": true,
+				"FarmType": "FrontierFarm",
+        "HasSeenEvent: anyPlayer|contains=1337431": true
+			},
+			"Target": "Maps/Farm_FrontierFarm",
 			"MapTiles": [
 				{
 					"Position": { "X": 25, "Y": 31 },
@@ -992,5 +996,55 @@
 				}
 			]
 		},
+		//Day-/NightTiles removal Frontier
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Farm_FrontierFarm",
+			"LogName": "Custom Farm FF Lights Remove",
+			"When": {
+				"FarmType": "FrontierFarm",
+				"HasMod": "flashshifter.FrontierFarm",
+				"HasSeenEvent: anyPlayer|contains=1337431": true
+			},
+			//Remove Lights
+			"TextOperations": [
+				{
+					"Operation": "RemoveDelimited",
+					"Target": ["MapProperties", "DayTiles"],
+					"Search": "Buildings 26 29 510 Buildings 85 21 510 Buildings 145 37 510",
+					"Delimiter": " "
+				},
+				{
+					"Operation": "RemoveDelimited",
+					"Target": ["MapProperties", "NightTiles"],
+					"Search": "Buildings 26 29 507 Buildings 85 21 507 Buildings 145 37 507",
+					"Delimiter": " "
+				},
+				{
+					"Operation": "RemoveDelimited",
+					"Target": ["MapProperties", "Light"],
+					"Search": "26 29 4 85 21 4 145 37 4",
+					"Delimiter": " "
+				}
+			]
+		},
+    //Repair Minecarts Quest Storage Chest
+    {
+      "Action": "EditMap",
+      "Target": "Maps/Farm_FrontierFarm",
+      "FromFile": "Assets/Custom Farms/FrontierFarm_Chest.tmx",
+      "ToArea": {
+        "X": 145,
+        "Y": 38,
+        "Width": 1,
+        "Height": 2
+      },
+      "When": {
+        "HasSeenEvent: anyPlayer|contains=1337430": true,
+        "HasSeenEvent: anyPlayer|contains=1337431": false,
+        "FarmType": "FrontierFarm",
+      },
+      "Update": "OnLocationChange"
+    }
 	]
 }
