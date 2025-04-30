@@ -383,6 +383,11 @@
 "Find3_L3": "Talvez a rede de carrinhos da mina da Vila de RidgeSide precise ser reparada também?",
 "Find3_L4": "Você adicionou “{{Unlocked_Location}}” à sua lista de Carrinhos da Mina Misteriosos!",
 
+"Find4_L1": "Você encontrou um novo Carrinho da Mina!",
+"Find4_L2": "Depois de consertar um pouco, parece que você o consertou, mas não parece fazer nada...",
+"Find4_L3": "Talvez a rede de carrinhos da mina da Fazenda precise ser reparada separadamente?",
+"Find4_L4": "Você adicionou “{{Unlocked_Location}}” à sua lista de Carrinhos da Mina Misteriosos!",
+
 "Unlock_L1": "Você encontrou um novo Carrinho da Mina!",
 "Unlock_L2": "Depois de tentar fazê-lo funcionar um pouco, ele ganha vida.",
 "Unlock_L3": "Deve estar totalmente funcional amanhã!",

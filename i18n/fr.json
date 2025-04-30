@@ -388,6 +388,11 @@
 "Find3_L3": "Peut-être que le réseau de chariots de mine du Village de RidgeSide a aussi besoin d'être réparé ?",
 "Find3_L4": "Tu as ajouté « {{Unlocked_Location}} » à ta liste de chariots de mine mystérieux !",
 
+"Find4_L1": "Tu as trouvé un nouveau chariot de mine !",
+"Find4_L2": "Après avoir bricolé un peu, il semble que tu l'aies réparé, mais il ne semble rien faire...",
+"Find4_L3": "Peut-être que le réseau de chariots de mine de la Ferme a besoin d'être réparé séparément ?",
+"Find4_L4": "Tu as ajouté « {{Unlocked_Location}} » à ta liste de chariots de mine mystérieux !",
+
 "Unlock_L1": "Tu as trouvé un nouveau chariot de mine !",
 "Unlock_L2": "Après avoir essayé de le faire fonctionner pendant un moment, il prend vie.",
 "Unlock_L3": "Il devrait être entièrement fonctionnel demain !",

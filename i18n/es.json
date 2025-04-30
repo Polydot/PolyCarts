@@ -388,6 +388,11 @@
 "Find3_L3": "¿Quizás la red de vagonetas del Pueblo RidgeSide también necesite ser reparada?",
 "Find3_L4": "¡Has añadido «{{Unlocked_Location}}» a tu lista de Vagonetas Misteriosas!",
 
+"Find4_L1": "¡Has encontrado una Vagoneta nueva!",
+"Find4_L2": "Tras trastear un poco, parece que la has arreglado, pero no parece hacer nada...",
+"Find4_L3": "¿Quizás la red de vagonetas de la Granja necesite ser reparada por separado?",
+"Find4_L4": "¡Has añadido «{{Unlocked_Location}}» a tu lista de Vagonetas Misteriosas!",
+
 "Unlock_L1": "¡Has encontrado una Vagoneta nueva!",
 "Unlock_L2": "Tras intentar que funcione un poco, cobra vida.",
 "Unlock_L3": "¡Debería estar totalmente funcional mañana!",

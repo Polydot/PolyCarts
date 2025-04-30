@@ -383,6 +383,11 @@
 "Find3_L3": "Vielleicht muss auch das Loretüren-Netzwerk von RidgeSide Village repariert werden?",
 "Find3_L4": "Du hast „{{Unlocked_Location}}“ zu deiner Liste der Mysteriösen Loretüren hinzugefügt!",
 
+"Find4_L1": "Du hast eine neue Loretür gefunden!",
+"Find4_L2": "Nach einigem Basteln sieht es so aus, als hättest du sie repariert, aber sie scheint nichts zu tun...",
+"Find4_L3": "Vielleicht muss das Loretüren-Netzwerk des Hofes separat repariert werden?",
+"Find4_L4": "Du hast „{{Unlocked_Location}}“ zu deiner Liste der Mysteriösen Loretüren hinzugefügt!",
+
 "Unlock_L1": "Du hast eine neue Loretür gefunden!",
 "Unlock_L2": "Nachdem du eine Weile versucht hast, sie zum Laufen zu bringen, erwacht sie zum Leben.",
 "Unlock_L3": "Morgen sollte sie voll funktionsfähig sein!",

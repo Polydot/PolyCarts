@@ -1123,6 +1123,25 @@
 			"When": {
 				"HasFlag: hostPlayer": "RSV.FixedMinecart"
 			}
+		},
+		{//Finding a Frontier Farm Minecart
+			"Name": "Frontier_find",
+			"Value": "Find"
+		},
+		{
+			"Name": "Frontier_find",
+			"Value": "Find4",
+			"When": {
+				"HasFlag": "ccBoilerRoom",
+				"HasSeenEvent: anyPlayer|contains=1337431": false
+			}
+		},
+		{
+			"Name": "Frontier_find",
+			"Value": "Unlock",
+			"When": {
+			"HasSeenEvent: anyPlayer|contains=1337431": true
+			}
 		}
 	],
 	"Changes": [

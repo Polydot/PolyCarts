@@ -383,6 +383,11 @@
 "Find3_L3": "Maybe RidgeSide Village's minecart network needs to be repaired as well?",
 "Find3_L4": "You've added '{{Unlocked_Location}}' to your Mysterious Minecarts list!",
 
+"Find4_L1": "You found a new Minecart!",
+"Find4_L2": "After tinkering a bit, it looks like you fixed it, but it doesn't seem to do anything...",
+"Find4_L3": "Maybe the Farm's minecart network needs to be repaired separately?",
+"Find4_L4": "You've added '{{Unlocked_Location}}' to your Mysterious Minecarts list!",
+
 "Unlock_L1": "You found a new Minecart!",
 "Unlock_L2": "After trying to get it to work for a bit it springs to life.",
 "Unlock_L3": "It should be fully functional tomorrow!",

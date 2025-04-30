@@ -780,14 +780,14 @@
 					"Position": { "X": 82, "Y": 25 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_North {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{FrontierFarm North Name}}}}"
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_North {{i18n: {{Frontier_Find}}_L1}}^{{i18n: {{Frontier_Find}}_L2}}^{{i18n: {{Frontier_Find}}_L3}}^{{i18n: {{Frontier_Find}}_L4 |Unlocked_Location={{FrontierFarm North Name}}}}"
 					}
 				},
 				{
 					"Position": { "X": 82, "Y": 26 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_North {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{FrontierFarm North Name}}}}"
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_North {{i18n: {{Frontier_Find}}_L1}}^{{i18n: {{Frontier_Find}}_L2}}^{{i18n: {{Frontier_Find}}_L3}}^{{i18n: {{Frontier_Find}}_L4 |Unlocked_Location={{FrontierFarm North Name}}}}"
 					}
 				}
 			]
@@ -888,14 +888,14 @@
 					"Position": { "X": 123, "Y": 23 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_East {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Farm East Name}}}}"
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_East {{i18n: {{Frontier_Find}}_L1}}^{{i18n: {{Frontier_Find}}_L2}}^{{i18n: {{Frontier_Find}}_L3}}^{{i18n: {{Frontier_Find}}_L4 |Unlocked_Location={{Farm East Name}}}}"
 					}
 				},
 				{
 					"Position": { "X": 123, "Y": 24 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_East {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{Farm East Name}}}}"
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_East {{i18n: {{Frontier_Find}}_L1}}^{{i18n: {{Frontier_Find}}_L2}}^{{i18n: {{Frontier_Find}}_L3}}^{{i18n: {{Frontier_Find}}_L4 |Unlocked_Location={{Farm East Name}}}}"
 					}
 				}
 			]
@@ -984,14 +984,14 @@
 					"Position": { "X": 25, "Y": 31 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_West {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{FrontierFarm West Name}}}}"
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_West {{i18n: {{Frontier_Find}}_L1}}^{{i18n: {{Frontier_Find}}_L2}}^{{i18n: {{Frontier_Find}}_L3}}^{{i18n: {{Frontier_Find}}_L4 |Unlocked_Location={{FrontierFarm West Name}}}}"
 					}
 				},
 				{
 					"Position": { "X": 26, "Y": 31 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_West {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{FrontierFarm West Name}}}}"
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.Farm_West {{i18n: {{Frontier_Find}}_L1}}^{{i18n: {{Frontier_Find}}_L2}}^{{i18n: {{Frontier_Find}}_L3}}^{{i18n: {{Frontier_Find}}_L4 |Unlocked_Location={{FrontierFarm West Name}}}}"
 					}
 				}
 			]
