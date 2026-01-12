@@ -1011,27 +1011,71 @@
 				{
 					"Operation": "RemoveDelimited",
 					"Target": ["MapProperties", "DayTiles"],
-					"Search": "Buildings 26 29 510 Buildings 85 21 510 Buildings 145 37 510",
+					"Search": "Buildings 26 29 510",
 					"Delimiter": " "
 				},
 				{
 					"Operation": "RemoveDelimited",
 					"Target": ["MapProperties", "NightTiles"],
-					"Search": "Buildings 26 29 507 Buildings 85 21 507 Buildings 145 37 507",
+					"Search": "Buildings 26 29 507",
 					"Delimiter": " "
 				},
 				{
 					"Operation": "RemoveDelimited",
 					"Target": ["MapProperties", "Light"],
-					"Search": "26 29 4 85 21 4 145 37 4",
+					"Search": "26 29 4",
+					"Delimiter": " "
+				},
+				{
+					"Operation": "RemoveDelimited",
+					"Target": ["MapProperties", "DayTiles"],
+					"Search": "Buildings 85 21 510",
+					"Delimiter": " "
+				},
+				{
+					"Operation": "RemoveDelimited",
+					"Target": ["MapProperties", "NightTiles"],
+					"Search": "Buildings 85 21 507",
+					"Delimiter": " "
+				},
+				{
+					"Operation": "RemoveDelimited",
+					"Target": ["MapProperties", "Light"],
+					"Search": "85 21 4",
+					"Delimiter": " "
+				},
+				{
+					"Operation": "RemoveDelimited",
+					"Target": ["MapProperties", "DayTiles"],
+					"Search": "Buildings 145 37 510",
+					"Delimiter": " "
+				},
+				{
+					"Operation": "RemoveDelimited",
+					"Target": ["MapProperties", "NightTiles"],
+					"Search": "Buildings 145 37 507",
+					"Delimiter": " "
+				},
+				{
+					"Operation": "RemoveDelimited",
+					"Target": ["MapProperties", "Light"],
+					"Search": "145 37 4",
 					"Delimiter": " "
 				}
 			]
+		},
+		{"Action": "EditMap",
+			"Target": "Maps/Farm_FrontierFarm",
+			"MapProperties": {
+				"DayTiles": null,
+				"NightTiles": null,
+			}
 		},
     //Repair Minecarts Quest Storage Chest
     {
       "Action": "EditMap",
       "Target": "Maps/Farm_FrontierFarm",
+			"LogName": "Custom Farm FF Repair Chest Quest",
       "FromFile": "Assets/Custom Farms/FrontierFarm_Chest.tmx",
       "ToArea": {
         "X": 145,

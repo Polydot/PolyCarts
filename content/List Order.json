@@ -25,7 +25,6 @@
 			},
 			"TargetField": ["{{EastScarp Destinations}}", "Destinations"],
 			"MoveEntries": [
-				{ "ID": "Polydot.PolyCarts_ClearingHouse", "ToPosition": "Top" },
 				{ "ID": "Polydot.PolyCarts_Orchard", "ToPosition": "Top" },
 				{ "ID": "Polydot.PolyCarts_ES_Meadow", "ToPosition": "Top" },
 				{ "ID": "Polydot.PolyCarts_UnderScarp", "ToPosition": "Top" },

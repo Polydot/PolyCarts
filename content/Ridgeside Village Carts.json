@@ -281,7 +281,8 @@
 			"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
 			"LogName": "RSV_Heaps EditMap",
 			"When": {
-				"RSV_Heaps": true
+				"RSV_Heaps": true,
+				"HasFlag: hostPlayer": "!RSV.FixedMinecart"
 			},
 			"FromFile": "assets/RSV/RSV_Heaps.tmx",
 			"ToArea": { "X": 68, "Y": 13, "Width": 4, "Height": 4 },
@@ -293,7 +294,29 @@
 					"Value": "70 14 4",
 					"Delimiter": " "
 				}
-			]
+			],
+			"Update": "OnLocationChange"
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
+			"LogName": "RSV_Heaps EditMap post-quest",
+			"When": {
+				"RSV_Heaps": true,
+				"HasFlag: hostPlayer": "RSV.FixedMinecart"
+			},
+			"FromFile": "assets/RSV/RSV_Heaps2.tmx",
+			"ToArea": { "X": 68, "Y": 13, "Width": 4, "Height": 4 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "70 14 4",
+					"Delimiter": " "
+				}
+			],
+			"Update": "OnLocationChange"
 		},
 		{
 			"Action": "EditMap",

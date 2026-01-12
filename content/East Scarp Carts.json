@@ -64,18 +64,7 @@
 				"EastScarp_DeepDark": null,
 				"EastScarp_DeepMountains": null,
 				"EastScarp_Village": null,
-				"EastScarp_ClearingHouse": null,
-				"Lemurkat_ClearingHouse": null
-			}
-		},
-		{
-			"Action": "EditData",
-			"Target": "Data/Minecarts",
-			"LogName": "ES Remove Destinations",
-			"TargetField": ["Default", "Destinations"],
-			"Entries": {
-				"EastScarp_ClearingHouse": null,
-				"Lemurkat_ClearingHouse": null
+				"EastScarp_Crossing": null
 			}
 		},
 		//
@@ -90,26 +79,6 @@
 			"LogName": "ES UnderScarp Remove",
 			"FromFile": "assets/ES/UnderScarp_Remove.tmx",
 			"ToArea": { "X": 3, "Y": 62, "Width": 15, "Height": 5 }
-		},
-		{//Clearing House 1
-			"Action": "EditMap",
-			"When": {
-				"ES_Clearing": false
-			},
-			"Target": "Maps/EastScarp_ClearingHouse",
-			"LogName": "ES ClearingHouse Remove1",
-			"FromFile": "assets/ES/ClearingHouse_Remove1.tmx",
-			"ToArea": { "X": 0, "Y": 25, "Width": 60, "Height": 1 }
-		},
-		{//Clearing House 2
-			"Action": "EditMap",
-			"When": {
-				"ES_Clearing": false
-			},
-			"Target": "Maps/EastScarp_ClearingHouse",
-			"LogName": "ES ClearingHouse Remove2",
-			"FromFile": "assets/ES/ClearingHouse_Remove2.tmx",
-			"ToArea": { "X": 1, "Y": 26, "Width": 4, "Height": 3 }
 		},
 		{//Village 1
 			"Action": "EditMap",
@@ -179,8 +148,222 @@
       }
 		},
 		//
+		//Remove Smokepuffs
+		//
+		{
+			"Action": "EditMap",
+			"Target": "Maps/EastScarp_Village",
+			"FromFile": "assets/ES/Smokepuff_Remove.tmx",
+			"PatchMode": "ReplaceByLayer",
+			"ToArea": {
+				"X": 69,
+				"Y": 15,
+				"Width": 1,
+				"Height": 1
+			},
+			"When": {
+				"HasFlag": "ccBoilerRoom"
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/EastScarp_Crossing",
+			"FromFile": "assets/ES/Smokepuff_Remove.tmx",
+			"PatchMode": "ReplaceByLayer",
+			"ToArea": {
+				"X": 20,
+				"Y": 25,
+				"Width": 1,
+				"Height": 1
+			},
+			"When": {
+				"HasFlag": "ccBoilerRoom"
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/EastScarp_DeepMountains",
+			"FromFile": "assets/ES/Smokepuff_Remove.tmx",
+			"PatchMode": "ReplaceByLayer",
+			"ToArea": {
+				"X": 57,
+				"Y": 36,
+				"Width": 1,
+				"Height": 1
+			},
+			"When": {
+				"HasFlag": "ccBoilerRoom"
+			}
+		},
+		//
 		//Add New Carts
 		//
+		//ScarpCrossing
+		{
+			"Action": "EditData",
+			"Target": "Data/Minecarts",
+			"LogName": "ScarpCrossing EditData",
+			"When": {
+				"ScarpCrossing": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.ScarpCrossing" 
+			},
+			"TargetField": ["{{EastScarp Destinations}}", "Destinations"],
+			"Entries": {
+				"ScarpCrossing": {
+					"Id": "Polydot.PolyCarts_ScarpCrossing",
+					"DisplayName": "{{ScarpCrossing Name}}",
+					"TargetLocation": "EastScarp_Crossing",
+					"TargetTile": { "X": 54, "Y": 25 },
+					"TargetDirection": "left"
+				}
+			}
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/EastScarp_Crossing",
+			"LogName": "ScarpCrossing EditMap",
+			"When": {
+				"ScarpCrossing": true,
+        "HasFlag |contains=Jade_ButterflyGarden": false
+			},
+			"FromFile": "assets/ES/ScarpCrossing.tmx",
+			"ToArea": { "X": 54, "Y": 24, "Width": 11, "Height": 4 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "54 27 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 54, "Y": 26 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{EastScarp destinations}} Polydot.PolyCarts_ScarpCrossing"
+					}
+				},
+				{
+					"Position": { "X": 55, "Y": 26 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{EastScarp destinations}} Polydot.PolyCarts_ScarpCrossing"
+					}
+				}
+			]
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/EastScarp_Crossing",
+			"LogName": "ScarpCrossing EditMap Flowers",
+			"When": {
+				"ScarpCrossing": true,
+        "HasFlag": "Jade_ButterflyGarden"
+			},
+			"FromFile": "assets/ES/ScarpCrossing_Flowers.tmx",
+			"ToArea": { "X": 54, "Y": 24, "Width": 11, "Height": 4 },
+			//Add a light
+			"TextOperations": [
+				{
+					"Operation": "Append",
+					"Target": ["MapProperties", "Light"],
+					"Value": "54 27 4",
+					"Delimiter": " "
+				}
+			],
+			"MapTiles": [
+				{
+					"Position": { "X": 54, "Y": 26 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{EastScarp destinations}} Polydot.PolyCarts_ScarpCrossing"
+					}
+				},
+				{
+					"Position": { "X": 55, "Y": 26 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MinecartTransport {{EastScarp destinations}} Polydot.PolyCarts_ScarpCrossing"
+					}
+				}
+			]
+		},
+		{//Unlock
+			"Action": "EditMap",
+			"LogName": "ES Unlock ScarpCrossing",
+			"When": {
+				"ScarpCrossing": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.ScarpCrossing": false 
+			},
+			"Target": "Maps/EastScarp_Crossing",
+			"MapTiles": [
+				{
+					"Position": { "X": 54, "Y": 26 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.ScarpCrossing {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{ScarpCrossing Name}}}}"
+					}
+				},
+				{
+					"Position": { "X": 55, "Y": 26 },
+					"Layer": "Buildings",
+					"SetProperties": {
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.ScarpCrossing {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{ScarpCrossing Name}}}}"
+					}
+				}
+			]
+		},
+		//Remove stuff
+		{
+			"Action": "EditMap",
+			"Target": "Maps/EastScarp_Crossing",
+			"LogName": "ScarpCrossing Remove",
+			"When": {
+				"ScarpCrossing": true,
+        "HasFlag |contains=Jade_ButterflyGarden": false,
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false
+			},
+			"FromFile": "assets/ES/ScarpCrossing_Remove.tmx",
+			"ToArea": { "X": 0, "Y": 24, "Width": 54, "Height": 5 }
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/EastScarp_Crossing",
+			"LogName": "ScarpCrossing SVE Remove",
+			"When": {
+				"ScarpCrossing": true,
+        "HasFlag |contains=Jade_ButterflyGarden": false,
+				"HasMod": "FlashShifter.StardewValleyExpandedCP" 
+			},
+			"FromFile": "assets/ES/ScarpCrossing_SVE_Remove.tmx",
+			"ToArea": { "X": 54, "Y": 24, "Width": 11, "Height": 4 }
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/EastScarp_Crossing",
+			"LogName": "ScarpCrossing Remove Flowers",
+			"When": {
+				"ScarpCrossing": true,
+        "HasFlag": "Jade_ButterflyGarden",
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false
+			},
+			"FromFile": "assets/ES/ScarpCrossing_Flowers_Remove.tmx",
+			"ToArea": { "X": 54, "Y": 24, "Width": 11, "Height": 4 }
+		},
+		{
+			"Action": "EditMap",
+			"Target": "Maps/EastScarp_Crossing",
+			"LogName": "ScarpCrossing SVE Remove Flowers",
+			"When": {
+				"ScarpCrossing": true,
+        "HasFlag": "Jade_ButterflyGarden",
+				"HasMod": "FlashShifter.StardewValleyExpandedCP" 
+			},
+			"FromFile": "assets/ES/ScarpCrossing_SVE_Flowers_Remove.tmx",
+			"ToArea": { "X": 54, "Y": 24, "Width": 11, "Height": 4 }
+		},
 		//East Scarp Village
 		{
 			"Action": "EditData",
@@ -209,7 +392,7 @@
 				"ES Village": true 
 			},
 			"FromFile": "assets/ES/Village.tmx",
-			"ToArea": { "X": 48, "Y": 70, "Width": 4, "Height": 4 },
+			"ToArea": { "X": 48, "Y": 70, "Width": 4, "Height": 5 },
 			//Add a light
 			"TextOperations": [
 				{
@@ -597,86 +780,6 @@
 					"Layer": "Buildings",
 					"SetProperties": {
 						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.ES_Meadow {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{ES Meadow Name}}}}"
-					}
-				}
-			]
-		},
-		//Clearing House
-		{
-			"Action": "EditData",
-			"Target": "Data/Minecarts",
-			"LogName": "ES ClearingHouse EditData",
-			"When": {
-				"ClearingHouse": true,
-				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.ClearingHouse" 
-			},
-			"TargetField": ["{{EastScarp Destinations}}", "Destinations"],
-			"Entries": {
-				"ClearingHouse": {
-					"Id": "Polydot.PolyCarts_ClearingHouse",
-					"DisplayName": "{{ClearingHouse Name}}",
-					"TargetLocation": "EastScarp_ClearingHouse",
-					"TargetTile": { "X": 35, "Y": 5 },
-					"TargetDirection": "down"
-				}
-			}
-		},
-		{
-			"Action": "EditMap",
-			"Target": "Maps/EastScarp_ClearingHouse",
-			"LogName": "ES ClearingHouse EditMap",
-			"When": {
-				"ClearingHouse": true 
-			},
-			"FromFile": "assets/ES/ClearingHouse.tmx",
-			"ToArea": { "X": 34, "Y": 0, "Width": 2, "Height": 5 },
-			//Add a light
-			"TextOperations": [
-				{
-					"Operation": "Append",
-					"Target": ["MapProperties", "Light"],
-					"Value": "34 4 4",
-					"Delimiter": " "
-				}
-			],
-			"MapTiles": [
-				{
-					"Position": { "X": 35, "Y": 3 },
-					"Layer": "Buildings",
-					"SetProperties": {
-						"Action": "MinecartTransport {{EastScarp destinations}} Polydot.PolyCarts_ClearingHouse"
-					}
-				},
-				{
-					"Position": { "X": 35, "Y": 4 },
-					"Layer": "Buildings",
-					"SetProperties": {
-						"Action": "MinecartTransport {{EastScarp destinations}} Polydot.PolyCarts_ClearingHouse"
-					}
-				}
-			]
-		},
-		{//Unlock
-			"Action": "EditMap",
-			"LogName": "ES Unlock ClearingHouse",
-			"When": {
-				"ClearingHouse": true,
-				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.ClearingHouse": false 
-			},
-			"Target": "Maps/EastScarp_ClearingHouse",
-			"MapTiles": [
-				{
-					"Position": { "X": 35, "Y": 3 },
-					"Layer": "Buildings",
-					"SetProperties": {
-						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.ClearingHouse {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{ClearingHouse Name}}}}"
-					}
-				},
-				{
-					"Position": { "X": 35, "Y": 4 },
-					"Layer": "Buildings",
-					"SetProperties": {
-						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.ClearingHouse {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{ClearingHouse Name}}}}"
 					}
 				}
 			]
