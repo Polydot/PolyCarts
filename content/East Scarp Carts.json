@@ -67,42 +67,6 @@
 			}
 		},
 		//
-		//Remove ES Carts
-		//
-		{//Trace's House
-			"Action": "EditMap",
-			"Target": "Maps/EastScarp_Village",
-			"LogName": "ScarpVillage Remove Trace's House",
-			"When": {
-				"HasMod": "7thAxis.DitR",
-				"ES_Trace": false
-			},
-			"FromFile": "assets/ES/Trace_House_Exterior.tmx",
-			"ToArea": { "X": 0, "Y": 74, "Width": 13, "Height": 7 }
-		},
-		{//Deep Mountains
-			"Action": "EditMap",
-			"When": {
-				"ES_DeepMountains": false
-			},
-			"Target": "Maps/EastScarp_DeepMountains",
-			"LogName": "ES Deep Mountains Remove",
-			"FromFile": "assets/ES/DeepMountains_Remove.tmx",
-			"ToArea": { "X": 53, "Y": 33, "Width": 5, "Height": 6 },
-			"TextOperations": [
-				{
-					"Operation": "RemoveDelimited",
-					"Target": ["MapProperties", "Light"],
-					"Search": "56 35 4",
-					"Delimiter": " "
-				}
-			],
-      "MapProperties": {
-				"DayTiles": "",
-				"NightTiles": ""
-      }
-		},
-		//
 		//Remove Smokepuffs
 		//
 		{
@@ -530,7 +494,7 @@
 				"Deep Mountains West": true 
 			},
 			"FromFile": "assets/ES/DeepMountains_West.tmx",
-			"ToArea": { "X": 21, "Y": 28, "Width": 3, "Height": 4 },
+			"ToArea": { "X": 20, "Y": 28, "Width": 4, "Height": 4 },
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -580,6 +544,28 @@
 					}
 				}
 			]
+		},
+		{//Remove stuff
+			"Action": "EditMap",
+			"When": {
+				"Deep Mountains West": true
+			},
+			"Target": "Maps/EastScarp_DeepMountains",
+			"LogName": "ES Deep Mountains Remove",
+			"FromFile": "assets/ES/DeepMountains_Remove.tmx",
+			"ToArea": { "X": 53, "Y": 33, "Width": 5, "Height": 6 },
+			"TextOperations": [
+				{
+					"Operation": "RemoveDelimited",
+					"Target": ["MapProperties", "Light"],
+					"Search": "56 35 4",
+					"Delimiter": " "
+				}
+			],
+      "MapProperties": {
+				"DayTiles": "",
+				"NightTiles": ""
+      }
 		},
 		//UnderScarp
 		{
@@ -689,22 +675,22 @@
 			"FromFile": "assets/ES/UnderScarp_Remove.tmx",
 			"ToArea": { "X": 2, "Y": 61, "Width": 17, "Height": 7 }
 		},
-		//Meadow
+		//MeadowFarm
 		{
 			"Action": "EditData",
 			"Target": "Data/Minecarts",
-			"LogName": "ES Meadow EditData",
+			"LogName": "MeadowFarm EditData",
 			"When": {
-				"ES Meadow": true,
-				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.ES_Meadow" 
+				"MeadowFarm": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.MeadowFarm" 
 			},
 			"TargetField": ["{{EastScarp Destinations}}", "Destinations"],
 			"Entries": {
-				"ES Meadow": {
-					"Id": "Polydot.PolyCarts_ES_Meadow",
-					"DisplayName": "{{ES Meadow Name}}",
+				"MeadowFarm": {
+					"Id": "Polydot.PolyCarts_MeadowFarm",
+					"DisplayName": "{{MeadowFarm Name}}",
 					"TargetLocation": "EastScarp_MeadowFarm",
-					"TargetTile": { "X": 46, "Y": 23 },
+					"TargetTile": { "X": 46, "Y": 20 },
 					"TargetDirection": "left"
 				}
 			}
@@ -712,12 +698,12 @@
 		{
 			"Action": "EditMap",
 			"Target": "Maps/EastScarp_MeadowFarm",
-			"LogName": "ES Meadow EditMap",
+			"LogName": "MeadowFarm EditMap",
 			"When": {
-				"ES Meadow": true 
+				"MeadowFarm": true 
 			},
-			"FromFile": "assets/ES/Meadow.tmx",
-			"ToArea": { "X": 47, "Y": 22, "Width": 3, "Height": 3 },
+			"FromFile": "assets/ES/MeadowFarm.tmx",
+			"ToArea": { "X": 47, "Y": 19, "Width": 3, "Height": 3 },
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -728,17 +714,17 @@
 			],
 			"MapTiles": [
 				{
-					"Position": { "X": 47, "Y": 23 },
+					"Position": { "X": 47, "Y": 20 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "MinecartTransport {{EastScarp destinations}} Polydot.PolyCarts_ES_Meadow"
+						"Action": "MinecartTransport {{EastScarp destinations}} Polydot.PolyCarts_MeadowFarm"
 					}
 				},
 				{
-					"Position": { "X": 48, "Y": 23 },
+					"Position": { "X": 48, "Y": 20 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "MinecartTransport {{EastScarp destinations}} Polydot.PolyCarts_ES_Meadow"
+						"Action": "MinecartTransport {{EastScarp destinations}} Polydot.PolyCarts_MeadowFarm"
 					}
 				}
 			]
@@ -747,23 +733,23 @@
 			"Action": "EditMap",
 			"LogName": "ES Unlock Meadow",
 			"When": {
-				"ES Meadow": true,
-				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.ES_Meadow": false 
+				"MeadowFarm": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.MeadowFarm": false 
 			},
 			"Target": "Maps/EastScarp_MeadowFarm",
 			"MapTiles": [
 				{
-					"Position": { "X": 47, "Y": 23 },
+					"Position": { "X": 47, "Y": 20 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.ES_Meadow {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{ES Meadow Name}}}}"
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.MeadowFarm {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{MeadowFarm Name}}}}"
 					}
 				},
 				{
-					"Position": { "X": 48, "Y": 23 },
+					"Position": { "X": 48, "Y": 20 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.ES_Meadow {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{ES Meadow Name}}}}"
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.MeadowFarm {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{MeadowFarm Name}}}}"
 					}
 				}
 			]

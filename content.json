@@ -341,12 +341,12 @@
 			"AllowBlank": true,
 			"Section": "East Scarp Minecarts"
 		},
-		"ES Meadow": {
+		"MeadowFarm": {
 			"AllowValues": "true, false",
 			"Default": "true",
 			"Section": "East Scarp Minecarts"
 		},
-		"ES Meadow Minecart": {
+		"MeadowFarm Minecart": {
 			"AllowBlank": true,
 			"Section": "East Scarp Minecarts"
 		},
@@ -857,14 +857,14 @@
 			"Value": "{{UnderScarp Minecart}}",
 			"When": { "UnderScarp Minecart": "{{UnderScarp Minecart}}" }
 		},
-		{//ES Meadow
-			"Name": "ES Meadow Name",
-			"Value": "{{i18n: ES Meadow}}"
+		{//MeadowFarm
+			"Name": "MeadowFarm Name",
+			"Value": "{{i18n: MeadowFarm}}"
 		},
 		{
-			"Name": "ES Meadow Name",
-			"Value": "{{ES Meadow Minecart}}",
-			"When": { "ES Meadow Minecart": "{{ES Meadow Minecart}}" }
+			"Name": "MeadowFarm Name",
+			"Value": "{{MeadowFarm Minecart}}",
+			"When": { "MeadowFarm Minecart": "{{MeadowFarm Minecart}}" }
 		},
 		{//ScarpCrossing
 			"Name": "ScarpCrossing Name",
