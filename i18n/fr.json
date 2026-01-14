@@ -1,9 +1,4 @@
 {
-	/*
-  Translation provided by:
-  Caranud
-  */
-
 	"$schema": "https://smapi.io/schemas/i18n.json",
 
 "config.section.Toggle Minecarts.name": "Activer/Désactiver les chariots de mine",
@@ -221,11 +216,11 @@
 
 "FrontierFarm West": "Ferme - Cabane de Papi",
 
-"ES Village": "Auberge de Scarpe",
-"config.ES Village.name": "Village d'East Scarp",
-"config.ES Village.description": "Activer le chariot de mine près de l'auberge d'East Scarp",
-"config.ES Village Minecart.name": "Village d'East Scarp",
-"config.ES Village Minecart.description": "(Facultatif) Entrez un nom personnalisé pour le chariot de mine du Village d'East Scarp\nLaissez vide pour « Auberge de Scarpe »",
+"ScarpVillage": "Auberge de Scarpe",
+"config.ScarpVillage.name": "Village d'East Scarp",
+"config.ScarpVillage.description": "Activer le chariot de mine près de l'auberge d'East Scarp",
+"config.ScarpVillage Minecart.name": "Village d'East Scarp",
+"config.ScarpVillage Minecart.description": "(Facultatif) Entrez un nom personnalisé pour le chariot de mine du Village d'East Scarp\nLaissez vide pour « Auberge de Scarpe »",
 
 "Deep Mountains South": "Montagnes Profondes - Lac",
 "config.Deep Mountains South.name": "Montagnes Profondes Sud",
@@ -245,38 +240,23 @@
 "config.UnderScarp Minecart.name": "UnderScarp",
 "config.UnderScarp Minecart.description": "(Facultatif) Entrez un nom personnalisé pour le chariot de mine de l'UnderScarp\nLaissez vide pour « UnderScarp »",
 
-"ES Meadow": "Pré de Scarp",
-"config.ES Meadow.name": "Pré",
-"config.ES Meadow.description": "Activer le chariot de mine sur le Pré de Scarp",
-"config.ES Meadow Minecart.name": "Pré d'East Scarp",
-"config.ES Meadow Minecart.description": "(Facultatif) Entrez un nom personnalisé pour le chariot de mine du Pré d'East Scarp\nLaissez vide pour « Pré de Scarp »",
+"MeadowFarm": "Pré de Scarp",
+"config.MeadowFarm.name": "Ferme du Pré",
+"config.MeadowFarm.description": "Activer le chariot de mine sur le Pré de Scarp",
+"config.MeadowFarm Minecart.name": "Ferme du Pré d'East Scarp",
+"config.MeadowFarm Minecart.description": "(Facultatif) Entrez un nom personnalisé pour le chariot de mine de la Ferme du Pré\nLaissez vide pour « Pré de Scarp »",
 
-"ClearingHouse": "Clearing House",
-"config.ClearingHouse.name": "Clearing House",
-"config.ClearingHouse.description": "Activer le chariot de mine près du Clearing House",
-"config.ClearingHouse Minecart.name": "Clearing House",
-"config.ClearingHouse Minecart.description": "(Facultatif) Entrez un nom personnalisé pour le chariot de mine du Clearing House\nLaissez vide pour « Clearing House »",
+"ScarpCrossing": "Traversée de Scarp",
+"config.ScarpCrossing.name": "Traversée de Scarp",
+"config.ScarpCrossing.description": "Activer le chariot de mine à la Traversée de Scarp",
+"config.ScarpCrossing Minecart.name": "Traversée de Scarp",
+"config.ScarpCrossing Minecart.description": "(Facultatif) Entrez un nom personnalisé pour le chariot de mine de la Traversée de Scarp\nLaissez vide pour « Traversée de Scarp »",
 
 "Orchard": "Verger",
 "config.Orchard.name": "Verger",
 "config.Orchard.description": "Activer le chariot de mine dans le Verger",
 "config.Orchard Minecart.name": "Verger",
 "config.Orchard Minecart.description": "(Facultatif) Entrez un nom personnalisé pour le chariot de mine du Verger\nLaissez vide pour « Verger »",
-
-"config.ES_Underscarp.name": "UnderScarp standard",
-"config.ES_Underscarp.description": "Restaurer le chariot de mine standard dans l'UnderScarp",
-
-"config.ES_Clearing.name": "Clearing House standard",
-"config.ES_Clearing.description": "Restaurer le chariot de mine standard près du Clearing House",
-
-"config.ES_Village.name": "Village standard",
-"config.ES_Village.description": "Restaurer le chariot de mine standard dans le village",
-
-"config.ES_Trace.name": "Maison de Trace standard",
-"config.ES_Trace.description": "Restaurer le chariot de mine standard près de la Maison de Trace",
-
-"config.ES_DeepMountains.name": "Montagnes Profondes standard",
-"config.ES_DeepMountains.description": "Restaurer le chariot de mine standard dans les Montagnes Profondes",
 
 "RSV_CableCar_Bottom": "Téléphérique - Quai inférieur",
 "config.RSV_CableCar_Bottom.name": "Bas du Téléphérique",

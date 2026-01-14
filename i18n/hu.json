@@ -216,11 +216,11 @@
 
 "FrontierFarm West": "Farm - Nagypapa Kunyhója",
 
-"ES Village": "Scarpe Fogadó",
-"config.ES Village.name": "East Scarp Falu",
-"config.ES Village.description": "Engedélyezd a csillét a Scarpe Fogadó közelében",
-"config.ES Village Minecart.name": "East Scarp Falu",
-"config.ES Village Minecart.description": "(Választható) Adj meg egy egyéni nevet az East Scarp Falu Csilléhez\nHagyd üresen a „Scarpe Inn” névhez",
+"ScarpVillage": "Scarp Fogadó",
+"config.ScarpVillage.name": "East Scarp Falu",
+"config.ScarpVillage.description": "Engedélyezd a csillét az East Scarp fogadója közelében",
+"config.ScarpVillage Minecart.name": "East Scarp Falu",
+"config.ScarpVillage Minecart.description": "(Választható) Adj meg egy egyéni nevet az East Scarp Falu Csilléhez\nHagyd üresen a „Scarp Inn” névhez",
 
 "Deep Mountains South": "Mély Hegyek - Tó",
 "config.Deep Mountains South.name": "Mély Hegyek Dél",
@@ -240,38 +240,23 @@
 "config.UnderScarp Minecart.name": "UnderScarp",
 "config.UnderScarp Minecart.description": "(Választható) Adj meg egy egyéni nevet az UnderScarp Csilléhez\nHagyd üresen az „UnderScarp” névhez",
 
-"ES Meadow": "Scarp Rét",
-"config.ES Meadow.name": "Rét",
-"config.ES Meadow.description": "Engedélyezd a csillét a Scarp Réten",
-"config.ES Meadow Minecart.name": "East Scarp Rét",
-"config.ES Meadow Minecart.description": "(Választható) Adj meg egy egyéni nevet az East Scarp Rét Csilléhez\nHagyd üresen a „Scarp Meadow” névhez",
+"MeadowFarm": "Scarp Rét",
+"config.MeadowFarm.name": "Rét Farm",
+"config.MeadowFarm.description": "Engedélyezd a csillét a Scarp Réten",
+"config.MeadowFarm Minecart.name": "East Scarp Rét Farm",
+"config.MeadowFarm Minecart.description": "(Választható) Adj meg egy egyéni nevet a Rét Farm Csilléhez\nHagyd üresen a „Scarp Meadow” névhez",
 
-"ClearingHouse": "Clearing House",
-"config.ClearingHouse.name": "Clearing House",
-"config.ClearingHouse.description": "Engedélyezd a csillét a Clearing House közelében",
-"config.ClearingHouse Minecart.name": "Clearing House",
-"config.ClearingHouse Minecart.description": "(Választható) Adj meg egy egyéni nevet a Clearing House Csilléhez\nHagyd üresen a „Clearing House” névhez",
+"ScarpCrossing": "Scarp Átkelő",
+"config.ScarpCrossing.name": "Scarp Átkelő",
+"config.ScarpCrossing.description": "Engedélyezd a csillét a Scarp Átkelőnél",
+"config.ScarpCrossing Minecart.name": "Scarp Átkelő",
+"config.ScarpCrossing Minecart.description": "(Választható) Adj meg egy egyéni nevet a Scarp Átkelő Csilléhez\nHagyd üresen a „Scarp Crossing” névhez",
 
 "Orchard": "Gyümölcsös",
 "config.Orchard.name": "Gyümölcsös",
 "config.Orchard.description": "Engedélyezd a csillét a Gyümölcsösben",
 "config.Orchard Minecart.name": "Gyümölcsös",
-"config.Orchard Minecart.description": "(Választható) Adj meg egy egyéni nevet a Gyümölcsös Csilléhez\nHagyd üresen az „Orchard” névhez",
-
-"config.ES_Underscarp.name": "Szabványos Underscarp",
-"config.ES_Underscarp.description": "Visszaállítja a szabványos csillét az Underscarpban",
-
-"config.ES_Clearing.name": "Szabványos Clearing House",
-"config.ES_Clearing.description": "Visszaállítja a szabványos csillét a Clearing House közelében",
-
-"config.ES_Village.name": "Szabványos Falu",
-"config.ES_Village.description": "Visszaállítja a szabványos csillét a faluban",
-
-"config.ES_Trace.name": "Szabványos Trace Háza",
-"config.ES_Trace.description": "Visszaállítja a szabványos csillét Trace Háza közelében",
-
-"config.ES_DeepMountains.name": "Szabványos Mély Hegyek",
-"config.ES_DeepMountains.description": "Visszaállítja a szabványos csillét a Mély Hegyekben",
+"config.Orchard Minecart.description": "(Választható) Adj meg egy egyéni nevet a Gyümölcsös Csilléhez\nHagyd üresen a „Orchard” névhez",
 
 "RSV_CableCar_Bottom": "Kötélpálya - Alsó Kikötő",
 "config.RSV_CableCar_Bottom.name": "Kötélpálya Alja",

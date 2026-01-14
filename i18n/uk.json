@@ -216,11 +216,11 @@
 
 "FrontierFarm West": "Ферма - Дідова хата",
 
-"ES Village": "Готель «Скарп»",
-"config.ES Village.name": "Село Східного Схилу",
-"config.ES Village.description": "Увімкнути вагонетку біля готелю Східного Схилу",
-"config.ES Village Minecart.name": "Село Східного Схилу",
-"config.ES Village Minecart.description": "(Додатково) Введіть спеціальну назву для Вагонетки в Селі Східного Схилу\nЗалиште порожнім для «Готель «Скарп»»",
+"ScarpVillage": "Готель «Скарп»",
+"config.ScarpVillage.name": "Село Східного Схилу",
+"config.ScarpVillage.description": "Увімкнути вагонетку біля готелю Східного Схилу",
+"config.ScarpVillage Minecart.name": "Село Східного Схилу",
+"config.ScarpVillage Minecart.description": "(Додатково) Введіть спеціальну назву для Вагонетки в Селі Східного Схилу\nЗалиште порожнім для «Готель «Скарп»»",
 
 "Deep Mountains South": "Глибокі Гори - Озеро",
 "config.Deep Mountains South.name": "Глибокі Гори Південь",
@@ -240,38 +240,23 @@
 "config.UnderScarp Minecart.name": "Підсхил",
 "config.UnderScarp Minecart.description": "(Додатково) Введіть спеціальну назву для Вагонетки в Підсхилі\nЗалиште порожнім для «Підсхил»",
 
-"ES Meadow": "Луг Схилу",
-"config.ES Meadow.name": "Луг",
-"config.ES Meadow.description": "Увімкнути вагонетку на Лузі Схилу",
-"config.ES Meadow Minecart.name": "Луг Східного Схилу",
-"config.ES Meadow Minecart.description": "(Додатково) Введіть спеціальну назву для Вагонетки на Лузі Східного Схилу\nЗалиште порожнім для «Луг Схилу»",
+"MeadowFarm": "Луг Схилу",
+"config.MeadowFarm.name": "Луг-ферма",
+"config.MeadowFarm.description": "Увімкнути вагонетку на Лузі Схилу",
+"config.MeadowFarm Minecart.name": "Луг-ферма Східного Схилу",
+"config.MeadowFarm Minecart.description": "(Додатково) Введіть спеціальну назву для Вагонетки на Лузі-фермі\nЗалиште порожнім для «Луг Схилу»",
 
-"ClearingHouse": "Дім Лісоруба",
-"config.ClearingHouse.name": "Дім Лісоруба",
-"config.ClearingHouse.description": "Увімкнути вагонетку біля Дому Лісоруба",
-"config.ClearingHouse Minecart.name": "Дім Лісоруба",
-"config.ClearingHouse Minecart.description": "(Додатково) Введіть спеціальну назву для Вагонетки біля Дому Лісоруба\nЗалиште порожнім для «Дім Лісоруба»",
+"ScarpCrossing": "Переправа Схилу",
+"config.ScarpCrossing.name": "Переправа Схилу",
+"config.ScarpCrossing.description": "Увімкнути вагонетку на Переправі Схилу",
+"config.ScarpCrossing Minecart.name": "Переправа Схилу",
+"config.ScarpCrossing Minecart.description": "(Додатково) Введіть спеціальну назву для Вагонетки на Переправі Схилу\nЗалиште порожнім для «Переправа Схилу»",
 
 "Orchard": "Сад",
 "config.Orchard.name": "Сад",
 "config.Orchard.description": "Увімкнути вагонетку в Саду",
 "config.Orchard Minecart.name": "Сад",
 "config.Orchard Minecart.description": "(Додатково) Введіть спеціальну назву для Вагонетки в Саду\nЗалиште порожнім для «Сад»",
-
-"config.ES_Underscarp.name": "Стандартний Підсхил",
-"config.ES_Underscarp.description": "Відновити стандартну вагонетку в Підсхилі",
-
-"config.ES_Clearing.name": "Стандартний Дім Лісоруба",
-"config.ES_Clearing.description": "Відновити стандартну вагонетку біля Дому Лісоруба",
-
-"config.ES_Village.name": "Стандартне Село",
-"config.ES_Village.description": "Відновити стандартну вагонетку в селі",
-
-"config.ES_Trace.name": "Стандартний Дім Трейса",
-"config.ES_Trace.description": "Відновити стандартну вагонетку біля Дому Трейса",
-
-"config.ES_DeepMountains.name": "Стандартні Глибокі Гори",
-"config.ES_DeepMountains.description": "Відновити стандартну вагонетку в Глибоких Горах",
 
 "RSV_CableCar_Bottom": "Канатна дорога - Нижній причал",
 "config.RSV_CableCar_Bottom.name": "Канатна дорога Низ",

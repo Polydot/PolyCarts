@@ -216,11 +216,11 @@
 
 "FrontierFarm West": "Ферма - Сарай дедушки",
 
-"ES Village": "Гостиница Скарпа",
-"config.ES Village.name": "Деревня Восточного Скарпа",
-"config.ES Village.description": "Включить вагонетку рядом с гостиницей Восточного Скарпа",
-"config.ES Village Minecart.name": "Деревня Восточного Скарпа",
-"config.ES Village Minecart.description": "(Необязательно) Введите пользовательское название для вагонетки Деревни Восточного Скарпа\nОставьте поле пустым для «Гостиница Скарпа»",
+"ScarpVillage": "Гостиница Скарпа",
+"config.ScarpVillage.name": "Деревня Восточного Скарпа",
+"config.ScarpVillage.description": "Включить вагонетку рядом с гостиницей Восточного Скарпа",
+"config.ScarpVillage Minecart.name": "Деревня Восточного Скарпа",
+"config.ScarpVillage Minecart.description": "(Необязательно) Введите пользовательское название для вагонетки Деревни Восточного Скарпа\nОставьте поле пустым для «Гостиница Скарпа»",
 
 "Deep Mountains South": "Глубокие горы - Озеро",
 "config.Deep Mountains South.name": "Юг Глубоких гор",
@@ -240,38 +240,23 @@
 "config.UnderScarp Minecart.name": "ПодСкарп",
 "config.UnderScarp Minecart.description": "(Необязательно) Введите пользовательское название для вагонетки в ПодСкарпе\nОставьте поле пустым для «ПодСкарп»",
 
-"ES Meadow": "Луговина Скарпа",
-"config.ES Meadow.name": "Луговина",
-"config.ES Meadow.description": "Включить вагонетку на Луговине Скарпа",
-"config.ES Meadow Minecart.name": "Луговина Восточного Скарпа",
-"config.ES Meadow Minecart.description": "(Необязательно) Введите пользовательское название для вагонетки Луговины Восточного Скарпа\nОставьте поле пустым для «Луговина Скарпа»",
+"MeadowFarm": "Луговина Скарпа",
+"config.MeadowFarm.name": "Луговая ферма",
+"config.MeadowFarm.description": "Включить вагонетку на Луговине Скарпа",
+"config.MeadowFarm Minecart.name": "Луговая ферма Восточного Скарпа",
+"config.MeadowFarm Minecart.description": "(Необязательно) Введите пользовательское название для вагонетки Луговой фермы\nОставьте поле пустым для «Луговина Скарпа»",
 
-"ClearingHouse": "Клиринговый дом",
-"config.ClearingHouse.name": "Клиринговый дом",
-"config.ClearingHouse.description": "Включить вагонетку рядом с Клиринговым домом",
-"config.ClearingHouse Minecart.name": "Клиринговый дом",
-"config.ClearingHouse Minecart.description": "(Необязательно) Введите пользовательское название для вагонетки Клирингового дома\nОставьте поле пустым для «Клиринговый дом»",
+"ScarpCrossing": "Переправа Скарпа",
+"config.ScarpCrossing.name": "Переправа Скарпа",
+"config.ScarpCrossing.description": "Включить вагонетку на Переправе Скарпа",
+"config.ScarpCrossing Minecart.name": "Переправа Скарпа",
+"config.ScarpCrossing Minecart.description": "(Необязательно) Введите пользовательское название для вагонетки Переправы Скарпа\nОставьте поле пустым для «Переправа Скарпа»",
 
 "Orchard": "Фруктовый сад",
 "config.Orchard.name": "Фруктовый сад",
 "config.Orchard.description": "Включить вагонетку во Фруктовом саду",
 "config.Orchard Minecart.name": "Фруктовый сад",
 "config.Orchard Minecart.description": "(Необязательно) Введите пользовательское название для вагонетки Фруктового сада\nОставьте поле пустым для «Фруктовый сад»",
-
-"config.ES_Underscarp.name": "Стандартный ПодСкарп",
-"config.ES_Underscarp.description": "Восстановить стандартную вагонетку в ПодСкарпе",
-
-"config.ES_Clearing.name": "Стандартный Клиринговый дом",
-"config.ES_Clearing.description": "Восстановить стандартную вагонетку рядом с Клиринговым домом",
-
-"config.ES_Village.name": "Стандартная деревня",
-"config.ES_Village.description": "Восстановить стандартную вагонетку в деревне",
-
-"config.ES_Trace.name": "Стандартный дом Трейса",
-"config.ES_Trace.description": "Восстановить стандартную вагонетку рядом с домом Трейса",
-
-"config.ES_DeepMountains.name": "Стандартные Глубокие горы",
-"config.ES_DeepMountains.description": "Восстановить стандартную вагонетку в Глубоких горах",
 
 "RSV_CableCar_Bottom": "Канатная дорога - Нижний причал",
 "config.RSV_CableCar_Bottom.name": "Низ канатной дороги",

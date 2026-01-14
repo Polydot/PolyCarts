@@ -216,11 +216,11 @@
 
 "FrontierFarm West": "Fazenda - Galpão do Vovô",
 
-"ES Village": "Estalagem Escarpa",
-"config.ES Village.name": "Vila da Escarpa Leste",
-"config.ES Village.description": "Habilitar o carrinho da mina perto da estalagem da Escarpa Leste",
-"config.ES Village Minecart.name": "Vila da Escarpa Leste",
-"config.ES Village Minecart.description": "(Opcional) Insira um nome personalizado para o Carrinho da Mina da Vila da Escarpa Leste\nDeixe em branco para “Estalagem Escarpa”",
+"ScarpVillage": "Estalagem Escarpa",
+"config.ScarpVillage.name": "Vila da Escarpa Leste",
+"config.ScarpVillage.description": "Habilitar o carrinho da mina perto da estalagem da Escarpa Leste",
+"config.ScarpVillage Minecart.name": "Vila da Escarpa Leste",
+"config.ScarpVillage Minecart.description": "(Opcional) Insira um nome personalizado para o Carrinho da Mina da Vila da Escarpa Leste\nDeixe em branco para “Estalagem Escarpa”",
 
 "Deep Mountains South": "Montanhas Profundas - Lago",
 "config.Deep Mountains South.name": "Montanhas Profundas Sul",
@@ -240,38 +240,23 @@
 "config.UnderScarp Minecart.name": "Subescarpa",
 "config.UnderScarp Minecart.description": "(Opcional) Insira um nome personalizado para o Carrinho da Mina da Subescarpa\nDeixe em branco para “Subescarpa”",
 
-"ES Meadow": "Prado da Escarpa",
-"config.ES Meadow.name": "Prado",
-"config.ES Meadow.description": "Habilitar o carrinho da mina no Prado da Escarpa",
-"config.ES Meadow Minecart.name": "Prado da Escarpa Leste",
-"config.ES Meadow Minecart.description": "(Opcional) Insira um nome personalizado para o Carrinho da Mina do Prado da Escarpa Leste\nDeixe em branco para “Prado da Escarpa”",
+"MeadowFarm": "Prado da Escarpa",
+"config.MeadowFarm.name": "Fazenda do Prado",
+"config.MeadowFarm.description": "Habilitar o carrinho da mina no Prado da Escarpa",
+"config.MeadowFarm Minecart.name": "Fazenda do Prado da Escarpa Leste",
+"config.MeadowFarm Minecart.description": "(Opcional) Insira um nome personalizado para o Carrinho da Mina da Fazenda do Prado\nDeixe em branco para “Prado da Escarpa”",
 
-"ClearingHouse": "Casa da Clareira",
-"config.ClearingHouse.name": "Casa da Clareira",
-"config.ClearingHouse.description": "Habilitar o carrinho da mina perto da Casa da Clareira",
-"config.ClearingHouse Minecart.name": "Casa da Clareira",
-"config.ClearingHouse Minecart.description": "(Opcional) Insira um nome personalizado para o Carrinho da Mina da Casa da Clareira\nDeixe em branco para “Casa da Clareira”",
+"ScarpCrossing": "Travessia da Escarpa",
+"config.ScarpCrossing.name": "Travessia da Escarpa",
+"config.ScarpCrossing.description": "Habilitar o carrinho da mina na Travessia da Escarpa",
+"config.ScarpCrossing Minecart.name": "Travessia da Escarpa",
+"config.ScarpCrossing Minecart.description": "(Opcional) Insira um nome personalizado para o Carrinho da Mina da Travessia da Escarpa\nDeixe em branco para “Travessia da Escarpa”",
 
 "Orchard": "Pomar",
 "config.Orchard.name": "Pomar",
 "config.Orchard.description": "Habilitar o carrinho da mina no Pomar",
 "config.Orchard Minecart.name": "Pomar",
 "config.Orchard Minecart.description": "(Opcional) Insira um nome personalizado para o Carrinho da Mina do Pomar\nDeixe em branco para “Pomar”",
-
-"config.ES_Underscarp.name": "Padrão Subescarpa",
-"config.ES_Underscarp.description": "Restaurar o carrinho da mina padrão na Subescarpa",
-
-"config.ES_Clearing.name": "Padrão Casa da Clareira",
-"config.ES_Clearing.description": "Restaurar o carrinho da mina padrão perto da Casa da Clareira",
-
-"config.ES_Village.name": "Padrão Vila",
-"config.ES_Village.description": "Restaurar o carrinho da mina padrão na vila",
-
-"config.ES_Trace.name": "Padrão Casa do Trace",
-"config.ES_Trace.description": "Restaurar o carrinho da mina padrão perto da Casa do Trace",
-
-"config.ES_DeepMountains.name": "Padrão Montanhas Profundas",
-"config.ES_DeepMountains.description": "Restaurar o carrinho da mina padrão nas Montanhas Profundas",
 
 "RSV_CableCar_Bottom": "Teleférico - Docas Inferiores",
 "config.RSV_CableCar_Bottom.name": "Base do Teleférico",

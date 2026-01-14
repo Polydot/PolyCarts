@@ -216,11 +216,11 @@
 
 "FrontierFarm West": "Fattoria - Capanno del nonno",
 
-"ES Village": "Locanda di Scarpe",
-"config.ES Village.name": "Villaggio di East Scarp",
-"config.ES Village.description": "Abilita il carrello da miniera vicino alla locanda di East Scarp",
-"config.ES Village Minecart.name": "Villaggio di East Scarp",
-"config.ES Village Minecart.description": "(Opzionale) Inserisci un nome personalizzato per il Carrello da miniera del Villaggio di East Scarp\nLascia vuoto per «Locanda di Scarpe»",
+"ScarpVillage": "Locanda di Scarp",
+"config.ScarpVillage.name": "Villaggio di East Scarp",
+"config.ScarpVillage.description": "Abilita il carrello da miniera vicino alla locanda di East Scarp",
+"config.ScarpVillage Minecart.name": "Villaggio di East Scarp",
+"config.ScarpVillage Minecart.description": "(Opzionale) Inserisci un nome personalizzato per il Carrello da miniera del Villaggio di East Scarp\nLascia vuoto per «Locanda di Scarp»",
 
 "Deep Mountains South": "Montagne Profonde - Lago",
 "config.Deep Mountains South.name": "Montagne Profonde Sud",
@@ -240,38 +240,23 @@
 "config.UnderScarp Minecart.name": "UnderScarp",
 "config.UnderScarp Minecart.description": "(Opzionale) Inserisci un nome personalizzato per il Carrello da miniera dell'UnderScarp\nLascia vuoto per «UnderScarp»",
 
-"ES Meadow": "Prato di Scarp",
-"config.ES Meadow.name": "Prato",
-"config.ES Meadow.description": "Abilita il carrello da miniera sul Prato di Scarp",
-"config.ES Meadow Minecart.name": "Prato di East Scarp",
-"config.ES Meadow Minecart.description": "(Opzionale) Inserisci un nome personalizzato per il Carrello da miniera del Prato di East Scarp\nLascia vuoto per «Prato di Scarp»",
+"MeadowFarm": "Prato di Scarp",
+"config.MeadowFarm.name": "Fattoria del Prato",
+"config.MeadowFarm.description": "Abilita il carrello da miniera sul Prato di Scarp",
+"config.MeadowFarm Minecart.name": "Fattoria del Prato di East Scarp",
+"config.MeadowFarm Minecart.description": "(Opzionale) Inserisci un nome personalizzato per il Carrello da miniera della Fattoria del Prato\nLascia vuoto per «Prato di Scarp»",
 
-"ClearingHouse": "Clearing House",
-"config.ClearingHouse.name": "Clearing House",
-"config.ClearingHouse.description": "Abilita il carrello da miniera vicino alla Clearing House",
-"config.ClearingHouse Minecart.name": "Clearing House",
-"config.ClearingHouse Minecart.description": "(Opzionale) Inserisci un nome personalizzato per il Carrello da miniera della Clearing House\nLascia vuoto per «Clearing House»",
+"ScarpCrossing": "Incrocio di Scarp",
+"config.ScarpCrossing.name": "Incrocio di Scarp",
+"config.ScarpCrossing.description": "Abilita il carrello da miniera sull'Incrocio di Scarp",
+"config.ScarpCrossing Minecart.name": "Incrocio di Scarp",
+"config.ScarpCrossing Minecart.description": "(Opzionale) Inserisci un nome personalizzato per il Carrello da miniera dell'Incrocio di Scarp\nLascia vuoto per «Incrocio di Scarp»",
 
 "Orchard": "Frutteto",
 "config.Orchard.name": "Frutteto",
 "config.Orchard.description": "Abilita il carrello da miniera nel Frutteto",
 "config.Orchard Minecart.name": "Frutteto",
 "config.Orchard Minecart.description": "(Opzionale) Inserisci un nome personalizzato per il Carrello da miniera del Frutteto\nLascia vuoto per «Frutteto»",
-
-"config.ES_Underscarp.name": "Underscarp Standard",
-"config.ES_Underscarp.description": "Ripristina il carrello da miniera standard nell'Underscarp",
-
-"config.ES_Clearing.name": "Clearing House Standard",
-"config.ES_Clearing.description": "Ripristina il carrello da miniera standard vicino alla Clearing House",
-
-"config.ES_Village.name": "Villaggio Standard",
-"config.ES_Village.description": "Ripristina il carrello da miniera standard nel villaggio",
-
-"config.ES_Trace.name": "Casa di Trace Standard",
-"config.ES_Trace.description": "Ripristina il carrello da miniera standard vicino alla Casa di Trace",
-
-"config.ES_DeepMountains.name": "Montagne Profonde Standard",
-"config.ES_DeepMountains.description": "Ripristina il carrello da miniera standard nelle Montagne Profonde",
 
 "RSV_CableCar_Bottom": "Funivia - Molo Inferiore",
 "config.RSV_CableCar_Bottom.name": "Fondo Funivia",

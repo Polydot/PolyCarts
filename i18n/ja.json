@@ -216,11 +216,11 @@
 
 "FrontierFarm West": "牧場 - おじいさんの小屋",
 
-"ES Village": "スカープ亭",
-"config.ES Village.name": "イーストスカープ村",
-"config.ES Village.description": "イーストスカープの宿近くのトロッコを有効にする",
-"config.ES Village Minecart.name": "イーストスカープ村",
-"config.ES Village Minecart.description": "（任意）イーストスカープ村のトロッコにカスタム名を入力してください\n「スカープ亭」の場合は空白のままにしてください",
+"ScarpVillage": "スカープ亭",
+"config.ScarpVillage.name": "イーストスカープ村",
+"config.ScarpVillage.description": "イーストスカープの宿近くのトロッコを有効にする",
+"config.ScarpVillage Minecart.name": "イーストスカープ村",
+"config.ScarpVillage Minecart.description": "（任意）イーストスカープ村のトロッコにカスタム名を入力してください\n「スカープ亭」の場合は空白のままにしてください",
 
 "Deep Mountains South": "深い山 - 湖",
 "config.Deep Mountains South.name": "深い山 南",
@@ -240,38 +240,23 @@
 "config.UnderScarp Minecart.name": "アンダー・スカープ",
 "config.UnderScarp Minecart.description": "（任意）アンダー・スカープのトロッコにカスタム名を入力してください\n「アンダー・スカープ」の場合は空白のままにしてください",
 
-"ES Meadow": "スカープ牧草地",
-"config.ES Meadow.name": "牧草地",
-"config.ES Meadow.description": "スカープ牧草地にあるトロッコを有効にする",
-"config.ES Meadow Minecart.name": "イーストスカープ牧草地",
-"config.ES Meadow Minecart.description": "（任意）イーストスカープ牧草地のトロッコにカスタム名を入力してください\n「スカープ牧草地」の場合は空白のままにしてください",
+"MeadowFarm": "スカープ牧草地",
+"config.MeadowFarm.name": "牧草地の牧場",
+"config.MeadowFarm.description": "スカープ牧草地にあるトロッコを有効にする",
+"config.MeadowFarm Minecart.name": "イーストスカープ牧草地の牧場",
+"config.MeadowFarm Minecart.description": "（任意）牧草地の牧場のトロッコにカスタム名を入力してください\n「スカープ牧草地」の場合は空白のままにしてください",
 
-"ClearingHouse": "クリアリング・ハウス",
-"config.ClearingHouse.name": "クリアリング・ハウス",
-"config.ClearingHouse.description": "クリアリング・ハウス近くのトロッコを有効にする",
-"config.ClearingHouse Minecart.name": "クリアリング・ハウス",
-"config.ClearingHouse Minecart.description": "（任意）クリアリング・ハウスのトロッコにカスタム名を入力してください\n「クリアリング・ハウス」の場合は空白のままにしてください",
+"ScarpCrossing": "スカープ・クロッシング",
+"config.ScarpCrossing.name": "スカープ・クロッシング",
+"config.ScarpCrossing.description": "スカープ・クロッシングにあるトロッコを有効にする",
+"config.ScarpCrossing Minecart.name": "スカープ・クロッシング",
+"config.ScarpCrossing Minecart.description": "（任意）スカープ・クロッシングのトロッコにカスタム名を入力してください\n「スカープ・クロッシング」の場合は空白のままにしてください",
 
 "Orchard": "果樹園",
 "config.Orchard.name": "果樹園",
 "config.Orchard.description": "果樹園にあるトロッコを有効にする",
 "config.Orchard Minecart.name": "果樹園",
 "config.Orchard Minecart.description": "（任意）果樹園のトロッコにカスタム名を入力してください\n「果樹園」の場合は空白のままにしてください",
-
-"config.ES_Underscarp.name": "標準アンダー・スカープ",
-"config.ES_Underscarp.description": "アンダー・スカープの標準トロッコを復元する",
-
-"config.ES_Clearing.name": "標準クリアリング・ハウス",
-"config.ES_Clearing.description": "クリアリング・ハウス近くの標準トロッコを復元する",
-
-"config.ES_Village.name": "標準村",
-"config.ES_Village.description": "村の標準トロッコを復元する",
-
-"config.ES_Trace.name": "標準トレースの家",
-"config.ES_Trace.description": "トレースの家近くの標準トロッコを復元する",
-
-"config.ES_DeepMountains.name": "標準深い山",
-"config.ES_DeepMountains.description": "深い山の標準トロッコを復元する",
 
 "RSV_CableCar_Bottom": "ケーブルカー - 下部桟橋",
 "config.RSV_CableCar_Bottom.name": "ケーブルカー 下部",

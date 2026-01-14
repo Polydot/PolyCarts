@@ -216,11 +216,11 @@
 
 "FrontierFarm West": "Çiftlik - Dede'nin Kulübesi",
 
-"ES Village": "Scarpe Inn",
-"config.ES Village.name": "East Scarp Köyü",
-"config.ES Village.description": "East Scarp hanının yakınındaki maden arabasını etkinleştirin",
-"config.ES Village Minecart.name": "East Scarp Köyü",
-"config.ES Village Minecart.description": "(İsteğe Bağlı) East Scarp Köyü Maden Arabası için özel bir isim girin\n“Scarpe Inn” için boş bırakın",
+"ScarpVillage": "Scarp Hanı",
+"config.ScarpVillage.name": "East Scarp Köyü",
+"config.ScarpVillage.description": "East Scarp hanının yakınındaki maden arabasını etkinleştirin",
+"config.ScarpVillage Minecart.name": "East Scarp Köyü",
+"config.ScarpVillage Minecart.description": "(İsteğe Bağlı) East Scarp Köyü Maden Arabası için özel bir isim girin\n“Scarp Inn” için boş bırakın",
 
 "Deep Mountains South": "Derin Dağlar - Göl",
 "config.Deep Mountains South.name": "Derin Dağlar Güney",
@@ -240,38 +240,23 @@
 "config.UnderScarp Minecart.name": "UnderScarp",
 "config.UnderScarp Minecart.description": "(İsteğe Bağlı) UnderScarp Maden Arabası için özel bir isim girin\n“UnderScarp” için boş bırakın",
 
-"ES Meadow": "Scarp Çayırı",
-"config.ES Meadow.name": "Çayır",
-"config.ES Meadow.description": "Scarp Çayırındaki maden arabasını etkinleştirin",
-"config.ES Meadow Minecart.name": "East Scarp Çayırı",
-"config.ES Meadow Minecart.description": "(İsteğe Bağlı) East Scarp Çayırı Maden Arabası için özel bir isim girin\n“Scarp Çayırı” için boş bırakın",
+"MeadowFarm": "Scarp Çayırı",
+"config.MeadowFarm.name": "Çayır Çiftliği",
+"config.MeadowFarm.description": "Scarp Çayırı'ndaki maden arabasını etkinleştirin",
+"config.MeadowFarm Minecart.name": "East Scarp Çayır Çiftliği",
+"config.MeadowFarm Minecart.description": "(İsteğe Bağlı) Çayır Çiftliği Maden Arabası için özel bir isim girin\n“Scarp Meadow” için boş bırakın",
 
-"ClearingHouse": "Clearing House",
-"config.ClearingHouse.name": "Clearing House",
-"config.ClearingHouse.description": "Clearing House yakınındaki maden arabasını etkinleştirin",
-"config.ClearingHouse Minecart.name": "Clearing House",
-"config.ClearingHouse Minecart.description": "(İsteğe Bağlı) Clearing House Maden Arabası için özel bir isim girin\n“Clearing House” için boş bırakın",
+"ScarpCrossing": "Scarp Geçidi",
+"config.ScarpCrossing.name": "Scarp Geçidi",
+"config.ScarpCrossing.description": "Scarp Geçidi'ndeki maden arabasını etkinleştirin",
+"config.ScarpCrossing Minecart.name": "Scarp Geçidi",
+"config.ScarpCrossing Minecart.description": "(İsteğe Bağlı) Scarp Geçidi Maden Arabası için özel bir isim girin\n“Scarp Crossing” için boş bırakın",
 
 "Orchard": "Meyve Bahçesi",
 "config.Orchard.name": "Meyve Bahçesi",
-"config.Orchard.description": "Meyve Bahçesindeki maden arabasını etkinleştirin",
+"config.Orchard.description": "Meyve Bahçesi'ndeki maden arabasını etkinleştirin",
 "config.Orchard Minecart.name": "Meyve Bahçesi",
-"config.Orchard Minecart.description": "(İsteğe Bağlı) Meyve Bahçesi Maden Arabası için özel bir isim girin\n“Meyve Bahçesi” için boş bırakın",
-
-"config.ES_Underscarp.name": "Standart Underscarp",
-"config.ES_Underscarp.description": "Underscarp'taki standart maden arabasını geri yükle",
-
-"config.ES_Clearing.name": "Standart Clearing House",
-"config.ES_Clearing.description": "Clearing House yakınındaki standart maden arabasını geri yükle",
-
-"config.ES_Village.name": "Standart Köy",
-"config.ES_Village.description": "Köydeki standart maden arabasını geri yükle",
-
-"config.ES_Trace.name": "Standart Trace’in Evi",
-"config.ES_Trace.description": "Trace’in Evi yakınındaki standart maden arabasını geri yükle",
-
-"config.ES_DeepMountains.name": "Standart Derin Dağlar",
-"config.ES_DeepMountains.description": "Derin Dağlar'daki standart maden arabasını geri yükle",
+"config.Orchard Minecart.description": "(İsteğe Bağlı) Meyve Bahçesi Maden Arabası için özel bir isim girin\n“Orchard” için boş bırakın",
 
 "RSV_CableCar_Bottom": "Teleferik - Alt İskele",
 "config.RSV_CableCar_Bottom.name": "Teleferik Altı",

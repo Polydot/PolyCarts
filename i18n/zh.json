@@ -216,11 +216,11 @@
 
 "FrontierFarm West": "农场 - 爷爷的小屋",
 
-"ES Village": "悬崖旅店",
-"config.ES Village.name": "东悬崖村庄",
-"config.ES Village.description": "启用东悬崖旅店附近的矿车",
-"config.ES Village Minecart.name": "东悬崖村庄",
-"config.ES Village Minecart.description": "（可选）输入东悬崖村庄矿车的自定义名称\n留空则为“悬崖旅店”",
+"ScarpVillage": "悬崖旅店",
+"config.ScarpVillage.name": "东悬崖村庄",
+"config.ScarpVillage.description": "启用东悬崖旅店附近的矿车",
+"config.ScarpVillage Minecart.name": "东悬崖村庄",
+"config.ScarpVillage Minecart.description": "（可选）输入东悬崖村庄矿车的自定义名称\n留空则为“悬崖旅店”",
 
 "Deep Mountains South": "深山 - 湖泊",
 "config.Deep Mountains South.name": "深山南部",
@@ -240,38 +240,23 @@
 "config.UnderScarp Minecart.name": "悬崖下",
 "config.UnderScarp Minecart.description": "（可选）输入悬崖下矿车的自定义名称\n留空则为“悬崖下”",
 
-"ES Meadow": "悬崖草甸",
-"config.ES Meadow.name": "草甸",
-"config.ES Meadow.description": "启用悬崖草甸上的矿车",
-"config.ES Meadow Minecart.name": "东悬崖草甸",
-"config.ES Meadow Minecart.description": "（可选）输入东悬崖草甸矿车的自定义名称\n留空则为“悬崖草甸”",
+"MeadowFarm": "悬崖草甸",
+"config.MeadowFarm.name": "草甸农场",
+"config.MeadowFarm.description": "启用悬崖草甸上的矿车",
+"config.MeadowFarm Minecart.name": "东悬崖草甸农场",
+"config.MeadowFarm Minecart.description": "（可选）输入草甸农场矿车的自定义名称\n留空则为“悬崖草甸”",
 
-"ClearingHouse": "清算所",
-"config.ClearingHouse.name": "清算所",
-"config.ClearingHouse.description": "启用清算所附近的矿车",
-"config.ClearingHouse Minecart.name": "清算所",
-"config.ClearingHouse Minecart.description": "（可选）输入清算所矿车的自定义名称\n留空则为“清算所”",
+"ScarpCrossing": "悬崖渡口",
+"config.ScarpCrossing.name": "悬崖渡口",
+"config.ScarpCrossing.description": "启用悬崖渡口上的矿车",
+"config.ScarpCrossing Minecart.name": "悬崖渡口",
+"config.ScarpCrossing Minecart.description": "（可选）输入悬崖渡口矿车的自定义名称\n留空则为“悬崖渡口”",
 
 "Orchard": "果园",
 "config.Orchard.name": "果园",
 "config.Orchard.description": "启用果园中的矿车",
 "config.Orchard Minecart.name": "果园",
 "config.Orchard Minecart.description": "（可选）输入果园矿车的自定义名称\n留空则为“果园”",
-
-"config.ES_Underscarp.name": "标准悬崖下",
-"config.ES_Underscarp.description": "恢复悬崖下的标准矿车",
-
-"config.ES_Clearing.name": "标准清算所",
-"config.ES_Clearing.description": "恢复清算所附近的标准矿车",
-
-"config.ES_Village.name": "标准村庄",
-"config.ES_Village.description": "恢复村庄中的标准矿车",
-
-"config.ES_Trace.name": "标准特蕾丝家",
-"config.ES_Trace.description": "恢复特蕾丝家附近的标准矿车",
-
-"config.ES_DeepMountains.name": "标准深山",
-"config.ES_DeepMountains.description": "恢复深山中的标准矿车",
 
 "RSV_CableCar_Bottom": "缆车 - 下层码头",
 "config.RSV_CableCar_Bottom.name": "缆车底部",

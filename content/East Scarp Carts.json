@@ -708,7 +708,7 @@
 				{
 					"Operation": "Append",
 					"Target": ["MapProperties", "Light"],
-					"Value": "49 24 4",
+					"Value": "47 19 4",
 					"Delimiter": " "
 				}
 			],

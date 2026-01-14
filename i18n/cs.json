@@ -216,11 +216,11 @@
 
 "FrontierFarm West": "Farma - Dědečkův Přístřešek",
 
-"ES Village": "Scarpe Hostinec",
-"config.ES Village.name": "Vesnice East Scarp",
-"config.ES Village.description": "Povolit důlní vozík blízko hostince East Scarp",
-"config.ES Village Minecart.name": "Vesnice East Scarp",
-"config.ES Village Minecart.description": "(Volitelné) Zadat vlastní název pro Důlní vozík vesnice East Scarp\nPonechat prázdné pro „Scarpe Hostinec”",
+"ScarpVillage": "Hostinec Scarp",
+"config.ScarpVillage.name": "Vesnice East Scarp",
+"config.ScarpVillage.description": "Povolit důlní vozík blízko hostince East Scarp",
+"config.ScarpVillage Minecart.name": "Vesnice East Scarp",
+"config.ScarpVillage Minecart.description": "(Volitelné) Zadat vlastní název pro Důlní vozík vesnice East Scarp\nPonechat prázdné pro „Hostinec Scarp”",
 
 "Deep Mountains South": "Hluboké Hory - Jezero",
 "config.Deep Mountains South.name": "Hluboké Hory Jih",
@@ -240,38 +240,23 @@
 "config.UnderScarp Minecart.name": "UnderScarp",
 "config.UnderScarp Minecart.description": "(Volitelné) Zadat vlastní název pro Důlní vozík UnderScarp\nPonechat prázdné pro „UnderScarp”",
 
-"ES Meadow": "Scarp Louka",
-"config.ES Meadow.name": "Louka",
-"config.ES Meadow.description": "Povolit důlní vozík na Scarp Louce",
-"config.ES Meadow Minecart.name": "Louka East Scarp",
-"config.ES Meadow Minecart.description": "(Volitelné) Zadat vlastní název pro Důlní vozík Louky East Scarp\nPonechat prázdné pro „Scarp Louka”",
+"MeadowFarm": "Scarp Louka",
+"config.MeadowFarm.name": "Luční Farma",
+"config.MeadowFarm.description": "Povolit důlní vozík na Scarp Louce",
+"config.MeadowFarm Minecart.name": "Luční Farma East Scarp",
+"config.MeadowFarm Minecart.description": "(Volitelné) Zadat vlastní název pro Důlní vozík Luční farmy\nPonechat prázdné pro „Scarp Louka”",
 
-"ClearingHouse": "Clearing House",
-"config.ClearingHouse.name": "Clearing House",
-"config.ClearingHouse.description": "Povolit důlní vozík blízko Clearing House",
-"config.ClearingHouse Minecart.name": "Clearing House",
-"config.ClearingHouse Minecart.description": "(Volitelné) Zadat vlastní název pro Důlní vozík Clearing House\nPonechat prázdné pro „Clearing House”",
+"ScarpCrossing": "Scarp Crossing",
+"config.ScarpCrossing.name": "Scarp Crossing",
+"config.ScarpCrossing.description": "Povolit důlní vozík v Scarp Crossing",
+"config.ScarpCrossing Minecart.name": "Scarp Crossing",
+"config.ScarpCrossing Minecart.description": "(Volitelné) Zadat vlastní název pro Důlní vozík Scarp Crossing\nPonechat prázdné pro „Scarp Crossing”",
 
 "Orchard": "Ovocný Sad",
 "config.Orchard.name": "Ovocný Sad",
 "config.Orchard.description": "Povolit důlní vozík v Ovocném sadu",
 "config.Orchard Minecart.name": "Ovocný Sad",
 "config.Orchard Minecart.description": "(Volitelné) Zadat vlastní název pro Důlní vozík Ovocného sadu\nPonechat prázdné pro „Ovocný sad”",
-
-"config.ES_Underscarp.name": "Standardní Underscarp",
-"config.ES_Underscarp.description": "Obnovit standardní důlní vozík v UnderScarp",
-
-"config.ES_Clearing.name": "Standardní Clearing House",
-"config.ES_Clearing.description": "Obnovit standardní důlní vozík blízko Clearing House",
-
-"config.ES_Village.name": "Standardní Vesnice",
-"config.ES_Village.description": "Obnovit standardní důlní vozík ve vesnici",
-
-"config.ES_Trace.name": "Standardní Traceův Dům",
-"config.ES_Trace.description": "Obnovit standardní důlní vozík blízko Traceova domu",
-
-"config.ES_DeepMountains.name": "Standardní Hluboké Hory",
-"config.ES_DeepMountains.description": "Obnovit standardní důlní vozík v Hlubokých horách",
 
 "RSV_CableCar_Bottom": "Lanovka - Spodní Molo",
 "config.RSV_CableCar_Bottom.name": "Lanovka Spodek",

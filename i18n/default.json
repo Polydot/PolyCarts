@@ -216,11 +216,11 @@
 
 "FrontierFarm West": "Farm - Grandpa's Shed",
 
-"ES Village": "Scarpe Inn",
-"config.ES Village.name": "East Scarp Village",
-"config.ES Village.description": "Enable the minecart near the inn of East Scarp",
-"config.ES Village Minecart.name": "East Scarp Village",
-"config.ES Village Minecart.description": "(Optional) Enter a custom name for the East Scarp Village Minecart\nLeave blank for 'Scarpe Inn'",
+"ScarpVillage": "Scarp Inn",
+"config.ScarpVillage.name": "East Scarp Village",
+"config.ScarpVillage.description": "Enable the minecart near the inn of East Scarp",
+"config.ScarpVillage Minecart.name": "East Scarp Village",
+"config.ScarpVillage Minecart.description": "(Optional) Enter a custom name for the East Scarp Village Minecart\nLeave blank for 'Scarp Inn'",
 
 "Deep Mountains South": "Deep Mountains - Lake",
 "config.Deep Mountains South.name": "Deep Mountains South",
@@ -240,38 +240,23 @@
 "config.UnderScarp Minecart.name": "UnderScarp",
 "config.UnderScarp Minecart.description": "(Optional) Enter a custom name for the UnderScarp Minecart\nLeave blank for 'UnderScarp'",
 
-"ES Meadow": "Scarp Meadow",
-"config.ES Meadow.name": "Meadow",
-"config.ES Meadow.description": "Enable the minecart on the Scarp Meadow",
-"config.ES Meadow Minecart.name": "East Scarp Meadow",
-"config.ES Meadow Minecart.description": "(Optional) Enter a custom name for the East Scarp Meadow Minecart\nLeave blank for 'Scarp Meadow'",
+"MeadowFarm": "Scarp Meadow",
+"config.MeadowFarm.name": "Meadow Farm",
+"config.MeadowFarm.description": "Enable the minecart on the Scarp Meadow",
+"config.MeadowFarm Minecart.name": "East Scarp Meadow Farm",
+"config.MeadowFarm Minecart.description": "(Optional) Enter a custom name for the Meadow Farm Minecart\nLeave blank for 'Scarp Meadow'",
 
-"ClearingHouse": "Clearing House",
-"config.ClearingHouse.name": "Clearing House",
-"config.ClearingHouse.description": "Enable the minecart near the Clearing House",
-"config.ClearingHouse Minecart.name": "Clearing House",
-"config.ClearingHouse Minecart.description": "(Optional) Enter a custom name for the Clearing House Minecart\nLeave blank for 'Clearing House'",
+"ScarpCrossing": "Scarp Crossing",
+"config.ScarpCrossing.name": "Scarp Crossing",
+"config.ScarpCrossing.description": "Enable the minecart on Scarp Crossing",
+"config.ScarpCrossing Minecart.name": "Scarp Crossing",
+"config.ScarpCrossing Minecart.description": "(Optional) Enter a custom name for Scarp Crossing Minecart\nLeave blank for 'Scarp Crossing'",
 
 "Orchard": "Orchard",
 "config.Orchard.name": "Orchard",
 "config.Orchard.description": "Enable the minecart in the Orchard",
 "config.Orchard Minecart.name": "Orchard",
 "config.Orchard Minecart.description": "(Optional) Enter a custom name for the Orchard Minecart\nLeave blank for 'Orchard'",
-
-"config.ES_Underscarp.name": "Standard Underscarp",
-"config.ES_Underscarp.description": "Restore the standard minecart in the Underscarp",
-
-"config.ES_Clearing.name": "Standard Clearing House",
-"config.ES_Clearing.description": "Restore the standard minecart near the Clearing House",
-
-"config.ES_Village.name": "Standard Village",
-"config.ES_Village.description": "Restore the standard minecart in the village",
-
-"config.ES_Trace.name": "Standard Trace's House",
-"config.ES_Trace.description": "Restore the standard minecart near Trace's House",
-
-"config.ES_DeepMountains.name": "Standard Deep Mountains",
-"config.ES_DeepMountains.description": "Restore the standard minecart in the Deep Mountains",
 
 "RSV_CableCar_Bottom": "Cable Car - Lower Dock",
 "config.RSV_CableCar_Bottom.name": "Cable Car Bottom",

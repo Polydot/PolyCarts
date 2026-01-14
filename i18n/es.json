@@ -1,9 +1,4 @@
 {
-	/*
-  Translation provided by:
-  CarlosRojasCu (Partial)
-  */
-
 	"$schema": "https://smapi.io/schemas/i18n.json",
 
 "config.section.Toggle Minecarts.name": "Activar/Desactivar Vagonetas",
@@ -221,11 +216,11 @@
 
 "FrontierFarm West": "Granja - Caseta del abuelo",
 
-"ES Village": "Posada Scarpe",
-"config.ES Village.name": "Pueblo de Escarpa del Este",
-"config.ES Village.description": "Activar la vagoneta cerca de la posada de Escarpa del Este",
-"config.ES Village Minecart.name": "Pueblo de Escarpa del Este",
-"config.ES Village Minecart.description": "(Opcional) Introduce un nombre personalizado para la Vagoneta del Pueblo de Escarpa del Este\nDeja en blanco para «Posada Scarpe»",
+"ScarpVillage": "Posada de la Escarpa",
+"config.ScarpVillage.name": "Pueblo de Escarpa del Este",
+"config.ScarpVillage.description": "Activar la vagoneta cerca de la posada de Escarpa del Este",
+"config.ScarpVillage Minecart.name": "Pueblo de Escarpa del Este",
+"config.ScarpVillage Minecart.description": "(Opcional) Introduce un nombre personalizado para la Vagoneta del Pueblo de Escarpa del Este\nDeja en blanco para «Posada de la Escarpa»",
 
 "Deep Mountains South": "Montañas Profundas - Lago",
 "config.Deep Mountains South.name": "Montañas Profundas Sur",
@@ -245,38 +240,23 @@
 "config.UnderScarp Minecart.name": "Bajo la Escarpa",
 "config.UnderScarp Minecart.description": "(Opcional) Introduce un nombre personalizado para la Vagoneta de Bajo la Escarpa\nDeja en blanco para «Bajo la Escarpa»",
 
-"ES Meadow": "Prado de la Escarpa",
-"config.ES Meadow.name": "Prado",
-"config.ES Meadow.description": "Activar la vagoneta en el Prado de la Escarpa",
-"config.ES Meadow Minecart.name": "Prado de Escarpa del Este",
-"config.ES Meadow Minecart.description": "(Opcional) Introduce un nombre personalizado para la Vagoneta del Prado de Escarpa del Este\nDeja en blanco para «Prado de la Escarpa»",
+"MeadowFarm": "Prado de la Escarpa",
+"config.MeadowFarm.name": "Granja del Prado",
+"config.MeadowFarm.description": "Activar la vagoneta en el Prado de la Escarpa",
+"config.MeadowFarm Minecart.name": "Granja del Prado de Escarpa del Este",
+"config.MeadowFarm Minecart.description": "(Opcional) Introduce un nombre personalizado para la Vagoneta de la Granja del Prado\nDeja en blanco para «Prado de la Escarpa»",
 
-"ClearingHouse": "Casa de Compensación",
-"config.ClearingHouse.name": "Casa de Compensación",
-"config.ClearingHouse.description": "Activar la vagoneta cerca de la Casa de Compensación",
-"config.ClearingHouse Minecart.name": "Casa de Compensación",
-"config.ClearingHouse Minecart.description": "(Opcional) Introduce un nombre personalizado para la Vagoneta de la Casa de Compensación\nDeja en blanco para «Casa de Compensación»",
+"ScarpCrossing": "Cruce de la Escarpa",
+"config.ScarpCrossing.name": "Cruce de la Escarpa",
+"config.ScarpCrossing.description": "Activar la vagoneta en el Cruce de la Escarpa",
+"config.ScarpCrossing Minecart.name": "Cruce de la Escarpa",
+"config.ScarpCrossing Minecart.description": "(Opcional) Introduce un nombre personalizado para la Vagoneta del Cruce de la Escarpa\nDeja en blanco para «Cruce de la Escarpa»",
 
 "Orchard": "Huerto",
 "config.Orchard.name": "Huerto",
 "config.Orchard.description": "Activar la vagoneta en el Huerto",
 "config.Orchard Minecart.name": "Huerto",
 "config.Orchard Minecart.description": "(Opcional) Introduce un nombre personalizado para la Vagoneta del Huerto\nDeja en blanco para «Huerto»",
-
-"config.ES_Underscarp.name": "Bajo la Escarpa Estándar",
-"config.ES_Underscarp.description": "Restaurar la vagoneta estándar en Bajo la Escarpa",
-
-"config.ES_Clearing.name": "Casa de Compensación Estándar",
-"config.ES_Clearing.description": "Restaurar la vagoneta estándar cerca de la Casa de Compensación",
-
-"config.ES_Village.name": "Pueblo Estándar",
-"config.ES_Village.description": "Restaurar la vagoneta estándar en el pueblo",
-
-"config.ES_Trace.name": "Casa de Trace Estándar",
-"config.ES_Trace.description": "Restaurar la vagoneta estándar cerca de la Casa de Trace",
-
-"config.ES_DeepMountains.name": "Montañas Profundas Estándar",
-"config.ES_DeepMountains.description": "Restaurar la vagoneta estándar en las Montañas Profundas",
 
 "RSV_CableCar_Bottom": "Teleférico - Muelle Inferior",
 "config.RSV_CableCar_Bottom.name": "Teleférico Abajo",

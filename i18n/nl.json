@@ -216,11 +216,11 @@
 
 "FrontierFarm West": "Boerderij - Grootvaders Schuur",
 
-"ES Village": "Scarpe Inn",
-"config.ES Village.name": "East Scarp Dorp",
-"config.ES Village.description": "Schakel de mijnwagen bij de herberg van East Scarp in",
-"config.ES Village Minecart.name": "East Scarp Dorp",
-"config.ES Village Minecart.description": "(Optioneel) Voer een aangepaste naam in voor de East Scarp Dorp Mijnwagen\nLaat leeg voor 'Scarpe Inn'",
+"ScarpVillage": "Scarp Herberg",
+"config.ScarpVillage.name": "East Scarp Dorp",
+"config.ScarpVillage.description": "Schakel de mijnwagen bij de herberg van East Scarp in",
+"config.ScarpVillage Minecart.name": "East Scarp Dorp",
+"config.ScarpVillage Minecart.description": "(Optioneel) Voer een aangepaste naam in voor de East Scarp Dorp Mijnwagen\nLaat leeg voor 'Scarp Herberg'",
 
 "Deep Mountains South": "Deep Mountains - Meer",
 "config.Deep Mountains South.name": "Deep Mountains Zuid",
@@ -238,40 +238,25 @@
 "config.UnderScarp.name": "UnderScarp",
 "config.UnderScarp.description": "Schakel de mijnwagen in de UnderScarp in",
 "config.UnderScarp Minecart.name": "UnderScarp",
-"config.UnderScarp Minecart.description": "(Optioneel) Voer een aangepaste naam in voor de UnderScarp Mijnwagen\nLaat leeg voor 'UnderScarp'",
+"config.UnderScarp Minecart.description": "(Optioneel) Voer een aangepaste naam in voor de UnderScarp Mijnwagen\nLaat leeg for 'UnderScarp'",
 
-"ES Meadow": "Scarp Meadow",
-"config.ES Meadow.name": "Weide",
-"config.ES Meadow.description": "Schakel de mijnwagen op de Scarp Meadow in",
-"config.ES Meadow Minecart.name": "East Scarp Weide",
-"config.ES Meadow Minecart.description": "(Optioneel) Voer een aangepaste naam in voor de East Scarp Weide Mijnwagen\nLaat leeg voor 'Scarp Meadow'",
+"MeadowFarm": "Scarp Weide",
+"config.MeadowFarm.name": "Weideboerderij",
+"config.MeadowFarm.description": "Schakel de mijnwagen op de Scarp Weide in",
+"config.MeadowFarm Minecart.name": "East Scarp Weideboerderij",
+"config.MeadowFarm Minecart.description": "(Optioneel) Voer een aangepaste naam in voor de Weideboerderij Mijnwagen\nLaat leeg voor 'Scarp Weide'",
 
-"ClearingHouse": "Clearing House",
-"config.ClearingHouse.name": "Clearing House",
-"config.ClearingHouse.description": "Schakel de mijnwagen bij het Clearing House in",
-"config.ClearingHouse Minecart.name": "Clearing House",
-"config.ClearingHouse Minecart.description": "(Optioneel) Voer een aangepaste naam in voor de Clearing House Mijnwagen\nLaat leeg voor 'Clearing House'",
+"ScarpCrossing": "Scarp Oversteek",
+"config.ScarpCrossing.name": "Scarp Oversteek",
+"config.ScarpCrossing.description": "Schakel de mijnwagen bij Scarp Oversteek in",
+"config.ScarpCrossing Minecart.name": "Scarp Oversteek",
+"config.ScarpCrossing Minecart.description": "(Optioneel) Voer een aangepaste naam in voor de Scarp Oversteek Mijnwagen\nLaat leeg voor 'Scarp Oversteek'",
 
 "Orchard": "Boomgaard",
 "config.Orchard.name": "Boomgaard",
 "config.Orchard.description": "Schakel de mijnwagen in de Boomgaard in",
 "config.Orchard Minecart.name": "Boomgaard",
 "config.Orchard Minecart.description": "(Optioneel) Voer een aangepaste naam in voor de Boomgaard Mijnwagen\nLaat leeg voor 'Boomgaard'",
-
-"config.ES_Underscarp.name": "Standaard Underscarp",
-"config.ES_Underscarp.description": "Herstel de standaard mijnwagen in de Underscarp",
-
-"config.ES_Clearing.name": "Standaard Clearing House",
-"config.ES_Clearing.description": "Herstel de standaard mijnwagen bij het Clearing House",
-
-"config.ES_Village.name": "Standaard Dorp",
-"config.ES_Village.description": "Herstel de standaard mijnwagen in het dorp",
-
-"config.ES_Trace.name": "Standaard Trace's House",
-"config.ES_Trace.description": "Herstel de standaard mijnwagen bij Trace's House",
-
-"config.ES_DeepMountains.name": "Standaard Deep Mountains",
-"config.ES_DeepMountains.description": "Herstel de standaard mijnwagen in de Deep Mountains",
 
 "RSV_CableCar_Bottom": "Kabelbaan - Lagere Steiger",
 "config.RSV_CableCar_Bottom.name": "Kabelbaan Beneden",

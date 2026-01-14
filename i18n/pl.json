@@ -216,21 +216,21 @@
 
 "FrontierFarm West": "Farma - Szopa Dziadka",
 
-"ES Village": "Scarpe Inn",
-"config.ES Village.name": "East Scarp Wieś",
-"config.ES Village.description": "Włącz wózek kopalniany w pobliżu gospody w East Scarp",
-"config.ES Village Minecart.name": "East Scarp Wieś",
-"config.ES Village Minecart.description": "(Opcjonalnie) Wprowadź własną nazwę dla Wózka kopalnianego East Scarp Wieś\nZostaw puste dla „Scarpe Inn”",
+"ScarpVillage": "Gospoda w Scarp",
+"config.ScarpVillage.name": "Wieś East Scarp",
+"config.ScarpVillage.description": "Włącz wózek kopalniany w pobliżu gospody w East Scarp",
+"config.ScarpVillage Minecart.name": "Wieś East Scarp",
+"config.ScarpVillage Minecart.description": "(Opcjonalnie) Wprowadź własną nazwę dla Wózka kopalnianego Wieś East Scarp\nZostaw puste dla „Gospoda w Scarp”",
 
 "Deep Mountains South": "Głębokie Góry - Jezioro",
 "config.Deep Mountains South.name": "Głębokie Góry Południe",
-"config.Deep Mountains South.description": "Włącz wózek kopalniany na południowym wschodzie Głebokich Gór",
+"config.Deep Mountains South.description": "Włącz wózek kopalniany na południowym wschodzie Głębokich Gór",
 "config.Deep Mountains South Minecart.name": "Głębokie Góry Południe",
 "config.Deep Mountains South Minecart.description": "(Opcjonalnie) Wprowadź własną nazwę dla Wózka kopalnianego Głębokie Góry Południe\nZostaw puste dla „Głębokie Góry - Jezioro”",
 
 "Deep Mountains West": "Głębokie Góry - Kozy",
 "config.Deep Mountains West.name": "Głębokie Góry Zachód",
-"config.Deep Mountains West.description": "Włącz wózek kopalniany na zachodzie Głebokich Gór",
+"config.Deep Mountains West.description": "Włącz wózek kopalniany na zachodzie Głębokich Gór",
 "config.Deep Mountains West Minecart.name": "Głębokie Góry Zachód",
 "config.Deep Mountains West Minecart.description": "(Opcjonalnie) Wprowadź własną nazwę dla Wózka kopalnianego Głębokie Góry Zachód\nZostaw puste dla „Głębokie Góry - Kozy”",
 
@@ -240,38 +240,23 @@
 "config.UnderScarp Minecart.name": "UnderScarp",
 "config.UnderScarp Minecart.description": "(Opcjonalnie) Wprowadź własną nazwę dla Wózka kopalnianego UnderScarp\nZostaw puste dla „UnderScarp”",
 
-"ES Meadow": "Scarp Łąka",
-"config.ES Meadow.name": "Łąka",
-"config.ES Meadow.description": "Włącz wózek kopalniany na Scarp Łące",
-"config.ES Meadow Minecart.name": "East Scarp Łąka",
-"config.ES Meadow Minecart.description": "(Opcjonalnie) Wprowadź własną nazwę dla Wózka kopalnianego East Scarp Łąka\nZostaw puste dla „Scarp Łąka”",
+"MeadowFarm": "Scarp Łąka",
+"config.MeadowFarm.name": "Farma na Łące",
+"config.MeadowFarm.description": "Włącz wózek kopalniany na Scarp Łące",
+"config.MeadowFarm Minecart.name": "Farma na Łące East Scarp",
+"config.MeadowFarm Minecart.description": "(Opcjonalnie) Wprowadź własną nazwę dla Wózka kopalnianego Farma na Łące\nZostaw puste dla „Scarp Łąka”",
 
-"ClearingHouse": "Clearing House",
-"config.ClearingHouse.name": "Clearing House",
-"config.ClearingHouse.description": "Włącz wózek kopalniany przy Clearing House",
-"config.ClearingHouse Minecart.name": "Clearing House",
-"config.ClearingHouse Minecart.description": "(Opcjonalnie) Wprowadź własną nazwę dla Wózka kopalnianego Clearing House\nZostaw puste dla „Clearing House”",
+"ScarpCrossing": "Scarp Przejście",
+"config.ScarpCrossing.name": "Scarp Przejście",
+"config.ScarpCrossing.description": "Włącz wózek kopalniany na Scarp Przejściu",
+"config.ScarpCrossing Minecart.name": "Scarp Przejście",
+"config.ScarpCrossing Minecart.description": "(Opcjonalnie) Wprowadź własną nazwę dla Wózka kopalnianego Scarp Przejście\nZostaw puste dla „Scarp Przejście”",
 
 "Orchard": "Sad",
 "config.Orchard.name": "Sad",
 "config.Orchard.description": "Włącz wózek kopalniany w Sadzie",
 "config.Orchard Minecart.name": "Sad",
 "config.Orchard Minecart.description": "(Opcjonalnie) Wprowadź własną nazwę dla Wózka kopalnianego Sad\nZostaw puste dla „Sad”",
-
-"config.ES_Underscarp.name": "Standardowy UnderScarp",
-"config.ES_Underscarp.description": "Przywróć standardowy wózek kopalniany w UnderScarp",
-
-"config.ES_Clearing.name": "Standardowy Clearing House",
-"config.ES_Clearing.description": "Przywróć standardowy wózek kopalniany przy Clearing House",
-
-"config.ES_Village.name": "Standardowa Wieś",
-"config.ES_Village.description": "Przywróć standardowy wózek kopalniany we wsi",
-
-"config.ES_Trace.name": "Standardowy Dom Trace'a",
-"config.ES_Trace.description": "Przywróć standardowy wózek kopalniany przy Domu Trace'a",
-
-"config.ES_DeepMountains.name": "Standardowe Głębokie Góry",
-"config.ES_DeepMountains.description": "Przywróć standardowy wózek kopalniany w Głebokich Górach",
 
 "RSV_CableCar_Bottom": "Kolejka linowa - Dolna Przystań",
 "config.RSV_CableCar_Bottom.name": "Dół Kolejki linowej",

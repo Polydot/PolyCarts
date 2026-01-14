@@ -216,23 +216,23 @@
 
 "FrontierFarm West": "Hof - Großvaters Schuppen",
 
-"ES Village": "Gasthof Scarpe",
-"config.ES Village.name": "East Scarp Dorf",
-"config.ES Village.description": "Die Loretür beim Gasthof von East Scarp aktivieren",
-"config.ES Village Minecart.name": "East Scarp Dorf",
-"config.ES Village Minecart.description": "(Optional) Gib einen benutzerdefinierten Namen für die Loretür im Dorf East Scarp ein\nLeer lassen für „Gasthof Scarpe“",
+"ScarpVillage": "Gasthof Scarp",
+"config.ScarpVillage.name": "East Scarp Dorf",
+"config.ScarpVillage.description": "Die Loretür beim Gasthof von East Scarp aktivieren",
+"config.ScarpVillage Minecart.name": "East Scarp Dorf",
+"config.ScarpVillage Minecart.description": "(Optional) Gib einen benutzerdefinierten Namen für die East Scarp Dorf Loretür ein\nLeer lassen für „Gasthof Scarp“",
 
 "Deep Mountains South": "Tiefe Berge - See",
 "config.Deep Mountains South.name": "Tiefe Berge Süd",
 "config.Deep Mountains South.description": "Die Loretür im Südosten der Tiefen Berge aktivieren",
 "config.Deep Mountains South Minecart.name": "Tiefe Berge Süd",
-"config.Deep Mountains South Minecart.description": "(Optional) Gib einen benutzerdefinierten Namen für die Loretür im Süden der Tiefen Berge ein\nLeer lassen für „Tiefe Berge - See“",
+"config.Deep Mountains South Minecart.description": "(Optional) Gib einen benutzerdefinierten Namen für die Tiefe Berge Süd Loretür ein\nLeer lassen für „Tiefe Berge - See“",
 
 "Deep Mountains West": "Tiefe Berge - Ziegen",
 "config.Deep Mountains West.name": "Tiefe Berge West",
 "config.Deep Mountains West.description": "Die Loretür im Westen der Tiefen Berge aktivieren",
 "config.Deep Mountains West Minecart.name": "Tiefe Berge West",
-"config.Deep Mountains West Minecart.description": "(Optional) Gib einen benutzerdefinierten Namen für die Loretür im Westen der Tiefen Berge ein\nLeer lassen für „Tiefe Berge - Ziegen“",
+"config.Deep Mountains West Minecart.description": "(Optional) Gib einen benutzerdefinierten Namen für die Tiefe Berge West Loretür ein\nLeer lassen für „Tiefe Berge - Ziegen“",
 
 "UnderScarp": "UnderScarp",
 "config.UnderScarp.name": "UnderScarp",
@@ -240,38 +240,23 @@
 "config.UnderScarp Minecart.name": "UnderScarp",
 "config.UnderScarp Minecart.description": "(Optional) Gib einen benutzerdefinierten Namen für die UnderScarp Loretür ein\nLeer lassen für „UnderScarp“",
 
-"ES Meadow": "Scarp Wiese",
-"config.ES Meadow.name": "Wiese",
-"config.ES Meadow.description": "Die Loretür auf der Scarp Wiese aktivieren",
-"config.ES Meadow Minecart.name": "East Scarp Wiese",
-"config.ES Meadow Minecart.description": "(Optional) Gib einen benutzerdefinierten Namen für die Loretür auf der East Scarp Wiese ein\nLeer lassen für „Scarp Wiese“",
+"MeadowFarm": "Scarp Wiese",
+"config.MeadowFarm.name": "Wiesen-Hof",
+"config.MeadowFarm.description": "Die Loretür auf der Scarp Wiese aktivieren",
+"config.MeadowFarm Minecart.name": "East Scarp Wiesen-Hof",
+"config.MeadowFarm Minecart.description": "(Optional) Gib einen benutzerdefinierten Namen für die Wiesen-Hof Loretür ein\nLeer lassen für „Scarp Wiese“",
 
-"ClearingHouse": "Clearing House",
-"config.ClearingHouse.name": "Clearing House",
-"config.ClearingHouse.description": "Die Loretür beim Clearing House aktivieren",
-"config.ClearingHouse Minecart.name": "Clearing House",
-"config.ClearingHouse Minecart.description": "(Optional) Gib einen benutzerdefinierten Namen für die Clearing House Loretür ein\nLeer lassen für „Clearing House“",
+"ScarpCrossing": "Scarp Crossing",
+"config.ScarpCrossing.name": "Scarp Crossing",
+"config.ScarpCrossing.description": "Die Loretür beim Scarp Crossing aktivieren",
+"config.ScarpCrossing Minecart.name": "Scarp Crossing",
+"config.ScarpCrossing Minecart.description": "(Optional) Gib einen benutzerdefinierten Namen für die Scarp Crossing Loretür ein\nLeer lassen für „Scarp Crossing“",
 
 "Orchard": "Obstgarten",
 "config.Orchard.name": "Obstgarten",
 "config.Orchard.description": "Die Loretür im Obstgarten aktivieren",
 "config.Orchard Minecart.name": "Obstgarten",
 "config.Orchard Minecart.description": "(Optional) Gib einen benutzerdefinierten Namen für die Obstgarten-Loretür ein\nLeer lassen für „Obstgarten“",
-
-"config.ES_Underscarp.name": "Standard UnderScarp",
-"config.ES_Underscarp.description": "Die Standard-Loretür im UnderScarp wiederherstellen",
-
-"config.ES_Clearing.name": "Standard Clearing House",
-"config.ES_Clearing.description": "Die Standard-Loretür beim Clearing House wiederherstellen",
-
-"config.ES_Village.name": "Standard Dorf",
-"config.ES_Village.description": "Die Standard-Loretür im Dorf wiederherstellen",
-
-"config.ES_Trace.name": "Standard Trace's House",
-"config.ES_Trace.description": "Die Standard-Loretür bei Trace's House wiederherstellen",
-
-"config.ES_DeepMountains.name": "Standard Tiefe Berge",
-"config.ES_DeepMountains.description": "Die Standard-Loretür in den Tiefen Bergen wiederherstellen",
 
 "RSV_CableCar_Bottom": "Seilbahn - Untere Anlegestelle",
 "config.RSV_CableCar_Bottom.name": "Seilbahn Unten",
