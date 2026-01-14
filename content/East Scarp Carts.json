@@ -42,7 +42,6 @@
 					}
 				}
 			],
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -70,53 +69,10 @@
 		//
 		//Remove ES Carts
 		//
-		{//UnderScarp
-			"Action": "EditMap",
-			"When": {
-				"ES_Underscarp": false
-			},
-			"Target": "Maps/EastScarp_DeepDark",
-			"LogName": "ES UnderScarp Remove",
-			"FromFile": "assets/ES/UnderScarp_Remove.tmx",
-			"ToArea": { "X": 3, "Y": 62, "Width": 15, "Height": 5 }
-		},
-		{//Village 1
-			"Action": "EditMap",
-			"When": {
-				"ES_Village": false
-			},
-			"Target": "Maps/EastScarp_Village",
-			"LogName": "ES Village Remove1",
-			"FromFile": "assets/ES/Village_Remove1.tmx",
-			"ToArea": { "X": 64, "Y": 12, "Width": 11, "Height": 7 },
-			//Add a light
-			"TextOperations": [
-				{
-					"Operation": "RemoveDelimited",
-					"Target": ["MapProperties", "Light"],
-					"Search": "68 13 4",
-					"Delimiter": " "
-				}
-			],
-      "MapProperties": {
-				"DayTiles": "",
-				"NightTiles": ""
-      }
-		},
-		{//Village 2
-			"Action": "EditMap",
-			"When": {
-				"ES_Village": false
-			},
-			"Target": "Maps/EastScarp_Village",
-			"LogName": "ES Village Remove2",
-			"FromFile": "assets/ES/Village_Remove2.tmx",
-			"ToArea": { "X": 0, "Y": 74, "Width": 34, "Height": 7 }
-		},
 		{//Trace's House
 			"Action": "EditMap",
 			"Target": "Maps/EastScarp_Village",
-			"LogName": "ES Village Remove Trace's House",
+			"LogName": "ScarpVillage Remove Trace's House",
 			"When": {
 				"HasMod": "7thAxis.DitR",
 				"ES_Trace": false
@@ -133,7 +89,6 @@
 			"LogName": "ES Deep Mountains Remove",
 			"FromFile": "assets/ES/DeepMountains_Remove.tmx",
 			"ToArea": { "X": 53, "Y": 33, "Width": 5, "Height": 6 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "RemoveDelimited",
@@ -228,7 +183,6 @@
 			},
 			"FromFile": "assets/ES/ScarpCrossing.tmx",
 			"ToArea": { "X": 54, "Y": 24, "Width": 11, "Height": 4 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -264,7 +218,6 @@
 			},
 			"FromFile": "assets/ES/ScarpCrossing_Flowers.tmx",
 			"ToArea": { "X": 54, "Y": 24, "Width": 11, "Height": 4 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -315,8 +268,7 @@
 				}
 			]
 		},
-		//Remove stuff
-		{
+		{//Remove stuff
 			"Action": "EditMap",
 			"Target": "Maps/EastScarp_Crossing",
 			"LogName": "ScarpCrossing Remove",
@@ -338,7 +290,7 @@
 				"HasMod": "FlashShifter.StardewValleyExpandedCP" 
 			},
 			"FromFile": "assets/ES/ScarpCrossing_SVE_Remove.tmx",
-			"ToArea": { "X": 54, "Y": 24, "Width": 11, "Height": 4 }
+			"ToArea": { "X": 13, "Y": 25, "Width": 8, "Height": 15 }
 		},
 		{
 			"Action": "EditMap",
@@ -349,8 +301,8 @@
         "HasFlag": "Jade_ButterflyGarden",
 				"HasMod |contains=FlashShifter.StardewValleyExpandedCP": false
 			},
-			"FromFile": "assets/ES/ScarpCrossing_Flowers_Remove.tmx",
-			"ToArea": { "X": 54, "Y": 24, "Width": 11, "Height": 4 }
+			"FromFile": "assets/ES/ScarpCrossing_Remove.tmx",
+			"ToArea": { "X": 0, "Y": 24, "Width": 54, "Height": 5 }
 		},
 		{
 			"Action": "EditMap",
@@ -362,22 +314,22 @@
 				"HasMod": "FlashShifter.StardewValleyExpandedCP" 
 			},
 			"FromFile": "assets/ES/ScarpCrossing_SVE_Flowers_Remove.tmx",
-			"ToArea": { "X": 54, "Y": 24, "Width": 11, "Height": 4 }
+			"ToArea": { "X": 13, "Y": 25, "Width": 8, "Height": 15 }
 		},
 		//East Scarp Village
 		{
 			"Action": "EditData",
 			"Target": "Data/Minecarts",
-			"LogName": "ES Village EditData",
+			"LogName": "ScarpVillage EditData",
 			"When": {
-				"ES Village": true,
-				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.ES_Village" 
+				"ScarpVillage": true,
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.ScarpVillage" 
 			},
 			"TargetField": ["{{EastScarp Destinations}}", "Destinations"],
 			"Entries": {
-				"ES Village": {
-					"Id": "Polydot.PolyCarts_ES_Village",
-					"DisplayName": "{{ES Village Name}}",
+				"ScarpVillage": {
+					"Id": "Polydot.PolyCarts_ScarpVillage",
+					"DisplayName": "{{ScarpVillage Name}}",
 					"TargetLocation": "EastScarp_Village",
 					"TargetTile": { "X": 47, "Y": 70 },
 					"TargetDirection": "up"
@@ -387,13 +339,12 @@
 		{
 			"Action": "EditMap",
 			"Target": "Maps/EastScarp_Village",
-			"LogName": "ES Village EditMap",
+			"LogName": "ScarpVillage EditMap",
 			"When": {
-				"ES Village": true 
+				"ScarpVillage": true 
 			},
-			"FromFile": "assets/ES/Village.tmx",
+			"FromFile": "assets/ES/ScarpVillage.tmx",
 			"ToArea": { "X": 48, "Y": 70, "Width": 4, "Height": 5 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -407,24 +358,24 @@
 					"Position": { "X": 48, "Y": 70 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "MinecartTransport {{EastScarp destinations}} Polydot.PolyCarts_ES_Village"
+						"Action": "MinecartTransport {{EastScarp destinations}} Polydot.PolyCarts_ScarpVillage"
 					}
 				},
 				{
 					"Position": { "X": 48, "Y": 71 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "MinecartTransport {{EastScarp destinations}} Polydot.PolyCarts_ES_Village"
+						"Action": "MinecartTransport {{EastScarp destinations}} Polydot.PolyCarts_ScarpVillage"
 					}
 				}
 			]
 		},
 		{//Unlock
 			"Action": "EditMap",
-			"LogName": "ES Unlock Village",
+			"LogName": "ScarpVillage Unlock",
 			"When": {
-				"ES Village": true,
-				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.ES_Village": false 
+				"ScarpVillage": true,
+				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.ScarpVillage": false 
 			},
 			"Target": "Maps/EastScarp_Village",
 			"MapTiles": [
@@ -432,15 +383,43 @@
 					"Position": { "X": 48, "Y": 70 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.ES_Village {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{ES Village Name}}}}"
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.ScarpVillage {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{ScarpVillage Name}}}}"
 					}
 				},
 				{
 					"Position": { "X": 48, "Y": 71 },
 					"Layer": "Buildings",
 					"SetProperties": {
-						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.ES_Village {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{ES Village Name}}}}"
+						"Action": "MessageOnce Polydot.PolyCarts.Unlock_Event.ScarpVillage {{i18n: {{find}}_L1}}^{{i18n: {{find}}_L2}}^{{i18n: {{find}}_L3}}^{{i18n: {{find}}_L4 |Unlocked_Location={{ScarpVillage Name}}}}"
 					}
+				}
+			]
+		},
+		{//Remove stuff
+			"Action": "EditMap",
+			"Target": "Maps/EastScarp_Village",
+			"LogName": "ScarpVillage Remove",
+			"When": {
+				"ScarpVillage": true
+			},
+			"FromFile": "assets/ES/ScarpVillage_Remove.tmx",
+			"ToArea": { "X": 0, "Y": 74, "Width": 27, "Height": 15 }
+		},
+		{
+			"Action": "EditMap",
+			"When": {
+				"ScarpVillage": true,
+			},
+			"Target": "Maps/EastScarp_Village",
+			"LogName": "ScarpVillage Remove North",
+			"FromFile": "assets/ES/ScarpVillage_North_Remove.tmx",
+			"ToArea": { "X": 65, "Y": 12, "Width": 5, "Height": 6 },
+			"TextOperations": [
+				{
+					"Operation": "RemoveDelimited",
+					"Target": ["MapProperties", "Light"],
+					"Search": "68 13 4",
+					"Delimiter": " "
 				}
 			]
 		},
@@ -473,7 +452,6 @@
 			},
 			"FromFile": "assets/ES/DeepMountains_South.tmx",
 			"ToArea": { "X": 99, "Y": 23, "Width": 5, "Height": 6 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -553,7 +531,6 @@
 			},
 			"FromFile": "assets/ES/DeepMountains_West.tmx",
 			"ToArea": { "X": 21, "Y": 28, "Width": 3, "Height": 4 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -608,7 +585,7 @@
 		{
 			"Action": "EditData",
 			"Target": "Data/Minecarts",
-			"LogName": "ES UnderScarp EditData",
+			"LogName": "UnderScarp EditData",
 			"When": {
 				"UnderScarp": true,
 				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.UnderScarp" 
@@ -633,7 +610,6 @@
 			},
 			"FromFile": "assets/ES/UnderScarp.tmx",
 			"ToArea": { "X": 34, "Y": 57, "Width": 14, "Height": 3 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -662,14 +638,13 @@
 		{
 			"Action": "EditMap",
 			"Target": "Maps/EastScarp_SeaCave",
-			"LogName": "ES UnderScarp cart SeaCave EditMap",
+			"LogName": "SeaCave EditMap",
 			"When": {
 				"UnderScarp": true 
 			},
 			"FromFile": "assets/ES/SeaCave.tmx",
 			"ToArea": { "X": 0, "Y": 6, "Width": 14, "Height": 5 },
 			"PatchMode": "Overlay",
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -704,6 +679,16 @@
 				}
 			]
 		},
+		{//Remove stuff
+			"Action": "EditMap",
+			"When": {
+				"Underscarp": true
+			},
+			"Target": "Maps/EastScarp_DeepDark",
+			"LogName": "UnderScarp Remove",
+			"FromFile": "assets/ES/UnderScarp_Remove.tmx",
+			"ToArea": { "X": 2, "Y": 61, "Width": 17, "Height": 7 }
+		},
 		//Meadow
 		{
 			"Action": "EditData",
@@ -733,7 +718,6 @@
 			},
 			"FromFile": "assets/ES/Meadow.tmx",
 			"ToArea": { "X": 47, "Y": 22, "Width": 3, "Height": 3 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",

@@ -30,7 +30,8 @@
 				{ "ID": "Polydot.PolyCarts_UnderScarp", "ToPosition": "Top" },
 				{ "ID": "Polydot.PolyCarts_DeepMountains_West", "ToPosition": "Top" },
 				{ "ID": "Polydot.PolyCarts_DeepMountains_South", "ToPosition": "Top" },
-				{ "ID": "Polydot.PolyCarts_ES_Village", "ToPosition": "Top" },
+				{ "ID": "Polydot.PolyCarts_ScarpVillage", "ToPosition": "Top" },
+				{ "ID": "Polydot.PolyCarts_ScarpCrossing", "ToPosition": "Top" },
 				{ "ID": "Polydot.PolyCarts_Expa", "ToPosition": "Top" }
 			]
 		},

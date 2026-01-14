@@ -34,7 +34,6 @@
 			},
 			"FromFile": "assets/Custom Farms/GrandpasFarm_East1.tmx",
 			"ToArea": { "X": 107, "Y": 31, "Width": 4, "Height": 8 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -118,7 +117,6 @@
 			},
 			"FromFile": "assets/Custom Farms/GrandpasFarm_West.tmx",
 			"ToArea": { "X": 30, "Y": 58, "Width": 2, "Height": 2 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -204,7 +202,6 @@
 			},
 			"FromFile": "assets/Custom Farms/GrandpasFarm_North.tmx",
 			"ToArea": { "X": 13, "Y": 14, "Width": 2, "Height": 3 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -295,7 +292,6 @@
 			},
 			"FromFile": "assets/Custom Farms/IF2R_North_Remove.tmx",
 			"ToArea": { "X": 74, "Y": 6, "Width": 5, "Height": 7 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "RemoveDelimited",
@@ -328,7 +324,6 @@
 			},
 			"FromFile": "assets/Custom Farms/IF2R_North.tmx",
 			"ToArea": { "X": 75, "Y": 6, "Width": 3, "Height": 4 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -400,7 +395,6 @@
 			},
 			"FromFile": "assets/Custom Farms/IF2R_East.tmx",
 			"ToArea": { "X": 157, "Y": 45, "Width": 6, "Height": 7 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -486,7 +480,6 @@
 			},
 			"FromFile": "assets/Custom Farms/IF2R_South_Remove.tmx",
 			"ToArea": { "X": 121, "Y": 90, "Width": 8, "Height": 5 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "RemoveDelimited",
@@ -519,7 +512,6 @@
 			},
 			"FromFile": "assets/Custom Farms/IF2R_South.tmx",
 			"ToArea": { "X": 124, "Y": 90, "Width": 4, "Height": 4 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -591,7 +583,6 @@
 			},
 			"FromFile": "assets/Custom Farms/IF2R_West_Remove.tmx",
 			"ToArea": { "X": 1, "Y": 23, "Width": 7, "Height": 9 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "RemoveDelimited",
@@ -624,7 +615,6 @@
 			},
 			"FromFile": "assets/Custom Farms/IF2R_West.tmx",
 			"ToArea": { "X": 15, "Y": 37, "Width": 3, "Height": 4 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -686,7 +676,6 @@
 			},
 			"FromFile": "assets/Custom Farms/IF2R_DeepCave.tmx",
 			"ToArea": { "X": 0, "Y": 3, "Width": 23, "Height": 9 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -729,7 +718,6 @@
 			},
 			"FromFile": "assets/Custom Farms/FrontierFarm_North.tmx",
 			"ToArea": { "X": 82, "Y": 20, "Width": 4, "Height": 8 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -837,7 +825,6 @@
 			},
 			"FromFile": "assets/Custom Farms/FrontierFarm_East.tmx",
 			"ToArea": { "X": 122, "Y": 20, "Width": 19, "Height": 5 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -933,7 +920,6 @@
 			},
 			"FromFile": "assets/Custom Farms/FrontierFarm_West.tmx",
 			"ToArea": { "X": 23, "Y": 28, "Width": 5, "Height": 5 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",

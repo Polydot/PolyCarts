@@ -305,12 +305,12 @@
 		//
 		//East Scarp Carts
 		//
-		"ES Village": {
+		"ScarpVillage": {
 			"AllowValues": "true, false",
 			"Default": "true",
 			"Section": "East Scarp Minecarts"
 		},
-		"ES Village Minecart": {
+		"ScarpVillage Minecart": {
 			"AllowBlank": true,
 			"Section": "East Scarp Minecarts"
 		},
@@ -821,14 +821,14 @@
 		//
 		//East Scarp
 		//
-		{//ES Village
-			"Name": "ES Village Name",
-			"Value": "{{i18n: ES Village}}"
+		{//ScarpVillage
+			"Name": "ScarpVillage Name",
+			"Value": "{{i18n: ScarpVillage}}"
 		},
 		{
-			"Name": "ES Village Name",
-			"Value": "{{ES Village Minecart}}",
-			"When": { "ES Village Minecart": "{{ES Village Minecart}}" }
+			"Name": "ScarpVillage Name",
+			"Value": "{{ScarpVillage Minecart}}",
+			"When": { "ScarpVillage Minecart": "{{ScarpVillage Minecart}}" }
 		},
 		{//Deep Mountains South
 			"Name": "Deep Mountains South Name",

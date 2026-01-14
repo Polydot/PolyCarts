@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="15" height="5" tilewidth="16" tileheight="16" infinite="0" nextlayerid="13" nextobjectid="18">
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="17" height="7" tilewidth="16" tileheight="16" infinite="0" nextlayerid="13" nextobjectid="22">
+  <properties>
+    <property name="AmbientLight" value="200 120 120" />
+    <property name="IndoorWater" type="bool" value="true" />
+    <property name="LocationContext" value="Lemurkat_EastScarp" />
+    <property name="Music" value="EarthMine" />
+    <property name="Warp" value="21 15 EastScarp_Village 35 38" />
+  </properties>
   <tileset firstgid="1" name="mine_desert" tilewidth="16" tileheight="16" tilecount="384" columns="16">
     <image source="ES_mine_desert" width="256" height="384" />
     <tile id="137">
@@ -248,10 +255,7 @@
       </animation>
     </tile>
   </tileset>
-  <tileset firstgid="385" name="cave_daisyextras" tilewidth="16" tileheight="16" tilecount="640" columns="20">
-    <image source="cave_daisyextras" width="320" height="512" />
-  </tileset>
-  <tileset firstgid="1025" name="Landscape" tilewidth="16" tileheight="16" tilecount="1975" columns="25">
+  <tileset firstgid="385" name="Landscape" tilewidth="16" tileheight="16" tilecount="1975" columns="25">
     <image source="DeepDark_outdoorsTileSheet" width="400" height="1264" />
     <tile id="512">
       <properties>
@@ -802,31 +806,86 @@
       </properties>
     </tile>
   </tileset>
-  <tileset firstgid="3000" name="townInterior" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
+  <tileset firstgid="2360" name="townInterior" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
     <image source="townInterior" width="512" height="1088" />
   </tileset>
-  <tileset firstgid="5176" name="paths" tilewidth="16" tileheight="16" tilecount="64" columns="4">
+  <tileset firstgid="4536" name="paths" tilewidth="16" tileheight="16" tilecount="64" columns="4">
     <image source="paths" width="64" height="256" />
   </tileset>
-  <layer id="1" name="Back" width="15" height="5">
+  <tileset firstgid="4600" name="fall_town" tilewidth="16" tileheight="16" tilecount="2304" columns="32">
+    <image source="fall_town" width="512" height="1152" />
+  </tileset>
+  <tileset firstgid="6904" name="lemurfurniture" tilewidth="16" tileheight="16" tilecount="3264" columns="32">
+    <image source="lemurfurniture" width="512" height="1632" />
+  </tileset>
+  <layer id="1" name="Back" width="17" height="7">
     <data encoding="csv">
-      1705,1705,219,220,139,140,218,219,219,248,263,264,264,264,324, 171,219,187,236,138,139,234,235,235,236,277,278,277,277,261, 169,170,171,172,173,169,170,155,172,173,169,156,155,172,173, 171,169,172,170,154,169,172,156,173,169,172,173,169,171,169, 172,170,155,169,172,170,171,169,172,170,171,169,170,173,1705
+      0,0,0,0,154,199,170,218,219,219,220,247,248,248,248,248,79,
+      0,154,154,219,220,171,173,218,219,219,220,277,277,277,277,277,277,
+      154,219,219,187,236,141,155,234,235,235,236,277,277,277,277,277,277,
+      219,219,187,236,140,170,171,141,156,154,155,156,139,140,138,139,140,
+      219,219,220,155,156,154,155,138,139,140,138,154,155,156,154,155,156,
+      219,219,188,204,172,170,171,172,170,171,172,170,171,172,170,171,172,
+      219,219,219,188,204,154,155,154,154,154,154,154,154,155,156,139,139
     </data>
   </layer>
-  <layer id="3" name="Buildings" width="15" height="5">
+  <layer id="11" name="Back2" width="17" height="7">
+    <properties>
+      <property name="Draw" value="Back" />
+    </properties>
     <data encoding="csv">
-      118,119,134,135,0,0,0,471,469,470,263,0,0,158,159, 134,135,575,0,0,0,0,0,0,576,279,280,280,280,280, 573,574,0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,206, 471,0,0,0,0,288,0,0,0,0,0,0,0,206,207
+      0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+      0,0,0,0,0,0,0,0,0,0,0,0,245,245,245,245,245,
+      0,0,0,0,0,0,0,0,0,0,0,260,0,0,0,0,280,
+      0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+      0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+      0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+      0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+    </data>
+  </layer>
+  <layer id="3" name="Buildings" width="17" height="7">
+    <data encoding="csv">
+      85,102,103,118,119,120,0,121,56,123,124,53,54,55,142,143,144,
+      101,118,119,134,135,0,0,0,0,0,0,244,0,0,158,159,160,
+      117,134,135,0,0,0,0,0,0,0,0,279,280,280,280,280,208,
+      133,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,192,
+      149,0,0,0,0,0,0,0,0,0,0,0,0,0,0,206,222,
+      96,0,0,0,0,0,288,0,0,0,0,0,0,0,206,207,79,
+      96,215,216,215,216,215,216,216,216,216,217,0,0,221,222,79,79
     </data>
   </layer>
   <objectgroup id="4" name="Buildings" />
-  <layer id="5" name="Front" width="15" height="5">
+  <layer id="5" name="Front" width="17" height="7">
     <data encoding="csv">
-      0,0,555,0,0,0,0,0,0,556,0,0,0,0,0, 553,554,0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 451,0,0,0,0,272,0,0,0,0,0,0,0,0,0, 198,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+      85,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+      101,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+      117,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,208,
+      133,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+      149,0,0,0,0,0,272,0,0,0,0,0,0,0,0,0,0,
+      214,198,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+      96,214,215,216,215,216,0,216,216,215,216,217,0,0,0,0,0
     </data>
   </layer>
-  <layer id="7" name="Paths" width="15" height="5">
+  <layer id="7" name="Paths" width="17" height="7">
     <data encoding="csv">
-      0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0,5184,5184,5184,0,0
+      0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+      0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+      0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+      0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+      0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+      0,0,0,0,0,0,0,0,0,0,0,4544,4544,4544,0,0,0,
+      0,0,0,0,0,0,0,0,0,0,0,4544,0,4544,0,0,0
+    </data>
+  </layer>
+  <layer id="9" name="AlwaysFront" width="17" height="7">
+    <data encoding="csv">
+      0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+      0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+      0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+      0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+      0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+      0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+      0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
     </data>
   </layer>
 </map>

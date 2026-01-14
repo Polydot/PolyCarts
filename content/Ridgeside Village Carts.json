@@ -93,7 +93,6 @@
 			},
 			"FromFile": "assets/RSV/RSV_CableCar_Bottom.tmx",
 			"ToArea": { "X": 23, "Y": 15, "Width": 4, "Height": 4 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "RemoveDelimited",
@@ -195,7 +194,6 @@
 			},
 			"FromFile": "assets/RSV/RSV_CableCar_Top.tmx",
 			"ToArea": { "X": 23, "Y": 19, "Width": 5, "Height": 4 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -286,7 +284,6 @@
 			},
 			"FromFile": "assets/RSV/RSV_Heaps.tmx",
 			"ToArea": { "X": 68, "Y": 13, "Width": 4, "Height": 4 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -307,7 +304,6 @@
 			},
 			"FromFile": "assets/RSV/RSV_Heaps2.tmx",
 			"ToArea": { "X": 68, "Y": 13, "Width": 4, "Height": 4 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -378,7 +374,6 @@
 			},
 			"FromFile": "assets/RSV/RSV_Nightingale_Remove.tmx",
 			"ToArea": { "X": 15, "Y": 79, "Width": 3, "Height": 4 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "RemoveDelimited",
@@ -423,7 +418,6 @@
 			},
 			"FromFile": "assets/RSV/RSV_Nightingale.tmx",
 			"ToArea": { "X": 29, "Y": 86, "Width": 5, "Height": 12 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -493,7 +487,6 @@
 			},
 			"FromFile": "assets/RSV/RSV_Greenhouse_Remove.tmx",
 			"ToArea": { "X": 108, "Y": 82, "Width": 4, "Height": 4 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "RemoveDelimited",
@@ -538,7 +531,6 @@
 			},
 			"FromFile": "assets/RSV/RSV_Greenhouse.tmx",
 			"ToArea": { "X": 88, "Y": 65, "Width": 3, "Height": 4 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -628,7 +620,6 @@
 			},
 			"FromFile": "assets/RSV/RSV_LogCabin.tmx",
 			"ToArea": { "X": 126, "Y": 12, "Width": 3, "Height": 8 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -718,7 +709,6 @@
 			},
 			"FromFile": "assets/RSV/RSV_Hike.tmx",
 			"ToArea": { "X": 44, "Y": 16, "Width": 4, "Height": 6 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -808,7 +798,6 @@
 			},
 			"FromFile": "assets/RSV/RSV_Falls.tmx",
 			"ToArea": { "X": 65, "Y": 22, "Width": 3, "Height": 4 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -898,7 +887,6 @@
 			},
 			"FromFile": "assets/RSV/RSV_Pond.tmx",
 			"ToArea": { "X": 10, "Y": 4, "Width": 3, "Height": 4 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -988,7 +976,6 @@
 			},
 			"FromFile": "assets/RSV/RSV_Ridge_East.tmx",
 			"ToArea": { "X": 76, "Y": 17, "Width": 4, "Height": 4 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -1078,7 +1065,6 @@
 			},
 			"FromFile": "assets/RSV/RSV_Ridge_West.tmx",
 			"ToArea": { "X": 25, "Y": 8, "Width": 3, "Height": 4 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -1168,7 +1154,6 @@
 			},
 			"FromFile": "assets/RSV/RSV_SummitFarm_East.tmx",
 			"ToArea": { "X": 75, "Y": 45, "Width": 4, "Height": 4 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -1268,7 +1253,6 @@
 			},
 			"FromFile": "assets/RSV/RSV_SummitFarm_West.tmx",
 			"ToArea": { "X": 8, "Y": 46, "Width": 3, "Height": 6 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",

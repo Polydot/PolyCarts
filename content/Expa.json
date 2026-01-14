@@ -36,7 +36,6 @@
 			"Action": "EditMap",
 			"LogName": "Location Light Expa",
 			"Target": "Maps/Polydot.PolyCarts_Expa",
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",

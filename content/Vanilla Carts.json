@@ -63,7 +63,6 @@
 					}
 				}
 			],
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -102,7 +101,6 @@
 			},
 			"FromFile": "assets/SDV/FarmCave.tmx",
 			"ToArea": { "X": 0, "Y": 1, "Width": 3, "Height": 8 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -183,7 +181,6 @@
 			},
 			"FromFile": "assets/SVE/GrandpasShed.tmx",
 			"ToArea": { "X": 30, "Y": 26, "Width": 7, "Height": 4 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -356,7 +353,6 @@
 			},
 			"FromFile": "assets/SDV/Town_North.tmx",
 			"ToArea": { "X": 43, "Y": 6, "Width": 6, "Height": 17 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -416,7 +412,6 @@
 			},
 			"FromFile": "assets/SDV/Town_North.tmx",
 			"ToArea": { "X": 43, "Y": 6, "Width": 6, "Height": 17 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -435,7 +430,6 @@
 			},
 			"FromFile": "assets/SDV/Town_North.tmx",
 			"ToArea": { "X": 43, "Y": 6, "Width": 6, "Height": 17 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -455,7 +449,6 @@
 			},
 			"FromFile": "assets/SDV/Town_North_Halloween.tmx",
 			"ToArea": { "X": 43, "Y": 6, "Width": 6, "Height": 17 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -475,7 +468,6 @@
 			},
 			"FromFile": "assets/SDV/Town_North_Halloween2.tmx",
 			"ToArea": { "X": 42, "Y": 6, "Width": 7, "Height": 17 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -535,7 +527,6 @@
 			},
 			"FromFile": "assets/SVE/Town_North_Halloween.tmx",
 			"ToArea": { "X": 43, "Y": 6, "Width": 4, "Height": 15 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -555,7 +546,6 @@
 			},
 			"FromFile": "assets/SVE/Town_North_Halloween2.tmx",
 			"ToArea": { "X": 42, "Y": 6, "Width": 6, "Height": 16 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -581,7 +571,6 @@
 			},
 			"FromFile": "assets/SVE/Town_North_Halloween_Secret.tmx",
 			"ToArea": { "X": 53, "Y": 6, "Width": 9, "Height": 9 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -600,7 +589,6 @@
 			},
 			"FromFile": "assets/SVE/Town_North_Halloween_Secret2.tmx",
 			"ToArea": { "X": 53, "Y": 6, "Width": 9, "Height": 9 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -620,7 +608,6 @@
 			},
 			"FromFile": "assets/SVE/Town_North_Halloween_Secret3.tmx",
 			"ToArea": { "X": 54, "Y": 6, "Width": 8, "Height": 9 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -764,7 +751,6 @@
 			},
 			"FromFile": "assets/SVE/Town_East.tmx",
 			"ToArea": { "X": 103, "Y": 74, "Width": 21, "Height": 18 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -1035,7 +1021,6 @@
 			},
 			"FromFile": "assets/SVE/Town_West_Halloween.tmx",
 			"ToArea": { "X": 1, "Y": 65, "Width": 7, "Height": 4 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -1267,7 +1252,6 @@
 			},
 			"FromFile": "assets/SDV/Mountain_North.tmx",
 			"ToArea": { "X": 22, "Y": 2, "Width": 3, "Height": 5 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -1363,7 +1347,6 @@
 			},
 			"FromFile": "assets/SDV/Mountain_East.tmx",
 			"ToArea": { "X": 122, "Y": 5, "Width": 6, "Height": 8 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -1456,7 +1439,6 @@
 			},
 			"FromFile": "assets/SDV/Mountain_West.tmx",
 			"ToArea": { "X": 0, "Y": 18, "Width": 8, "Height": 15 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -1492,7 +1474,6 @@
 			},
 			"FromFile": "assets/SVE/Mountain_West.tmx",
 			"ToArea": { "X": 0, "Y": 24, "Width": 4, "Height": 6 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -1574,7 +1555,6 @@
 			},
 			"FromFile": "assets/SDV/Forest_North.tmx",
 			"ToArea": { "X": 75, "Y": 2, "Width": 6, "Height": 11 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -1656,7 +1636,6 @@
 			},
 			"FromFile": "assets/SVE/Forest_North.tmx",
 			"ToArea": { "X": 71, "Y": 2, "Width": 8, "Height": 9 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -1812,7 +1791,6 @@
 			},
 			"FromFile": "assets/SVE/Forest_East.tmx",
 			"ToArea": { "X": 95, "Y": 69, "Width": 9, "Height": 5 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -1901,7 +1879,6 @@
 			},
 			"FromFile": "assets/SDV/Forest_West.tmx",
 			"ToArea": { "X": 12, "Y": 37, "Width": 5, "Height": 5 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -2017,7 +1994,6 @@
 			},
 			"FromFile": "assets/SDV/Desert_North.tmx",
 			"ToArea": { "X": 16, "Y": 3, "Width": 5, "Height": 6 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -2122,7 +2098,6 @@
 			},
 			"FromFile": "assets/SVE/Desert_North.tmx",
 			"ToArea": { "X": 14, "Y": 3, "Width": 3, "Height": 5 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -2228,7 +2203,6 @@
 			},
 			"FromFile": "assets/SDV/Desert_South.tmx",
 			"ToArea": { "X": 9, "Y": 37, "Width": 3, "Height": 7 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -2290,7 +2264,6 @@
 			},
 			"FromFile": "assets/SDV/Desert_Festival_South.tmx",
 			"ToArea": { "X": 9, "Y": 37, "Width": 3, "Height": 7 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -2353,7 +2326,6 @@
 			},
 			"FromFile": "assets/SVE/Desert_South.tmx",
 			"ToArea": { "X": 33, "Y": 60, "Width": 6, "Height": 5 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -2436,7 +2408,6 @@
 			},
 			"FromFile": "assets/SDV/Railroad.tmx",
 			"ToArea": { "X": 0, "Y": 50, "Width": 9, "Height": 11 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -2518,7 +2489,6 @@
 			},
 			"FromFile": "assets/SVE/Railroad.tmx",
 			"ToArea": { "X": 0, "Y": 51, "Width": 7, "Height": 11 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -2601,7 +2571,6 @@
 			},
 			"FromFile": "assets/SDV/Secret_Woods.tmx",
 			"ToArea": { "X": 35, "Y": 5, "Width": 6, "Height": 9 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -2683,7 +2652,6 @@
 			},
 			"FromFile": "assets/SVE/Secret_Woods.tmx",
 			"ToArea": { "X": 55, "Y": 39, "Width": 4, "Height": 5 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -2764,7 +2732,6 @@
 			},
 			"FromFile": "assets/SDV/GingerIsland_North.tmx",
 			"ToArea": { "X": 15, "Y": 64, "Width": 3, "Height": 3 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -2844,7 +2811,6 @@
 			},
 			"FromFile": "assets/SDV/GingerIsland_East.tmx",
 			"ToArea": { "X": 10, "Y": 38, "Width": 4, "Height": 5 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -2910,7 +2876,6 @@
 			},
 			"FromFile": "assets/SDV/GingerIsland_South.tmx",
 			"ToArea": { "X": 20, "Y": 3, "Width": 3, "Height": 5 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -2990,7 +2955,6 @@
 			},
 			"FromFile": "assets/SDV/GingerIsland_West.tmx",
 			"ToArea": { "X": 55, "Y": 42, "Width": 6, "Height": 4 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -3071,7 +3035,6 @@
 			},
 			"FromFile": "assets/SVE/ForestWest_North.tmx",
 			"ToArea": { "X": 46, "Y": 10, "Width": 3, "Height": 4 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -3152,7 +3115,6 @@
 			},
 			"FromFile": "assets/SVE/ForestWest_East.tmx",
 			"ToArea": { "X": 137, "Y": 81, "Width": 9, "Height": 3 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -3233,7 +3195,6 @@
 			},
 			"FromFile": "assets/SVE/ForestWest_South.tmx",
 			"ToArea": { "X": 49, "Y": 145, "Width": 2, "Height": 4 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
@@ -3300,7 +3261,6 @@
 			},
 			"FromFile": "assets/SVE/ForestWest_West.tmx",
 			"ToArea": { "X": 7, "Y": 79, "Width": 15, "Height": 5 },
-			//Add a light
 			"TextOperations": [
 				{
 					"Operation": "Append",
