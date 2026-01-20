@@ -631,7 +631,7 @@
 			"When": {
 				"Town East": true,
 				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Town_East",
-				"HasMod |contains=FlashShifter.StardewValleyExpandedCP, LemurKat.EastScarpe": false 
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP, LemurKat.EastScarp": false 
 			},
 			"TargetField": ["Default", "Destinations"],
 			"Entries": {
@@ -662,7 +662,7 @@
 			"LogName": "Town East EditMap",
 			"When": {
 				"Town East": true,
-				"HasMod |contains=FlashShifter.StardewValleyExpandedCP, LemurKat.EastScarpe": false 
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP, LemurKat.EastScarp": false 
 			},
 			"FromFile": "assets/SDV/Town_East.tmx",
 			"ToArea": { "X": 105, "Y": 70, "Width": 25, "Height": 17 },
@@ -689,7 +689,7 @@
 			"When": {
 				"Town East": true,
 				"HasSeenEvent |contains=Polydot.PolyCarts.Unlock_Event.Town_East": false,
-				"HasMod |contains=FlashShifter.StardewValleyExpandedCP, LemurKat.EastScarpe": false 
+				"HasMod |contains=FlashShifter.StardewValleyExpandedCP, LemurKat.EastScarp": false 
 			},
 			"Target": "Maps/Town",
 			"MapTiles": [
