@@ -21,7 +21,7 @@
 			"Action": "EditData",
 			"Target": "Data/Minecarts",
 			"When": {
-				"HasMod": "LemurKat.EastScarpe.CP"
+				"HasMod": "LemurKat.EastScarpe"
 			},
 			"TargetField": ["{{EastScarp Destinations}}", "Destinations"],
 			"MoveEntries": [

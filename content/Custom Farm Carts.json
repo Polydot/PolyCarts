@@ -1050,7 +1050,8 @@
 				}
 			]
 		},
-		{"Action": "EditMap",
+		{
+			"Action": "EditMap",
 			"Target": "Maps/Farm_FrontierFarm",
 			"MapProperties": {
 				"DayTiles": null,
