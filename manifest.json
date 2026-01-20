@@ -37,12 +37,12 @@
 		},
 		{
 			"UniqueID": "Lemurkat.EastScarp",
-			"MinimumVersion": "3.0.5",
+			"MinimumVersion": "3.0.6",
 			"IsRequired": false
 		},
 		{
-			"UniqueID": "LemurKat.EastScarpe.CP",
-			"MinimumVersion": "3.0.5",
+			"UniqueID": "Lemurkat.EastScarpNPCs",
+			"MinimumVersion": "3.0.6",
 			"IsRequired": false
 		},
 		{

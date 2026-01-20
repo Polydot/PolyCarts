@@ -1044,7 +1044,7 @@
 		},
 		{
 			"Name": "Expa Valid",
-			"When": { "HasMod": "LemurKat.EastScarpe.CP, Rafseazz.RSVCP" },
+			"When": { "HasMod": "LemurKat.EastScarpe, Rafseazz.RSVCP" },
 			"Value": "true"
 		},
 		{
@@ -1142,7 +1142,7 @@
 		{//East Scarp Carts
 			"Action": "Include",
 			"When": {
-				"HasMod": "LemurKat.EastScarpe.CP"
+				"HasMod": "LemurKat.EastScarpe"
 			},
 			"FromFile": "content/East Scarp Carts.json"
 		},
