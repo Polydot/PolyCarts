@@ -2,7 +2,7 @@
 	"$schema": "https://smapi.io/schemas/manifest.json",
 	"Name": "PolyCarts",
 	"Author": "Polydot",
-	"Version": "1.9.2",
+	"Version": "1.9.3",
 	"Description": "An neatness-focused minecart overhaul!",
 	"UniqueID": "Polydot.PolyCarts",
 	"MinimumApiVersion": "4.0.0",

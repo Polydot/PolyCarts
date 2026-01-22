@@ -1049,7 +1049,9 @@
 		},
 		{
 			"Name": "Expa Valid",
-			"When": { "HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.GingerIsland_North, Polydot.PolyCarts.Unlock_Event.GingerIsland_East, Polydot.PolyCarts.Unlock_Event.GingerIsland_South, Polydot.PolyCarts.Unlock_Event.GingerIsland_West" },
+			"When": {
+				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.GingerIsland_North, Polydot.PolyCarts.Unlock_Event.GingerIsland_East, Polydot.PolyCarts.Unlock_Event.GingerIsland_South, Polydot.PolyCarts.Unlock_Event.GingerIsland_West" 
+			},
 			"Value": "true"
 		},
 		//
