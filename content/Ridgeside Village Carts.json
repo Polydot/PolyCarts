@@ -279,8 +279,8 @@
 			"Target": "Maps/Custom_Ridgeside_RidgesideVillage",
 			"LogName": "RSV_Heaps EditMap",
 			"When": {
-				"RSV_Heaps": true,
-				"HasFlag: hostPlayer": "!RSV.FixedMinecart"
+				"RSV_Heaps": true,	
+				"HasFlag: hostPlayer |contains=RSV.FixedMinecart": false
 			},
 			"FromFile": "assets/RSV/RSV_Heaps.tmx",
 			"ToArea": { "X": 68, "Y": 13, "Width": 4, "Height": 4 },

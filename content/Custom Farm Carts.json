@@ -694,7 +694,8 @@
 				"FrontierFarm North": true,
 				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Farm_North",
 				"FarmType": "FrontierFarm",
-				"HasMod": "flashshifter.FrontierFarm" 
+				"HasMod": "flashshifter.FrontierFarm",
+        "HasSeenEvent: anyPlayer": "1337431"
 			},
 			"TargetField": ["Default", "Destinations"],
 			"Entries": {
@@ -733,7 +734,7 @@
 			"When": {
 				"FrontierFarm North": true,
 				"FarmType": "FrontierFarm",
-        "HasSeenEvent: anyPlayer|contains=1337431": true
+        "HasSeenEvent: anyPlayer": "1337431"
 			},
 			"Target": "Maps/Farm_FrontierFarm",
 			"MapTiles": [
@@ -789,7 +790,8 @@
 				"Farm East": true,
 				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Farm_East",
 				"FarmType": "FrontierFarm",
-				"HasMod": "flashshifter.FrontierFarm" 
+				"HasMod": "flashshifter.FrontierFarm",
+        "HasSeenEvent: anyPlayer": "1337431"
 			},
 			"TargetField": ["Default", "Destinations"],
 			"Entries": {
@@ -840,7 +842,7 @@
 			"When": {
 				"Farm East": true,
 				"FarmType": "FrontierFarm",
-        "HasSeenEvent: anyPlayer|contains=1337431": true
+        "HasSeenEvent: anyPlayer": "1337431"
 			},
 			"Target": "Maps/Farm_FrontierFarm",
 			"MapTiles": [
@@ -896,7 +898,8 @@
 				"Farm West": true,
 				"HasSeenEvent": "Polydot.PolyCarts.Unlock_Event.Farm_West",
 				"FarmType": "FrontierFarm",
-				"HasMod": "flashshifter.FrontierFarm" 
+				"HasMod": "flashshifter.FrontierFarm",
+        "HasSeenEvent: anyPlayer": "1337431"
 			},
 			"TargetField": ["Default", "Destinations"],
 			"Entries": {
@@ -935,7 +938,7 @@
 			"When": {
 				"Farm West": true,
 				"FarmType": "FrontierFarm",
-        "HasSeenEvent: anyPlayer|contains=1337431": true
+        "HasSeenEvent: anyPlayer": "1337431"
 			},
 			"Target": "Maps/Farm_FrontierFarm",
 			"MapTiles": [
@@ -1071,7 +1074,7 @@
         "Height": 2
       },
       "When": {
-        "HasSeenEvent: anyPlayer|contains=1337430": true,
+        "HasSeenEvent: anyPlayer": "1337430",
         "HasSeenEvent: anyPlayer|contains=1337431": false,
         "FarmType": "FrontierFarm",
       },

@@ -1,13 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" compressionlevel="0" width="7" height="8" tilewidth="16" tileheight="16" infinite="0" nextlayerid="22" nextobjectid="3">
-  <properties>
-    <property name="AllowGrassSurviveInWinter" value="T" />
-    <property name="Fall_Objects" value="T" />
-    <property name="Outdoors" value="T" />
-    <property name="Spring_Objects" value="T" />
-    <property name="Summer_Objects" value="T" />
-    <property name="Winter_Objects" value="T" />
-  </properties>
   <tileset firstgid="1" name="Paths" tilewidth="16" tileheight="16" tilecount="64" columns="4">
     <image source="paths" width="64" height="256" />
   </tileset>
@@ -2835,7 +2827,7 @@
   </tileset>
   <layer id="14" name="Back2" width="7" height="8">
     <data encoding="base64" compression="zlib">
-      eAFjYCAMpokxMEwH4hlAjA5mA8XmAPFcLHILgGILgXgRFrmlULHlWOSWAMWWAfEKLHLo9hPiAwD+KAnv
+      eAFjYCAMpokxMEwH4hlAjA5mA8WSRRkY5mKRWwCVW4RFbilQLAWobzkWuSVAsWVAvAKLHLr9hPgA6oEJ7w==
     </data>
   </layer>
   <layer id="17" name="Buildings" width="7" height="8">
