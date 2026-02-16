@@ -22,7 +22,7 @@
 						"Y": 19
 					},
 					"CreateOnLoad": {
-						"MapPath": "Maps\\Polydot.PolyCarts_Expa"
+						"MapPath": "Maps/Polydot.PolyCarts_Expa"
 					},
 					"Music": [
 						{
